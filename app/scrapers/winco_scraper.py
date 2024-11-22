@@ -11,6 +11,36 @@ from datetime import datetime
 import os
 from urllib.parse import urlparse
 from utils.logger import setup_logger, log_product_found, log_image_download, log_database_update, log_metadata
+import sys
+
+def setup_logger(name):
+    """Setup logger with single handler to prevent duplicate messages"""
+    logger = logging.getLogger(name)
+    
+    # Clear any existing handlers
+    if logger.hasHandlers():
+        logger.handlers.clear()
+    
+    # Set level
+    logger.setLevel(logging.DEBUG)
+    
+    # Create formatter
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    
+    # Create and add file handler
+    file_handler = logging.FileHandler('scraper.log')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+    
+    # Create and add console handler
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+    
+    # Prevent propagation to root logger
+    logger.propagate = False
+    
+    return logger
 
 logger = setup_logger(__name__)
 
@@ -125,119 +155,138 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
             return 0
         return len([f for f in os.listdir(domain_dir) if f.endswith(('.jpg', '.png', '.jpeg'))])
     
+    def normalize_product_url(url):
+        """Normalize product URLs to prevent duplicate processing"""
+        # Remove trailing slashes
+        url = url.rstrip('/')
+        
+        # Normalize common variations
+        url = url.replace('-inch-', '-')
+        url = url.replace('inches-', '-')
+        url = url.replace('-in-', '-')
+        
+        return url
+
+    def extract_effects(description):
+        """Extract effects from product description"""
+        if not description:
+            return None  # Return None instead of empty list
+        
+        effects = []
+        desc_text = description.lower()
+        
+        # Extract duration
+        duration_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:second|sec)', desc_text)
+        if duration_match:
+            effects.append(f"Duration: {duration_match.group(0)}")
+        
+        # Extract shot count
+        shot_match = re.search(r'(\d+)\s*(?:shot|shots)', desc_text)
+        if shot_match:
+            effects.append(f"Shot Count: {shot_match.group(0)}")
+        
+        # Extract specific effects
+        effect_patterns = [
+            r'(?:effect|effects):\s*([^.]*)',
+            r'(?:color|colours):\s*([^.]*)',
+            r'(?:burst|bursts):\s*([^.]*)',
+        ]
+        
+        for pattern in effect_patterns:
+            matches = re.finditer(pattern, desc_text)
+            for match in matches:
+                effects.append(match.group(1).strip())
+        
+        return '\n'.join(effects) if effects else None  # Return None if no effects found
+
     def process_winco_product(product_name, product_url, image_url, product_soup, domain_dir, headers):
         try:
             session = Session()
             log_product_found(logger, product_name, product_url)
             
-            # Get metadata
+            # Get metadata first
             price_elem = product_soup.find('p', class_='price')
             sku_elem = product_soup.find('span', class_='sku')
             desc_elem = product_soup.find('div', class_='woocommerce-product-details__short-description')
             category_elem = product_soup.find('nav', class_='woocommerce-breadcrumb')
             stock_elem = product_soup.find('p', class_='stock')
             
+            # Get SKU
+            sku = sku_elem.text.strip() if sku_elem else None
+            
+            # Download image if it exists
+            local_image_path = None
+            if image_url:
+                filename = get_filename_from_url(image_url)
+                filepath = os.path.join(domain_dir, filename)
+                local_image_path = filepath
+                
+                if not os.path.exists(filepath):
+                    logger.info(f"Downloading image: {image_url}")
+                    try:
+                        response = requests.get(image_url, headers=headers, verify=False)
+                        if response.status_code == 200:
+                            with open(filepath, 'wb') as f:
+                                f.write(response.content)
+                            log_image_download(logger, "success", filename)
+                    except Exception as e:
+                        logger.error(f"Failed to download image: {str(e)}")
+                else:
+                    log_image_download(logger, "exists", filename)
+            
+            # Check if product exists using SKU
+            existing_product = session.query(Product).filter(
+                Product.site_name == 'Winco Fireworks Texas',
+                Product.sku == sku
+            ).first() if sku else None
+            
             # Log metadata found
             metadata = {
                 'Price': price_elem.text.strip() if price_elem else 'Not found',
-                'SKU': sku_elem.text.strip() if sku_elem else 'Not found',
+                'SKU': sku if sku else 'Not found',
                 'Category': category_elem.text.strip() if category_elem else 'Not found',
                 'Stock Status': stock_elem.text.strip() if stock_elem else 'Not found'
             }
             log_metadata(logger, metadata)
             
-            # Track if we made any changes
-            made_changes = False
-            
-            # Process image if URL found
-            filepath = None
-            image_downloaded = False
-            if image_url:
-                clean_name = re.sub(r'[^a-zA-Z0-9]', '_', product_name)
-                clean_name = re.sub(r'_+', '_', clean_name).strip('_').lower()
-                filename = f"{clean_name}.jpg"
-                filepath = os.path.join(domain_dir, filename)
-                
-                if not os.path.exists(filepath):
-                    logger.info(f"Downloading image: {image_url}")
-                    image_response = requests.get(image_url, headers=headers, verify=False)
-                    if image_response.status_code == 200 and len(image_response.content) > 5000:
-                        with open(filepath, 'wb') as f:
-                            f.write(image_response.content)
-                        log_image_download(logger, "success", filename)
-                        image_downloaded = True
-                        made_changes = True
-                else:
-                    log_image_download(logger, "exists", filename)
-            
-            # Extract additional details from description
-            effects = []
-            if desc_elem:
-                desc_text = desc_elem.text.lower()
-                
-                duration_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:second|sec)', desc_text)
-                if duration_match:
-                    effects.append(f"Duration: {duration_match.group(0)}")
-                
-                shot_match = re.search(r'(\d+)\s*(?:shot|shots)', desc_text)
-                if shot_match:
-                    effects.append(f"Shot Count: {shot_match.group(0)}")
-                
-                effect_keywords = ['effect', 'color', 'burst', 'flash', 'crackle', 'whistle']
-                for line in desc_text.split('\n'):
-                    if any(keyword in line for keyword in effect_keywords):
-                        effects.append(line.strip())
-                
-                logger.info("Effects found:")
-                for effect in effects:
-                    logger.info(f"  - {effect}")
-            
-            # Check if product exists
-            existing_product = session.query(Product).filter_by(
-                site_name='Winco Fireworks Texas',
-                product_name=product_name
-            ).first()
-            
+            # Store the product data
             product_data = {
                 'site_name': 'Winco Fireworks Texas',
                 'product_name': product_name,
-                'sku': sku_elem.text.strip() if sku_elem else None,
-                'price': float(price_elem.text.strip().replace('$', '')) if price_elem else None,
+                'sku': sku,
+                'price': float(price_elem.text.strip().replace('$', '')) if price_elem and price_elem.text.strip() else None,
                 'description': desc_elem.text.strip() if desc_elem else None,
                 'category': category_elem.text.strip() if category_elem else None,
                 'stock_status': stock_elem.text.strip() if stock_elem else None,
-                'effects': '\n'.join(effects) if effects else None,
+                'effects': extract_effects(desc_elem.text if desc_elem else None),
                 'product_url': product_url,
                 'image_url': image_url,
-                'local_image_path': filepath
+                'local_image_path': local_image_path
             }
             
             if existing_product:
-                # Update if needed
-                has_changes = False
+                # Update only if there are actual changes
                 changes = []
                 for key, value in product_data.items():
-                    if getattr(existing_product, key) != value:
-                        changes.append(f"{key}: {getattr(existing_product, key)} -> {value}")
+                    current_value = getattr(existing_product, key)
+                    if current_value != value:
+                        changes.append(f"{key}: {current_value} -> {value}")
                         setattr(existing_product, key, value)
-                        has_changes = True
                 
-                if has_changes:
+                if changes:
                     existing_product.updated_at = datetime.utcnow()
                     session.commit()
                     log_database_update(logger, "updated", product_name, changes)
-                    made_changes = True
+                    return True
                 else:
                     log_database_update(logger, "unchanged", product_name)
+                    return False
             else:
-                # Create new product
                 new_product = Product(**product_data)
                 session.add(new_product)
                 session.commit()
                 log_database_update(logger, "new", product_name)
-                made_changes = True
-            
-            return made_changes
+                return True
                 
         except Exception as e:
             logger.error(f"❌ Error processing Winco product: {str(e)}")
@@ -257,16 +306,20 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
             logger.info(f"Found {len(product_containers)} product containers")
             
             successful_downloads = 0
+            processed_count = 0
+            
             for container in product_containers:
-                if limit != -1 and successful_downloads >= limit:
-                    logger.info(f"Reached limit of {limit} products")
-                    return None
+                processed_count += 1
+                logger.info(f"Checking product {processed_count} of {limit if limit != -1 else 'unlimited'}")
                 
+                # Check total limit before processing each product
+                if limit != -1 and successful_downloads >= limit:
+                    logger.info(f"Reached limit of {limit} successful products")
+                    return None
+                    
                 link = container.find('a', href=lambda x: x and '/product/' in x)
                 
                 if link:
-                    logger.info(f"Checking product {successful_downloads + 1} of {limit if limit != -1 else 'unlimited'}")
-                    
                     product_url = urljoin(current_url, link['href'])
                     response = requests.get(product_url, headers=headers, verify=False)
                     product_soup = BeautifulSoup(response.text, 'html.parser')
@@ -298,24 +351,23 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                             if was_updated:
                                 successful_downloads += 1
                                 logger.info(f"Successfully processed product {successful_downloads} of {limit if limit != -1 else 'unlimited'}")
+                                # Check limit after successful processing
+                                if limit != -1 and successful_downloads >= limit:
+                                    logger.info(f"Reached download limit of {limit}")
+                                    return None
                             else:
                                 logger.info("Product already exists with no changes")
-                        else:
-                            logger.warning(f"No image found for product: {product_name}")
                             
-                    time.sleep(1)  # Polite delay between requests
-                    
-                    if successful_downloads >= limit and limit != -1:
-                        logger.info(f"Reached download limit of {limit}")
-                        return None
+                        time.sleep(1)  # Polite delay between requests
             
+            # Only look for next page if we haven't hit the limit
             if limit == -1 or successful_downloads < limit:
                 next_link = soup.find('a', class_='next page-numbers')
                 if next_link and next_link.get('href'):
                     logger.info("Found next page link")
                     return next_link['href']
             
-            logger.info(f"Completed processing {successful_downloads} products")
+            logger.info(f"Completed processing {successful_downloads} successful products")
                 
         except Exception as e:
             logger.error(f"Error processing Winco page: {str(e)}")

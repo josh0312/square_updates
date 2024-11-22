@@ -500,3 +500,567 @@
 2024-11-22 10:01:25,614 - scrapers.winco_scraper - DEBUG -   - image_url: https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36.png -> https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36-2.png
 2024-11-22 10:01:25,614 - scrapers.winco_scraper - INFO - Successfully processed product 2 of 2
 2024-11-22 10:01:26,617 - scrapers.winco_scraper - INFO - Reached download limit of 2
+2024-11-22 10:07:34,404 - scrapers.winco_scraper - INFO - Fetching content from: https://www.wincofireworks.com/fireworks/?swoof=1&stock_location=texas
+2024-11-22 10:07:34,404 - scrapers.winco_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/wincofireworks.com
+2024-11-22 10:07:34,592 - scrapers.winco_scraper - INFO - Found 123 existing images in directory
+2024-11-22 10:07:34,592 - scrapers.winco_scraper - INFO - Using Winco Fireworks specific approach...
+2024-11-22 10:07:34,594 - scrapers.winco_scraper - INFO - Found 40 product containers
+2024-11-22 10:07:34,594 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:34,762 - scrapers.winco_scraper - INFO - Found product: #3 Assortment
+2024-11-22 10:07:34,763 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/3-Assortment.png
+2024-11-22 10:07:34,763 - scrapers.winco_scraper - INFO - 
+📦 Found product: #3 Assortment
+2024-11-22 10:07:34,763 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/3-assortment/
+2024-11-22 10:07:34,768 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:34,768 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:34,768 - scrapers.winco_scraper - INFO -   - SKU: ATLG3BOX
+2024-11-22 10:07:34,768 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:34,768 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:34,769 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 3_assortment.jpg
+2024-11-22 10:07:34,773 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: #3 Assortment
+2024-11-22 10:07:34,774 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:35,779 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:35,958 - scrapers.winco_scraper - INFO - Found product: #3 Solar Wave Cone
+2024-11-22 10:07:35,958 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/Solar-Wave.png
+2024-11-22 10:07:35,959 - scrapers.winco_scraper - INFO - 
+📦 Found product: #3 Solar Wave Cone
+2024-11-22 10:07:35,959 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/3-solar-wave-cone/
+2024-11-22 10:07:35,963 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:35,963 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:35,963 - scrapers.winco_scraper - INFO -   - SKU: CNBC288
+2024-11-22 10:07:35,963 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:35,963 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:35,963 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 3_solar_wave_cone.jpg
+2024-11-22 10:07:35,964 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:35,965 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: #3 Solar Wave Cone
+2024-11-22 10:07:35,966 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:36,971 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:37,173 - scrapers.winco_scraper - INFO - Found product: #8 Pharaoh’s Treasure
+2024-11-22 10:07:37,174 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/Pharaohs-Treasure.png
+2024-11-22 10:07:37,174 - scrapers.winco_scraper - INFO - 
+📦 Found product: #8 Pharaoh’s Treasure
+2024-11-22 10:07:37,174 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/8-pharaohs-treasure/
+2024-11-22 10:07:37,179 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:37,179 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:37,179 - scrapers.winco_scraper - INFO -   - SKU: CNBC290
+2024-11-22 10:07:37,179 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:37,179 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:37,180 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 8_pharaoh_s_treasure.jpg
+2024-11-22 10:07:37,180 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:37,181 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: #8 Pharaoh’s Treasure
+2024-11-22 10:07:37,181 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:38,184 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:38,362 - scrapers.winco_scraper - INFO - Found product: 1.21 Gigawatts
+2024-11-22 10:07:38,363 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/1.21-Gigawatts.png
+2024-11-22 10:07:38,363 - scrapers.winco_scraper - INFO - 
+📦 Found product: 1.21 Gigawatts
+2024-11-22 10:07:38,363 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/1-21-gigawatts/
+2024-11-22 10:07:38,367 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:38,367 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:38,368 - scrapers.winco_scraper - INFO -   - SKU: FNBC2177
+2024-11-22 10:07:38,368 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:38,368 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:38,368 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 1_21_gigawatts.jpg
+2024-11-22 10:07:38,368 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:38,369 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 1.21 Gigawatts
+2024-11-22 10:07:38,369 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:39,374 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:39,663 - scrapers.winco_scraper - INFO - Found product: 10 Ball Candle
+2024-11-22 10:07:39,663 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/10-Ball-China-BC-4pk.png
+2024-11-22 10:07:39,664 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10 Ball Candle
+2024-11-22 10:07:39,664 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-ball-candle/
+2024-11-22 10:07:39,669 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:39,669 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:39,669 - scrapers.winco_scraper - INFO -   - SKU: RCBC513A
+2024-11-22 10:07:39,669 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:39,669 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:39,670 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_ball_candle.jpg
+2024-11-22 10:07:39,670 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:39,671 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10 Ball Candle
+2024-11-22 10:07:39,671 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:40,678 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:40,910 - scrapers.winco_scraper - INFO - Found product: 10 Ball China 6 pack
+2024-11-22 10:07:40,911 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/10-ball-china-6-pack-black-cat.png
+2024-11-22 10:07:40,911 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10 Ball China 6 pack
+2024-11-22 10:07:40,911 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-ball-china-6-pack-2/
+2024-11-22 10:07:40,916 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:40,916 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:40,916 - scrapers.winco_scraper - INFO -   - SKU: RCBC513
+2024-11-22 10:07:40,917 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:40,917 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:40,917 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_ball_china_6_pack.jpg
+2024-11-22 10:07:40,918 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10 Ball China 6 pack
+2024-11-22 10:07:40,918 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:41,920 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:42,139 - scrapers.winco_scraper - INFO - Found product: 10 Ball Crackling
+2024-11-22 10:07:42,140 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2024/02/SRC2010.png
+2024-11-22 10:07:42,140 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10 Ball Crackling
+2024-11-22 10:07:42,140 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-ball-crackling/
+2024-11-22 10:07:42,146 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:42,146 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:42,146 - scrapers.winco_scraper - INFO -   - SKU: RCSRC2010
+2024-11-22 10:07:42,146 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:42,147 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:42,147 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_ball_crackling.jpg
+2024-11-22 10:07:42,148 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10 Ball Crackling
+2024-11-22 10:07:42,148 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:43,149 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:43,333 - scrapers.winco_scraper - INFO - Found product: 10 Ball Mini Candle
+2024-11-22 10:07:43,333 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/10-Ball-Mini-Candle.png
+2024-11-22 10:07:43,333 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10 Ball Mini Candle
+2024-11-22 10:07:43,333 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-ball-mini-candle/
+2024-11-22 10:07:43,339 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:43,340 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:43,340 - scrapers.winco_scraper - INFO -   - SKU: RCT6236A
+2024-11-22 10:07:43,340 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:43,340 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:43,340 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_ball_mini_candle.jpg
+2024-11-22 10:07:43,341 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10 Ball Mini Candle
+2024-11-22 10:07:43,341 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:44,347 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:44,568 - scrapers.winco_scraper - INFO - Found product: 10 Ball Nitro Assorted
+2024-11-22 10:07:44,569 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2022/02/Nitro-10-Ball-Roman-Candle.jpg
+2024-11-22 10:07:44,569 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10 Ball Nitro Assorted
+2024-11-22 10:07:44,569 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-ball-nitro-assorted/
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO -   - SKU: RCJ500
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_ball_nitro_assorted.jpg
+2024-11-22 10:07:44,575 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:44,576 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10 Ball Nitro Assorted
+2024-11-22 10:07:44,577 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:45,582 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:45,812 - scrapers.winco_scraper - INFO - Found product: 10″ Color Wire
+2024-11-22 10:07:45,813 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2024/02/SEP10A.png
+2024-11-22 10:07:45,813 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10″ Color Wire
+2024-11-22 10:07:45,814 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-color-wire/
+2024-11-22 10:07:45,820 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:45,820 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:45,820 - scrapers.winco_scraper - INFO -   - SKU: SKSEP10A
+2024-11-22 10:07:45,820 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:45,820 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:45,820 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_color_wire.jpg
+2024-11-22 10:07:45,821 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10″ Color Wire
+2024-11-22 10:07:45,821 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:46,827 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:47,018 - scrapers.winco_scraper - INFO - Found product: 10″ Wire Sparkler
+2024-11-22 10:07:47,018 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/10-BC-Gold-Sparkler.png
+2024-11-22 10:07:47,019 - scrapers.winco_scraper - INFO - 
+📦 Found product: 10″ Wire Sparkler
+2024-11-22 10:07:47,019 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/10-inch-wire-sparkler/
+2024-11-22 10:07:47,023 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:47,023 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:47,024 - scrapers.winco_scraper - INFO -   - SKU: SKBC313-10AC
+2024-11-22 10:07:47,024 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:47,024 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:47,024 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 10_wire_sparkler.jpg
+2024-11-22 10:07:47,024 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:47,025 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 10″ Wire Sparkler
+2024-11-22 10:07:47,025 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:48,030 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:48,222 - scrapers.winco_scraper - INFO - Found product: 100 Foot Fountain
+2024-11-22 10:07:48,223 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/100-Foot-Fountain.png
+2024-11-22 10:07:48,223 - scrapers.winco_scraper - INFO - 
+📦 Found product: 100 Foot Fountain
+2024-11-22 10:07:48,223 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/100-foot-fountain/
+2024-11-22 10:07:48,228 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:48,228 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:48,228 - scrapers.winco_scraper - INFO -   - SKU: FNBC2216
+2024-11-22 10:07:48,228 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:48,229 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:48,229 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 100_foot_fountain.jpg
+2024-11-22 10:07:48,229 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:48,230 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 100 Foot Fountain
+2024-11-22 10:07:48,230 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:49,232 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:49,457 - scrapers.winco_scraper - INFO - Found product: 100 Shot Missile Battery
+2024-11-22 10:07:49,458 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2023/03/100-Shot-Saturn-Missile.png
+2024-11-22 10:07:49,458 - scrapers.winco_scraper - INFO - 
+📦 Found product: 100 Shot Missile Battery
+2024-11-22 10:07:49,458 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/100-shot-missile-battery/
+2024-11-22 10:07:49,464 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:49,464 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:49,464 - scrapers.winco_scraper - INFO -   - SKU: MEJ6000
+2024-11-22 10:07:49,464 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:49,464 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:49,464 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 100_shot_missile_battery.jpg
+2024-11-22 10:07:49,465 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 100 Shot Missile Battery
+2024-11-22 10:07:49,466 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:50,469 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:50,731 - scrapers.winco_scraper - INFO - Found product: 1000 Gram Display
+2024-11-22 10:07:50,731 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/1000-gram-display.png
+2024-11-22 10:07:50,732 - scrapers.winco_scraper - INFO - 
+📦 Found product: 1000 Gram Display
+2024-11-22 10:07:50,732 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/1000-gram-display/
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO -   - SKU: MEBC6401
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 1000_gram_display.jpg
+2024-11-22 10:07:50,736 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:50,737 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 1000 Gram Display
+2024-11-22 10:07:50,737 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:51,738 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:51,939 - scrapers.winco_scraper - INFO - Found product: 1000 Gram Finale
+2024-11-22 10:07:51,940 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/1000-gram-finale.png
+2024-11-22 10:07:51,940 - scrapers.winco_scraper - INFO - 
+📦 Found product: 1000 Gram Finale
+2024-11-22 10:07:51,940 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/1000-gram-finale/
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO -   - SKU: MEBC6404
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 1000_gram_finale.jpg
+2024-11-22 10:07:51,945 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:51,946 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 1000 Gram Finale
+2024-11-22 10:07:51,947 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:52,952 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:53,188 - scrapers.winco_scraper - INFO - Found product: 120 Shot Camo Pack
+2024-11-22 10:07:53,189 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/120-shot-camo-pack.png
+2024-11-22 10:07:53,189 - scrapers.winco_scraper - INFO - 
+📦 Found product: 120 Shot Camo Pack
+2024-11-22 10:07:53,189 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/120-shot-camo-pack/
+2024-11-22 10:07:53,195 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:53,195 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:53,195 - scrapers.winco_scraper - INFO -   - SKU: RCJP-510
+2024-11-22 10:07:53,195 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:53,195 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:53,195 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 120_shot_camo_pack.jpg
+2024-11-22 10:07:53,196 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 120 Shot Camo Pack
+2024-11-22 10:07:53,196 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:54,199 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:54,411 - scrapers.winco_scraper - INFO - Found product: 14″ Gold Wire
+2024-11-22 10:07:54,411 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/14-inch-gold-wire.png
+2024-11-22 10:07:54,411 - scrapers.winco_scraper - INFO - 
+📦 Found product: 14″ Gold Wire
+2024-11-22 10:07:54,412 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/14-inch-gold-wire/
+2024-11-22 10:07:54,418 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:54,418 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:54,418 - scrapers.winco_scraper - INFO -   - SKU: SKBC313-14C
+2024-11-22 10:07:54,418 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:54,418 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:54,418 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 14_gold_wire.jpg
+2024-11-22 10:07:54,419 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 14″ Gold Wire
+2024-11-22 10:07:54,419 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:55,424 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:55,613 - scrapers.winco_scraper - INFO - Found product: 16″ Morning Glory
+2024-11-22 10:07:55,614 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-BC.png
+2024-11-22 10:07:55,614 - scrapers.winco_scraper - INFO - 
+📦 Found product: 16″ Morning Glory
+2024-11-22 10:07:55,614 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/16-inch-morning-glory/
+2024-11-22 10:07:55,619 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:55,619 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:55,619 - scrapers.winco_scraper - INFO -   - SKU: SKBC313-06
+2024-11-22 10:07:55,619 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:55,620 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:55,620 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 16_morning_glory.jpg
+2024-11-22 10:07:55,620 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:55,621 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 16″ Morning Glory
+2024-11-22 10:07:55,621 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:56,624 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:56,800 - scrapers.winco_scraper - INFO - Found product: 2 Color Spaceship
+2024-11-22 10:07:56,800 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/2-color-spaceship.png
+2024-11-22 10:07:56,800 - scrapers.winco_scraper - INFO - 
+📦 Found product: 2 Color Spaceship
+2024-11-22 10:07:56,800 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/2-color-spaceship/
+2024-11-22 10:07:56,805 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:56,805 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:56,805 - scrapers.winco_scraper - INFO -   - SKU: WGJP-806
+2024-11-22 10:07:56,805 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:56,805 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:56,805 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 2_color_spaceship.jpg
+2024-11-22 10:07:56,806 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 2 Color Spaceship
+2024-11-22 10:07:56,806 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:57,811 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:58,006 - scrapers.winco_scraper - INFO - Found product: 20″ Wire Sparkler
+2024-11-22 10:07:58,007 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/20-BC-Sparkler.png
+2024-11-22 10:07:58,007 - scrapers.winco_scraper - INFO - 
+📦 Found product: 20″ Wire Sparkler
+2024-11-22 10:07:58,007 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/20-inch-wire-sparkler/
+2024-11-22 10:07:58,012 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:58,012 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:58,012 - scrapers.winco_scraper - INFO -   - SKU: SKBC313-20C
+2024-11-22 10:07:58,012 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:58,012 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:58,013 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 20_wire_sparkler.jpg
+2024-11-22 10:07:58,013 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:07:58,014 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 20″ Wire Sparkler
+2024-11-22 10:07:58,014 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:07:59,015 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:07:59,250 - scrapers.winco_scraper - INFO - Found product: 25 Shot Missile Battery
+2024-11-22 10:07:59,251 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2023/03/25-Shot-Saturn-Missile-Harlen.png
+2024-11-22 10:07:59,251 - scrapers.winco_scraper - INFO - 
+📦 Found product: 25 Shot Missile Battery
+2024-11-22 10:07:59,251 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/25-shot-missile-battery/
+2024-11-22 10:07:59,257 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:07:59,257 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:07:59,257 - scrapers.winco_scraper - INFO -   - SKU: MEJ679
+2024-11-22 10:07:59,257 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:07:59,257 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:07:59,258 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 25_shot_missile_battery.jpg
+2024-11-22 10:07:59,258 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 25 Shot Missile Battery
+2024-11-22 10:07:59,259 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:00,264 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:00,460 - scrapers.winco_scraper - INFO - Found product: 25 Zombies
+2024-11-22 10:08:00,461 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/25-zombies.png
+2024-11-22 10:08:00,461 - scrapers.winco_scraper - INFO - 
+📦 Found product: 25 Zombies
+2024-11-22 10:08:00,461 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/25-zombies/
+2024-11-22 10:08:00,466 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:00,466 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:00,466 - scrapers.winco_scraper - INFO -   - SKU: MEJP-6226
+2024-11-22 10:08:00,467 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:00,467 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:00,467 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 25_zombies.jpg
+2024-11-22 10:08:00,467 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:00,468 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 25 Zombies
+2024-11-22 10:08:00,468 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:01,474 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:01,702 - scrapers.winco_scraper - INFO - Found product: 250 Shot Missile Base
+2024-11-22 10:08:01,702 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/BC6414-SMB-250-1.png
+2024-11-22 10:08:01,702 - scrapers.winco_scraper - INFO - 
+📦 Found product: 250 Shot Missile Base
+2024-11-22 10:08:01,703 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/250-shot-missile-base/
+2024-11-22 10:08:01,707 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:01,708 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:01,708 - scrapers.winco_scraper - INFO -   - SKU: MEBC6414
+2024-11-22 10:08:01,708 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:01,708 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:01,708 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 250_shot_missile_base.jpg
+2024-11-22 10:08:01,708 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:01,709 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 250 Shot Missile Base
+2024-11-22 10:08:01,709 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:02,715 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:02,925 - scrapers.winco_scraper - INFO - Found product: 28 shot Finale
+2024-11-22 10:08:02,926 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/28-shot-finale.png
+2024-11-22 10:08:02,926 - scrapers.winco_scraper - INFO - 
+📦 Found product: 28 shot Finale
+2024-11-22 10:08:02,926 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/28-shot-finale/
+2024-11-22 10:08:02,931 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:02,931 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:02,931 - scrapers.winco_scraper - INFO -   - SKU: MEJP-6230
+2024-11-22 10:08:02,931 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:02,932 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:02,932 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 28_shot_finale.jpg
+2024-11-22 10:08:02,932 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:02,933 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 28 shot Finale
+2024-11-22 10:08:02,933 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:03,938 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:04,134 - scrapers.winco_scraper - INFO - Found product: 3 For 1!
+2024-11-22 10:08:04,135 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/3-for-1.png
+2024-11-22 10:08:04,135 - scrapers.winco_scraper - INFO - 
+📦 Found product: 3 For 1!
+2024-11-22 10:08:04,135 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/3-for-1/
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO -   - SKU: FNBC2224
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 3_for_1.jpg
+2024-11-22 10:08:04,140 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:04,141 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 3 For 1!
+2024-11-22 10:08:04,141 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:05,142 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:05,300 - scrapers.winco_scraper - INFO - Found product: 3 Minute Fountain
+2024-11-22 10:08:05,300 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2023/03/3-Minute-Fountain.png
+2024-11-22 10:08:05,300 - scrapers.winco_scraper - INFO - 
+📦 Found product: 3 Minute Fountain
+2024-11-22 10:08:05,300 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/3-minute-fountain/
+2024-11-22 10:08:05,304 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:05,304 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:05,304 - scrapers.winco_scraper - INFO -   - SKU: FNBC2240
+2024-11-22 10:08:05,304 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:05,304 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:05,304 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 3_minute_fountain.jpg
+2024-11-22 10:08:05,305 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:05,305 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 3 Minute Fountain
+2024-11-22 10:08:05,305 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:06,311 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:06,494 - scrapers.winco_scraper - INFO - Found product: 3 Monkey’s
+2024-11-22 10:08:06,494 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/3-Monkeys.png
+2024-11-22 10:08:06,494 - scrapers.winco_scraper - INFO - 
+📦 Found product: 3 Monkey’s
+2024-11-22 10:08:06,494 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/3-monkeys/
+2024-11-22 10:08:06,499 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:06,499 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:06,499 - scrapers.winco_scraper - INFO -   - SKU: MEF6010
+2024-11-22 10:08:06,500 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:06,500 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:06,500 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 3_monkey_s.jpg
+2024-11-22 10:08:06,500 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:06,501 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 3 Monkey’s
+2024-11-22 10:08:06,501 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:07,503 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:07,742 - scrapers.winco_scraper - INFO - Found product: 300’s SMB
+2024-11-22 10:08:07,742 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2024/02/SSM1130-300.png
+2024-11-22 10:08:07,743 - scrapers.winco_scraper - INFO - 
+📦 Found product: 300’s SMB
+2024-11-22 10:08:07,743 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/300s-smb/
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO -   - SKU: MESSM1130-3
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 300_s_smb.jpg
+2024-11-22 10:08:07,748 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:07,749 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 300’s SMB
+2024-11-22 10:08:07,749 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:08,755 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:08,988 - scrapers.winco_scraper - INFO - Found product: 36 Shot Happy
+2024-11-22 10:08:08,989 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2022/02/36-Shot-Happy.jpg
+2024-11-22 10:08:08,989 - scrapers.winco_scraper - INFO - 
+📦 Found product: 36 Shot Happy
+2024-11-22 10:08:08,989 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/36-shot-happy-2/
+2024-11-22 10:08:08,995 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:08,995 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:08,995 - scrapers.winco_scraper - INFO -   - SKU: MEJ6001
+2024-11-22 10:08:08,995 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:08,995 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:08,995 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 36_shot_happy.jpg
+2024-11-22 10:08:08,997 - scrapers.winco_scraper - INFO - ⏩ No database updates needed for: 36 Shot Happy
+2024-11-22 10:08:08,997 - scrapers.winco_scraper - INFO - Product already exists with no changes
+2024-11-22 10:08:10,000 - scrapers.winco_scraper - INFO - Checking product 1 of 2
+2024-11-22 10:08:10,282 - scrapers.winco_scraper - INFO - Found product: 36″ Morning Glory
+2024-11-22 10:08:10,283 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36.png
+2024-11-22 10:08:10,283 - scrapers.winco_scraper - INFO - 
+📦 Found product: 36″ Morning Glory
+2024-11-22 10:08:10,284 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/36-morning-glory/
+2024-11-22 10:08:10,289 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:10,289 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:10,289 - scrapers.winco_scraper - INFO -   - SKU: SKBC313-24
+2024-11-22 10:08:10,289 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:10,289 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:10,290 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 36_morning_glory.jpg
+2024-11-22 10:08:10,290 - scrapers.winco_scraper - INFO - Effects found:
+2024-11-22 10:08:10,297 - scrapers.winco_scraper - INFO - 🔄 Updated product in database: 36″ Morning Glory
+2024-11-22 10:08:10,297 - scrapers.winco_scraper - DEBUG -   - sku: SKWDN36 -> SKBC313-24
+2024-11-22 10:08:10,297 - scrapers.winco_scraper - DEBUG -   - description: None -> 
+2024-11-22 10:08:10,297 - scrapers.winco_scraper - DEBUG -   - product_url: https://www.wincofireworks.com/product/36-inch-morning-glory/ -> https://www.wincofireworks.com/product/36-morning-glory/
+2024-11-22 10:08:10,297 - scrapers.winco_scraper - DEBUG -   - image_url: https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36-2.png -> https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36.png
+2024-11-22 10:08:10,297 - scrapers.winco_scraper - INFO - Successfully processed product 1 of 2
+2024-11-22 10:08:11,298 - scrapers.winco_scraper - INFO - Checking product 2 of 2
+2024-11-22 10:08:11,482 - scrapers.winco_scraper - INFO - Found product: 36″ Morning Glory
+2024-11-22 10:08:11,482 - scrapers.winco_scraper - INFO - Found image URL: https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36-2.png
+2024-11-22 10:08:11,482 - scrapers.winco_scraper - INFO - 
+📦 Found product: 36″ Morning Glory
+2024-11-22 10:08:11,482 - scrapers.winco_scraper - DEBUG - Product URL: https://www.wincofireworks.com/product/36-inch-morning-glory/
+2024-11-22 10:08:11,486 - scrapers.winco_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:08:11,486 - scrapers.winco_scraper - INFO -   - Price: Not found
+2024-11-22 10:08:11,487 - scrapers.winco_scraper - INFO -   - SKU: SKWDN36
+2024-11-22 10:08:11,487 - scrapers.winco_scraper - INFO -   - Category: Not found
+2024-11-22 10:08:11,487 - scrapers.winco_scraper - INFO -   - Stock Status: Not found
+2024-11-22 10:08:11,487 - scrapers.winco_scraper - INFO - ⏩ Image already exists: 36_morning_glory.jpg
+2024-11-22 10:08:11,489 - scrapers.winco_scraper - INFO - 🔄 Updated product in database: 36″ Morning Glory
+2024-11-22 10:08:11,489 - scrapers.winco_scraper - DEBUG -   - sku: SKBC313-24 -> SKWDN36
+2024-11-22 10:08:11,489 - scrapers.winco_scraper - DEBUG -   - description:  -> None
+2024-11-22 10:08:11,489 - scrapers.winco_scraper - DEBUG -   - product_url: https://www.wincofireworks.com/product/36-morning-glory/ -> https://www.wincofireworks.com/product/36-inch-morning-glory/
+2024-11-22 10:08:11,489 - scrapers.winco_scraper - DEBUG -   - image_url: https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36.png -> https://www.wincofireworks.com/wp-content/uploads/2020/10/Morning-Glory-36-2.png
+2024-11-22 10:08:11,489 - scrapers.winco_scraper - INFO - Successfully processed product 2 of 2
+2024-11-22 10:08:12,495 - scrapers.winco_scraper - INFO - Reached download limit of 2
+2024-11-22 10:24:43,029 - scrapers.redrhino_scraper - INFO - Fetching content from: https://www.redrhinofireworks.com/firework-brands/hog-wild/
+2024-11-22 10:24:43,030 - scrapers.redrhino_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com
+2024-11-22 10:24:44,093 - scrapers.redrhino_scraper - INFO - Found 18 existing images in directory
+2024-11-22 10:24:44,093 - scrapers.redrhino_scraper - INFO - 
+Processing page 1...
+2024-11-22 10:24:44,812 - scrapers.redrhino_scraper - INFO - Found 0 unique product links
+2024-11-22 10:24:44,812 - scrapers.redrhino_scraper - DEBUG - Looking for next page link...
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - DEBUG - No next page URL found
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - INFO - 
+Final Summary:
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - INFO - Pages processed: 1
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - INFO - Existing images found: 18
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - INFO - New images downloaded: 0
+2024-11-22 10:24:44,815 - scrapers.redrhino_scraper - INFO - Total images in directory: 18
+2024-11-22 10:27:51,774 - scrapers.redrhino_scraper - INFO - Found 0 existing images in directory
+2024-11-22 10:27:51,774 - scrapers.redrhino_scraper - INFO - 
+Processing page 1...
+2024-11-22 10:27:52,750 - scrapers.redrhino_scraper - INFO - Using Red Rhino specific approach...
+2024-11-22 10:27:52,752 - scrapers.redrhino_scraper - INFO - Found 16 unique product links
+2024-11-22 10:28:57,729 - scrapers.redrhino_scraper - INFO - Found 0 existing images in directory
+2024-11-22 10:28:57,729 - scrapers.redrhino_scraper - INFO - 
+Processing page 1...
+2024-11-22 10:28:58,586 - scrapers.redrhino_scraper - INFO - Using Red Rhino specific approach...
+2024-11-22 10:28:58,590 - scrapers.redrhino_scraper - INFO - Found 0 unique product links
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - Completed processing 0 products
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - 
+Final Summary:
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - Pages processed: 1
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - Existing images found: 0
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - New images downloaded: 0
+2024-11-22 10:28:58,592 - scrapers.redrhino_scraper - INFO - Total images in directory: 0
+2024-11-22 10:29:52,649 - scrapers.redrhino_scraper - INFO - Found 0 existing images in directory
+2024-11-22 10:29:52,650 - scrapers.redrhino_scraper - INFO - 
+Processing page 1...
+2024-11-22 10:29:53,587 - scrapers.redrhino_scraper - INFO - Using Red Rhino specific approach...
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - INFO - Found 16 unique product links
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/enraged/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/hog-wild-battery/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/high-fliers/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/motor-boating/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/ghost-rail/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/dumpster-fire/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/wooly-bully/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/natural-born-pyros/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/orange-blossom-special/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/hog-wild-flag/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/dark-oblivion/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/bunting/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/hell-fire/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/lets-go-bro/
+2024-11-22 10:29:53,599 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/eagle-command/
+2024-11-22 10:29:53,600 - scrapers.redrhino_scraper - DEBUG - Found product link: https://www.redrhinofireworks.com/firework/4-logo-pennants/
+2024-11-22 10:29:53,600 - scrapers.redrhino_scraper - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/enraged/
+2024-11-22 10:29:54,079 - scrapers.redrhino_scraper - INFO - Found product: Enraged
+2024-11-22 10:29:54,082 - scrapers.redrhino_scraper - INFO - Found image URL: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4=
+2024-11-22 10:29:54,082 - scrapers.redrhino_scraper - INFO - 
+📦 Found product: Enraged
+2024-11-22 10:29:54,083 - scrapers.redrhino_scraper - DEBUG - Product URL: https://www.redrhinofireworks.com/firework/enraged/
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - ERROR - Failed to download image: No connection adapters were found for 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4='
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - site_name: Red Rhino Fireworks
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - product_name: Enraged
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - sku: None
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - description: None
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - effects: None
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - product_url: https://www.redrhinofireworks.com/firework/enraged/
+2024-11-22 10:29:54,085 - scrapers.redrhino_scraper - INFO -   - image_url: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4=
+2024-11-22 10:29:54,086 - scrapers.redrhino_scraper - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/www.redrhinofireworks.com/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4=
+2024-11-22 10:29:54,095 - scrapers.redrhino_scraper - INFO - ✅ Added new product to database: Enraged
+2024-11-22 10:29:54,095 - scrapers.redrhino_scraper - INFO - Successfully processed 1 of 2
+2024-11-22 10:29:55,100 - scrapers.redrhino_scraper - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hog-wild-battery/
+2024-11-22 10:29:55,656 - scrapers.redrhino_scraper - INFO - Found product: Hog Wild Battery
+2024-11-22 10:29:55,658 - scrapers.redrhino_scraper - INFO - Found image URL: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4=
+2024-11-22 10:29:55,658 - scrapers.redrhino_scraper - INFO - 
+📦 Found product: Hog Wild Battery
+2024-11-22 10:29:55,658 - scrapers.redrhino_scraper - DEBUG - Product URL: https://www.redrhinofireworks.com/firework/hog-wild-battery/
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - ERROR - Failed to download image: No connection adapters were found for 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4='
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO - 📋 Metadata found:
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - site_name: Red Rhino Fireworks
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - product_name: Hog Wild Battery
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - sku: None
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - description: None
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - effects: None
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hog-wild-battery/
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - image_url: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4=
+2024-11-22 10:29:55,660 - scrapers.redrhino_scraper - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/www.redrhinofireworks.com/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDEiIGhlaWdodD0iNjAxIiB2aWV3Qm94PSIwIDAgNjAxIDYwMSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2NmZDRkYjtmaWxsLW9wYWNpdHk6IDAuMTsiLz48L3N2Zz4=
+2024-11-22 10:29:55,663 - scrapers.redrhino_scraper - INFO - ✅ Added new product to database: Hog Wild Battery
+2024-11-22 10:29:55,663 - scrapers.redrhino_scraper - INFO - Successfully processed 2 of 2
+2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - 
+Final Summary:
+2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - Pages processed: 1
+2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - Existing images found: 0
+2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - New images downloaded: 0
+2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - Total images in directory: 0

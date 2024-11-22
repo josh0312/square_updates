@@ -2,7 +2,7 @@ websites:
   - name: Winco Fireworks Texas
     url: https://www.wincofireworks.com/fireworks/?swoof=1&stock_location=texas
     scraper: winco_scraper.py
-    enabled: true
+    enabled: false
     limit: 2
     note: >
       Uses WordPress/WooCommerce structure with srcset attributes.
@@ -31,7 +31,7 @@ websites:
   - name: Red Rhino Fireworks
     url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
     scraper: redrhino_scraper.py
-    enabled: false
+    enabled: true
     limit: 2
     note: "Uses WordPress/WooCommerce structure with srcset and data-large_image attributes"
 
