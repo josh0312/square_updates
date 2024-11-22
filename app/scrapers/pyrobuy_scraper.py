@@ -28,14 +28,34 @@ def get_next_page_url(soup, base_url):
     logger.debug("Looking for next page link...")
     
     # Look for pagination links
-    next_link = soup.find('a', string=lambda x: x and 'Next' in x)
+    next_links = soup.find_all('a', href=lambda x: x and ('¤tpage=' in x or 'currentpage=' in x))
     
-    if next_link:
-        href = next_link.get('href')
-        if href and href != '#':
-            next_url = urljoin(base_url, href)
-            logger.debug(f"Found next page URL: {next_url}")
-            return next_url
+    if next_links:
+        # Get current page number from URL if it exists
+        current_page = 1
+        if '¤tpage=' in base_url:
+            current_page = int(base_url.split('¤tpage=')[1])
+        elif 'currentpage=' in base_url:
+            current_page = int(base_url.split('currentpage=')[1])
+            
+        # Find the next page link
+        for link in next_links:
+            href = link.get('href')
+            if href:
+                # Handle both URL encodings
+                if '¤tpage=' in href:
+                    page_num = int(href.split('¤tpage=')[1])
+                elif 'currentpage=' in href:
+                    page_num = int(href.split('currentpage=')[1])
+                else:
+                    continue
+                    
+                if page_num == current_page + 1:
+                    next_url = urljoin(base_url, href)
+                    # Fix URL encoding
+                    next_url = next_url.replace('¤tpage=', 'currentpage=')
+                    logger.debug(f"Found next page URL: {next_url}")
+                    return next_url
     
     logger.debug("No next page URL found")
     return None

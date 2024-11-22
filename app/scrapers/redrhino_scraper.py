@@ -165,15 +165,17 @@ def handle_redrhino_site(current_url, soup, domain_dir, limit, headers):
         product_links = []
         for link in soup.find_all('a', href=True):
             if '/firework/' in link['href']:
-                product_links.append(link['href'])
+                # Make sure we have absolute URLs
+                full_url = link['href'] if link['href'].startswith(('http://', 'https://')) else urljoin(current_url, link['href'])
+                product_links.append(full_url)
                 
         product_links = list(set(product_links))  # Remove duplicates
         logger.info(f"Found {len(product_links)} unique product links")
         
+        # Process each product
         for product_url in product_links:
             if limit != -1 and successful_downloads >= limit:
-                logger.info(f"Reached limit of {limit} successful products")
-                return None
+                return None  # Stop if we've hit our limit
                 
             try:
                 # Get product page
@@ -284,10 +286,47 @@ def handle_redrhino_site(current_url, soup, domain_dir, limit, headers):
             
         logger.info(f"Completed processing {successful_downloads} products")
         
+        # Only look for next page if we haven't hit our limit
+        if limit == -1 or successful_downloads < limit:
+            next_url = get_next_page_url(soup, current_url)
+            if next_url and next_url != current_url:  # Make sure we're not stuck on same page
+                logger.info(f"Found next page: {next_url}")
+                return next_url
+                
+        logger.info("No more product links found and no next page. Stopping scraper.")
+        return None
+        
     except Exception as e:
         logger.error(f"Error processing Red Rhino page: {str(e)}")
         logger.error(f"Error details:", exc_info=True)
-        
+        return None
+
+def get_next_page_url(soup, base_url):
+    """Extract the next page URL if it exists"""
+    logger.info("Looking for next page...")
+    
+    # Check if we're already on a page number
+    current_page = 1
+    if '/page/' in base_url:
+        try:
+            current_page = int(base_url.split('/page/')[1].rstrip('/'))
+        except:
+            pass
+            
+    # Construct next page URL
+    next_page = current_page + 1
+    base_path = base_url.split('/page/')[0].rstrip('/')
+    next_url = f"{base_path}/page/{next_page}/"
+    
+    # Verify the next page exists by checking if current page has products
+    product_links = [link['href'] for link in soup.find_all('a', href=True) 
+                    if '/firework/' in link['href']]
+    
+    if product_links:
+        logger.info(f"Found next page URL: {next_url}")
+        return next_url
+    
+    logger.info("No more products found, stopping pagination")
     return None
 
 def scrape_website(url, limit=5, base_dir=None, headers=None):
