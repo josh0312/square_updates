@@ -1,0 +1,7 @@
+Collecting SQLAlchemy
+  Downloading SQLAlchemy-2.0.36-cp313-cp313-macosx_10_13_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./venv/lib/python3.13/site-packages (from SQLAlchemy) (4.12.2)
+Downloading SQLAlchemy-2.0.36-cp313-cp313-macosx_10_13_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 3.6 MB/s eta 0:00:00
+Installing collected packages: SQLAlchemy
+Successfully installed SQLAlchemy-2.0.36

@@ -1,20 +1,45 @@
 websites:
   - name: Winco Fireworks Texas
     url: https://www.wincofireworks.com/fireworks/?swoof=1&stock_location=texas
+    scraper: winco_scraper.py
     enabled: true
-    limit: 0
-    note: "Uses WordPress/WooCommerce structure with srcset attributes"
-    
+    limit: 2
+    note: >
+      Uses WordPress/WooCommerce structure with srcset attributes.
+      Product Metadata:
+        - Title: h2.woocommerce-loop-product__title
+        - Price: span.price
+        - SKU: span.sku
+        - Categories: nav.woocommerce-breadcrumb
+        - Description: div.woocommerce-product-details__short-description
+        - Stock Status: p.stock
+        - Product Details:
+          - Duration: Found in description
+          - Shot Count: Found in description or title
+          - Effects: Found in description
+          - Size: Found in description
+        - Additional Fields:
+          - Warehouse Location: data-location attribute
+          - Brand: Found in product categories
+          - Product Type: Found in product categories
+      Images:
+        - Main Product Image: img.wp-post-image
+        - Gallery Images: div.woocommerce-product-gallery__image
+        - High-res URLs in srcset attribute
+      Pagination: Standard WooCommerce with ?page=X parameter
+
   - name: Red Rhino Fireworks
     url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
-    enabled: true
-    limit: 0
+    scraper: redrhino_scraper.py
+    enabled: false
+    limit: 2
     note: "Uses WordPress/WooCommerce structure with srcset and data-large_image attributes"
 
   - name: World Class Fireworks
     url: https://www.worldclassfireworks.com/fireworks/
-    enabled: true
-    limit: 0
+    scraper: worldclass_scraper.py
+    enabled: false
+    limit: 2
     note: >
       Uses custom Shopify structure.
       Pagination: Uses 'Load More' button with data-url attribute.
@@ -26,8 +51,9 @@ websites:
 
   - name: Pyro Buy Fireworks
     url: https://www.pyrobuy.com/products.asp?sid=1&bid=1
-    enabled: true
-    limit: 10
+    scraper: pyrobuy_scraper.py
+    enabled: false
+    limit: 2
     note: >
       Uses classic ASP structure with query parameters.
       Product Links: Found in table cells with 'MORE' links.
@@ -36,6 +62,37 @@ websites:
       Categories: Uses sid parameter for sections, bid for brands.
       Structure: Table-based layout with product cells.
       Detail Pages: Products have detail pages with larger images.
+
+  - name: Raccoon Fireworks
+    url: https://www.raccoonfireworksusa.com/raccoon-1-4g-1
+    scraper: raccoon_scraper.py
+    enabled: false
+    limit: 2
+    note: >
+      Uses Wix platform with dynamic product pages.
+      Product Links: Found in <a> tags with '/product-page/' in href.
+      Images: Uses wixstatic.com CDN with configurable image parameters.
+      Pagination: Uses query parameter '?page=X' for page numbers.
+      Product Images: Found in multiple locations:
+        - wix-image with id="comp-image"
+        - div with data-mesh-id containing "SITE_PAGES"
+        - Any wixstatic.com media URLs not containing 'button', 'logo', 'icon'
+      Image URL Modifications:
+        - Replace '/v1/fill/[^/]+/' with '/v1/fill/w_1500,h_1500,al_c/'
+        - Remove blur effects and other constraints
+      Product Metadata:
+        - Title: h1 tag with data-hook="product-title"
+        - Price: span with data-hook="product-price"
+        - SKU: span with data-hook="product-sku"
+        - Description: div with data-hook="product-description"
+        - Category: Found in breadcrumb with data-hook="breadcrumbs"
+        - Stock Status: span with data-hook="product-inventory-status"
+        - Weight/Size: Often in product description
+        - Effects: Often in product description
+      Database:
+        - Products are stored with site_name and product_name as unique identifiers
+        - Updates existing products if data changes
+        - Stores both image_url and local_image_path
 
   # Add more websites as needed:
   # - name: Store Name
