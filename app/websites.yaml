@@ -31,14 +31,30 @@ websites:
   - name: Red Rhino Fireworks
     url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
     scraper: redrhino_scraper.py
-    enabled: true
-    limit: 2
-    note: "Uses WordPress/WooCommerce structure with srcset and data-large_image attributes"
+    enabled: false
+    limit: 3
+    note: >
+      Uses WordPress/Elementor structure.
+      Product Images: Found in multiple locations:
+        - div.elementor-widget-image img tags
+        - figure elements with img tags
+        - data-src attributes
+        - Images are in year-based folders: /wp-content/uploads/YYYY/MM/
+      Product Metadata:
+        - Title: h1.elementor-heading-title
+        - SKU: Found in text content
+        - Description: Found in text content
+      Image Handling:
+        - Skips logo images (RR_brass)
+        - Skips header/footer/banner images
+        - Supports .jpg, .png, and .webp formats
+      Directory Structure:
+        - Images stored without www. prefix in domain folder
 
   - name: World Class Fireworks
     url: https://www.worldclassfireworks.com/fireworks/
     scraper: worldclass_scraper.py
-    enabled: false
+    enabled: true
     limit: 2
     note: >
       Uses custom Shopify structure.

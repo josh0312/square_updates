@@ -64,21 +64,31 @@ def process_redrhino_product(product_name, product_url, image_url, product_soup,
         # Download image
         local_image_path = None
         if image_url:
-            filename = os.path.basename(image_url).split('?')[0]  # Remove query parameters
+            # Extract filename from URL, handling query parameters
+            filename = os.path.basename(image_url.split('?')[0])
+            
+            # Create full filepath
             filepath = os.path.join(domain_dir, filename)
             local_image_path = filepath
             
+            # Only download if file doesn't exist
             if not os.path.exists(filepath):
                 try:
                     response = requests.get(image_url, headers=headers, verify=False, timeout=10)
                     if response.status_code == 200:
+                        # Ensure directory exists
+                        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                        
+                        # Write file
                         with open(filepath, 'wb') as f:
                             f.write(response.content)
                         log_image_download(logger, "success", filename)
                     else:
+                        logger.error(f"Failed to download image, status code: {response.status_code}")
                         log_image_download(logger, "failed", filename)
                 except Exception as e:
                     logger.error(f"Failed to download image: {str(e)}")
+                    local_image_path = None
             else:
                 log_image_download(logger, "exists", filename)
         
@@ -138,10 +148,9 @@ def handle_redrhino_site(current_url, soup, domain_dir, limit, headers):
     """Handle Red Rhino Fireworks site"""
     logger.info("Using Red Rhino specific approach...")
     
-    # Define images to skip
+    # Define images to skip - exact matches
     SKIP_IMAGES = [
-        'RR_brass.png',
-        'RR_brass.png.webp',
+        'RR_brass',  # Changed to match any version of the brass logo
         'logo',
         'header',
         'footer',
@@ -181,42 +190,91 @@ def handle_redrhino_site(current_url, soup, domain_dir, limit, headers):
                 if product_name:
                     logger.info(f"Found product: {product_name}")
                     
-                    # Find image URL - Red Rhino uses lazy loading
+                    # Find image URL - Try multiple approaches
                     image_url = None
-                    img_elements = product_soup.find_all('img')
-                    for img in img_elements:
-                        # Check various attributes for the real image URL
-                        possible_urls = [
-                            img.get('data-src'),
-                            img.get('data-lazy-src'),
-                            img.get('src')
-                        ]
-                        
-                        for url in possible_urls:
-                            if url and not url.startswith('data:'):
-                                # Skip common site images and small thumbnails
-                                if any(skip in url.lower() for skip in SKIP_IMAGES):
-                                    continue
-                                    
-                                # Only accept image URLs that look like product images
-                                if ('.jpg' in url.lower() or '.png' in url.lower() or '.webp' in url.lower()):
-                                    image_url = url
-                                    break
-                        
+                    
+                    # First try: Look for product images in specific sections
+                    product_sections = product_soup.find_all('div', class_='elementor-widget-image')
+                    for section in product_sections:
+                        img_tags = section.find_all('img')
+                        for img in img_tags:
+                            src = img.get('src', '')
+                            if not src:
+                                continue
+                                
+                            # Skip immediately if it's the brass logo
+                            if 'RR_brass' in src:
+                                logger.debug(f"Skipping brass logo image: {src}")
+                                continue
+                                
+                            # Skip other unwanted images
+                            if any(skip in src.lower() for skip in SKIP_IMAGES[1:]):  # Skip first item (RR_brass)
+                                logger.debug(f"Skipping unwanted image: {src}")
+                                continue
+                                
+                            if '/wp-content/uploads/202' in src:
+                                image_url = src
+                                logger.debug(f"Found potential product image: {image_url}")
+                                break
                         if image_url:
                             break
                     
+                    # Second try: Look for images in figure elements
+                    if not image_url:
+                        figures = product_soup.find_all('figure')
+                        for figure in figures:
+                            img = figure.find('img')
+                            if img:
+                                src = img.get('src', '')
+                                if not src:
+                                    continue
+                                    
+                                # Skip brass logo
+                                if 'RR_brass' in src:
+                                    logger.debug(f"Skipping brass logo image: {src}")
+                                    continue
+                                    
+                                if '/wp-content/uploads/202' in src and not any(skip in src.lower() for skip in SKIP_IMAGES[1:]):
+                                    image_url = src
+                                    logger.debug(f"Found potential product image in figure: {image_url}")
+                                    break
+                    
+                    # Third try: Look for data-src attributes
+                    if not image_url:
+                        for img in product_soup.find_all('img', {'data-src': True}):
+                            src = img['data-src']
+                            
+                            # Skip brass logo
+                            if 'RR_brass' in src:
+                                logger.debug(f"Skipping brass logo image: {src}")
+                                continue
+                                
+                            if '/wp-content/uploads/202' in src and not any(skip in src.lower() for skip in SKIP_IMAGES[1:]):
+                                image_url = src
+                                logger.debug(f"Found potential product image from data-src: {image_url}")
+                                break
+                    
                     if image_url:
-                        logger.info(f"Found image URL: {image_url}")
-                        was_updated = process_redrhino_product(
-                            product_name, product_url, image_url, 
-                            product_soup, domain_dir, headers
-                        )
-                        if was_updated:
-                            successful_downloads += 1
-                            logger.info(f"Successfully processed {successful_downloads} of {limit if limit != -1 else 'unlimited'}")
-                            if limit != -1 and successful_downloads >= limit:
-                                return None
+                        # Final check to ensure we're not using the brass logo
+                        if 'RR_brass' not in image_url:
+                            logger.info(f"Found valid product image URL: {image_url}")
+                            was_updated = process_redrhino_product(
+                                product_name, product_url, image_url, 
+                                product_soup, domain_dir, headers
+                            )
+                            if was_updated:
+                                successful_downloads += 1
+                                logger.info(f"Successfully processed {successful_downloads} of {limit if limit != -1 else 'unlimited'}")
+                                if limit != -1 and successful_downloads >= limit:
+                                    return None
+                        else:
+                            logger.warning(f"Skipping brass logo image that made it through filters: {image_url}")
+                    else:
+                        logger.warning(f"No valid product image found for: {product_name}")
+                        logger.debug("HTML content around product image area:")
+                        image_area = product_soup.find('div', class_='elementor-widget-container')
+                        if image_area:
+                            logger.debug(image_area.prettify())
                                 
             except requests.exceptions.RequestException as e:
                 logger.error(f"Error fetching product {product_url}: {str(e)}")
@@ -239,8 +297,8 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
 
-    # Create domain directory for images
-    domain = urlparse(url).netloc
+    # Create domain directory for images - remove www. prefix
+    domain = urlparse(url).netloc.replace('www.', '')
     domain_dir = os.path.join(base_dir, domain) if base_dir else domain
     os.makedirs(domain_dir, exist_ok=True)
     

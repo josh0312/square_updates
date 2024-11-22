@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 import re
 import logging
 from sqlalchemy import create_engine
@@ -9,304 +9,327 @@ from sqlalchemy.orm import sessionmaker
 from models.product import Product, Base
 from datetime import datetime
 import os
-from urllib.parse import urlparse
-from utils.logger import setup_logger, log_product_found, log_image_download, log_database_update, log_metadata
+from utils.logger import log_product_found, log_image_download, log_database_update, log_metadata
 
-logger = setup_logger(__name__)
+logger = logging.getLogger(__name__)
 
 # Database setup
 engine = create_engine('sqlite:///fireworks.db')
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 
-def scrape_website(url, limit=5, base_dir=None, headers=None):
-    # Set default headers if none provided
-    if headers is None:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive',
-        }
+def extract_effects(description):
+    """Extract effects from product description"""
+    if not description:
+        return None
+        
+    effects = []
+    desc_text = description.lower()
     
-    # Use the passed base_dir
-    BASE_DIR = base_dir
+    # Extract shot count if present
+    shot_match = re.search(r'(\d+)\s*(?:shot|shots)', desc_text)
+    if shot_match:
+        effects.append(f"Shot Count: {shot_match.group(0)}")
+    
+    # Extract specific effects
+    if "effects:" in desc_text:
+        effects_section = desc_text.split("effects:")[1].split(".")[0]
+        effects.append(effects_section.strip())
+        
+    return '\n'.join(effects) if effects else None
 
-    def get_domain_folder(url):
-        """Extract domain name from URL and create folder"""
-        parsed_url = urlparse(url)
-        domain = parsed_url.netloc.replace('www.', '')
-        domain_dir = os.path.join(BASE_DIR, domain)
-        os.makedirs(domain_dir, exist_ok=True)
-        return domain_dir
-
-    def get_filename_from_url(url):
-        """Convert image URL to a clean filename"""
-        parsed_url = urlparse(url)
-        path = parsed_url.path
-        original_name = os.path.splitext(os.path.basename(path))[0]
-        clean_name = re.sub(r'[^a-zA-Z0-9]', '_', original_name)
-        clean_name = re.sub(r'_+', '_', clean_name).strip('_').lower()
-        return f"{clean_name}.jpg"
-
-    def download_image(url, domain_dir):
-        try:
-            filename = get_filename_from_url(url)
+def process_worldclass_product(product_name, product_url, image_url, product_soup, domain_dir, headers):
+    """Process a single World Class product"""
+    try:
+        session = Session()
+        log_product_found(logger, product_name, product_url)
+        
+        # Get metadata
+        sku = None
+        description = None
+        
+        # Look for SKU in product meta
+        sku_elem = product_soup.find('div', text=re.compile(r'SKU:', re.I))
+        if sku_elem:
+            sku = sku_elem.text.replace('SKU:', '').strip()
+            
+        # Get description
+        desc_elem = product_soup.find('div', class_='entry-content')
+        if desc_elem:
+            description = desc_elem.text.strip()
+            
+        effects = extract_effects(description)
+        
+        # Download image
+        local_image_path = None
+        if image_url:
+            # Extract filename from URL
+            filename = os.path.basename(image_url.split('?')[0])
+            
+            # Create full filepath
             filepath = os.path.join(domain_dir, filename)
+            local_image_path = filepath
             
-            if os.path.exists(filepath):
-                print(f"Skipping existing file: {filename}")
-                return True
-            
-            response = requests.get(url)
-            response.raise_for_status()
-            
-            with open(filepath, 'wb') as f:
-                f.write(response.content)
-            print(f"Successfully downloaded: {filename}")
-            return True
-        except Exception as e:
-            print(f"Error downloading {url}: {str(e)}")
-            return False
-
-    def get_image_url(img_tag, base_url):
-        """Try different attributes to find a valid image URL"""
-        possible_attrs = [
-            'data-src', 'src', 'data-original', 'data-lazy-src', 
-            'data-lazy', 'srcset', 'data-large_image', 'data-bgset'
-        ]
+            # Only download if file doesn't exist
+            if not os.path.exists(filepath):
+                try:
+                    response = requests.get(image_url, headers=headers, verify=False, timeout=10)
+                    if response.status_code == 200:
+                        # Ensure directory exists
+                        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                        
+                        # Write file
+                        with open(filepath, 'wb') as f:
+                            f.write(response.content)
+                        log_image_download(logger, "success", filename)
+                    else:
+                        logger.error(f"Failed to download image, status code: {response.status_code}")
+                        log_image_download(logger, "failed", filename)
+                except Exception as e:
+                    logger.error(f"Failed to download image: {str(e)}")
+                    local_image_path = None
+            else:
+                log_image_download(logger, "exists", filename)
         
-        for attr in possible_attrs:
-            url = img_tag.get(attr)
-            if url:
-                if attr == 'srcset':
-                    srcset_urls = url.split(',')
-                    if srcset_urls:
-                        url = srcset_urls[-1].split()[0]
-                
-                if url.startswith('data:'):
-                    continue
-                
-                if any(skip in url.lower() for skip in [
-                    'icon', '-50x', '-150x', '-300x', 'thumb', 
-                    '50x50', '150x150', '300x300'
-                ]):
-                    continue
-                    
-                if not url.startswith(('http://', 'https://')):
-                    url = urljoin(base_url, url)
-                    
-                return url
-        
-        return None
-
-    def get_next_page_url(soup, base_url):
-        """Extract the next page URL if it exists"""
-        logger.debug("Looking for next page link...")
-        
-        load_more = soup.find('button', {'data-load-more': True}) or \
-                   soup.find('button', class_=lambda x: x and 'load-more' in x.lower())
-        if load_more:
-            data_url = load_more.get('data-url')
-            if data_url:
-                next_url = urljoin(base_url, data_url)
-                logger.debug(f"Found Shopify load more URL: {next_url}")
-                return next_url
-        
-        logger.debug("No next page URL found")
-        return None
-
-    def count_existing_images(domain_dir):
-        """Count how many images already exist in the directory"""
-        if not os.path.exists(domain_dir):
-            return 0
-        return len([f for f in os.listdir(domain_dir) if f.endswith(('.jpg', '.png', '.jpeg'))])
-    
-    def get_worldclass_product_details(product_url):
-        response = requests.get(product_url, headers=headers, verify=False)
-        soup = BeautifulSoup(response.text, 'html.parser')
-
-        product_name = soup.select_one('h1.product__title').text.strip()
-        price = soup.select_one('span.price').text.strip()
-        description = soup.select_one('div.product__description').text.strip()
-        
-        # Extract other product details as needed
-        
-        return {
-            'name': product_name,
-            'price': price,
+        # Store in database
+        product_data = {
+            'site_name': 'World Class Fireworks',
+            'product_name': product_name,
+            'sku': sku,
             'description': description,
-            # Add other extracted details
+            'effects': effects,
+            'product_url': product_url,
+            'image_url': image_url,
+            'local_image_path': local_image_path
+        }
+        
+        # Log metadata found
+        log_metadata(logger, product_data)
+        
+        # Check if product exists and update/insert as needed
+        existing_product = session.query(Product).filter_by(
+            site_name='World Class Fireworks',
+            product_name=product_name
+        ).first()
+        
+        if existing_product:
+            changes = {}
+            for key, value in product_data.items():
+                if getattr(existing_product, key) != value:
+                    changes[key] = value
+                    setattr(existing_product, key, value)
+                    
+            if changes:
+                existing_product.updated_at = datetime.utcnow()
+                session.commit()
+                log_database_update(logger, "updated", product_name, changes)
+                return True
+            else:
+                log_database_update(logger, "unchanged", product_name)
+                return False
+        else:
+            new_product = Product(**product_data)
+            session.add(new_product)
+            session.commit()
+            log_database_update(logger, "new", product_name)
+            return True
+            
+    except Exception as e:
+        logger.error(f"❌ Error processing World Class product: {str(e)}")
+        if session:
+            session.rollback()
+        return False
+    finally:
+        if session:
+            session.close()
+
+def handle_worldclass_site(current_url, soup, domain_dir, limit, headers):
+    """Handle World Class Fireworks site"""
+    logger.info("Using World Class specific approach...")
+    
+    successful_downloads = 0
+    
+    try:
+        # Start with artillery shells category directly
+        artillery_url = "https://www.worldclassfireworks.com/fireworks/artillery-shells/"
+        logger.info(f"Processing artillery shells category: {artillery_url}")
+        
+        try:
+            response = requests.get(artillery_url, headers=headers, verify=False, timeout=10)
+            category_soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Find product links in category page
+            product_links = []
+            
+            # Look for links in the grid
+            grid = category_soup.find('div', class_='grid')
+            if grid:
+                for link in grid.find_all('a', href=True):
+                    href = link['href']
+                    if '/fireworks/artillery-shells/' in href and href.count('/') >= 4:
+                        product_links.append(href)
+                        logger.debug(f"Found product link in grid: {href}")
+            
+            # Also look for links in product-single divs
+            product_divs = category_soup.find_all('div', class_='product-single')
+            for div in product_divs:
+                link = div.find('a', href=True)
+                if link and '/fireworks/artillery-shells/' in link['href']:
+                    product_links.append(link['href'])
+                    logger.debug(f"Found product link in product-single: {link['href']}")
+            
+            product_links = list(set(product_links))  # Remove duplicates
+            logger.info(f"Found {len(product_links)} products in artillery shells category")
+            
+            # Process each product
+            for product_url in product_links:
+                if limit != -1 and successful_downloads >= limit:
+                    logger.info(f"Reached limit of {limit} successful products")
+                    return None
+                
+                try:
+                    logger.info(f"Fetching product page: {product_url}")
+                    response = requests.get(product_url, headers=headers, verify=False, timeout=10)
+                    product_soup = BeautifulSoup(response.text, 'html.parser')
+                    
+                    # Get product name
+                    product_name = None
+                    title_elem = product_soup.find('h2')  # They use h2 for product titles
+                    if title_elem:
+                        product_name = title_elem.text.strip()
+                    
+                    if product_name:
+                        logger.info(f"Found product: {product_name}")
+                        
+                        # Find image URL - Try multiple approaches
+                        image_url = None
+                        
+                        # First try: Look in product-detail-image div
+                        logger.debug("Looking for product-detail-image...")
+                        detail_image_div = product_soup.find('div', class_='product-detail-image')
+                        if detail_image_div:
+                            img = detail_image_div.find('img')
+                            if img:
+                                image_url = img.get('src')
+                                logger.debug(f"Found detail image: {image_url}")
+                        
+                        # Second try: Look in data-fancybox
+                        if not image_url:
+                            logger.debug("Looking for data-fancybox...")
+                            fancybox = product_soup.find('a', {'data-fancybox': True})
+                            if fancybox:
+                                image_url = fancybox.get('data-src') or fancybox.get('href')
+                                logger.debug(f"Found fancybox image: {image_url}")
+                        
+                        # Third try: Look for any wp-content/uploads image
+                        if not image_url:
+                            logger.debug("Looking for wp-content/uploads images...")
+                            for img in product_soup.find_all('img'):
+                                src = img.get('src', '')
+                                if '/wp-content/uploads/' in src and not src.endswith(('-150x150', '-300x300', '-thumbnail')):
+                                    image_url = src
+                                    logger.debug(f"Found upload image: {image_url}")
+                                    break
+                        
+                        if image_url:
+                            # Clean up the URL if needed
+                            if '?' in image_url:
+                                image_url = image_url.split('?')[0]
+                            
+                            logger.info(f"Found image URL: {image_url}")
+                            
+                            # Download image
+                            try:
+                                # Extract filename from URL
+                                filename = os.path.basename(image_url)
+                                filepath = os.path.join(domain_dir, filename)
+                                
+                                if not os.path.exists(filepath):
+                                    logger.info(f"Downloading image to: {filepath}")
+                                    img_response = requests.get(image_url, headers=headers, verify=False, timeout=10)
+                                    if img_response.status_code == 200:
+                                        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                                        with open(filepath, 'wb') as f:
+                                            f.write(img_response.content)
+                                        logger.info(f"Successfully downloaded image: {filename}")
+                                        successful_downloads += 1
+                                    else:
+                                        logger.error(f"Failed to download image, status code: {img_response.status_code}")
+                                else:
+                                    logger.info(f"Image already exists: {filename}")
+                                    
+                            except Exception as e:
+                                logger.error(f"Error downloading image: {str(e)}")
+                        else:
+                            logger.warning(f"No valid product image found for: {product_name}")
+                            logger.debug("All img tags found:")
+                            for img in product_soup.find_all('img'):
+                                logger.debug(f"Image tag: {img}")
+                                
+                except requests.exceptions.RequestException as e:
+                    logger.error(f"Error fetching product {product_url}: {str(e)}")
+                    continue
+                
+                time.sleep(1)  # Polite delay between products
+            
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error fetching artillery shells category: {str(e)}")
+        
+        logger.info(f"Completed processing {successful_downloads} products")
+        
+    except Exception as e:
+        logger.error(f"Error processing World Class page: {str(e)}")
+        logger.error(f"Error details:", exc_info=True)
+        
+    return None
+
+def scrape_website(url, limit=5, base_dir=None, headers=None):
+    """Main scraper function for World Class"""
+    if not headers:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
 
-    def process_worldclass_product(product_name, product_url, image_url, product_soup, domain_dir, headers):
-        try:
-            session = Session()
-            logger.info(f"Processing World Class product: {product_name}")
-            
-            # Get metadata
-            product_details = get_worldclass_product_details(product_url)
-            
-            # Process image if URL found
-            filepath = None
-            image_downloaded = False
-            if image_url:
-                clean_name = re.sub(r'[^a-zA-Z0-9]', '_', product_name)
-                clean_name = re.sub(r'_+', '_', clean_name).strip('_').lower()
-                filename = f"{clean_name}.jpg"
-                filepath = os.path.join(domain_dir, filename)
-                
-                if not os.path.exists(filepath):
-                    image_response = requests.get(image_url, headers=headers, verify=False)
-                    if image_response.status_code == 200 and len(image_response.content) > 5000:
-                        with open(filepath, 'wb') as f:
-                            f.write(image_response.content)
-                        logger.info(f"Downloaded image: {filename}")
-                        image_downloaded = True
-            
-            # Check if product exists
-            existing_product = session.query(Product).filter_by(
-                site_name='World Class Fireworks',
-                product_name=product_name
-            ).first()
-            
-            product_data = {
-                'site_name': 'World Class Fireworks',
-                'product_name': product_name,
-                'price': product_details.get('price'),
-                'description': product_details.get('description'),
-                'product_url': product_url,
-                'image_url': image_url,
-                'local_image_path': filepath
-            }
-            
-            if existing_product:
-                # Update if needed
-                has_changes = False
-                for key, value in product_data.items():
-                    if getattr(existing_product, key) != value:
-                        setattr(existing_product, key, value)
-                        has_changes = True
-                
-                if has_changes:
-                    existing_product.updated_at = datetime.utcnow()
-                    session.commit()
-                    logger.info(f"Updated product: {product_name}")
-                    return True
-                return image_downloaded
-            else:
-                # Create new product
-                new_product = Product(**product_data)
-                session.add(new_product)
-                session.commit()
-                logger.info(f"Added new product: {product_name}")
-                return True
-                
-        except Exception as e:
-            logger.error(f"Error processing World Class product: {str(e)}")
-            if session:
-                session.rollback()
-            return False
-        finally:
-            if session:
-                session.close()
+    # Create domain directory for images
+    domain = urlparse(url).netloc.replace('www.', '')
+    domain_dir = os.path.join(base_dir, domain) if base_dir else domain
+    os.makedirs(domain_dir, exist_ok=True)
     
-    # Call the World Class-specific functions
-    domain_dir = get_domain_folder(url)
     logger.info(f"Fetching content from: {url}")
     logger.info(f"Saving images to: {domain_dir}")
     
-    response = requests.get(url, headers=headers, verify=False)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, 'html.parser')
+    # Count existing images
+    existing_images = len([f for f in os.listdir(domain_dir) if os.path.isfile(os.path.join(domain_dir, f))])
+    logger.info(f"Found {existing_images} existing images in directory")
     
-    existing_count = count_existing_images(domain_dir)
-    logger.info(f"Found {existing_count} existing images in directory")
-    
-    successful_downloads = 0
+    page = 1
     current_url = url
-    page_number = 1
     
-    while current_url and (limit == -1 or successful_downloads < limit):
-        logger.info(f"\nProcessing page {page_number}...")
-        response = requests.get(current_url, headers=headers, verify=False)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
+    while current_url:
+        logger.info(f"\nProcessing page {page}...")
         
-        # Find all product links
-        product_links = soup.select('a.product-item__link')
-        
-        unique_product_links = list(set([link.get('href') for link in product_links if link.get('href')]))
-        logger.info(f"Found {len(unique_product_links)} unique product links")
-        
-        if len(unique_product_links) == 0:
-            # Get next page URL
-            next_url = get_next_page_url(soup, current_url)
-            if next_url:
-                logger.info(f"No product links found on current page. Moving to next page: {next_url}")
-                current_url = next_url
-                page_number += 1
-                time.sleep(2)
-                continue
-            else:
+        try:
+            response = requests.get(current_url, headers=headers, verify=False)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            next_url = handle_worldclass_site(current_url, soup, domain_dir, limit, headers)
+            
+            if not next_url:
                 logger.info("No more product links found and no next page. Stopping scraper.")
                 break
-        
-        # Process each product page
-        for product_url in unique_product_links:
-            if limit != -1 and successful_downloads >= limit:
-                break
                 
-            if not product_url.startswith(('http://', 'https://')):
-                product_url = urljoin(current_url, product_url)
+            current_url = next_url
+            page += 1
+            time.sleep(1)  # Polite delay between pages
             
-            logger.info(f"Visiting product page: {product_url}")
-            try:
-                product_response = requests.get(product_url, headers=headers, verify=False)
-                product_response.raise_for_status()
-                product_soup = BeautifulSoup(product_response.text, 'html.parser')
-                
-                product_details = get_worldclass_product_details(product_url)
-                product_name = product_details.get('name')
-                
-                if product_name:
-                    logger.info(f"Found product: {product_name}")
-                    
-                    # Get product image
-                    image_url = None
-                    main_image = product_soup.select_one('img.product__media-item')
-                    if main_image:
-                        image_url = main_image.get('src')
-                    
-                    if image_url:
-                        logger.info(f"Found image URL: {image_url}")
-                        # Process the product and check if anything was updated
-                        was_updated = process_worldclass_product(product_name, product_url, image_url, product_soup, domain_dir, headers)
-                        if was_updated:
-                            successful_downloads += 1
-                            logger.info(f"Successfully processed product {successful_downloads} of {limit if limit != -1 else 'unlimited'}")
-                        else:
-                            logger.info("Product already exists with no changes")
-                    else:
-                        logger.warning(f"No image found for product: {product_name}")
+        except Exception as e:
+            logger.error(f"Error processing page {page}: {str(e)}")
+            break
             
-                time.sleep(2)  # Delay between product pages
-                
-            except Exception as e:
-                logger.error(f"Error processing product page: {str(e)}")
-                continue
-        
-        # Get next page URL
-        current_url = get_next_page_url(soup, current_url)
-        if current_url:
-            logger.info(f"Found next page: {current_url}")
-            page_number += 1
-            time.sleep(2)
-        else:
-            logger.info("No more pages found.")
-    
-    logger.info(f"\nFinal Summary:")
-    logger.info(f"Pages processed: {page_number}")
-    logger.info(f"Existing images found: {existing_count}")
-    logger.info(f"New images downloaded: {successful_downloads}")
-    logger.info(f"Total images in directory: {count_existing_images(domain_dir)}") 
+    # Log final summary
+    final_image_count = len([f for f in os.listdir(domain_dir) if os.path.isfile(os.path.join(domain_dir, f))])
+    logger.info("\nFinal Summary:")
+    logger.info(f"Pages processed: {page}")
+    logger.info(f"Existing images found: {existing_images}")
+    logger.info(f"New images downloaded: {final_image_count - existing_images}")
+    logger.info(f"Total images in directory: {final_image_count}") 

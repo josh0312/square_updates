@@ -1064,3 +1064,18 @@ Final Summary:
 2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - Existing images found: 0
 2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - New images downloaded: 0
 2024-11-22 10:29:55,664 - scrapers.redrhino_scraper - INFO - Total images in directory: 0
+2024-11-22 11:38:59,164 - scrapers.worldclass_scraper - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 11:38:59,165 - scrapers.worldclass_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 11:39:00,142 - scrapers.worldclass_scraper - INFO - Found 19 existing images in directory
+2024-11-22 11:39:00,143 - scrapers.worldclass_scraper - INFO - 
+Processing page 1...
+2024-11-22 11:39:00,851 - scrapers.worldclass_scraper - INFO - Found 0 unique product links
+2024-11-22 11:39:00,851 - scrapers.worldclass_scraper - DEBUG - Looking for next page link...
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - DEBUG - No next page URL found
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - 
+Final Summary:
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - Pages processed: 1
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - Existing images found: 19
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - New images downloaded: 0
+2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - Total images in directory: 19

@@ -134,10 +134,13 @@ To add a new website to the scraper:
 
 ## Acknowledgments
 
-- BeautifulSoup4 for HTML parsing
-- SQLAlchemy for database operations
-- Requests for HTTP operations
-- PyYAML for configuration management
+- Winco Fireworks (WooCommerce-based)
+- Red Rhino Fireworks (WordPress/Elementor-based)
+  - Supports year-based image folders
+  - Handles multiple image locations
+  - Filters out common site images
+- World Class Fireworks (Shopify-based)
+- Pyro Buy Fireworks (Classic ASP-based)
 
 ## Notes
 
