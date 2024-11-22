@@ -1,0 +1,48 @@
+websites:
+  - name: Winco Fireworks Texas
+    url: https://www.wincofireworks.com/fireworks/?swoof=1&stock_location=texas
+    enabled: true
+    limit: 0
+    note: "Uses WordPress/WooCommerce structure with srcset attributes"
+    
+  - name: Red Rhino Fireworks
+    url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
+    enabled: true
+    limit: 0
+    note: "Uses WordPress/WooCommerce structure with srcset and data-large_image attributes"
+
+  - name: World Class Fireworks
+    url: https://www.worldclassfireworks.com/fireworks/
+    enabled: true
+    limit: 0
+    note: >
+      Uses custom Shopify structure.
+      Pagination: Uses 'Load More' button with data-url attribute.
+      Product Grid: Uses 'product-item' class.
+      Images: Found in '.product-item__image-container' with data-bgset attribute.
+      Detail Pages: Contains higher resolution images in '.product__media-item'.
+      Categories: Uses faceted filtering with 'collection-filters__item'.
+      AJAX: Site loads more products dynamically via JSON responses.
+
+  - name: Pyro Buy Fireworks
+    url: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+    enabled: true
+    limit: 10
+    note: >
+      Uses classic ASP structure with query parameters.
+      Product Links: Found in table cells with 'MORE' links.
+      Images: Direct image links in table cells.
+      Pagination: Uses numbered links at bottom (1,2,3...).
+      Categories: Uses sid parameter for sections, bid for brands.
+      Structure: Table-based layout with product cells.
+      Detail Pages: Products have detail pages with larger images.
+
+  # Add more websites as needed:
+  # - name: Store Name
+  #   url: https://store-url.com
+  #   enabled: true   # true means process this website
+  #   limit: 5        # Examples:
+                      # limit: -1  -> get all images from all pages
+                      # limit: 1   -> get just one image
+                      # limit: 50  -> get up to 50 images across all pages
+                      # limit: 0   -> skip all images but still process the site
