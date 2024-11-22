@@ -6,11 +6,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models.product import Base, Product
 import importlib
+import requests
 
 # Add logging configuration at the top of the file after imports
 def setup_logging():
     logging.basicConfig(
-        level=logging.DEBUG,
+        level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler('scraper.log'),
@@ -53,28 +54,34 @@ def load_websites():
 def scrape_all_websites():
     websites = load_websites()
     
-    if not websites:
-        print("No websites found in configuration file!")
-        return
-    
-    for site in websites:
-        if not site.get('enabled', True):
-            print(f"\nSkipping disabled website: {site['name']}")
+    for website in websites:
+        if not website.get('enabled', True):
             continue
             
-        print(f"\n{'='*50}")
-        print(f"Processing: {site['name']}")
-        print(f"{'='*50}")
-        
-        scraper_module = importlib.import_module(f"scrapers.{site['scraper'].replace('.py', '')}")
-        scraper_function = getattr(scraper_module, 'scrape_website')
-        
-        scraper_function(
-            url=site['url'],
-            limit=site.get('limit', 5),
-            base_dir=BASE_DIR,
-            headers=headers
-        )
+        try:
+            logging.info(f"\nAttempting to scrape {website['name']}...")
+            
+            # Remove .py extension if it exists in the scraper name
+            scraper_name = website['scraper'].replace('.py', '')
+            scraper_module = importlib.import_module(f"scrapers.{scraper_name}")
+            scraper_function = getattr(scraper_module, 'scrape_website')
+            
+            # Create website-specific directory
+            website_dir = BASE_DIR
+            
+            scraper_function(
+                website['url'],
+                limit=website.get('limit', -1),
+                base_dir=website_dir,
+                headers=headers
+            )
+            
+        except requests.exceptions.ConnectionError as e:
+            logging.error(f"Failed to connect to {website['name']}: {str(e)}")
+            continue
+        except Exception as e:
+            logging.error(f"Error scraping {website['name']}: {str(e)}")
+            continue
 
 if __name__ == "__main__":
     logger.info("Starting scraper...")

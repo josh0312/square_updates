@@ -1079,3 +1079,1040 @@ Final Summary:
 2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - Existing images found: 19
 2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - New images downloaded: 0
 2024-11-22 11:39:00,854 - scrapers.worldclass_scraper - INFO - Total images in directory: 19
+2024-11-22 14:43:28,829 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:43:28,830 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com
+2024-11-22 14:47:24,897 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:47:24,898 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:47:25,837 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:47:25,837 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:47:26,866 - scrapers.pyrobuy_scraper - INFO - Found 0 unique product links
+2024-11-22 14:47:26,866 - scrapers.pyrobuy_scraper - DEBUG - Looking for next page link...
+2024-11-22 14:47:26,868 - scrapers.pyrobuy_scraper - DEBUG - Found next page URL: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:47:26,868 - scrapers.pyrobuy_scraper - INFO - No product links found on current page. Moving to next page: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:47:28,870 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 2...
+2024-11-22 14:48:25,111 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:48:25,111 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:48:26,162 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:48:26,163 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:48:27,180 - scrapers.pyrobuy_scraper - INFO - Found 0 unique product links
+2024-11-22 14:48:27,180 - scrapers.pyrobuy_scraper - DEBUG - Looking for next page link...
+2024-11-22 14:48:27,181 - scrapers.pyrobuy_scraper - DEBUG - Found next page URL: http://www.pyrobuy.com/products.asp?sid=1&bid=1currentpage=2
+2024-11-22 14:48:27,181 - scrapers.pyrobuy_scraper - INFO - No product links found on current page. Moving to next page: http://www.pyrobuy.com/products.asp?sid=1&bid=1currentpage=2
+2024-11-22 14:48:29,185 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 2...
+2024-11-22 14:49:08,130 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:49:08,131 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:49:09,037 - scrapers.pyrobuy_scraper - DEBUG - Response content length: 23052
+2024-11-22 14:49:09,038 - scrapers.pyrobuy_scraper - DEBUG - Response content type: text/html; Charset=utf-8
+2024-11-22 14:49:09,064 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:49:09,064 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:49:09,941 - scrapers.pyrobuy_scraper - DEBUG - Page HTML content:
+2024-11-22 14:49:09,947 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/global.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="st
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found 110 total links
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: index.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://pyrobuy.com/index.php/firework-dealer-locations/
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: Member/login.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=6&bid=1&tag=2025
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=7&bid=1
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=8&bid=1
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=9&bid=1
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=10&bid=1
+2024-11-22 14:49:09,948 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=11&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=12&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=13&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=14&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=15&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=16&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=17&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=18&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=19&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=20&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=21&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=22&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=23&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=24&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=25&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=31&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=32&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=65&bid=1
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: /UploadFiles/Excel/Full_Product_List.xlsx
+2024-11-22 14:49:09,949 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=ALAMO
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Bellino
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blast Wave
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blastwave
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator Eco
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Great Grizzly
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Hero
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=JD fireworks
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Joker
+2024-11-22 14:49:09,950 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Keystone
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pro-Level: Dominator
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Buy
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Packed
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Raccoon
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Shock Wave
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Sly Dog
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:49:09,951 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=12
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=18
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=24
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=30
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:49:09,952 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=3
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=4
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=5
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=6
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=97
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=2&bid=2
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=3&bid=3
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=4&bid=4
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=5&bid=5
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=7
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=30
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:49:09,953 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp?id=21
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.facebook.com/pyrobuy/
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://instagram.com/pyrobuyfireworks
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.youtube.com/channel/UCfpfzOSpXLh2Wno8dLukTjw
+2024-11-22 14:49:09,954 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.tiktok.com/@dominatorfireworks
+2024-11-22 14:49:09,955 - scrapers.pyrobuy_scraper - DEBUG - Found 13 images
+2024-11-22 14:49:09,955 - scrapers.pyrobuy_scraper - DEBUG - Found 0 table cells
+2024-11-22 14:49:09,955 - scrapers.pyrobuy_scraper - INFO - Found 0 unique product links
+2024-11-22 14:49:09,955 - scrapers.pyrobuy_scraper - DEBUG - Looking for next page link...
+2024-11-22 14:49:09,957 - scrapers.pyrobuy_scraper - DEBUG - Found next page URL: http://www.pyrobuy.com/products.asp?sid=1&bid=1currentpage=2
+2024-11-22 14:49:09,957 - scrapers.pyrobuy_scraper - INFO - No product links found on current page. Moving to next page: http://www.pyrobuy.com/products.asp?sid=1&bid=1currentpage=2
+2024-11-22 14:49:11,962 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 2...
+2024-11-22 14:51:04,990 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:51:04,990 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:51:05,857 - scrapers.pyrobuy_scraper - DEBUG - Response content length: 23052
+2024-11-22 14:51:05,857 - scrapers.pyrobuy_scraper - DEBUG - Response content type: text/html; Charset=utf-8
+2024-11-22 14:51:05,882 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:51:05,883 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found 110 total links
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found link: index.asp
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:51:06,754 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://pyrobuy.com/index.php/firework-dealer-locations/
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: Member/login.asp
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=6&bid=1&tag=2025
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=7&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=8&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=9&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=10&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=11&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=12&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=13&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=14&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=15&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=16&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=17&bid=1
+2024-11-22 14:51:06,755 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=18&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=19&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=20&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=21&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=22&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=23&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=24&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=25&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=31&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=32&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=65&bid=1
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: /UploadFiles/Excel/Full_Product_List.xlsx
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=ALAMO
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Bellino
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blast Wave
+2024-11-22 14:51:06,756 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blastwave
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator Eco
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Great Grizzly
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Hero
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=JD fireworks
+2024-11-22 14:51:06,757 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Joker
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Keystone
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pro-Level: Dominator
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Buy
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Packed
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Raccoon
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Shock Wave
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Sly Dog
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:51:06,758 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:51:06,759 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=12
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=18
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=24
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=30
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=3
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=4
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=5
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=6
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=97
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=2&bid=2
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=3&bid=3
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=4&bid=4
+2024-11-22 14:51:06,760 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=5&bid=5
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=7
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=30
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp?id=21
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.facebook.com/pyrobuy/
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://instagram.com/pyrobuyfireworks
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.youtube.com/channel/UCfpfzOSpXLh2Wno8dLukTjw
+2024-11-22 14:51:06,761 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.tiktok.com/@dominatorfireworks
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Found 13 images
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:51:06,762 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:51:06,763 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:51:06,763 - scrapers.pyrobuy_scraper - DEBUG - Added product link from image parent: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:51:06,763 - scrapers.pyrobuy_scraper - INFO - Found 12 unique product links
+2024-11-22 14:51:06,763 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:51:08,584 - scrapers.pyrobuy_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 14:51:08,586 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:51:10,466 - scrapers.pyrobuy_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 14:51:10,469 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:51:12,414 - scrapers.pyrobuy_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 14:51:12,416 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:51:14,433 - scrapers.pyrobuy_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 14:51:14,435 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:54:43,449 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:54:43,450 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:54:44,388 - scrapers.pyrobuy_scraper - DEBUG - Response content length: 23052
+2024-11-22 14:54:44,389 - scrapers.pyrobuy_scraper - DEBUG - Response content type: text/html; Charset=utf-8
+2024-11-22 14:54:44,414 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:54:44,414 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:54:45,348 - scrapers.pyrobuy_scraper - DEBUG - Found 110 total links
+2024-11-22 14:54:45,348 - scrapers.pyrobuy_scraper - DEBUG - Found link: index.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://pyrobuy.com/index.php/firework-dealer-locations/
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: Member/login.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=6&bid=1&tag=2025
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=7&bid=1
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=8&bid=1
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=9&bid=1
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=10&bid=1
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=11&bid=1
+2024-11-22 14:54:45,349 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=12&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=13&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=14&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=15&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=16&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=17&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=18&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=19&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=20&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=21&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=22&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=23&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=24&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=25&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=31&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=32&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=65&bid=1
+2024-11-22 14:54:45,350 - scrapers.pyrobuy_scraper - DEBUG - Found link: /UploadFiles/Excel/Full_Product_List.xlsx
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=ALAMO
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Bellino
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blast Wave
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blastwave
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator Eco
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Great Grizzly
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Hero
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:54:45,351 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=JD fireworks
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Joker
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Keystone
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pro-Level: Dominator
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Buy
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Packed
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Raccoon
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Shock Wave
+2024-11-22 14:54:45,352 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Sly Dog
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:54:45,353 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=12
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=18
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=24
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=30
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=3
+2024-11-22 14:54:45,354 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=4
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=5
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=6
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=97
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=2&bid=2
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=3&bid=3
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=4&bid=4
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=5&bid=5
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=7
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=30
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp?id=21
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.facebook.com/pyrobuy/
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://instagram.com/pyrobuyfireworks
+2024-11-22 14:54:45,355 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.youtube.com/channel/UCfpfzOSpXLh2Wno8dLukTjw
+2024-11-22 14:54:45,356 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.tiktok.com/@dominatorfireworks
+2024-11-22 14:54:45,356 - scrapers.pyrobuy_scraper - INFO - Found 12 unique product links
+2024-11-22 14:54:45,356 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:54:46,220 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:54:48,220 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:54:49,116 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:54:51,120 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:54:52,398 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:54:54,403 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:54:55,999 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:54:58,004 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:54:59,267 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:55:01,269 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:55:02,204 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:55:04,210 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:55:05,407 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:55:07,408 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:55:08,350 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:55:10,355 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:55:11,550 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:55:13,554 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:55:14,544 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:57:39,893 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:57:39,893 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:57:41,452 - scrapers.pyrobuy_scraper - DEBUG - Response content length: 23052
+2024-11-22 14:57:41,453 - scrapers.pyrobuy_scraper - DEBUG - Response content type: text/html; Charset=utf-8
+2024-11-22 14:57:41,477 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:57:41,478 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found 110 total links
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: index.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://pyrobuy.com/index.php/firework-dealer-locations/
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: Member/login.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:57:42,410 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=6&bid=1&tag=2025
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=7&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=8&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=9&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=10&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=11&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=12&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=13&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=14&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=15&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=16&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=17&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=18&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=19&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=20&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=21&bid=1
+2024-11-22 14:57:42,411 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=22&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=23&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=24&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=25&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=31&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=32&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=65&bid=1
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: /UploadFiles/Excel/Full_Product_List.xlsx
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=ALAMO
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Bellino
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blast Wave
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blastwave
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator Eco
+2024-11-22 14:57:42,412 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Great Grizzly
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Hero
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=JD fireworks
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Joker
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Keystone
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pro-Level: Dominator
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Buy
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Packed
+2024-11-22 14:57:42,413 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Raccoon
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Shock Wave
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Sly Dog
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:57:42,414 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=12
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=18
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=24
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=30
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:57:42,415 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=3
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=4
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=5
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=6
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=97
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=2&bid=2
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=3&bid=3
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=4&bid=4
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=5&bid=5
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=7
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=30
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:57:42,416 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp?id=21
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.facebook.com/pyrobuy/
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://instagram.com/pyrobuyfireworks
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.youtube.com/channel/UCfpfzOSpXLh2Wno8dLukTjw
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.tiktok.com/@dominatorfireworks
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - INFO - Found 12 unique product links
+2024-11-22 14:57:42,417 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:57:43,268 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:57:43,273 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="3 Minute Fountain" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/MM7027.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel="stylesh
+2024-11-22 14:57:43,273 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: None, Image: http://pyrobuy.com/video/thumb/MM7027.png
+2024-11-22 14:57:43,276 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:57:45,282 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:57:46,160 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:57:46,165 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Snap Crackle &amp; Pop" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/DB-7021.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel="s
+2024-11-22 14:57:46,165 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: None, Image: http://pyrobuy.com/video/thumb/DB-7021.png
+2024-11-22 14:57:46,168 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:57:48,174 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:57:49,090 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:57:49,095 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Mad Axe - Handheld Fountain" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/OX7033.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" re
+2024-11-22 14:57:49,095 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: None, Image: http://pyrobuy.com/video/thumb/OX7033.png
+2024-11-22 14:57:49,097 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:57:51,100 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:57:52,314 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:57:52,319 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="25 Ball Roman Candle" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/LT1440.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel="styl
+2024-11-22 14:57:52,319 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: None, Image: http://pyrobuy.com/video/thumb/LT1440.png
+2024-11-22 14:57:52,322 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:57:54,328 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:57:55,289 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:57:55,293 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Mr. Lucky" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/BD-1624.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel="stylesheet" ty
+2024-11-22 14:57:55,294 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: None, Image: http://pyrobuy.com/video/thumb/BD-1624.png
+2024-11-22 14:57:55,297 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:57:57,298 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:57:58,317 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:57:58,322 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Whistling Fountain" property="og:title">
+     <meta content="http://dominatorfireworks.com/video/DM-T1016A.jpg" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel
+2024-11-22 14:57:58,323 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL in expected locations
+2024-11-22 14:57:58,325 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:58:00,330 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:58:01,291 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:58:01,296 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Buy One Get One - Snaps" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/LT928-100.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel
+2024-11-22 14:58:01,297 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: None, Image: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 14:58:01,300 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:58:03,304 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:58:04,278 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:58:04,282 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Launch Control" property="og:title">
+     <meta content="http://pyrobuy.com/video/K1097CT.jpg" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel="stylesheet" typ
+2024-11-22 14:58:04,283 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL in expected locations
+2024-11-22 14:58:04,285 - scrapers.pyrobuy_scraper - WARNING - Could not find product name or image URL
+2024-11-22 14:59:11,485 - scrapers.pyrobuy_scraper - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 14:59:11,485 - scrapers.pyrobuy_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com
+2024-11-22 14:59:12,488 - scrapers.pyrobuy_scraper - DEBUG - Response content length: 23052
+2024-11-22 14:59:12,488 - scrapers.pyrobuy_scraper - DEBUG - Response content type: text/html; Charset=utf-8
+2024-11-22 14:59:12,512 - scrapers.pyrobuy_scraper - INFO - Found 0 existing images in directory
+2024-11-22 14:59:12,512 - scrapers.pyrobuy_scraper - INFO - 
+Processing page 1...
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found 110 total links
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: index.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://pyrobuy.com/index.php/firework-dealer-locations/
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: Member/login.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=6&bid=1&tag=2025
+2024-11-22 14:59:13,431 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=7&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=8&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=9&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=10&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=11&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=12&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=13&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=14&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=15&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=16&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=17&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=18&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=19&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=20&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=21&bid=1
+2024-11-22 14:59:13,432 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=22&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=23&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=24&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=25&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=31&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=32&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=65&bid=1
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: /UploadFiles/Excel/Full_Product_List.xlsx
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=ALAMO
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Bellino
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blast Wave
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blastwave
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Blue Dragon
+2024-11-22 14:59:13,433 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator Eco
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Dominator - USA
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Great Grizzly
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Hero
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Inked Pyro
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=JD fireworks
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Joker
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Keystone
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Link Triad
+2024-11-22 14:59:13,434 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Machine Made
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Mad OX
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pro-Level: Dominator
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Buy
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro Packed
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Pyro High
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Raccoon
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Shock Wave
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&bd=Sly Dog
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=20&id=8118
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8117
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:59:13,435 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=22&id=8116
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8113
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8112
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8111
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8110
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8109
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8108
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Found link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:59:13,436 - scrapers.pyrobuy_scraper - DEBUG - Added product link: productdtls.asp?t=&sid=14&id=8107
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=12
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=18
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=24
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1&tag=&pagenum=30
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: #
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=3
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=4
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=5
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=6
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=97
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=1&bid=1
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=2&bid=2
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=3&bid=3
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=4&bid=4
+2024-11-22 14:59:13,437 - scrapers.pyrobuy_scraper - DEBUG - Found link: products.asp?sid=5&bid=5
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=7
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: brands.asp?id=30
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: member/index.asp
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: news.asp?id=21
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: about.asp
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.facebook.com/pyrobuy/
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://instagram.com/pyrobuyfireworks
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.youtube.com/channel/UCfpfzOSpXLh2Wno8dLukTjw
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - DEBUG - Found link: https://www.tiktok.com/@dominatorfireworks
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - INFO - Found 12 unique product links
+2024-11-22 14:59:13,438 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=13&id=8115
+2024-11-22 14:59:14,307 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:59:14,311 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Bangers" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/LT1236.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel="stylesheet" type=
+2024-11-22 14:59:14,312 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: Bangers, Image: http://pyrobuy.com/video/thumb/LT1236.png
+2024-11-22 14:59:14,315 - scrapers.pyrobuy_scraper - INFO - Found product: Bangers
+2024-11-22 14:59:14,315 - scrapers.pyrobuy_scraper - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT1236.png
+2024-11-22 14:59:14,315 - scrapers.pyrobuy_scraper - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com/Bangers.png
+2024-11-22 14:59:14,591 - scrapers.pyrobuy_scraper - INFO - Successfully processed product 1 of 2
+2024-11-22 14:59:16,596 - scrapers.pyrobuy_scraper - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8114
+2024-11-22 14:59:17,586 - scrapers.pyrobuy_scraper - DEBUG - Product page HTML structure:
+2024-11-22 14:59:17,591 - scrapers.pyrobuy_scraper - DEBUG - <!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="order by pyrobuy.com" name="author"/>
+  <meta content="PyroBuy--Brought to you by an experienced Liuyang Fireworks team with 20 years operating experience." name="description">
+   <meta content="fireworks,liuyang fireworks,china fireworks" name="keywords">
+    <meta content="Buy One Get One - Snaps" property="og:title">
+     <meta content="http://pyrobuy.com/video/thumb/LT928-100.png" property="og:image">
+      <meta content="315" property="og:image:height">
+       <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+       <link href="css/owl.carousel.min.css" rel
+2024-11-22 14:59:17,591 - scrapers.pyrobuy_scraper - INFO - Found product details - Name: Buy One Get One - Snaps, Image: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 14:59:17,594 - scrapers.pyrobuy_scraper - INFO - Found product: Buy One Get One - Snaps
+2024-11-22 14:59:17,594 - scrapers.pyrobuy_scraper - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 14:59:17,594 - scrapers.pyrobuy_scraper - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyro_buy_fireworks/pyrobuy.com/Buy One Get One - Snaps.png
+2024-11-22 14:59:17,816 - scrapers.pyrobuy_scraper - INFO - Successfully processed product 2 of 2
+2024-11-22 14:59:19,821 - scrapers.pyrobuy_scraper - DEBUG - Looking for next page link...
+2024-11-22 14:59:19,827 - scrapers.pyrobuy_scraper - DEBUG - Found next page URL: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:59:19,827 - scrapers.pyrobuy_scraper - INFO - Moving to next page: http://www.pyrobuy.com/products.asp?sid=1&bid=1¤tpage=2
+2024-11-22 14:59:21,831 - scrapers.pyrobuy_scraper - INFO - 
+Final Summary:
+2024-11-22 14:59:21,832 - scrapers.pyrobuy_scraper - INFO - Pages processed: 2
+2024-11-22 14:59:21,832 - scrapers.pyrobuy_scraper - INFO - Existing images found: 0
+2024-11-22 14:59:21,833 - scrapers.pyrobuy_scraper - INFO - New images downloaded: 2
+2024-11-22 14:59:21,833 - scrapers.pyrobuy_scraper - INFO - Total images in directory: 2
+2024-11-22 15:08:42,629 - scrapers.raccoon_scraper - INFO - Fetching content from: https://www.raccoonfireworksusa.com/raccoon-1-4g-1
+2024-11-22 15:08:42,630 - scrapers.raccoon_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/raccoonfireworksusa.com
+2024-11-22 15:08:42,967 - scrapers.raccoon_scraper - INFO - Found 2 existing images in directory
+2024-11-22 15:08:42,968 - scrapers.raccoon_scraper - INFO - 
+Processing page 1...
+2024-11-22 15:08:43,203 - scrapers.raccoon_scraper - INFO - Found 20 unique product links
+2024-11-22 15:08:43,203 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/armed-forces
+2024-11-22 15:08:43,734 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:43,735 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/2-minute-bomb
+2024-11-22 15:08:45,606 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:45,608 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/lethal-agent
+2024-11-22 15:08:47,433 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:47,435 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/usa-250
+2024-11-22 15:08:47,916 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:47,917 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/rdxplosion
+2024-11-22 15:08:48,426 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:48,428 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/72-haunted-echo
+2024-11-22 15:08:50,690 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:50,693 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/azura-chaos
+2024-11-22 15:08:51,192 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:51,193 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/novaburst
+2024-11-22 15:08:51,698 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:51,699 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/azuranova
+2024-11-22 15:08:52,247 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:52,249 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/5-independence-day-compact-24-s
+2024-11-22 15:08:54,977 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:54,979 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/azuraburst
+2024-11-22 15:08:56,629 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:56,631 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/battle-of-lexington
+2024-11-22 15:08:58,522 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:58,523 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/navy-seals
+2024-11-22 15:08:59,059 - scrapers.raccoon_scraper - ERROR - Error processing product page: 'NoneType' object has no attribute 'text'
+2024-11-22 15:08:59,061 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/green-widow-finale
+2024-11-22 15:10:27,095 - scrapers.raccoon_scraper - INFO - Fetching content from: https://www.raccoonfireworksusa.com/raccoon-1-4g-1
+2024-11-22 15:10:27,096 - scrapers.raccoon_scraper - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/raccoonfireworksusa.com
+2024-11-22 15:10:27,369 - scrapers.raccoon_scraper - INFO - Found 2 existing images in directory
+2024-11-22 15:10:27,369 - scrapers.raccoon_scraper - INFO - 
+Processing page 1...
+2024-11-22 15:10:27,606 - scrapers.raccoon_scraper - INFO - Found 20 unique product links
+2024-11-22 15:10:27,606 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/green-widow-finale
+2024-11-22 15:10:27,985 - scrapers.raccoon_scraper - WARNING - Could not find product name or image URL
+2024-11-22 15:10:29,993 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/battle-of-lexington
+2024-11-22 15:10:30,495 - scrapers.raccoon_scraper - INFO - Found product details - Name: Battle of Lexington, Image: https://static.wixstatic.com/media/706fa0_b2f25f06359b40119f909cf26b40860a~mv2.png/v1/fill/w_1500,h_1500,al_c/706fa0_b2f25f06359b40119f909cf26b40860a~mv2.png
+2024-11-22 15:10:30,495 - scrapers.raccoon_scraper - DEBUG - Additional metadata: {'price': None, 'sku': None, 'description': None, 'category': '', 'stock_status': None}
+2024-11-22 15:10:30,497 - scrapers.raccoon_scraper - INFO - Found product: Battle of Lexington
+2024-11-22 15:10:30,503 - scrapers.raccoon_scraper - INFO - Found image URL: https://static.wixstatic.com/media/706fa0_6b3133068fd54e26bf811ac929983e95~mv2.png/v1/fill/w_1500,h_1500,al_c/Raccoon__R_W_Logo.png
+2024-11-22 15:10:30,503 - scrapers.raccoon_scraper - INFO - Processing Raccoon product: Battle of Lexington
+2024-11-22 15:10:30,728 - scrapers.raccoon_scraper - INFO - Found product details - Name: Battle of Lexington, Image: https://static.wixstatic.com/media/706fa0_b2f25f06359b40119f909cf26b40860a~mv2.png/v1/fill/w_1500,h_1500,al_c/706fa0_b2f25f06359b40119f909cf26b40860a~mv2.png
+2024-11-22 15:10:30,728 - scrapers.raccoon_scraper - DEBUG - Additional metadata: {'price': None, 'sku': None, 'description': None, 'category': '', 'stock_status': None}
+2024-11-22 15:10:31,526 - scrapers.raccoon_scraper - INFO - Downloaded image: battle_of_lexington.jpg
+2024-11-22 15:10:31,546 - scrapers.raccoon_scraper - INFO - Updated product: Battle of Lexington
+2024-11-22 15:10:31,548 - scrapers.raccoon_scraper - INFO - Successfully processed product 1 of 2
+2024-11-22 15:10:33,553 - scrapers.raccoon_scraper - INFO - Visiting product page: https://www.raccoonfireworksusa.com/product-page/rdxplosion
+2024-11-22 15:10:34,023 - scrapers.raccoon_scraper - INFO - Found product details - Name: RDXplosion, Image: https://static.wixstatic.com/media/706fa0_cbc38d9833644cd3b0c6d6a75755e9b7~mv2.png/v1/fill/w_1500,h_1500,al_c/706fa0_cbc38d9833644cd3b0c6d6a75755e9b7~mv2.png
+2024-11-22 15:10:34,023 - scrapers.raccoon_scraper - DEBUG - Additional metadata: {'price': None, 'sku': None, 'description': None, 'category': '', 'stock_status': None}
+2024-11-22 15:10:34,025 - scrapers.raccoon_scraper - INFO - Found product: RDXplosion
+2024-11-22 15:10:34,030 - scrapers.raccoon_scraper - INFO - Found image URL: https://static.wixstatic.com/media/706fa0_6b3133068fd54e26bf811ac929983e95~mv2.png/v1/fill/w_1500,h_1500,al_c/Raccoon__R_W_Logo.png
+2024-11-22 15:10:34,030 - scrapers.raccoon_scraper - INFO - Processing Raccoon product: RDXplosion
+2024-11-22 15:10:34,303 - scrapers.raccoon_scraper - INFO - Found product details - Name: RDXplosion, Image: https://static.wixstatic.com/media/706fa0_cbc38d9833644cd3b0c6d6a75755e9b7~mv2.png/v1/fill/w_1500,h_1500,al_c/706fa0_cbc38d9833644cd3b0c6d6a75755e9b7~mv2.png
+2024-11-22 15:10:34,303 - scrapers.raccoon_scraper - DEBUG - Additional metadata: {'price': None, 'sku': None, 'description': None, 'category': '', 'stock_status': None}
+2024-11-22 15:10:34,554 - scrapers.raccoon_scraper - INFO - Downloaded image: rdxplosion.jpg
+2024-11-22 15:10:34,561 - scrapers.raccoon_scraper - INFO - Updated product: RDXplosion
+2024-11-22 15:10:34,564 - scrapers.raccoon_scraper - INFO - Successfully processed product 2 of 2
+2024-11-22 15:10:36,569 - scrapers.raccoon_scraper - DEBUG - Looking for next page link...
+2024-11-22 15:10:36,577 - scrapers.raccoon_scraper - DEBUG - No next page URL found
+2024-11-22 15:10:36,577 - scrapers.raccoon_scraper - INFO - No more pages found.
+2024-11-22 15:10:36,577 - scrapers.raccoon_scraper - INFO - 
+Final Summary:
+2024-11-22 15:10:36,577 - scrapers.raccoon_scraper - INFO - Pages processed: 1
+2024-11-22 15:10:36,577 - scrapers.raccoon_scraper - INFO - Existing images found: 2
+2024-11-22 15:10:36,577 - scrapers.raccoon_scraper - INFO - New images downloaded: 2
+2024-11-22 15:10:36,578 - scrapers.raccoon_scraper - INFO - Total images in directory: 4

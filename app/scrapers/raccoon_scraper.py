@@ -10,9 +10,9 @@ from models.product import Product, Base
 from datetime import datetime
 import os
 from urllib.parse import urlparse
-from utils.logger import setup_logger, log_product_found, log_image_download, log_database_update, log_metadata
 
-logger = setup_logger(__name__)
+# Only initialize logger once
+logger = logging.getLogger(__name__)
 
 # Database setup
 engine = create_engine('sqlite:///fireworks.db')
@@ -122,28 +122,67 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
             return 0
         return len([f for f in os.listdir(domain_dir) if f.endswith(('.jpg', '.png', '.jpeg'))])
     
-    def get_raccoon_product_details(product_url):
-        response = requests.get(product_url, headers=headers, verify=False)
-        soup = BeautifulSoup(response.text, 'html.parser')
-
-        product_name = soup.select_one('h1[data-hook="product-title"]').text.strip()
-        price = soup.select_one('span[data-hook="product-price"]').text.strip()
-        sku = soup.select_one('span[data-hook="product-sku"]').text.strip()
-        description = soup.select_one('div[data-hook="product-description"]').text.strip()
-        category = soup.select_one('div[data-hook="breadcrumbs"]').text.strip()
-        stock_status = soup.select_one('span[data-hook="product-inventory-status"]').text.strip()
-        
-        # Extract other product details as needed
-        
-        return {
-            'name': product_name,
-            'price': price,
-            'sku': sku,
-            'description': description,
-            'category': category,
-            'stock_status': stock_status,
-            # Add other extracted details
-        }
+    def get_raccoon_product_details(url, headers=None):
+        """Extract product details from a Raccoon product page"""
+        try:
+            response = requests.get(url, headers=headers, verify=False)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Find product name using Wix data-hook
+            name_elem = soup.find('h1', attrs={'data-hook': 'product-title'})
+            name = name_elem.text.strip() if name_elem else None
+            
+            # Find product image - try multiple locations
+            image_url = None
+            
+            # Try comp-image first
+            img = soup.find('img', id='comp-image')
+            if not img:
+                # Try SITE_PAGES div
+                img = soup.find('div', attrs={'data-mesh-id': lambda x: x and 'SITE_PAGES' in x}).find('img') if soup.find('div', attrs={'data-mesh-id': lambda x: x and 'SITE_PAGES' in x}) else None
+            if not img:
+                # Try any wixstatic media URL
+                img = soup.find('img', src=lambda x: x and 'wixstatic.com' in x and not any(skip in x.lower() for skip in ['button', 'logo', 'icon']))
+                
+            if img and img.get('src'):
+                image_url = img['src']
+                # Modify image URL for higher quality
+                if '/v1/fill/' in image_url:
+                    image_url = re.sub(r'/v1/fill/[^/]+/', '/v1/fill/w_1500,h_1500,al_c/', image_url)
+                # Remove any blur effects or constraints
+                image_url = image_url.split('?')[0]
+                
+            # Get additional metadata
+            price_elem = soup.find('span', attrs={'data-hook': 'product-price'})
+            sku_elem = soup.find('span', attrs={'data-hook': 'product-sku'})
+            desc_elem = soup.find('div', attrs={'data-hook': 'product-description'})
+            category_elem = soup.find('div', attrs={'data-hook': 'breadcrumbs'})
+            stock_elem = soup.find('span', attrs={'data-hook': 'product-inventory-status'})
+            
+            metadata = {
+                'price': price_elem.text.strip() if price_elem else None,
+                'sku': sku_elem.text.strip() if sku_elem else None,
+                'description': desc_elem.text.strip() if desc_elem else None,
+                'category': category_elem.text.strip() if category_elem else None,
+                'stock_status': stock_elem.text.strip() if stock_elem else None
+            }
+            
+            if name or image_url:
+                logger.info(f"Found product details - Name: {name}, Image: {image_url}")
+                logger.debug(f"Additional metadata: {metadata}")
+            else:
+                logger.warning("Could not find product name or image URL")
+                
+            return {
+                'name': name,
+                'image_url': image_url,
+                **metadata
+            }
+            
+        except Exception as e:
+            logger.error(f"Error getting product details: {str(e)}")
+            return {}
 
     def process_raccoon_product(product_name, product_url, image_url, product_soup, domain_dir, headers):
         try:

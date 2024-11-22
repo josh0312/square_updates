@@ -1,8 +1,8 @@
 websites:
   - name: Winco Fireworks Texas
     url: https://www.wincofireworks.com/fireworks/?swoof=1&stock_location=texas
-    scraper: winco_scraper.py
-    enabled: false
+    scraper: winco_scraper
+    enabled: true
     limit: 2
     note: >
       Uses WordPress/WooCommerce structure with srcset attributes.
@@ -30,8 +30,8 @@ websites:
 
   - name: Red Rhino Fireworks
     url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
-    scraper: redrhino_scraper.py
-    enabled: false
+    scraper: redrhino_scraper
+    enabled: true
     limit: 3
     note: >
       Uses WordPress/Elementor structure.
@@ -67,22 +67,32 @@ websites:
 
   - name: Pyro Buy Fireworks
     url: https://www.pyrobuy.com/products.asp?sid=1&bid=1
-    scraper: pyrobuy_scraper.py
-    enabled: false
+    scraper: pyrobuy_scraper
+    enabled: true
     limit: 2
     note: >
       Uses classic ASP structure with query parameters.
-      Product Links: Found in table cells with 'MORE' links.
-      Images: Direct image links in table cells.
-      Pagination: Uses numbered links at bottom (1,2,3...).
-      Categories: Uses sid parameter for sections, bid for brands.
-      Structure: Table-based layout with product cells.
-      Detail Pages: Products have detail pages with larger images.
+      Product Links: Found in productdtls.asp URLs.
+      Product Details:
+        - Name: Found in meta tag with property="og:title"
+        - Image: Found in meta tag with property="og:image"
+        - Image URLs: Usually in /video/thumb/ directory
+        - Image Types: Mix of .png and .jpg files
+      Pagination: 
+        - Uses numbered links at bottom (1,2,3...)
+        - Links contain ¤tpage parameter
+      Categories: 
+        - Uses sid parameter for sections
+        - Uses bid parameter for brands
+      Structure: 
+        - Table-based layout with product cells
+        - Product details in meta tags
+        - Images hosted on both pyrobuy.com and dominatorfireworks.com domains
 
   - name: Raccoon Fireworks
     url: https://www.raccoonfireworksusa.com/raccoon-1-4g-1
-    scraper: raccoon_scraper.py
-    enabled: false
+    scraper: raccoon_scraper
+    enabled: true
     limit: 2
     note: >
       Uses Wix platform with dynamic product pages.
