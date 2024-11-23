@@ -25,39 +25,48 @@ def count_existing_images(directory):
 
 def get_next_page_url(soup, base_url):
     """Extract the next page URL if it exists"""
-    logger.debug("Looking for next page link...")
+    logger.info("Looking for next page...")
     
-    # Look for pagination links
-    next_links = soup.find_all('a', href=lambda x: x and ('¤tpage=' in x or 'currentpage=' in x))
+    # Debug current URL structure
+    logger.info(f"Current URL: {base_url}")
     
-    if next_links:
-        # Get current page number from URL if it exists
-        current_page = 1
-        if '¤tpage=' in base_url:
-            current_page = int(base_url.split('¤tpage=')[1])
-        elif 'currentpage=' in base_url:
-            current_page = int(base_url.split('currentpage=')[1])
+    # Look for pagination links in the HTML
+    pagination_links = soup.find_all('a', href=lambda x: x and ('currentpage=' in x or 'page=' in x))
+    for link in pagination_links:
+        logger.info(f"Found pagination link: {link}")
+        
+    # Get base URL without any currentpage parameter
+    base_without_page = base_url.split('currentpage=')[0].rstrip('&')
+    
+    # Try to find the current page number
+    current_page = 1
+    if 'currentpage=' in base_url:
+        try:
+            # Get the last currentpage parameter value
+            all_pages = re.findall(r'currentpage=(\d+)', base_url)
+            if all_pages:
+                current_page = int(all_pages[-1])
+            logger.info(f"Current page: {current_page}")
+        except:
+            pass
             
-        # Find the next page link
-        for link in next_links:
-            href = link.get('href')
-            if href:
-                # Handle both URL encodings
-                if '¤tpage=' in href:
-                    page_num = int(href.split('¤tpage=')[1])
-                elif 'currentpage=' in href:
-                    page_num = int(href.split('currentpage=')[1])
-                else:
-                    continue
-                    
-                if page_num == current_page + 1:
-                    next_url = urljoin(base_url, href)
-                    # Fix URL encoding
-                    next_url = next_url.replace('¤tpage=', 'currentpage=')
-                    logger.debug(f"Found next page URL: {next_url}")
-                    return next_url
+    # Construct next page URL
+    next_page = current_page + 1
+    if '?' in base_without_page:
+        next_url = f"{base_without_page}&currentpage={next_page}"
+    else:
+        next_url = f"{base_without_page}?currentpage={next_page}"
+        
+    logger.info(f"Trying constructed URL: {next_url}")
     
-    logger.debug("No next page URL found")
+    try:
+        response = requests.get(next_url, headers=headers, verify=False)
+        if response.status_code == 200:
+            return next_url
+    except Exception as e:
+        logger.error(f"Error checking constructed URL: {str(e)}")
+    
+    logger.info("No valid next page URL found")
     return None
 
 def get_pyrobuy_product_details(url, headers=None):

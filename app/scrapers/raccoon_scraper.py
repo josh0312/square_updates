@@ -102,18 +102,51 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
 
     def get_next_page_url(soup, base_url):
         """Extract the next page URL if it exists"""
-        logger.debug("Looking for next page link...")
+        logger.info("Looking for next page...")
         
-        next_link = soup.find('a', string=lambda x: x and 'Next' in x)
+        # Get current page number
+        current_page = 1
+        if '?page=' in base_url:
+            try:
+                current_page = int(base_url.split('?page=')[1])
+            except:
+                pass
+            
+        # Get current page product URLs
+        current_products = set()
+        for link in soup.find_all('a', href=True):
+            if '/product-page/' in link['href']:
+                current_products.add(link['href'])
+        logger.info(f"Found {len(current_products)} products on current page")
         
-        if next_link:
-            href = next_link.get('href')
-            if href and href != '#':
-                next_url = href if href.startswith(('http://', 'https://')) else urljoin(base_url, href)
-                logger.debug(f"Found next page URL: {next_url}")
-                return next_url
+        # For Wix sites, we'll use the query parameter style pagination
+        base_path = base_url.split('?')[0]  # Remove any existing query parameters
+        next_url = f"{base_path}?page={current_page + 1}"
         
-        logger.debug("No next page URL found")
+        logger.info(f"Trying URL: {next_url}")
+        try:
+            response = requests.get(next_url, verify=False)
+            if response.status_code == 200:
+                next_soup = BeautifulSoup(response.text, 'html.parser')
+                next_products = set()
+                for link in next_soup.find_all('a', href=True):
+                    if '/product-page/' in link['href']:
+                        next_products.add(link['href'])
+                        
+                logger.info(f"Found {len(next_products)} products on next page")
+                
+                # Only return next URL if it has different products
+                if next_products and next_products != current_products:
+                    logger.info(f"Found valid next page with different products")
+                    return next_url
+                else:
+                    logger.info("Next page has same products or no products, stopping pagination")
+                    return None
+        except Exception as e:
+            logger.error(f"Error checking next page: {str(e)}")
+            return None
+        
+        logger.info("No valid next page found")
         return None
 
     def count_existing_images(domain_dir):
