@@ -23,9 +23,15 @@ def count_existing_images(directory):
         return 0
     return len([f for f in os.listdir(directory) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp'))])
 
-def get_next_page_url(soup, base_url):
+def get_next_page_url(soup, base_url, headers=None):
     """Extract the next page URL if it exists"""
     logger.info("Looking for next page...")
+    
+    # Set default headers if none provided
+    if not headers:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
     
     # Debug current URL structure
     logger.info(f"Current URL: {base_url}")
@@ -62,7 +68,16 @@ def get_next_page_url(soup, base_url):
     try:
         response = requests.get(next_url, headers=headers, verify=False)
         if response.status_code == 200:
-            return next_url
+            # Verify the page has products
+            next_soup = BeautifulSoup(response.text, 'html.parser')
+            product_links = [link['href'] for link in next_soup.find_all('a', href=True) 
+                           if 'productdtls.asp' in link['href']]
+            if product_links:
+                logger.info(f"Found {len(product_links)} products on next page")
+                return next_url
+            else:
+                logger.info("No products found on next page")
+                return None
     except Exception as e:
         logger.error(f"Error checking constructed URL: {str(e)}")
     
@@ -225,7 +240,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                 continue
 
         # Get next page URL
-        next_url = get_next_page_url(soup, current_url)
+        next_url = get_next_page_url(soup, current_url, headers)
         if next_url:
             logger.info(f"Moving to next page: {next_url}")
             current_url = next_url

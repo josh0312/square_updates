@@ -995,3 +995,1390 @@ Processing page 7...
 2024-11-22 17:47:05,529 - INFO - Processing Raccoon product: Aegis Shield
 2024-11-22 17:47:06,309 - INFO - Found product details - Name: Aegis Shield, Image: https://static.wixstatic.com/media/706fa0_a908c5f3c77c490286eeb087d7ccc089~mv2.png/v1/fill/w_1500,h_1500,al_c/706fa0_a908c5f3c77c490286eeb087d7ccc089~mv2.png
 2024-11-22 17:47:06,311 - INFO - Product already exists with no changes
+2024-11-22 18:59:37,504 - INFO - Starting scraper...
+2024-11-22 18:59:37,511 - INFO - 
+Attempting to scrape Pyro Buy Fireworks...
+2024-11-22 18:59:37,555 - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 18:59:37,556 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com
+2024-11-22 18:59:39,473 - INFO - Found 33 existing images in directory
+2024-11-22 18:59:39,473 - INFO - 
+Processing page 1...
+2024-11-22 18:59:40,345 - INFO - Found 12 unique product links
+2024-11-22 18:59:40,345 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=22&id=8116
+2024-11-22 18:59:41,306 - INFO - Found product details - Name: USA - Patriotic Barrage, Image: http://pyrobuy.com/video/thumb/DUSA1438.png
+2024-11-22 18:59:41,309 - INFO - Found product: USA - Patriotic Barrage
+2024-11-22 18:59:41,309 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA1438.png
+2024-11-22 18:59:41,309 - INFO - Product already exists with no changes
+2024-11-22 18:59:43,314 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8108
+2024-11-22 18:59:44,476 - INFO - Found product details - Name: NOVA 16  - Rocket Shaped Fountain, Image: http://pyrobuy.com/video/thumb/OX7029.png
+2024-11-22 18:59:44,479 - INFO - Found product: NOVA 16  - Rocket Shaped Fountain
+2024-11-22 18:59:44,480 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX7029.png
+2024-11-22 18:59:44,480 - INFO - Product already exists with no changes
+2024-11-22 18:59:46,485 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=13&id=8115
+2024-11-22 18:59:47,478 - INFO - Found product details - Name: Bangers, Image: http://pyrobuy.com/video/thumb/LT1236.png
+2024-11-22 18:59:47,481 - INFO - Found product: Bangers
+2024-11-22 18:59:47,481 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT1236.png
+2024-11-22 18:59:47,481 - INFO - Product already exists with no changes
+2024-11-22 18:59:49,487 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8112
+2024-11-22 18:59:50,511 - INFO - Found product details - Name: Whistling Fountain, Image: http://dominatorfireworks.com/video/DM-T1016A.jpg
+2024-11-22 18:59:50,514 - INFO - Found product: Whistling Fountain
+2024-11-22 18:59:50,514 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-T1016A.jpg
+2024-11-22 18:59:50,514 - INFO - Product already exists with no changes
+2024-11-22 18:59:52,517 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8111
+2024-11-22 18:59:54,102 - INFO - Found product details - Name: 3 Minute Fountain, Image: http://pyrobuy.com/video/thumb/MM7027.png
+2024-11-22 18:59:54,105 - INFO - Found product: 3 Minute Fountain
+2024-11-22 18:59:54,105 - INFO - Found image URL: http://pyrobuy.com/video/thumb/MM7027.png
+2024-11-22 18:59:54,105 - INFO - Product already exists with no changes
+2024-11-22 18:59:56,111 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8110
+2024-11-22 18:59:57,183 - INFO - Found product details - Name: Launch Control, Image: http://pyrobuy.com/video/K1097CT.jpg
+2024-11-22 18:59:57,185 - INFO - Found product: Launch Control
+2024-11-22 18:59:57,185 - INFO - Found image URL: http://pyrobuy.com/video/K1097CT.jpg
+2024-11-22 18:59:57,186 - INFO - Product already exists with no changes
+2024-11-22 18:59:59,189 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8109
+2024-11-22 19:00:00,347 - INFO - Found product details - Name: Mad Axe - Handheld Fountain, Image: http://pyrobuy.com/video/thumb/OX7033.png
+2024-11-22 19:00:00,350 - INFO - Found product: Mad Axe - Handheld Fountain
+2024-11-22 19:00:00,350 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX7033.png
+2024-11-22 19:00:00,351 - INFO - Product already exists with no changes
+2024-11-22 19:00:02,355 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8107
+2024-11-22 19:00:03,363 - INFO - Found product details - Name: Dalmation, Image: http://dominatorfireworks.com/video/DM7003.jpg
+2024-11-22 19:00:03,366 - INFO - Found product: Dalmation
+2024-11-22 19:00:03,366 - INFO - Found image URL: http://dominatorfireworks.com/video/DM7003.jpg
+2024-11-22 19:00:03,366 - INFO - Product already exists with no changes
+2024-11-22 19:00:05,370 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=20&id=8118
+2024-11-22 19:00:06,439 - INFO - Found product details - Name: Mr. Lucky, Image: http://pyrobuy.com/video/thumb/BD-1624.png
+2024-11-22 19:00:06,442 - INFO - Found product: Mr. Lucky
+2024-11-22 19:00:06,442 - INFO - Found image URL: http://pyrobuy.com/video/thumb/BD-1624.png
+2024-11-22 19:00:06,442 - INFO - Product already exists with no changes
+2024-11-22 19:00:08,447 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8113
+2024-11-22 19:00:09,454 - INFO - Found product details - Name: Snap Crackle & Pop, Image: http://pyrobuy.com/video/thumb/DB-7021.png
+2024-11-22 19:00:09,456 - INFO - Found product: Snap Crackle & Pop
+2024-11-22 19:00:09,456 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DB-7021.png
+2024-11-22 19:00:09,456 - INFO - Product already exists with no changes
+2024-11-22 19:00:11,462 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=22&id=8117
+2024-11-22 19:00:12,607 - INFO - Found product details - Name: 25 Ball Roman Candle, Image: http://pyrobuy.com/video/thumb/LT1440.png
+2024-11-22 19:00:12,609 - INFO - Found product: 25 Ball Roman Candle
+2024-11-22 19:00:12,609 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT1440.png
+2024-11-22 19:00:12,610 - INFO - Product already exists with no changes
+2024-11-22 19:00:14,615 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8114
+2024-11-22 19:00:15,635 - INFO - Found product details - Name: Buy One Get One - Snaps, Image: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 19:00:15,638 - INFO - Found product: Buy One Get One - Snaps
+2024-11-22 19:00:15,638 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 19:00:15,638 - INFO - Product already exists with no changes
+2024-11-22 19:00:17,640 - INFO - Looking for next page...
+2024-11-22 19:00:17,641 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 19:00:17,642 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">2</a>
+2024-11-22 19:00:17,642 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:00:17,643 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:00:17,643 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:00:17,643 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6"> ... </a>
+2024-11-22 19:00:17,643 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">Next</a>
+2024-11-22 19:00:17,643 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:00:17,643 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=2
+2024-11-22 19:00:17,643 - ERROR - Error checking constructed URL: name 'headers' is not defined
+2024-11-22 19:00:17,643 - INFO - No valid next page URL found
+2024-11-22 19:00:17,643 - INFO - No more pages to process
+2024-11-22 19:00:17,643 - INFO - 
+Final Summary:
+2024-11-22 19:00:17,643 - INFO - Pages processed: 1
+2024-11-22 19:00:17,643 - INFO - Existing images found: 33
+2024-11-22 19:00:17,643 - INFO - New images downloaded: 0
+2024-11-22 19:00:17,644 - INFO - Total images in directory: 33
+2024-11-22 19:11:05,865 - INFO - Starting scraper...
+2024-11-22 19:11:05,871 - INFO - 
+Attempting to scrape Pyro Buy Fireworks...
+2024-11-22 19:11:05,916 - INFO - Fetching content from: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 19:11:05,916 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com
+2024-11-22 19:11:11,514 - INFO - Found 33 existing images in directory
+2024-11-22 19:11:11,514 - INFO - 
+Processing page 1...
+2024-11-22 19:11:12,923 - INFO - Found 12 unique product links
+2024-11-22 19:11:12,923 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8109
+2024-11-22 19:11:13,978 - INFO - Found product details - Name: Mad Axe - Handheld Fountain, Image: http://pyrobuy.com/video/thumb/OX7033.png
+2024-11-22 19:11:13,981 - INFO - Found product: Mad Axe - Handheld Fountain
+2024-11-22 19:11:13,981 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX7033.png
+2024-11-22 19:11:13,982 - INFO - Product already exists with no changes
+2024-11-22 19:11:15,987 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=22&id=8116
+2024-11-22 19:11:16,950 - INFO - Found product details - Name: USA - Patriotic Barrage, Image: http://pyrobuy.com/video/thumb/DUSA1438.png
+2024-11-22 19:11:16,953 - INFO - Found product: USA - Patriotic Barrage
+2024-11-22 19:11:16,953 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA1438.png
+2024-11-22 19:11:16,953 - INFO - Product already exists with no changes
+2024-11-22 19:11:18,958 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8111
+2024-11-22 19:11:19,998 - INFO - Found product details - Name: 3 Minute Fountain, Image: http://pyrobuy.com/video/thumb/MM7027.png
+2024-11-22 19:11:20,000 - INFO - Found product: 3 Minute Fountain
+2024-11-22 19:11:20,000 - INFO - Found image URL: http://pyrobuy.com/video/thumb/MM7027.png
+2024-11-22 19:11:20,000 - INFO - Product already exists with no changes
+2024-11-22 19:11:22,006 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=22&id=8117
+2024-11-22 19:11:23,052 - INFO - Found product details - Name: 25 Ball Roman Candle, Image: http://pyrobuy.com/video/thumb/LT1440.png
+2024-11-22 19:11:23,055 - INFO - Found product: 25 Ball Roman Candle
+2024-11-22 19:11:23,055 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT1440.png
+2024-11-22 19:11:23,055 - INFO - Product already exists with no changes
+2024-11-22 19:11:25,058 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=13&id=8115
+2024-11-22 19:11:26,545 - INFO - Found product details - Name: Bangers, Image: http://pyrobuy.com/video/thumb/LT1236.png
+2024-11-22 19:11:26,548 - INFO - Found product: Bangers
+2024-11-22 19:11:26,548 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT1236.png
+2024-11-22 19:11:26,548 - INFO - Product already exists with no changes
+2024-11-22 19:11:28,551 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8113
+2024-11-22 19:11:29,979 - INFO - Found product details - Name: Snap Crackle & Pop, Image: http://pyrobuy.com/video/thumb/DB-7021.png
+2024-11-22 19:11:29,981 - INFO - Found product: Snap Crackle & Pop
+2024-11-22 19:11:29,981 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DB-7021.png
+2024-11-22 19:11:29,982 - INFO - Product already exists with no changes
+2024-11-22 19:11:31,986 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8110
+2024-11-22 19:11:33,023 - INFO - Found product details - Name: Launch Control, Image: http://pyrobuy.com/video/K1097CT.jpg
+2024-11-22 19:11:33,026 - INFO - Found product: Launch Control
+2024-11-22 19:11:33,026 - INFO - Found image URL: http://pyrobuy.com/video/K1097CT.jpg
+2024-11-22 19:11:33,026 - INFO - Product already exists with no changes
+2024-11-22 19:11:35,028 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=20&id=8118
+2024-11-22 19:11:36,075 - INFO - Found product details - Name: Mr. Lucky, Image: http://pyrobuy.com/video/thumb/BD-1624.png
+2024-11-22 19:11:36,077 - INFO - Found product: Mr. Lucky
+2024-11-22 19:11:36,077 - INFO - Found image URL: http://pyrobuy.com/video/thumb/BD-1624.png
+2024-11-22 19:11:36,077 - INFO - Product already exists with no changes
+2024-11-22 19:11:38,079 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8108
+2024-11-22 19:11:39,179 - INFO - Found product details - Name: NOVA 16  - Rocket Shaped Fountain, Image: http://pyrobuy.com/video/thumb/OX7029.png
+2024-11-22 19:11:39,182 - INFO - Found product: NOVA 16  - Rocket Shaped Fountain
+2024-11-22 19:11:39,182 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX7029.png
+2024-11-22 19:11:39,183 - INFO - Product already exists with no changes
+2024-11-22 19:11:41,188 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8107
+2024-11-22 19:11:42,181 - INFO - Found product details - Name: Dalmation, Image: http://dominatorfireworks.com/video/DM7003.jpg
+2024-11-22 19:11:42,184 - INFO - Found product: Dalmation
+2024-11-22 19:11:42,184 - INFO - Found image URL: http://dominatorfireworks.com/video/DM7003.jpg
+2024-11-22 19:11:42,184 - INFO - Product already exists with no changes
+2024-11-22 19:11:44,187 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8112
+2024-11-22 19:11:45,268 - INFO - Found product details - Name: Whistling Fountain, Image: http://dominatorfireworks.com/video/DM-T1016A.jpg
+2024-11-22 19:11:45,270 - INFO - Found product: Whistling Fountain
+2024-11-22 19:11:45,270 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-T1016A.jpg
+2024-11-22 19:11:45,270 - INFO - Product already exists with no changes
+2024-11-22 19:11:47,272 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8114
+2024-11-22 19:11:48,381 - INFO - Found product details - Name: Buy One Get One - Snaps, Image: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 19:11:48,383 - INFO - Found product: Buy One Get One - Snaps
+2024-11-22 19:11:48,384 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT928-100.png
+2024-11-22 19:11:48,384 - INFO - Product already exists with no changes
+2024-11-22 19:11:50,387 - INFO - Looking for next page...
+2024-11-22 19:11:50,388 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1
+2024-11-22 19:11:50,393 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">2</a>
+2024-11-22 19:11:50,393 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:11:50,393 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:11:50,393 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:11:50,393 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6"> ... </a>
+2024-11-22 19:11:50,394 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">Next</a>
+2024-11-22 19:11:50,394 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:11:50,394 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=2
+2024-11-22 19:11:51,756 - INFO - Found 12 products on next page
+2024-11-22 19:11:51,758 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=2
+2024-11-22 19:11:53,762 - INFO - 
+Processing page 2...
+2024-11-22 19:11:55,436 - INFO - Found 12 unique product links
+2024-11-22 19:11:55,437 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8095
+2024-11-22 19:11:56,843 - INFO - Found product details - Name: Color Carnival, Image: http://pyrobuy.com/video/thumb/OX5493.png
+2024-11-22 19:11:56,845 - INFO - Found product: Color Carnival
+2024-11-22 19:11:56,846 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX5493.png
+2024-11-22 19:11:56,846 - INFO - Product already exists with no changes
+2024-11-22 19:11:58,849 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8101
+2024-11-22 19:12:00,387 - INFO - Found product details - Name: 3 Minute Monster, Image: http://pyrobuy.com/video/thumb/HE5508.png
+2024-11-22 19:12:00,389 - INFO - Found product: 3 Minute Monster
+2024-11-22 19:12:00,389 - INFO - Found image URL: http://pyrobuy.com/video/thumb/HE5508.png
+2024-11-22 19:12:00,390 - INFO - Product already exists with no changes
+2024-11-22 19:12:02,395 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8100
+2024-11-22 19:12:03,603 - INFO - Found product details - Name: Welcome To The Show, Image: http://pyrobuy.com/video/thumb/IP5500.png
+2024-11-22 19:12:03,606 - INFO - Found product: Welcome To The Show
+2024-11-22 19:12:03,606 - INFO - Found image URL: http://pyrobuy.com/video/thumb/IP5500.png
+2024-11-22 19:12:03,606 - INFO - Product already exists with no changes
+2024-11-22 19:12:05,608 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8099
+2024-11-22 19:12:07,288 - INFO - Found product details - Name: Silver falling leaves, Image: http://pyrobuy.com/video/thumb/DMP5509.png
+2024-11-22 19:12:07,290 - INFO - Found product: Silver falling leaves
+2024-11-22 19:12:07,290 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DMP5509.png
+2024-11-22 19:12:07,290 - INFO - Product already exists with no changes
+2024-11-22 19:12:09,296 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8096
+2024-11-22 19:12:10,970 - INFO - Found product details - Name: 90 Second Shootout, Image: http://pyrobuy.com/video/K9048.jpg
+2024-11-22 19:12:10,973 - INFO - Found product: 90 Second Shootout
+2024-11-22 19:12:10,973 - INFO - Found image URL: http://pyrobuy.com/video/K9048.jpg
+2024-11-22 19:12:10,973 - INFO - Product already exists with no changes
+2024-11-22 19:12:12,975 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=19&id=8103
+2024-11-22 19:12:15,262 - INFO - Found product details - Name: Star Ball, Image: http://pyrobuy.com/video/thumb/LT-0906A.png
+2024-11-22 19:12:15,265 - INFO - Found product: Star Ball
+2024-11-22 19:12:15,265 - INFO - Found image URL: http://pyrobuy.com/video/thumb/LT-0906A.png
+2024-11-22 19:12:15,265 - INFO - Product already exists with no changes
+2024-11-22 19:12:17,266 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8098
+2024-11-22 19:12:18,654 - INFO - Found product details - Name: Nishiki Freedom, Image: http://pyrobuy.com/video/thumb/DUSA5491.png
+2024-11-22 19:12:18,657 - INFO - Found product: Nishiki Freedom
+2024-11-22 19:12:18,657 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA5491.png
+2024-11-22 19:12:18,657 - INFO - Product already exists with no changes
+2024-11-22 19:12:20,658 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8094
+2024-11-22 19:12:21,727 - INFO - Found product details - Name: One Hot Minute, Image: http://pyrobuy.com/video/thumb/DM5511.png
+2024-11-22 19:12:21,730 - INFO - Found product: One Hot Minute
+2024-11-22 19:12:21,730 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DM5511.png
+2024-11-22 19:12:21,730 - INFO - Product already exists with no changes
+2024-11-22 19:12:23,734 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8105
+2024-11-22 19:12:25,103 - INFO - Found product details - Name: Hero Fountain Assortment, Image: http://pyrobuy.com/video/thumb/HE7020.png
+2024-11-22 19:12:25,107 - INFO - Found product: Hero Fountain Assortment
+2024-11-22 19:12:25,107 - INFO - Found image URL: http://pyrobuy.com/video/thumb/HE7020.png
+2024-11-22 19:12:25,107 - INFO - Product already exists with no changes
+2024-11-22 19:12:27,112 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8104
+2024-11-22 19:12:28,736 - INFO - Found product details - Name: Bumble Bee, Image: http://pyrobuy.com/video/LT788.jpg
+2024-11-22 19:12:28,739 - INFO - Found product: Bumble Bee
+2024-11-22 19:12:28,739 - INFO - Found image URL: http://pyrobuy.com/video/LT788.jpg
+2024-11-22 19:12:28,740 - INFO - Product already exists with no changes
+2024-11-22 19:12:30,745 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8102
+2024-11-22 19:12:32,171 - INFO - Found product details - Name: U.S.A. Grand Finale, Image: http://pyrobuy.com/video/thumb/DUSA5495.png
+2024-11-22 19:12:32,173 - INFO - Found product: U.S.A. Grand Finale
+2024-11-22 19:12:32,173 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA5495.png
+2024-11-22 19:12:32,173 - INFO - Product already exists with no changes
+2024-11-22 19:12:34,175 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8097
+2024-11-22 19:12:35,850 - INFO - Found product details - Name: Wrecktangle, Image: http://pyrobuy.com/video/K9043.jpg
+2024-11-22 19:12:35,852 - INFO - Found product: Wrecktangle
+2024-11-22 19:12:35,852 - INFO - Found image URL: http://pyrobuy.com/video/K9043.jpg
+2024-11-22 19:12:35,852 - INFO - Product already exists with no changes
+2024-11-22 19:12:37,857 - INFO - Looking for next page...
+2024-11-22 19:12:37,859 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=2
+2024-11-22 19:12:37,864 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> First </a>
+2024-11-22 19:12:37,864 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1">Prev</a>
+2024-11-22 19:12:37,865 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1">1</a>
+2024-11-22 19:12:37,865 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:12:37,865 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:12:37,865 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:12:37,865 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">6</a>
+2024-11-22 19:12:37,866 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=7"> ... </a>
+2024-11-22 19:12:37,866 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">Next</a>
+2024-11-22 19:12:37,866 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:12:37,867 - INFO - Current page: 2
+2024-11-22 19:12:37,867 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=3
+2024-11-22 19:12:38,858 - INFO - Found 12 products on next page
+2024-11-22 19:12:38,860 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=3
+2024-11-22 19:12:40,862 - INFO - 
+Processing page 3...
+2024-11-22 19:12:41,962 - INFO - Found 12 unique product links
+2024-11-22 19:12:41,962 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=65&id=8093
+2024-11-22 19:12:43,230 - INFO - Found product details - Name: Keep On Rollin, Image: http://pyrobuy.com/video/thumb/PH5449.png
+2024-11-22 19:12:43,232 - INFO - Found product: Keep On Rollin
+2024-11-22 19:12:43,232 - INFO - Found image URL: http://pyrobuy.com/video/thumb/PH5449.png
+2024-11-22 19:12:43,233 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Keep On Rollin.png
+2024-11-22 19:12:44,354 - INFO - Successfully processed product 1 of 50
+2024-11-22 19:12:46,358 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8091
+2024-11-22 19:12:47,839 - INFO - Found product details - Name: Quiet Night, Image: http://pyrobuy.com/video/thumb/OX2140.png
+2024-11-22 19:12:47,842 - INFO - Found product: Quiet Night
+2024-11-22 19:12:47,842 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX2140.png
+2024-11-22 19:12:47,842 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Quiet Night.png
+2024-11-22 19:12:48,040 - INFO - Successfully processed product 2 of 50
+2024-11-22 19:12:50,046 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8092
+2024-11-22 19:12:51,219 - INFO - Found product details - Name: AI Overlord, Image: http://pyrobuy.com/video/thumb/MM2158.png
+2024-11-22 19:12:51,222 - INFO - Found product: AI Overlord
+2024-11-22 19:12:51,222 - INFO - Found image URL: http://pyrobuy.com/video/thumb/MM2158.png
+2024-11-22 19:12:51,222 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/AI Overlord.png
+2024-11-22 19:12:51,597 - INFO - Successfully processed product 3 of 50
+2024-11-22 19:12:53,603 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8088
+2024-11-22 19:12:54,905 - INFO - Found product details - Name: Pyro Pulse, Image: http://pyrobuy.com/video/thumb/MM2012.png
+2024-11-22 19:12:54,907 - INFO - Found product: Pyro Pulse
+2024-11-22 19:12:54,907 - INFO - Found image URL: http://pyrobuy.com/video/thumb/MM2012.png
+2024-11-22 19:12:54,908 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Pyro Pulse.png
+2024-11-22 19:12:55,244 - INFO - Successfully processed product 4 of 50
+2024-11-22 19:12:57,245 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8087
+2024-11-22 19:12:58,600 - INFO - Found product details - Name: OX BLOX, Image: http://pyrobuy.com/video/thumb/OX2009.png
+2024-11-22 19:12:58,602 - INFO - Found product: OX BLOX
+2024-11-22 19:12:58,602 - INFO - Found image URL: http://pyrobuy.com/video/thumb/OX2009.png
+2024-11-22 19:12:58,602 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/OX BLOX.png
+2024-11-22 19:12:58,817 - INFO - Successfully processed product 5 of 50
+2024-11-22 19:13:00,820 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8085
+2024-11-22 19:13:02,037 - INFO - Found product details - Name: America 250 Light Up Fountain, Image: http://pyrobuy.com/video/thumb/DUSA7250.png
+2024-11-22 19:13:02,039 - INFO - Found product: America 250 Light Up Fountain
+2024-11-22 19:13:02,039 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA7250.png
+2024-11-22 19:13:02,040 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/America 250 Light Up Fountain.png
+2024-11-22 19:13:02,241 - INFO - Successfully processed product 6 of 50
+2024-11-22 19:13:04,246 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8090
+2024-11-22 19:13:05,646 - INFO - Found product details - Name: Bomba, Image: http://pyrobuy.com/video/thumb/DM2149.png
+2024-11-22 19:13:05,648 - INFO - Found product: Bomba
+2024-11-22 19:13:05,648 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DM2149.png
+2024-11-22 19:13:05,648 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Bomba.png
+2024-11-22 19:13:05,896 - INFO - Successfully processed product 7 of 50
+2024-11-22 19:13:07,902 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=65&id=8083
+2024-11-22 19:13:09,574 - INFO - Found product details - Name: America's 250 - 12 shot cake, Image: http://pyrobuy.com/video/thumb/DUSA5525.png
+2024-11-22 19:13:09,576 - INFO - Found product: America's 250 - 12 shot cake
+2024-11-22 19:13:09,576 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA5525.png
+2024-11-22 19:13:09,577 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Americas 250 - 12 shot cake.png
+2024-11-22 19:13:09,746 - INFO - Successfully processed product 8 of 50
+2024-11-22 19:13:11,749 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=13&id=8084
+2024-11-22 19:13:13,029 - INFO - Found product details - Name: 250 String Firecrackers, Image: http://pyrobuy.com/video/thumb/DUSA-T728.png
+2024-11-22 19:13:13,031 - INFO - Found product: 250 String Firecrackers
+2024-11-22 19:13:13,031 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA-T728.png
+2024-11-22 19:13:13,031 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/250 String Firecrackers.png
+2024-11-22 19:13:13,241 - INFO - Successfully processed product 9 of 50
+2024-11-22 19:13:15,245 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8089
+2024-11-22 19:13:16,712 - INFO - Found product details - Name: 4th of July, Image: http://pyrobuy.com/video/thumb/DUSA2136.png
+2024-11-22 19:13:16,715 - INFO - Found product: 4th of July
+2024-11-22 19:13:16,715 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA2136.png
+2024-11-22 19:13:16,715 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/4th of July.png
+2024-11-22 19:13:16,942 - INFO - Successfully processed product 10 of 50
+2024-11-22 19:13:18,947 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8082
+2024-11-22 19:13:20,230 - INFO - Found product details - Name: Celebrate America - 250 Shot Zipper , Image: http://pyrobuy.com/video/thumb/DUSA5497.png
+2024-11-22 19:13:20,233 - INFO - Found product: Celebrate America - 250 Shot Zipper 
+2024-11-22 19:13:20,233 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DUSA5497.png
+2024-11-22 19:13:20,233 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Celebrate America - 250 Shot Zipper.png
+2024-11-22 19:13:20,436 - INFO - Successfully processed product 11 of 50
+2024-11-22 19:13:22,437 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8086
+2024-11-22 19:13:23,783 - INFO - Found product details - Name: Mighty Mini, Image: http://pyrobuy.com/video/thumb/DM232.png
+2024-11-22 19:13:23,785 - INFO - Found product: Mighty Mini
+2024-11-22 19:13:23,785 - INFO - Found image URL: http://pyrobuy.com/video/thumb/DM232.png
+2024-11-22 19:13:23,785 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Mighty Mini.png
+2024-11-22 19:13:24,041 - INFO - Successfully processed product 12 of 50
+2024-11-22 19:13:26,045 - INFO - Looking for next page...
+2024-11-22 19:13:26,046 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=3
+2024-11-22 19:13:26,051 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> First </a>
+2024-11-22 19:13:26,052 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">Prev</a>
+2024-11-22 19:13:26,052 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1">1</a>
+2024-11-22 19:13:26,052 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">2</a>
+2024-11-22 19:13:26,053 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:13:26,053 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:13:26,053 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">6</a>
+2024-11-22 19:13:26,053 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=7">7</a>
+2024-11-22 19:13:26,053 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=8"> ... </a>
+2024-11-22 19:13:26,054 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">Next</a>
+2024-11-22 19:13:26,054 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:13:26,054 - INFO - Current page: 3
+2024-11-22 19:13:26,054 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=4
+2024-11-22 19:13:27,583 - INFO - Found 12 products on next page
+2024-11-22 19:13:27,585 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=4
+2024-11-22 19:13:29,590 - INFO - 
+Processing page 4...
+2024-11-22 19:13:30,639 - INFO - Found 12 unique product links
+2024-11-22 19:13:30,640 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8074
+2024-11-22 19:13:31,707 - INFO - Found product details - Name: 96 Shots Color Pearl Flower, Image: http://www.oxfireworks.com/video/OX-T2521.jpg
+2024-11-22 19:13:31,710 - INFO - Found product: 96 Shots Color Pearl Flower
+2024-11-22 19:13:31,710 - INFO - Found image URL: http://www.oxfireworks.com/video/OX-T2521.jpg
+2024-11-22 19:13:31,710 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/96 Shots Color Pearl Flower.jpg
+2024-11-22 19:13:32,626 - INFO - Successfully processed product 13 of 50
+2024-11-22 19:13:34,632 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=21&id=8079
+2024-11-22 19:13:36,069 - INFO - Found product details - Name: 4 Oz. Rockets 72/6, Image: http://dominatorfireworks.com/video/DM-T0082B-6.jpg
+2024-11-22 19:13:36,072 - INFO - Found product: 4 Oz. Rockets 72/6
+2024-11-22 19:13:36,072 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-T0082B-6.jpg
+2024-11-22 19:13:36,072 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/4 Oz Rockets 726.jpg
+2024-11-22 19:13:36,573 - INFO - Successfully processed product 14 of 50
+2024-11-22 19:13:38,578 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8072
+2024-11-22 19:13:40,283 - INFO - Found product details - Name: Poly Pack – Cylinder Artillery Shell, Image: http://dominatorfireworks.com/video/DM-W515C-V.jpg
+2024-11-22 19:13:40,285 - INFO - Found product: Poly Pack – Cylinder Artillery Shell
+2024-11-22 19:13:40,286 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W515C-V.jpg
+2024-11-22 19:13:40,286 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Poly Pack  Cylinder Artillery Shell.jpg
+2024-11-22 19:13:40,575 - INFO - Successfully processed product 15 of 50
+2024-11-22 19:13:42,579 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8073
+2024-11-22 19:13:43,679 - INFO - Found product details - Name: The Big Hurt, Image: http://pyrobuy.com/video/K9060.jpg
+2024-11-22 19:13:43,680 - INFO - Found product: The Big Hurt
+2024-11-22 19:13:43,680 - INFO - Found image URL: http://pyrobuy.com/video/K9060.jpg
+2024-11-22 19:13:43,681 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/The Big Hurt.jpg
+2024-11-22 19:13:43,884 - INFO - Successfully processed product 16 of 50
+2024-11-22 19:13:45,887 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8076
+2024-11-22 19:13:47,313 - INFO - Found product details - Name: The Dominator Artillery 100'S, Image: http://dominatorfireworks.com/video/DM346.jpg
+2024-11-22 19:13:47,315 - INFO - Found product: The Dominator Artillery 100'S
+2024-11-22 19:13:47,316 - INFO - Found image URL: http://dominatorfireworks.com/video/DM346.jpg
+2024-11-22 19:13:47,316 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/The Dominator Artillery 100S.jpg
+2024-11-22 19:13:47,548 - INFO - Successfully processed product 17 of 50
+2024-11-22 19:13:49,554 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=25&id=8078
+2024-11-22 19:13:50,810 - INFO - Found product details - Name: #10 Bamboo Crackle Sparkler, Image: http://dominatorfireworks.com/video/DM10N2.jpg
+2024-11-22 19:13:50,813 - INFO - Found product: #10 Bamboo Crackle Sparkler
+2024-11-22 19:13:50,813 - INFO - Found image URL: http://dominatorfireworks.com/video/DM10N2.jpg
+2024-11-22 19:13:50,813 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/10 Bamboo Crackle Sparkler.jpg
+2024-11-22 19:13:51,001 - INFO - Successfully processed product 18 of 50
+2024-11-22 19:13:53,003 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=25&id=8070
+2024-11-22 19:13:54,505 - INFO - Found product details - Name: #20 Gold - Wedding Box Sparkler (Ups Pack), Image: http://dominatorfireworks.com/video/DM20NW-W.jpg
+2024-11-22 19:13:54,507 - INFO - Found product: #20 Gold - Wedding Box Sparkler (Ups Pack)
+2024-11-22 19:13:54,508 - INFO - Found image URL: http://dominatorfireworks.com/video/DM20NW-W.jpg
+2024-11-22 19:13:54,508 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/20 Gold - Wedding Box Sparkler Ups Pack.jpg
+2024-11-22 19:13:54,726 - INFO - Successfully processed product 19 of 50
+2024-11-22 19:13:56,731 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=18&id=8067
+2024-11-22 19:13:58,495 - INFO - Found product details - Name: Party Pops, Image: http://dominatorfireworks.com/video/DM936.jpg
+2024-11-22 19:13:58,498 - INFO - Found product: Party Pops
+2024-11-22 19:13:58,498 - INFO - Found image URL: http://dominatorfireworks.com/video/DM936.jpg
+2024-11-22 19:13:58,498 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Party Pops.jpg
+2024-11-22 19:13:58,719 - INFO - Successfully processed product 20 of 50
+2024-11-22 19:14:00,720 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8068
+2024-11-22 19:14:01,966 - INFO - Found product details - Name: Red Box Cylinder Artillery Shells, Image: http://dominatorfireworks.com/video/DM-W515C-R.jpg
+2024-11-22 19:14:01,968 - INFO - Found product: Red Box Cylinder Artillery Shells
+2024-11-22 19:14:01,968 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W515C-R.jpg
+2024-11-22 19:14:01,968 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Red Box Cylinder Artillery Shells.jpg
+2024-11-22 19:14:02,167 - INFO - Successfully processed product 21 of 50
+2024-11-22 19:14:04,170 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8077
+2024-11-22 19:14:05,548 - INFO - Found product details - Name: 12/12 Dominator Black Box Artillery, Image: http://dominatorfireworks.com/video/DM-W515B-12.jpg
+2024-11-22 19:14:05,550 - INFO - Found product: 12/12 Dominator Black Box Artillery
+2024-11-22 19:14:05,550 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W515B-12.jpg
+2024-11-22 19:14:05,550 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/1212 Dominator Black Box Artillery.jpg
+2024-11-22 19:14:05,850 - INFO - Successfully processed product 22 of 50
+2024-11-22 19:14:07,855 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8069
+2024-11-22 19:14:09,503 - INFO - Found product details - Name: Black Box Artillery - Compact 12 Shells, Image: http://dominatorfireworks.com/video/DM-W515S12.jpg
+2024-11-22 19:14:09,505 - INFO - Found product: Black Box Artillery - Compact 12 Shells
+2024-11-22 19:14:09,505 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W515S12.jpg
+2024-11-22 19:14:09,506 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Black Box Artillery - Compact 12 Shells.jpg
+2024-11-22 19:14:09,803 - INFO - Successfully processed product 23 of 50
+2024-11-22 19:14:11,808 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8081
+2024-11-22 19:14:13,241 - INFO - Found product details - Name: Crackling Artillery W/ Compact Box, Image: http://dominatorfireworks.com/video/DM-W518S.jpg
+2024-11-22 19:14:13,244 - INFO - Found product: Crackling Artillery W/ Compact Box
+2024-11-22 19:14:13,244 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W518S.jpg
+2024-11-22 19:14:13,244 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Crackling Artillery W Compact Box.jpg
+2024-11-22 19:14:13,847 - INFO - Successfully processed product 24 of 50
+2024-11-22 19:14:15,849 - INFO - Looking for next page...
+2024-11-22 19:14:15,849 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=4
+2024-11-22 19:14:15,850 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> First </a>
+2024-11-22 19:14:15,850 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">Prev</a>
+2024-11-22 19:14:15,850 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1">1</a>
+2024-11-22 19:14:15,850 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">2</a>
+2024-11-22 19:14:15,850 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:14:15,850 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:14:15,851 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">6</a>
+2024-11-22 19:14:15,851 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=7">7</a>
+2024-11-22 19:14:15,851 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=8">8</a>
+2024-11-22 19:14:15,851 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=9"> ... </a>
+2024-11-22 19:14:15,851 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">Next</a>
+2024-11-22 19:14:15,851 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:14:15,851 - INFO - Current page: 4
+2024-11-22 19:14:15,851 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=5
+2024-11-22 19:14:17,389 - INFO - Found 12 products on next page
+2024-11-22 19:14:17,391 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=5
+2024-11-22 19:14:19,395 - INFO - 
+Processing page 5...
+2024-11-22 19:14:21,235 - INFO - Found 12 unique product links
+2024-11-22 19:14:21,235 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8058
+2024-11-22 19:14:22,390 - INFO - Found product details - Name: Poly Pack - Crackling Cylinder Shell, Image: http://dominatorfireworks.com/video/DM-W518C-V.jpg
+2024-11-22 19:14:22,392 - INFO - Found product: Poly Pack - Crackling Cylinder Shell
+2024-11-22 19:14:22,392 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W518C-V.jpg
+2024-11-22 19:14:22,392 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Poly Pack - Crackling Cylinder Shell.jpg
+2024-11-22 19:14:22,602 - INFO - Successfully processed product 25 of 50
+2024-11-22 19:14:24,607 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8063
+2024-11-22 19:14:26,143 - INFO - Found product details - Name: Mothership, Image: http://dominatorfireworks.com/video/DM757.jpg
+2024-11-22 19:14:26,145 - INFO - Found product: Mothership
+2024-11-22 19:14:26,145 - INFO - Found image URL: http://dominatorfireworks.com/video/DM757.jpg
+2024-11-22 19:14:26,146 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Mothership.jpg
+2024-11-22 19:14:26,339 - INFO - Successfully processed product 26 of 50
+2024-11-22 19:14:28,340 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8060
+2024-11-22 19:14:30,117 - INFO - Found product details - Name: Recluse, Image: http://dominatorfireworks.com/video/DM595.jpg
+2024-11-22 19:14:30,120 - INFO - Found product: Recluse
+2024-11-22 19:14:30,120 - INFO - Found image URL: http://dominatorfireworks.com/video/DM595.jpg
+2024-11-22 19:14:30,120 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Recluse.jpg
+2024-11-22 19:14:30,384 - INFO - Successfully processed product 27 of 50
+2024-11-22 19:14:32,388 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8065
+2024-11-22 19:14:34,129 - INFO - Found product details - Name: #500 Tube Cake - Assorted Case, Image: http://dominatorfireworks.com/video/DM5019.jpg
+2024-11-22 19:14:34,132 - INFO - Found product: #500 Tube Cake - Assorted Case
+2024-11-22 19:14:34,132 - INFO - Found image URL: http://dominatorfireworks.com/video/DM5019.jpg
+2024-11-22 19:14:34,132 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/500 Tube Cake - Assorted Case.jpg
+2024-11-22 19:14:34,423 - INFO - Successfully processed product 28 of 50
+2024-11-22 19:14:36,425 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8062
+2024-11-22 19:14:38,121 - INFO - Found product details - Name: Assorted Artillery Shells, Image: http://dominatorfireworks.com/video/DM301.jpg
+2024-11-22 19:14:38,123 - INFO - Found product: Assorted Artillery Shells
+2024-11-22 19:14:38,123 - INFO - Found image URL: http://dominatorfireworks.com/video/DM301.jpg
+2024-11-22 19:14:38,124 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Assorted Artillery Shells.jpg
+2024-11-22 19:14:38,379 - INFO - Successfully processed product 29 of 50
+2024-11-22 19:14:40,383 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=8&id=8055
+2024-11-22 19:14:41,742 - INFO - Found product details - Name: Kaleidoscope, Image: http://www.oxfireworks.com/video/OX-T2512.jpg
+2024-11-22 19:14:41,744 - INFO - Found product: Kaleidoscope
+2024-11-22 19:14:41,745 - INFO - Found image URL: http://www.oxfireworks.com/video/OX-T2512.jpg
+2024-11-22 19:14:41,745 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Kaleidoscope.jpg
+2024-11-22 19:14:42,265 - INFO - Successfully processed product 30 of 50
+2024-11-22 19:14:44,266 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8066
+2024-11-22 19:14:45,803 - INFO - Found product details - Name: Whistling Artillery W/Compact Box, Image: http://dominatorfireworks.com/video/DM-W516S.jpg
+2024-11-22 19:14:45,806 - INFO - Found product: Whistling Artillery W/Compact Box
+2024-11-22 19:14:45,806 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W516S.jpg
+2024-11-22 19:14:45,806 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Whistling Artillery WCompact Box.jpg
+2024-11-22 19:14:46,083 - INFO - Successfully processed product 31 of 50
+2024-11-22 19:14:48,086 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8056
+2024-11-22 19:14:49,491 - INFO - Found product details - Name: God Of Thunder (Compact), Image: http://pyrobuy.com/video/KAS024C.jpg
+2024-11-22 19:14:49,494 - INFO - Found product: God Of Thunder (Compact)
+2024-11-22 19:14:49,494 - INFO - Found image URL: http://pyrobuy.com/video/KAS024C.jpg
+2024-11-22 19:14:49,494 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/God Of Thunder Compact.jpg
+2024-11-22 19:14:49,786 - INFO - Successfully processed product 32 of 50
+2024-11-22 19:14:51,790 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=10&id=8059
+2024-11-22 19:14:53,183 - INFO - Found product details - Name: Variety Pack Value Cakes #2, Image: http://dominatorfireworks.com/video/DM500B.jpg
+2024-11-22 19:14:53,186 - INFO - Found product: Variety Pack Value Cakes #2
+2024-11-22 19:14:53,186 - INFO - Found image URL: http://dominatorfireworks.com/video/DM500B.jpg
+2024-11-22 19:14:53,186 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Variety Pack Value Cakes 2.jpg
+2024-11-22 19:14:53,344 - INFO - Successfully processed product 33 of 50
+2024-11-22 19:14:55,349 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=14&id=8054
+2024-11-22 19:14:57,112 - INFO - Found product details - Name: Killer Bee, Image: http://dominatorfireworks.com/video/DM-W499A.jpg
+2024-11-22 19:14:57,114 - INFO - Found product: Killer Bee
+2024-11-22 19:14:57,114 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W499A.jpg
+2024-11-22 19:14:57,114 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Killer Bee.jpg
+2024-11-22 19:14:57,320 - INFO - Successfully processed product 34 of 50
+2024-11-22 19:14:59,324 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=13&id=8064
+2024-11-22 19:15:00,856 - INFO - Found product details - Name: Lady Finger Firecrackers, Image: http://dominatorfireworks.com/video/DM-T532.jpg
+2024-11-22 19:15:00,859 - INFO - Found product: Lady Finger Firecrackers
+2024-11-22 19:15:00,859 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-T532.jpg
+2024-11-22 19:15:00,859 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Lady Finger Firecrackers.jpg
+2024-11-22 19:15:01,098 - INFO - Successfully processed product 35 of 50
+2024-11-22 19:15:03,103 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=7&id=8061
+2024-11-22 19:15:04,398 - INFO - Found product details - Name: The 8Th Wonder, Image: http://dominatorfireworks.com/video/K9017.jpg
+2024-11-22 19:15:04,401 - INFO - Found product: The 8Th Wonder
+2024-11-22 19:15:04,401 - INFO - Found image URL: http://dominatorfireworks.com/video/K9017.jpg
+2024-11-22 19:15:04,401 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/The 8Th Wonder.jpg
+2024-11-22 19:15:04,655 - INFO - Successfully processed product 36 of 50
+2024-11-22 19:15:06,661 - INFO - Looking for next page...
+2024-11-22 19:15:06,662 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=5
+2024-11-22 19:15:06,667 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> First </a>
+2024-11-22 19:15:06,667 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">Prev</a>
+2024-11-22 19:15:06,668 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1">1</a>
+2024-11-22 19:15:06,668 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">2</a>
+2024-11-22 19:15:06,668 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:15:06,669 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:15:06,669 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">6</a>
+2024-11-22 19:15:06,669 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=7">7</a>
+2024-11-22 19:15:06,669 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=8">8</a>
+2024-11-22 19:15:06,670 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=9">9</a>
+2024-11-22 19:15:06,670 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=10"> ... </a>
+2024-11-22 19:15:06,670 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">Next</a>
+2024-11-22 19:15:06,670 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:15:06,670 - INFO - Current page: 5
+2024-11-22 19:15:06,670 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=6
+2024-11-22 19:15:07,754 - INFO - Found 12 products on next page
+2024-11-22 19:15:07,756 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=6
+2024-11-22 19:15:09,757 - INFO - 
+Processing page 6...
+2024-11-22 19:15:10,696 - INFO - Found 12 unique product links
+2024-11-22 19:15:10,697 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=0&id=8043
+2024-11-22 19:15:11,913 - INFO - Found product details - Name: T-Shirt Package, Image: http://dominatorfireworks.com/video/DM1999-T.jpg
+2024-11-22 19:15:11,916 - INFO - Found product: T-Shirt Package
+2024-11-22 19:15:11,916 - INFO - Found image URL: http://dominatorfireworks.com/video/DM1999-T.jpg
+2024-11-22 19:15:11,916 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/T-Shirt Package.jpg
+2024-11-22 19:15:12,160 - INFO - Successfully processed product 37 of 50
+2024-11-22 19:15:14,165 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=0&id=8042
+2024-11-22 19:15:15,741 - INFO - Found product details - Name: Bug Repellent Bracelet, Image: http://dominatorfireworks.com/video/DM3088.jpg
+2024-11-22 19:15:15,743 - INFO - Found product: Bug Repellent Bracelet
+2024-11-22 19:15:15,743 - INFO - Found image URL: http://dominatorfireworks.com/video/DM3088.jpg
+2024-11-22 19:15:15,744 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Bug Repellent Bracelet.jpg
+2024-11-22 19:15:15,945 - INFO - Successfully processed product 38 of 50
+2024-11-22 19:15:17,949 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8052
+2024-11-22 19:15:19,449 - INFO - Found product details - Name: Small Black Box Cylinder Artillery Shells, Image: http://dominatorfireworks.com/video/DM-W515CS.jpg
+2024-11-22 19:15:19,452 - INFO - Found product: Small Black Box Cylinder Artillery Shells
+2024-11-22 19:15:19,452 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-W515CS.jpg
+2024-11-22 19:15:19,452 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Small Black Box Cylinder Artillery Shells.jpg
+2024-11-22 19:15:19,635 - INFO - Successfully processed product 39 of 50
+2024-11-22 19:15:21,639 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=25&id=8050
+2024-11-22 19:15:22,948 - INFO - Found product details - Name: #20 Gold Electric Sparkler, Image: http://dominatorfireworks.com/video/DM20N.jpg
+2024-11-22 19:15:22,950 - INFO - Found product: #20 Gold Electric Sparkler
+2024-11-22 19:15:22,950 - INFO - Found image URL: http://dominatorfireworks.com/video/DM20N.jpg
+2024-11-22 19:15:22,951 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/20 Gold Electric Sparkler.jpg
+2024-11-22 19:15:23,161 - INFO - Successfully processed product 40 of 50
+2024-11-22 19:15:25,163 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8049
+2024-11-22 19:15:26,662 - INFO - Found product details - Name: Poly Pack - Whistling Artillery Shell, Image: http://dominatorfireworks.com/video/BW-W516A-V.jpg
+2024-11-22 19:15:26,665 - INFO - Found product: Poly Pack - Whistling Artillery Shell
+2024-11-22 19:15:26,665 - INFO - Found image URL: http://dominatorfireworks.com/video/BW-W516A-V.jpg
+2024-11-22 19:15:26,666 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Poly Pack - Whistling Artillery Shell.jpg
+2024-11-22 19:15:26,836 - INFO - Successfully processed product 41 of 50
+2024-11-22 19:15:28,842 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=0&id=8045
+2024-11-22 19:15:30,065 - INFO - Found product details - Name: 1.91in 24 Shot Fiberglass Angle Rack, Image: http://dominatorfireworks.com/video/DM-R2-24.jpg
+2024-11-22 19:15:30,068 - INFO - Found product: 1.91in 24 Shot Fiberglass Angle Rack
+2024-11-22 19:15:30,068 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-R2-24.jpg
+2024-11-22 19:15:30,068 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/191in 24 Shot Fiberglass Angle Rack.jpg
+2024-11-22 19:15:30,249 - INFO - Successfully processed product 42 of 50
+2024-11-22 19:15:32,255 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8051
+2024-11-22 19:15:33,726 - INFO - Found product details - Name: Guardian - Double Break, Image: http://dominatorfireworks.com/video/DM310D.jpg
+2024-11-22 19:15:33,729 - INFO - Found product: Guardian - Double Break
+2024-11-22 19:15:33,729 - INFO - Found image URL: http://dominatorfireworks.com/video/DM310D.jpg
+2024-11-22 19:15:33,729 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Guardian - Double Break.jpg
+2024-11-22 19:15:33,961 - INFO - Successfully processed product 43 of 50
+2024-11-22 19:15:35,965 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=21&id=8048
+2024-11-22 19:15:37,720 - INFO - Found product details - Name: Clustering Bees, Image: http://dominatorfireworks.com/video/DM-T0508.jpg
+2024-11-22 19:15:37,724 - INFO - Found product: Clustering Bees
+2024-11-22 19:15:37,724 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-T0508.jpg
+2024-11-22 19:15:37,725 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Clustering Bees.jpg
+2024-11-22 19:15:37,914 - INFO - Successfully processed product 44 of 50
+2024-11-22 19:15:39,920 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8046
+2024-11-22 19:15:41,406 - INFO - Found product details - Name: Poly Pack - Artillery Shell, Image: http://dominatorfireworks.com/video/BW-W515B-V.jpg
+2024-11-22 19:15:41,409 - INFO - Found product: Poly Pack - Artillery Shell
+2024-11-22 19:15:41,409 - INFO - Found image URL: http://dominatorfireworks.com/video/BW-W515B-V.jpg
+2024-11-22 19:15:41,409 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Poly Pack - Artillery Shell.jpg
+2024-11-22 19:15:41,559 - INFO - Successfully processed product 45 of 50
+2024-11-22 19:15:43,564 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=0&id=8044
+2024-11-22 19:15:44,780 - INFO - Found product details - Name: 1.91in 12 Shot Vert. Fiberglass Rack, Image: http://dominatorfireworks.com/video/DM-R2-12.jpg
+2024-11-22 19:15:44,783 - INFO - Found product: 1.91in 12 Shot Vert. Fiberglass Rack
+2024-11-22 19:15:44,783 - INFO - Found image URL: http://dominatorfireworks.com/video/DM-R2-12.jpg
+2024-11-22 19:15:44,783 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/191in 12 Shot Vert Fiberglass Rack.jpg
+2024-11-22 19:15:44,979 - INFO - Successfully processed product 46 of 50
+2024-11-22 19:15:46,985 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8053
+2024-11-22 19:15:48,474 - INFO - Found product details - Name: Poly Pack - Crackling Artillery Shell, Image: http://dominatorfireworks.com/video/BW-W518A-V.jpg
+2024-11-22 19:15:48,477 - INFO - Found product: Poly Pack - Crackling Artillery Shell
+2024-11-22 19:15:48,478 - INFO - Found image URL: http://dominatorfireworks.com/video/BW-W518A-V.jpg
+2024-11-22 19:15:48,478 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Poly Pack - Crackling Artillery Shell.jpg
+2024-11-22 19:15:48,643 - INFO - Successfully processed product 47 of 50
+2024-11-22 19:15:50,649 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=9&id=8047
+2024-11-22 19:15:52,159 - INFO - Found product details - Name: Black Box Artillery (Compact Box), Image: http://dominatorfireworks.com/video/BW-W515S.jpg
+2024-11-22 19:15:52,161 - INFO - Found product: Black Box Artillery (Compact Box)
+2024-11-22 19:15:52,161 - INFO - Found image URL: http://dominatorfireworks.com/video/BW-W515S.jpg
+2024-11-22 19:15:52,162 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Black Box Artillery Compact Box.jpg
+2024-11-22 19:15:52,416 - INFO - Successfully processed product 48 of 50
+2024-11-22 19:15:54,421 - INFO - Looking for next page...
+2024-11-22 19:15:54,421 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=6
+2024-11-22 19:15:54,426 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> First </a>
+2024-11-22 19:15:54,426 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">Prev</a>
+2024-11-22 19:15:54,426 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> ... </a>
+2024-11-22 19:15:54,426 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2">2</a>
+2024-11-22 19:15:54,426 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:15:54,427 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:15:54,427 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:15:54,427 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=7">7</a>
+2024-11-22 19:15:54,428 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=8">8</a>
+2024-11-22 19:15:54,428 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=9">9</a>
+2024-11-22 19:15:54,428 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=10">10</a>
+2024-11-22 19:15:54,428 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=11"> ... </a>
+2024-11-22 19:15:54,428 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=7">Next</a>
+2024-11-22 19:15:54,428 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:15:54,428 - INFO - Current page: 6
+2024-11-22 19:15:54,428 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=7
+2024-11-22 19:15:55,973 - INFO - Found 12 products on next page
+2024-11-22 19:15:55,974 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=7
+2024-11-22 19:15:57,975 - INFO - 
+Processing page 7...
+2024-11-22 19:15:59,653 - INFO - Found 12 unique product links
+2024-11-22 19:15:59,655 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=0&id=8038
+2024-11-22 19:16:01,057 - INFO - Found product details - Name: LED Foam Baton- US Flag, Image: http://dominatorfireworks.com/video/DM3070-US.jpg
+2024-11-22 19:16:01,059 - INFO - Found product: LED Foam Baton- US Flag
+2024-11-22 19:16:01,059 - INFO - Found image URL: http://dominatorfireworks.com/video/DM3070-US.jpg
+2024-11-22 19:16:01,059 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/LED Foam Baton- US Flag.jpg
+2024-11-22 19:16:01,243 - INFO - Successfully processed product 49 of 50
+2024-11-22 19:16:03,249 - INFO - Visiting product page: https://www.pyrobuy.com/productdtls.asp?t=&sid=0&id=8032
+2024-11-22 19:16:04,679 - INFO - Found product details - Name: Dominator Notes, Image: http://dominatorfireworks.com/video/DM3040.jpg
+2024-11-22 19:16:04,681 - INFO - Found product: Dominator Notes
+2024-11-22 19:16:04,681 - INFO - Found image URL: http://dominatorfireworks.com/video/DM3040.jpg
+2024-11-22 19:16:04,682 - INFO - Downloading image to: /Users/joshgoble/Downloads/firework_pics/pyrobuy.com/Dominator Notes.jpg
+2024-11-22 19:16:04,890 - INFO - Successfully processed product 50 of 50
+2024-11-22 19:16:06,892 - INFO - Looking for next page...
+2024-11-22 19:16:06,893 - INFO - Current URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=7
+2024-11-22 19:16:06,896 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=1"> First </a>
+2024-11-22 19:16:06,897 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">Prev</a>
+2024-11-22 19:16:06,897 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=2"> ... </a>
+2024-11-22 19:16:06,897 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=3">3</a>
+2024-11-22 19:16:06,897 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=4">4</a>
+2024-11-22 19:16:06,897 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=5">5</a>
+2024-11-22 19:16:06,897 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=6">6</a>
+2024-11-22 19:16:06,898 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=8">8</a>
+2024-11-22 19:16:06,898 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=9">9</a>
+2024-11-22 19:16:06,898 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=10">10</a>
+2024-11-22 19:16:06,898 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=11">11</a>
+2024-11-22 19:16:06,899 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=12"> ... </a>
+2024-11-22 19:16:06,899 - INFO - Found pagination link: <a href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=8">Next</a>
+2024-11-22 19:16:06,899 - INFO - Found pagination link: <a class="dismobile" href="http://www.pyrobuy.com/products.asp?sid=1&amp;bid=1¤tpage=97"> Last </a>
+2024-11-22 19:16:06,899 - INFO - Current page: 7
+2024-11-22 19:16:06,899 - INFO - Trying constructed URL: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=8
+2024-11-22 19:16:07,957 - INFO - Found 12 products on next page
+2024-11-22 19:16:07,960 - INFO - Moving to next page: https://www.pyrobuy.com/products.asp?sid=1&bid=1&currentpage=8
+2024-11-22 19:16:09,961 - INFO - 
+Final Summary:
+2024-11-22 19:16:09,962 - INFO - Pages processed: 8
+2024-11-22 19:16:09,962 - INFO - Existing images found: 33
+2024-11-22 19:16:09,962 - INFO - New images downloaded: 50
+2024-11-22 19:16:09,963 - INFO - Total images in directory: 83
+2024-11-22 19:17:05,674 - INFO - Starting scraper...
+2024-11-22 19:17:05,680 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:17:05,725 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:17:05,725 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:17:05,726 - INFO - Found 30 existing images in directory
+2024-11-22 19:17:05,726 - INFO - 
+Processing page 1...
+2024-11-22 19:17:06,825 - INFO - Using World Class specific approach...
+2024-11-22 19:17:06,825 - INFO - Processing artillery shells category: https://www.worldclassfireworks.com/fireworks/artillery-shells/
+2024-11-22 19:17:07,642 - INFO - Found 34 products in artillery shells category
+2024-11-22 19:17:07,642 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/w515b-artillery-shell/
+2024-11-22 19:17:08,272 - INFO - Found product: W515B Artillery Shell
+2024-11-22 19:17:08,273 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/w515b_artillery__4bcbd821b12e7.png
+2024-11-22 19:17:08,273 - INFO - Image already exists: w515b_artillery__4bcbd821b12e7.png
+2024-11-22 19:17:09,274 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/w515b-slim-box/
+2024-11-22 19:17:09,904 - INFO - Found product: W515B Slim Box
+2024-11-22 19:17:09,905 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/W515B_Slim_Box_4bcbd84441fb9.png
+2024-11-22 19:17:09,905 - INFO - Image already exists: W515B_Slim_Box_4bcbd84441fb9.png
+2024-11-22 19:17:10,910 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/festival-balls-slim-box/
+2024-11-22 19:17:11,726 - INFO - Found product: Festival Balls -Slim Box
+2024-11-22 19:17:11,726 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Festival_Balls___4bcbd92ae69c5.png
+2024-11-22 19:17:11,726 - INFO - Image already exists: Festival_Balls___4bcbd92ae69c5.png
+2024-11-22 19:17:12,728 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/w515b-artillery-shell-black-box/
+2024-11-22 19:17:13,573 - INFO - Found product: W515B Artillery Shell (Black Box)
+2024-11-22 19:17:13,574 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/W515B_Artillery__4bcbd821b12e7_1.png
+2024-11-22 19:17:13,574 - INFO - Image already exists: W515B_Artillery__4bcbd821b12e7_1.png
+2024-11-22 19:17:14,578 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-all-bombs/
+2024-11-22 19:17:15,414 - INFO - Found product: MOAB (MOTHER OF ALL BOMBS)
+2024-11-22 19:17:15,415 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/MOAB.png
+2024-11-22 19:17:15,415 - INFO - Image already exists: MOAB.png
+2024-11-22 19:17:16,421 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/trilogy/
+2024-11-22 19:17:17,563 - INFO - Found product: Trilogy
+2024-11-22 19:17:17,564 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Trilogy_4bf5b3e157281.png
+2024-11-22 19:17:17,564 - INFO - Image already exists: Trilogy_4bf5b3e157281.png
+2024-11-22 19:17:18,565 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/5-assorted/
+2024-11-22 19:17:19,664 - INFO - Found product: #5 Assorted
+2024-11-22 19:17:19,665 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/5_Assorted_4bdb8e3850ab4.png
+2024-11-22 19:17:19,665 - INFO - Image already exists: 5_Assorted_4bdb8e3850ab4.png
+2024-11-22 19:17:20,667 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/festival-balls-0/
+2024-11-22 19:17:21,264 - INFO - Found product: Festival Balls
+2024-11-22 19:17:21,265 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Festival_Balls_4bcbd9a23886b.png
+2024-11-22 19:17:21,265 - INFO - Image already exists: Festival_Balls_4bcbd9a23886b.png
+2024-11-22 19:17:22,267 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/the-instigator/
+2024-11-22 19:17:23,097 - INFO - Found product: The Instigator
+2024-11-22 19:17:23,098 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/The_Instigator_4bcbd8582c92f.png
+2024-11-22 19:17:23,098 - INFO - Image already exists: The_Instigator_4bcbd8582c92f.png
+2024-11-22 19:17:24,099 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell/
+2024-11-22 19:17:24,937 - INFO - Found product: Super Magnum Artillery Shell
+2024-11-22 19:17:24,938 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/1001408-min.jpg
+2024-11-22 19:17:24,938 - INFO - Image already exists: 1001408-min.jpg
+2024-11-22 19:17:25,944 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/instigator/
+2024-11-22 19:17:27,089 - INFO - Found product: THE INSTIGATOR
+2024-11-22 19:17:27,089 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/The_Instigator_4bcbd8582c92f.png
+2024-11-22 19:17:27,090 - INFO - Image already exists: The_Instigator_4bcbd8582c92f.png
+2024-11-22 19:17:28,091 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/home-of-the-brave/
+2024-11-22 19:17:28,919 - INFO - Found product: Home of The Brave
+2024-11-22 19:17:28,919 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/home_of_the_brave.png
+2024-11-22 19:17:28,919 - INFO - Image already exists: home_of_the_brave.png
+2024-11-22 19:17:29,924 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell-tail/
+2024-11-22 19:17:30,775 - INFO - Found product: SUPER MAGNUM ARTILLERY SHELL WITH TAIL
+2024-11-22 19:17:30,776 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1001478-min.jpg
+2024-11-22 19:17:30,776 - INFO - Image already exists: 1001478-min.jpg
+2024-11-22 19:17:31,781 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/300-premium-assorted/
+2024-11-22 19:17:32,615 - INFO - Found product: #300 Premium Assorted
+2024-11-22 19:17:32,616 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/300_Premium_Ass_4bdb8e1bdd8a9.png
+2024-11-22 19:17:32,616 - INFO - Image already exists: 300_Premium_Ass_4bdb8e1bdd8a9.png
+2024-11-22 19:17:33,619 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/zeus-flourescent-artillery-shells/
+2024-11-22 19:17:34,767 - INFO - Found product: Zeus Flourescent Artillery Shells
+2024-11-22 19:17:34,767 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Zeus___Flouresce_4bdb94d14ee3e_0.png
+2024-11-22 19:17:34,768 - INFO - Image already exists: Zeus___Flouresce_4bdb94d14ee3e_0.png
+2024-11-22 19:17:35,771 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/growler-5-canister-shells/
+2024-11-22 19:17:36,613 - INFO - Found product: Growler 5″ Canister Shells
+2024-11-22 19:17:36,614 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/1003547.jpg
+2024-11-22 19:17:36,614 - INFO - Image already exists: 1003547.jpg
+2024-11-22 19:17:37,615 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/crackling-artillery-shell-green-box/
+2024-11-22 19:17:38,687 - INFO - Found product: Crackling Artillery Shell (Green Box)
+2024-11-22 19:17:38,688 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Crackling_Artill_4bcbd76e81e40.png
+2024-11-22 19:17:38,688 - INFO - Image already exists: Crackling_Artill_4bcbd76e81e40.png
+2024-11-22 19:17:39,690 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/merlin/
+2024-11-22 19:17:40,602 - INFO - Found product: Merlin
+2024-11-22 19:17:40,603 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Merlin_4bf5b340213d5.png
+2024-11-22 19:17:40,603 - INFO - Image already exists: Merlin_4bf5b340213d5.png
+2024-11-22 19:17:41,609 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/united-we-stand/
+2024-11-22 19:17:42,213 - INFO - Found product: United We Stand
+2024-11-22 19:17:42,214 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/United-We-Stand-min.png
+2024-11-22 19:17:42,214 - INFO - Image already exists: United-We-Stand-min.png
+2024-11-22 19:17:43,219 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/100-assorted/
+2024-11-22 19:17:43,835 - INFO - Found product: #100 Assorted
+2024-11-22 19:17:43,835 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/100_Assorted_4bdb8e06ae8f0.png
+2024-11-22 19:17:43,836 - INFO - Image already exists: 100_Assorted_4bdb8e06ae8f0.png
+2024-11-22 19:17:44,840 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/1-canister-in-poly-bag/
+2024-11-22 19:17:46,133 - INFO - Found product: 1″ Canister in Poly Bag
+2024-11-22 19:17:46,134 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/1030190-min.jpg
+2024-11-22 19:17:46,134 - INFO - Image already exists: 1030190-min.jpg
+2024-11-22 19:17:47,137 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-of-all-bombs/
+2024-11-22 19:17:48,283 - INFO - Found product: MOAB (Mother of all Bombs)
+2024-11-22 19:17:48,284 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/MOAB.png
+2024-11-22 19:17:48,284 - INFO - Image already exists: MOAB.png
+2024-11-22 19:17:49,286 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/excalibur-fireworks-artillery-shells/
+2024-11-22 19:17:50,440 - INFO - Found product: Excalibur Fireworks Artillery Shells
+2024-11-22 19:17:50,441 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/excalibur-firework.png
+2024-11-22 19:17:50,441 - INFO - Image already exists: excalibur-firework.png
+2024-11-22 19:17:51,444 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/pure-venom/
+2024-11-22 19:17:52,101 - INFO - Found product: Pure Venom
+2024-11-22 19:17:52,102 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/04/pure-venom-nb.png
+2024-11-22 19:17:52,102 - INFO - Image already exists: pure-venom-nb.png
+2024-11-22 19:17:53,104 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/festival-balls/
+2024-11-22 19:17:53,813 - INFO - Found product: Festival Balls
+2024-11-22 19:17:53,814 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Festival_Balls_4bcbd9feb94c7.png
+2024-11-22 19:17:53,814 - INFO - Image already exists: Festival_Balls_4bcbd9feb94c7.png
+2024-11-22 19:17:54,820 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/king-arthur/
+2024-11-22 19:17:55,658 - INFO - Found product: King Arthur
+2024-11-22 19:17:55,659 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/King_Aurthur_4bcbd67d1999d.png
+2024-11-22 19:17:55,659 - INFO - Image already exists: King_Aurthur_4bcbd67d1999d.png
+2024-11-22 19:17:56,665 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/goliath-fireworks/
+2024-11-22 19:17:57,809 - INFO - Found product: Goliath Fireworks
+2024-11-22 19:17:57,810 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Goliath_4bcbd665d202b.png
+2024-11-22 19:17:57,810 - INFO - Image already exists: Goliath_4bcbd665d202b.png
+2024-11-22 19:17:58,812 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/1-canister-in-poly-bag-2/
+2024-11-22 19:17:59,650 - INFO - Found product: 1″ CANISTER IN POLY BAG
+2024-11-22 19:17:59,651 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1030190-min.jpg
+2024-11-22 19:17:59,651 - INFO - Image already exists: 1030190-min.jpg
+2024-11-22 19:18:00,656 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/whistling-jake-red-box/
+2024-11-22 19:18:01,402 - INFO - Found product: Whistling Jake (Red Box)
+2024-11-22 19:18:01,403 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Whistling_Jake___4bcbd7bc7e840.png
+2024-11-22 19:18:01,403 - INFO - Image already exists: Whistling_Jake___4bcbd7bc7e840.png
+2024-11-22 19:18:02,406 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/home-brave/
+2024-11-22 19:18:02,984 - INFO - Found product: HOME OF THE BRAVE
+2024-11-22 19:18:02,985 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/home_of_the_brave.png
+2024-11-22 19:18:02,985 - INFO - Image already exists: home_of_the_brave.png
+2024-11-22 19:18:03,986 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/sir-lancelot/
+2024-11-22 19:18:04,687 - INFO - Found product: Sir Lancelot
+2024-11-22 19:18:04,687 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/Sir_Lancelot_4bcbd6f57e13c.png
+2024-11-22 19:18:04,688 - INFO - Image already exists: Sir_Lancelot_4bcbd6f57e13c.png
+2024-11-22 19:18:05,690 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/avenger/
+2024-11-22 19:18:06,433 - INFO - Found product: Avenger
+2024-11-22 19:18:06,434 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/avengers.png
+2024-11-22 19:18:06,434 - INFO - Image already exists: avengers.png
+2024-11-22 19:18:07,436 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/excalibur-platinum-artillery-shells/
+2024-11-22 19:18:08,255 - INFO - Found product: Excalibur Platinum Artillery Shells
+2024-11-22 19:18:08,256 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/12/1003570.jpg
+2024-11-22 19:18:08,256 - INFO - Image already exists: 1003570.jpg
+2024-11-22 19:18:09,262 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell-with-tail/
+2024-11-22 19:18:10,410 - INFO - Found product: Super Magnum Artillery Shell with Tail
+2024-11-22 19:18:10,411 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/1001478-min.jpg
+2024-11-22 19:18:10,411 - INFO - Image already exists: 1001478-min.jpg
+2024-11-22 19:18:11,416 - INFO - Completed processing 0 products
+2024-11-22 19:18:11,422 - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-22 19:18:11,424 - INFO - 
+Final Summary:
+2024-11-22 19:18:11,424 - INFO - Pages processed: 1
+2024-11-22 19:18:11,424 - INFO - Existing images found: 30
+2024-11-22 19:18:11,424 - INFO - New images downloaded: 0
+2024-11-22 19:18:11,425 - INFO - Total images in directory: 30
+2024-11-22 19:19:42,523 - INFO - Starting scraper...
+2024-11-22 19:19:42,529 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:19:42,574 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:19:42,574 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:19:42,574 - INFO - Found 29 existing images in directory
+2024-11-22 19:19:42,574 - INFO - 
+Processing page 1...
+2024-11-22 19:19:43,388 - INFO - Found 0 product links
+2024-11-22 19:19:43,389 - INFO - Looking for next page...
+2024-11-22 19:19:43,396 - INFO - No next page found
+2024-11-22 19:19:43,396 - INFO - No more pages to process
+2024-11-22 19:19:43,396 - INFO - 
+Final Summary:
+2024-11-22 19:19:43,396 - INFO - Pages processed: 1
+2024-11-22 19:19:43,396 - INFO - Existing images found: 29
+2024-11-22 19:19:43,396 - INFO - New images downloaded: 0
+2024-11-22 19:19:43,396 - INFO - Total images in directory: 29
+2024-11-22 19:19:54,883 - INFO - Starting scraper...
+2024-11-22 19:19:54,889 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:19:54,929 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:19:54,929 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:19:54,930 - INFO - Found 29 existing images in directory
+2024-11-22 19:19:54,930 - INFO - 
+Processing page 1...
+2024-11-22 19:19:55,732 - INFO - Found 0 product links
+2024-11-22 19:19:55,732 - INFO - Looking for next page...
+2024-11-22 19:19:55,739 - INFO - No next page found
+2024-11-22 19:19:55,739 - INFO - No more pages to process
+2024-11-22 19:19:55,739 - INFO - 
+Final Summary:
+2024-11-22 19:19:55,739 - INFO - Pages processed: 1
+2024-11-22 19:19:55,739 - INFO - Existing images found: 29
+2024-11-22 19:19:55,739 - INFO - New images downloaded: 0
+2024-11-22 19:19:55,740 - INFO - Total images in directory: 29
+2024-11-22 19:21:07,716 - INFO - Starting scraper...
+2024-11-22 19:21:07,722 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:21:07,765 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:21:07,766 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:21:07,766 - INFO - Found 29 existing images in directory
+2024-11-22 19:21:08,888 - INFO - Found 27 category links
+2024-11-22 19:21:08,888 - INFO - Processing category: https://www.worldclassfireworks.com/fireworks/fountains/
+2024-11-22 19:21:09,945 - INFO - Found 153 products in category
+2024-11-22 19:21:09,945 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:21:11,540 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/
+2024-11-22 19:21:13,433 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/
+2024-11-22 19:21:15,623 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/
+2024-11-22 19:21:17,592 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/
+2024-11-22 19:21:19,380 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/
+2024-11-22 19:21:21,238 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/novelties/
+2024-11-22 19:21:23,485 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/sparklers/
+2024-11-22 19:21:25,421 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/roman-candles/
+2024-11-22 19:21:27,112 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/show-to-go-cartons/
+2024-11-22 19:21:28,950 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/around-world/
+2024-11-22 19:21:30,819 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/bigger-life/
+2024-11-22 19:23:13,555 - INFO - Starting scraper...
+2024-11-22 19:23:13,561 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:23:13,605 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:23:13,605 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:23:13,606 - INFO - Found 29 existing images in directory
+2024-11-22 19:23:14,549 - INFO - Found 27 category links
+2024-11-22 19:23:14,549 - INFO - Processing category: https://www.worldclassfireworks.com/fireworks/fountains/
+2024-11-22 19:23:15,485 - INFO - Found 135 products in category
+2024-11-22 19:23:15,486 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/around-world/
+2024-11-22 19:23:17,321 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/bigger-life/
+2024-11-22 19:23:19,118 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/fish-out-water/
+2024-11-22 19:23:21,066 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/frosty-mug-beer/
+2024-11-22 19:23:22,912 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/its-boy/
+2024-11-22 19:23:24,648 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/its-girl/
+2024-11-22 19:23:26,816 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/made-usa/
+2024-11-22 19:23:28,528 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/men-honor/
+2024-11-22 19:24:35,707 - INFO - Starting scraper...
+2024-11-22 19:24:35,713 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:24:35,757 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:24:35,757 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:24:35,757 - INFO - Found 29 existing images in directory
+2024-11-22 19:24:36,593 - INFO - Found 27 category links
+2024-11-22 19:24:36,593 - INFO - Processing category: https://www.worldclassfireworks.com/fireworks/fountains/
+2024-11-22 19:24:37,604 - INFO - Found 135 products in category
+2024-11-22 19:24:37,604 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/around-world/
+2024-11-22 19:24:39,247 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/bigger-life/
+2024-11-22 19:24:41,285 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/fish-out-water/
+2024-11-22 19:24:43,076 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/frosty-mug-beer/
+2024-11-22 19:24:44,932 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/its-boy/
+2024-11-22 19:24:46,777 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/its-girl/
+2024-11-22 19:24:48,619 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/made-usa/
+2024-11-22 19:24:50,439 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/men-honor/
+2024-11-22 19:24:52,612 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/one-big-fountain/
+2024-11-22 19:25:52,432 - INFO - Starting scraper...
+2024-11-22 19:25:52,438 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:25:52,483 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:25:52,483 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:25:52,483 - INFO - Found 29 existing images in directory
+2024-11-22 19:25:53,284 - INFO - Found 28 product links
+2024-11-22 19:25:53,285 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/back-yard-preview-firework-video-system/
+2024-11-22 19:25:54,889 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/great-night-extravaganza-0/
+2024-11-22 19:25:56,567 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/laying-down-law/
+2024-11-22 19:25:58,302 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/sack-fun/
+2024-11-22 19:26:00,198 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/novelties/
+2024-11-22 19:26:02,251 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/mixx-it-3/
+2024-11-22 19:26:03,880 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-all-bombs/
+2024-11-22 19:26:05,479 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/show-to-go-cartons/
+2024-11-22 19:27:49,080 - INFO - Starting scraper...
+2024-11-22 19:27:49,086 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:27:49,131 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:27:49,131 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:27:49,132 - INFO - Found 29 existing images in directory
+2024-11-22 19:27:50,103 - INFO - Found 27 product links
+2024-11-22 19:27:50,103 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/sparklers/
+2024-11-22 19:27:50,714 - INFO - Found product: Fireworks
+2024-11-22 19:27:50,719 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:27:51,175 - INFO - Downloaded image: Fireworks.png
+2024-11-22 19:27:52,181 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/page/2/
+2024-11-22 19:27:53,487 - INFO - Found product: FIREWORKS
+2024-11-22 19:27:53,493 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:27:53,493 - INFO - Image already exists
+2024-11-22 19:27:54,499 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/sack-fun/
+2024-11-22 19:27:55,189 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/sack-fun/
+2024-11-22 19:27:56,193 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/page/58/
+2024-11-22 19:27:57,172 - INFO - Found product: FIREWORKS
+2024-11-22 19:27:57,177 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:27:57,177 - INFO - Image already exists
+2024-11-22 19:27:58,181 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/four-go/
+2024-11-22 19:27:58,990 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/four-go/
+2024-11-22 19:27:59,996 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/instigator/
+2024-11-22 19:28:00,850 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/artillery-shells/instigator/
+2024-11-22 19:28:01,856 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/page/3/
+2024-11-22 19:28:02,510 - INFO - Found product: FIREWORKS
+2024-11-22 19:28:02,517 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:02,517 - INFO - Image already exists
+2024-11-22 19:28:03,519 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/
+2024-11-22 19:28:04,231 - INFO - Found product: Fireworks
+2024-11-22 19:28:04,240 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:04,240 - INFO - Image already exists
+2024-11-22 19:28:05,241 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/mixx-it-3/
+2024-11-22 19:28:06,058 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/mixx-it-3/
+2024-11-22 19:28:07,064 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/back-yard-preview-firework-video-system/
+2024-11-22 19:28:07,901 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/back-yard-preview-firework-video-system/
+2024-11-22 19:28:08,906 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell-tail/
+2024-11-22 19:28:09,752 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell-tail/
+2024-11-22 19:28:10,754 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/kash-king/
+2024-11-22 19:28:11,590 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/kash-king/
+2024-11-22 19:28:12,595 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/
+2024-11-22 19:28:13,451 - INFO - Found product: Fireworks
+2024-11-22 19:28:13,458 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:13,458 - INFO - Image already exists
+2024-11-22 19:28:14,459 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/
+2024-11-22 19:28:15,483 - INFO - Found product: Fireworks
+2024-11-22 19:28:15,504 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:15,504 - INFO - Image already exists
+2024-11-22 19:28:16,510 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/home-brave/
+2024-11-22 19:28:17,669 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/artillery-shells/home-brave/
+2024-11-22 19:28:18,674 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/show-to-go-cartons/
+2024-11-22 19:28:19,594 - INFO - Found product: Fireworks
+2024-11-22 19:28:19,600 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:19,600 - INFO - Image already exists
+2024-11-22 19:28:20,605 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/
+2024-11-22 19:28:21,793 - INFO - Found product: Fireworks
+2024-11-22 19:28:21,827 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:21,827 - INFO - Image already exists
+2024-11-22 19:28:22,830 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/loaded-fun/
+2024-11-22 19:28:23,608 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/loaded-fun/
+2024-11-22 19:28:24,614 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/one-money/
+2024-11-22 19:28:25,727 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/one-money/
+2024-11-22 19:28:26,730 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-all-bombs/
+2024-11-22 19:28:27,837 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-all-bombs/
+2024-11-22 19:28:28,842 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/great-night-extravaganza-0/
+2024-11-22 19:28:29,701 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/great-night-extravaganza-0/
+2024-11-22 19:28:30,703 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/laying-down-law/
+2024-11-22 19:28:31,283 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/laying-down-law/
+2024-11-22 19:28:32,284 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/1-canister-in-poly-bag-2/
+2024-11-22 19:28:32,857 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/artillery-shells/1-canister-in-poly-bag-2/
+2024-11-22 19:28:33,862 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/
+2024-11-22 19:28:34,554 - INFO - Found product: Fireworks
+2024-11-22 19:28:34,560 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:34,977 - INFO - Downloaded image: Fireworks.png
+2024-11-22 19:28:35,983 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/biggen/
+2024-11-22 19:28:36,554 - WARNING - No product name found for URL: https://www.worldclassfireworks.com/fireworks/family-packs/biggen/
+2024-11-22 19:28:37,560 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/roman-candles/
+2024-11-22 19:28:38,209 - INFO - Found product: Fireworks
+2024-11-22 19:28:38,215 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:38,215 - INFO - Image already exists
+2024-11-22 19:28:39,220 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/novelties/
+2024-11-22 19:28:40,534 - INFO - Found product: Fireworks
+2024-11-22 19:28:40,545 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2023/09/imgpsh_fullsize_anim.png
+2024-11-22 19:28:40,545 - INFO - Image already exists
+2024-11-22 19:28:41,550 - INFO - 
+Final Summary:
+2024-11-22 19:28:41,551 - INFO - Pages processed: 27
+2024-11-22 19:28:41,551 - INFO - Existing images found: 29
+2024-11-22 19:28:41,551 - INFO - New images downloaded: 2
+2024-11-22 19:28:41,552 - INFO - Total images in directory: 30
+2024-11-22 19:30:37,537 - INFO - Starting scraper...
+2024-11-22 19:30:37,543 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:30:37,586 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:30:37,587 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:30:37,587 - INFO - Found 30 existing images in directory
+2024-11-22 19:30:38,829 - INFO - Found 14 product links
+2024-11-22 19:30:38,829 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/instigator/
+2024-11-22 19:30:39,425 - INFO - Found product: Instigator
+2024-11-22 19:30:39,428 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/The_Instigator_4bcbd8582c92f.png
+2024-11-22 19:30:39,837 - INFO - Downloaded image: Instigator.png
+2024-11-22 19:30:40,842 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/one-money/
+2024-11-22 19:30:41,503 - INFO - Found product: One Money
+2024-11-22 19:30:41,506 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/One_for_the_Mone_4bcbc01a6fb1b.png
+2024-11-22 19:30:41,974 - INFO - Downloaded image: One Money.png
+2024-11-22 19:30:42,976 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-all-bombs/
+2024-11-22 19:30:43,659 - INFO - Found product: Moab Mother All Bombs
+2024-11-22 19:30:43,662 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/MOAB.png
+2024-11-22 19:30:44,079 - INFO - Downloaded image: Moab Mother All Bombs.png
+2024-11-22 19:30:45,084 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/four-go/
+2024-11-22 19:30:46,117 - INFO - Found product: Four Go
+2024-11-22 19:30:46,120 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Four_to_Go_4bcbbfdac12ec.png
+2024-11-22 19:30:46,631 - INFO - Downloaded image: Four Go.png
+2024-11-22 19:30:47,637 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/loaded-fun/
+2024-11-22 19:30:48,573 - INFO - Found product: Loaded Fun
+2024-11-22 19:30:48,576 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/loadedforfun.png
+2024-11-22 19:30:49,031 - INFO - Downloaded image: Loaded Fun.png
+2024-11-22 19:30:50,034 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/mixx-it-3/
+2024-11-22 19:30:50,724 - INFO - Found product: Mixx It 3
+2024-11-22 19:30:50,727 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Mixx_it_Up__3__4bcbbd7c2ce89.png
+2024-11-22 19:30:51,222 - INFO - Downloaded image: Mixx It 3.png
+2024-11-22 19:30:52,228 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/sack-fun/
+2024-11-22 19:30:52,960 - INFO - Found product: Sack Fun
+2024-11-22 19:30:52,963 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/sack-of-fun.jpg
+2024-11-22 19:30:53,322 - INFO - Downloaded image: Sack Fun.jpg
+2024-11-22 19:30:54,325 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell-tail/
+2024-11-22 19:30:55,024 - INFO - Found product: Super Magnum Artillery Shell Tail
+2024-11-22 19:30:55,027 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1001478-min.jpg
+2024-11-22 19:30:55,323 - INFO - Downloaded image: Super Magnum Artillery Shell Tail.jpg
+2024-11-22 19:30:56,329 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/home-brave/
+2024-11-22 19:30:57,175 - INFO - Found product: Home Brave
+2024-11-22 19:30:57,178 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/home_of_the_brave.png
+2024-11-22 19:30:57,656 - INFO - Downloaded image: Home Brave.png
+2024-11-22 19:30:58,659 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/great-night-extravaganza-0/
+2024-11-22 19:30:59,518 - INFO - Found product: Great Night Extravaganza
+2024-11-22 19:30:59,521 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Great_Night_Extr_4bdb8f094bda3.png
+2024-11-22 19:30:59,942 - INFO - Downloaded image: Great Night Extravaganza.png
+2024-11-22 19:31:00,947 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/biggen/
+2024-11-22 19:31:01,625 - INFO - Found product: Biggen
+2024-11-22 19:31:01,627 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/The_Biggen_4bcbc179632a5.png
+2024-11-22 19:31:02,054 - INFO - Downloaded image: Biggen.png
+2024-11-22 19:31:03,059 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/kash-king/
+2024-11-22 19:31:03,653 - INFO - Found product: Kash King
+2024-11-22 19:31:03,656 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/kash_is_the_king.png
+2024-11-22 19:31:04,104 - INFO - Downloaded image: Kash King.png
+2024-11-22 19:31:05,109 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/laying-down-law/
+2024-11-22 19:31:05,736 - INFO - Found product: Laying Down Law
+2024-11-22 19:31:05,739 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Laying_Down_The__4bcbbf29c1e17.png
+2024-11-22 19:31:06,174 - INFO - Downloaded image: Laying Down Law.png
+2024-11-22 19:31:07,180 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/1-canister-in-poly-bag-2/
+2024-11-22 19:31:07,995 - INFO - Found product: Canister In Poly Bag
+2024-11-22 19:31:08,007 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1030190-min.jpg
+2024-11-22 19:31:08,296 - INFO - Downloaded image: Canister In Poly Bag.jpg
+2024-11-22 19:31:09,301 - INFO - 
+Final Summary:
+2024-11-22 19:31:09,302 - INFO - Pages processed: 14
+2024-11-22 19:31:09,302 - INFO - Existing images found: 30
+2024-11-22 19:31:09,302 - INFO - New images downloaded: 14
+2024-11-22 19:31:09,303 - INFO - Total images in directory: 44
+2024-11-22 19:40:07,079 - INFO - Starting scraper...
+2024-11-22 19:40:07,085 - INFO - 
+Attempting to scrape World Class Fireworks...
+2024-11-22 19:40:07,132 - INFO - Fetching content from: https://www.worldclassfireworks.com/fireworks/
+2024-11-22 19:40:07,132 - INFO - Saving images to: /Users/joshgoble/Downloads/firework_pics/worldclassfireworks.com
+2024-11-22 19:40:07,132 - INFO - Found 44 existing images in directory
+2024-11-22 19:40:07,132 - INFO - 
+Processing page 1...
+2024-11-22 19:40:08,049 - INFO - Found 14 product links
+2024-11-22 19:40:08,049 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/home-brave/
+2024-11-22 19:40:09,211 - INFO - Found product: Home Brave
+2024-11-22 19:40:09,215 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/home_of_the_brave.png
+2024-11-22 19:40:09,215 - INFO - Image already exists
+2024-11-22 19:40:10,220 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/great-night-extravaganza-0/
+2024-11-22 19:40:11,363 - INFO - Found product: Great Night Extravaganza
+2024-11-22 19:40:11,366 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Great_Night_Extr_4bdb8f094bda3.png
+2024-11-22 19:40:11,366 - INFO - Image already exists
+2024-11-22 19:40:12,370 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/kash-king/
+2024-11-22 19:40:13,514 - INFO - Found product: Kash King
+2024-11-22 19:40:13,517 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/kash_is_the_king.png
+2024-11-22 19:40:13,517 - INFO - Image already exists
+2024-11-22 19:40:14,522 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/four-go/
+2024-11-22 19:40:15,218 - INFO - Found product: Four Go
+2024-11-22 19:40:15,221 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Four_to_Go_4bcbbfdac12ec.png
+2024-11-22 19:40:15,221 - INFO - Image already exists
+2024-11-22 19:40:16,225 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/mixx-it-3/
+2024-11-22 19:40:17,237 - INFO - Found product: Mixx It 3
+2024-11-22 19:40:17,240 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Mixx_it_Up__3__4bcbbd7c2ce89.png
+2024-11-22 19:40:17,240 - INFO - Image already exists
+2024-11-22 19:40:18,241 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/sack-fun/
+2024-11-22 19:40:19,043 - INFO - Found product: Sack Fun
+2024-11-22 19:40:19,046 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/sack-of-fun.jpg
+2024-11-22 19:40:19,046 - INFO - Image already exists
+2024-11-22 19:40:20,049 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/laying-down-law/
+2024-11-22 19:40:21,190 - INFO - Found product: Laying Down Law
+2024-11-22 19:40:21,192 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Laying_Down_The__4bcbbf29c1e17.png
+2024-11-22 19:40:21,192 - INFO - Image already exists
+2024-11-22 19:40:22,196 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/one-money/
+2024-11-22 19:40:23,036 - INFO - Found product: One Money
+2024-11-22 19:40:23,039 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/One_for_the_Mone_4bcbc01a6fb1b.png
+2024-11-22 19:40:23,039 - INFO - Image already exists
+2024-11-22 19:40:24,042 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/1-canister-in-poly-bag-2/
+2024-11-22 19:40:24,844 - INFO - Found product: Canister In Poly Bag
+2024-11-22 19:40:24,847 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1030190-min.jpg
+2024-11-22 19:40:24,847 - INFO - Image already exists
+2024-11-22 19:40:25,852 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/super-magnum-artillery-shell-tail/
+2024-11-22 19:40:26,971 - INFO - Found product: Super Magnum Artillery Shell Tail
+2024-11-22 19:40:26,973 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1001478-min.jpg
+2024-11-22 19:40:26,973 - INFO - Image already exists
+2024-11-22 19:40:27,978 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/moab-mother-all-bombs/
+2024-11-22 19:40:28,873 - INFO - Found product: Moab Mother All Bombs
+2024-11-22 19:40:28,876 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/MOAB.png
+2024-11-22 19:40:28,876 - INFO - Image already exists
+2024-11-22 19:40:29,879 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/biggen/
+2024-11-22 19:40:30,716 - INFO - Found product: Biggen
+2024-11-22 19:40:30,719 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/The_Biggen_4bcbc179632a5.png
+2024-11-22 19:40:30,719 - INFO - Image already exists
+2024-11-22 19:40:31,723 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/artillery-shells/instigator/
+2024-11-22 19:40:32,559 - INFO - Found product: Instigator
+2024-11-22 19:40:32,562 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/The_Instigator_4bcbd8582c92f.png
+2024-11-22 19:40:32,562 - INFO - Image already exists
+2024-11-22 19:40:33,568 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/loaded-fun/
+2024-11-22 19:40:34,711 - INFO - Found product: Loaded Fun
+2024-11-22 19:40:34,714 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/loadedforfun.png
+2024-11-22 19:40:34,714 - INFO - Image already exists
+2024-11-22 19:40:35,724 - INFO - Moving to next page: https://www.worldclassfireworks.com/fireworks/page/2/
+2024-11-22 19:40:36,726 - INFO - 
+Processing page 2...
+2024-11-22 19:40:37,578 - INFO - Found 15 product links
+2024-11-22 19:40:37,578 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/big-gun/
+2024-11-22 19:40:38,167 - INFO - Found product: Big Gun
+2024-11-22 19:40:38,170 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30292-27.png
+2024-11-22 19:40:38,584 - INFO - Downloaded image: Big Gun.png
+2024-11-22 19:40:39,590 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/bachelor-party/
+2024-11-22 19:40:40,855 - INFO - Found product: Bachelor Party
+2024-11-22 19:40:40,858 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1003510.jpg
+2024-11-22 19:40:41,174 - INFO - Downloaded image: Bachelor Party.jpg
+2024-11-22 19:40:42,175 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/what-girl-wants-backpack/
+2024-11-22 19:40:43,312 - INFO - Found product: What Girl Wants Backpack
+2024-11-22 19:40:43,315 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/What_A_Girls_Wan_4bcbc1e767f34.png
+2024-11-22 19:40:43,802 - INFO - Downloaded image: What Girl Wants Backpack.png
+2024-11-22 19:40:44,805 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/chicken-chain/
+2024-11-22 19:40:46,075 - INFO - Found product: Chicken Chain
+2024-11-22 19:40:46,078 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Chicken_on_a_Cha_4bb02e346c814.png
+2024-11-22 19:40:46,532 - INFO - Downloaded image: Chicken Chain.png
+2024-11-22 19:40:47,538 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/come/
+2024-11-22 19:40:48,229 - INFO - Found product: Come
+2024-11-22 19:40:48,232 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/km15309_come_on.png
+2024-11-22 19:40:48,703 - INFO - Downloaded image: Come.png
+2024-11-22 19:40:49,708 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/did-someone-order-some-patriotism-go/
+2024-11-22 19:40:50,279 - INFO - Found product: Did Someone Order Some Patriotism Go
+2024-11-22 19:40:50,282 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/km30127.png
+2024-11-22 19:40:50,706 - INFO - Downloaded image: Did Someone Order Some Patriotism Go.png
+2024-11-22 19:40:51,708 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/crazy-exciting-steroids/
+2024-11-22 19:40:52,291 - INFO - Found product: Crazy Exciting Steroids
+2024-11-22 19:40:52,294 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Crazy_Exciting_o_4bad085092801_0.png
+2024-11-22 19:40:52,741 - INFO - Downloaded image: Crazy Exciting Steroids.png
+2024-11-22 19:40:53,745 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/bomb-shell/
+2024-11-22 19:40:54,348 - INFO - Found product: Bomb Shell
+2024-11-22 19:40:54,351 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Bombshell_4da66e2148e05.png
+2024-11-22 19:40:54,817 - INFO - Downloaded image: Bomb Shell.png
+2024-11-22 19:40:55,818 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/americas-king/
+2024-11-22 19:40:56,524 - INFO - Found product: Americas King
+2024-11-22 19:40:56,528 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30027.png
+2024-11-22 19:40:56,939 - INFO - Downloaded image: Americas King.png
+2024-11-22 19:40:57,941 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/awareness/
+2024-11-22 19:40:58,670 - INFO - Found product: Awareness
+2024-11-22 19:40:58,673 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/pink.png
+2024-11-22 19:40:59,108 - INFO - Downloaded image: Awareness.png
+2024-11-22 19:41:00,114 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/star-power/
+2024-11-22 19:41:00,820 - INFO - Found product: Star Power
+2024-11-22 19:41:00,823 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/km24512star_power.png
+2024-11-22 19:41:01,249 - INFO - Downloaded image: Star Power.png
+2024-11-22 19:41:02,255 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/courtesy-red-white-and-blue/
+2024-11-22 19:41:02,854 - INFO - Found product: Courtesy Red White And Blue
+2024-11-22 19:41:02,857 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/courtesyrwb.png
+2024-11-22 19:41:03,309 - INFO - Downloaded image: Courtesy Red White And Blue.png
+2024-11-22 19:41:04,313 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/big-dog/
+2024-11-22 19:41:05,430 - INFO - Found product: Big Dog
+2024-11-22 19:41:05,433 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/The_Big_Dog_4bcbdb7a131c5.png
+2024-11-22 19:41:05,947 - INFO - Downloaded image: Big Dog.png
+2024-11-22 19:41:06,949 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/americas-glory/
+2024-11-22 19:41:07,693 - INFO - Found product: Americas Glory
+2024-11-22 19:41:07,695 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30187-27.png
+2024-11-22 19:41:08,147 - INFO - Downloaded image: Americas Glory.png
+2024-11-22 19:41:09,149 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/family-packs/two-show/
+2024-11-22 19:41:10,039 - INFO - Found product: Two Show
+2024-11-22 19:41:10,042 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Two_for_the_Show_4bcbc1c42c06d.png
+2024-11-22 19:41:10,503 - INFO - Downloaded image: Two Show.png
+2024-11-22 19:41:11,518 - INFO - Moving to next page: https://www.worldclassfireworks.com/fireworks/page/3/
+2024-11-22 19:41:12,520 - INFO - 
+Processing page 3...
+2024-11-22 19:41:13,673 - INFO - Found 15 product links
+2024-11-22 19:41:13,673 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/new-folds-honor-cake/
+2024-11-22 19:41:14,336 - INFO - Found product: New Folds Honor Cake
+2024-11-22 19:41:14,339 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/foldsofhonor_0.png
+2024-11-22 19:41:14,770 - INFO - Downloaded image: New Folds Honor Cake.png
+2024-11-22 19:41:15,776 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/folds-honor-0/
+2024-11-22 19:41:16,459 - INFO - Found product: Folds Honor
+2024-11-22 19:41:16,462 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1003374-2018-folds-of-honor.png
+2024-11-22 19:41:16,889 - INFO - Downloaded image: Folds Honor.png
+2024-11-22 19:41:17,895 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/fireworker/
+2024-11-22 19:41:18,578 - INFO - Found product: Fireworker
+2024-11-22 19:41:18,581 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/fireworker-firework.jpg
+2024-11-22 19:41:18,889 - INFO - Downloaded image: Fireworker.jpg
+2024-11-22 19:41:19,895 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/heavy-artillery/
+2024-11-22 19:41:20,790 - INFO - Found product: Heavy Artillery
+2024-11-22 19:41:20,793 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1003511.jpg
+2024-11-22 19:41:21,176 - INFO - Downloaded image: Heavy Artillery.jpg
+2024-11-22 19:41:22,183 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/loyal-none/
+2024-11-22 19:41:23,249 - INFO - Found product: Loyal None
+2024-11-22 19:41:23,252 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Loyal_to_None_4bad02943f7c3.png
+2024-11-22 19:41:23,678 - INFO - Downloaded image: Loyal None.png
+2024-11-22 19:41:24,682 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/not-my-yard/
+2024-11-22 19:41:25,706 - INFO - Found product: Not My Yard
+2024-11-22 19:41:25,709 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Not_in_my_Yard_4bcc853f46998.png
+2024-11-22 19:41:26,163 - INFO - Downloaded image: Not My Yard.png
+2024-11-22 19:41:27,169 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/land-free-because-brave/
+2024-11-22 19:41:27,853 - INFO - Found product: Land Free Because Brave
+2024-11-22 19:41:27,856 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1003509.jpg
+2024-11-22 19:41:28,169 - INFO - Downloaded image: Land Free Because Brave.jpg
+2024-11-22 19:41:29,175 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/one-bad-mother-law/
+2024-11-22 19:41:29,863 - INFO - Found product: One Bad Mother Law
+2024-11-22 19:41:29,866 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/One_Bad_Mother_i_4bcc863050a14.png
+2024-11-22 19:41:30,388 - INFO - Downloaded image: One Bad Mother Law.png
+2024-11-22 19:41:31,393 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/feel-heat/
+2024-11-22 19:41:32,465 - INFO - Found product: Feel Heat
+2024-11-22 19:41:32,468 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/feeltheheat.png
+2024-11-22 19:41:33,004 - INFO - Downloaded image: Feel Heat.png
+2024-11-22 19:41:34,010 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/pride-water/
+2024-11-22 19:41:35,230 - INFO - Found product: Pride Water
+2024-11-22 19:41:35,233 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/pride_in_the_water.png
+2024-11-22 19:41:35,705 - INFO - Downloaded image: Pride Water.png
+2024-11-22 19:41:36,711 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/moolah/
+2024-11-22 19:41:37,685 - INFO - Found product: Moolah
+2024-11-22 19:41:37,688 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30045.png
+2024-11-22 19:41:38,192 - INFO - Downloaded image: Moolah.png
+2024-11-22 19:41:39,198 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/freedom-fighter/
+2024-11-22 19:41:40,082 - INFO - Found product: Freedom Fighter
+2024-11-22 19:41:40,085 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1003521.jpg
+2024-11-22 19:41:40,475 - INFO - Downloaded image: Freedom Fighter.jpg
+2024-11-22 19:41:41,480 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/field-dreams/
+2024-11-22 19:41:42,295 - INFO - Found product: Field Dreams
+2024-11-22 19:41:42,299 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/km15312_field_of_dreams.png
+2024-11-22 19:41:42,748 - INFO - Downloaded image: Field Dreams.png
+2024-11-22 19:41:43,754 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/inferno-punch/
+2024-11-22 19:41:44,753 - INFO - Found product: Inferno Punch
+2024-11-22 19:41:44,756 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/inferno_punch.png
+2024-11-22 19:41:45,311 - INFO - Downloaded image: Inferno Punch.png
+2024-11-22 19:41:46,316 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/king-pirates/
+2024-11-22 19:41:47,208 - INFO - Found product: King Pirates
+2024-11-22 19:41:47,211 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/king-of-pirates-daytime-firework.jpg
+2024-11-22 19:41:47,575 - INFO - Downloaded image: King Pirates.jpg
+2024-11-22 19:41:48,589 - INFO - Moving to next page: https://www.worldclassfireworks.com/fireworks/page/4/
+2024-11-22 19:41:49,594 - INFO - 
+Processing page 4...
+2024-11-22 19:41:50,295 - INFO - Found 15 product links
+2024-11-22 19:41:50,295 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-161000/
+2024-11-22 19:41:51,202 - INFO - Found product: Boomer Tb Firecrackers 6
+2024-11-22 19:41:51,205 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:41:51,719 - INFO - Downloaded image: Boomer Tb Firecrackers 6.png
+2024-11-22 19:41:52,725 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-28000/
+2024-11-22 19:41:53,658 - INFO - Found product: Boomer Tb Firecrackers 8
+2024-11-22 19:41:53,660 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:41:54,111 - INFO - Downloaded image: Boomer Tb Firecrackers 8.png
+2024-11-22 19:41:55,116 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/sea-shining-sea/
+2024-11-22 19:43:10,742 - ERROR - Error processing product https://www.worldclassfireworks.com/fireworks/finales/sea-shining-sea/: HTTPSConnectionPool(host='www.worldclassfireworks.com', port=443): Max retries exceeded with url: /fireworks/finales/sea-shining-sea/ (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1147)')))
+2024-11-22 19:43:10,746 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/screech-victory/
+2024-11-22 19:43:11,656 - INFO - Found product: Screech Victory
+2024-11-22 19:43:11,659 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30180-27.png
+2024-11-22 19:43:12,107 - INFO - Downloaded image: Screech Victory.png
+2024-11-22 19:43:13,113 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-82000/
+2024-11-22 19:43:13,858 - INFO - Found product: Boomer Tb Firecrackers 8
+2024-11-22 19:43:13,861 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:43:13,861 - INFO - Image already exists
+2024-11-22 19:43:14,867 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-116000/
+2024-11-22 19:43:15,986 - INFO - Found product: Boomer Tb Firecrackers 6
+2024-11-22 19:43:15,988 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:43:15,988 - INFO - Image already exists
+2024-11-22 19:43:16,994 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-244016/
+2024-11-22 19:43:18,140 - INFO - Found product: Boomer Tb Firecrackers 446
+2024-11-22 19:43:18,143 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:43:18,582 - INFO - Downloaded image: Boomer Tb Firecrackers 446.png
+2024-11-22 19:43:19,588 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/whoop-3-assorted/
+2024-11-22 19:43:20,599 - INFO - Found product: Whoop 3 Assorted
+2024-11-22 19:43:20,602 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Whoop_A______3_A_4bcc88d94f01b.png
+2024-11-22 19:43:21,080 - INFO - Downloaded image: Whoop 3 Assorted.png
+2024-11-22 19:43:22,086 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/taste-heat/
+2024-11-22 19:43:22,777 - INFO - Found product: Taste Heat
+2024-11-22 19:43:22,779 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/A_Taste_of_Heat_4bcbba5ad4301.png
+2024-11-22 19:43:23,271 - INFO - Downloaded image: Taste Heat.png
+2024-11-22 19:43:24,277 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/pyro-dave/
+2024-11-22 19:43:25,207 - INFO - Found product: Pyro Dave
+2024-11-22 19:43:25,211 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/PyroDave.png
+2024-11-22 19:43:25,698 - INFO - Downloaded image: Pyro Dave.png
+2024-11-22 19:43:26,703 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-820100/
+2024-11-22 19:43:27,593 - INFO - Found product: Boomer Tb Firecrackers 8
+2024-11-22 19:43:27,596 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:43:27,596 - INFO - Image already exists
+2024-11-22 19:43:28,599 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/whole-nine-yards/
+2024-11-22 19:43:29,505 - INFO - Found product: Whole Nine Yards
+2024-11-22 19:43:29,507 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Whole_Nine_Yards_4bcc88bd7890c.png
+2024-11-22 19:43:30,050 - INFO - Downloaded image: Whole Nine Yards.png
+2024-11-22 19:43:31,056 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/boomer-tb-firecrackers-128016/
+2024-11-22 19:43:31,956 - INFO - Found product: Boomer Tb Firecrackers 86
+2024-11-22 19:43:31,959 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Boomer_TB_Firecr_4bb0d5336a9a7.png
+2024-11-22 19:43:32,415 - INFO - Downloaded image: Boomer Tb Firecrackers 86.png
+2024-11-22 19:43:33,420 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/tears-fear/
+2024-11-22 19:43:34,420 - INFO - Found product: Tears Fear
+2024-11-22 19:43:34,424 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Tears_of_Fear_4da715fed18ef.png
+2024-11-22 19:43:34,905 - INFO - Downloaded image: Tears Fear.png
+2024-11-22 19:43:35,910 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/finales/united-states-america/
+2024-11-22 19:43:36,865 - INFO - Found product: United States America
+2024-11-22 19:43:36,867 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/1003508.jpg
+2024-11-22 19:43:37,187 - INFO - Downloaded image: United States America.jpg
+2024-11-22 19:43:38,202 - INFO - Moving to next page: https://www.worldclassfireworks.com/fireworks/page/5/
+2024-11-22 19:43:39,207 - INFO - 
+Processing page 5...
+2024-11-22 19:43:40,531 - INFO - Found 15 product links
+2024-11-22 19:43:40,531 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/m-5000-salute-cracker-4036/
+2024-11-22 19:43:41,484 - INFO - Found product: M 5 Salute Cracker 436
+2024-11-22 19:43:41,486 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/M_5000_Salute_Cr_4bb155f78ff67.png
+2024-11-22 19:43:41,954 - INFO - Downloaded image: M 5 Salute Cracker 436.png
+2024-11-22 19:43:42,957 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/fish-out-water/
+2024-11-22 19:43:43,614 - INFO - Found product: Fish Out Water
+2024-11-22 19:43:43,617 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Fish_out_of_Wate_4bcb9bfa1190e.png
+2024-11-22 19:43:44,030 - INFO - Downloaded image: Fish Out Water.png
+2024-11-22 19:43:45,035 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/world-class-firecracker-161000/
+2024-11-22 19:43:45,789 - INFO - Found product: World Class Firecracker 6
+2024-11-22 19:43:45,792 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/World_Class_Fire_4bb0df5a9198a.png
+2024-11-22 19:43:46,289 - INFO - Downloaded image: World Class Firecracker 6.png
+2024-11-22 19:43:47,295 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/its-boy/
+2024-11-22 19:43:47,905 - INFO - Found product: Its Boy
+2024-11-22 19:43:47,908 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/its_a_boy.png
+2024-11-22 19:43:48,298 - INFO - Downloaded image: Its Boy.png
+2024-11-22 19:43:49,304 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/m-5000-salute-cracker-12012/
+2024-11-22 19:43:50,088 - INFO - Found product: M 5 Salute Cracker
+2024-11-22 19:43:50,091 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/M_5000_Salute_Cr_4bb155f78ff67.png
+2024-11-22 19:43:50,602 - INFO - Downloaded image: M 5 Salute Cracker.png
+2024-11-22 19:43:51,603 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/made-usa/
+2024-11-22 19:43:52,853 - INFO - Found product: Made Usa
+2024-11-22 19:43:52,856 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30056.png
+2024-11-22 19:43:53,296 - INFO - Downloaded image: Made Usa.png
+2024-11-22 19:43:54,302 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/firecrackers/world-class-firecrackers-84050/
+2024-11-22 19:43:55,311 - INFO - Found product: World Class Firecrackers 845
+2024-11-22 19:43:55,315 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/World_Class_Fire_4bb0df5a9198a.png
+2024-11-22 19:43:55,790 - INFO - Downloaded image: World Class Firecrackers 845.png
+2024-11-22 19:43:56,795 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/around-world/
+2024-11-22 19:43:57,770 - INFO - Found product: Around World
+2024-11-22 19:43:57,773 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/KM30057-1.png
+2024-11-22 19:43:58,176 - INFO - Downloaded image: Around World.png
+2024-11-22 19:43:59,178 - INFO - Fetching product page: https://www.worldclassfireworks.com/fireworks/fountains/frosty-mug-beer/
+2024-11-22 19:43:59,922 - INFO - Found product: Frosty Mug Beer
+2024-11-22 19:43:59,925 - INFO - Found image URL: https://www.worldclassfireworks.com/wp-content/uploads/2024/05/Frosty_Mug_of_Be_4bcb9d519e587.png
+2024-11-22 19:44:00,413 - INFO - Downloaded image: Frosty Mug Beer.png
+2024-11-22 19:44:01,424 - INFO - Moving to next page: https://www.worldclassfireworks.com/fireworks/page/6/
+2024-11-22 19:44:02,428 - INFO - 
+Final Summary:
+2024-11-22 19:44:02,429 - INFO - Pages processed: 67
+2024-11-22 19:44:02,429 - INFO - Existing images found: 44
+2024-11-22 19:44:02,429 - INFO - New images downloaded: 50
+2024-11-22 19:44:02,431 - INFO - Total images in directory: 94
