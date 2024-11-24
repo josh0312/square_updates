@@ -88,7 +88,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                 print(f"Skipping existing file: {filename}")
                 return True
             
-            response = requests.get(url)
+            response = requests.get(url, verify=False)
             response.raise_for_status()
             
             with open(filepath, 'wb') as f:

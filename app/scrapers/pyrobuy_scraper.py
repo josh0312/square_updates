@@ -27,61 +27,23 @@ def get_next_page_url(soup, base_url, headers=None):
     """Extract the next page URL if it exists"""
     logger.info("Looking for next page...")
     
-    # Set default headers if none provided
-    if not headers:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
-    
-    # Debug current URL structure
-    logger.info(f"Current URL: {base_url}")
-    
-    # Look for pagination links in the HTML
-    pagination_links = soup.find_all('a', href=lambda x: x and ('currentpage=' in x or 'page=' in x))
-    for link in pagination_links:
-        logger.info(f"Found pagination link: {link}")
-        
-    # Get base URL without any currentpage parameter
-    base_without_page = base_url.split('currentpage=')[0].rstrip('&')
-    
     # Try to find the current page number
     current_page = 1
     if 'currentpage=' in base_url:
         try:
-            # Get the last currentpage parameter value
-            all_pages = re.findall(r'currentpage=(\d+)', base_url)
-            if all_pages:
-                current_page = int(all_pages[-1])
+            current_page = int(base_url.split('currentpage=')[1].split('&')[0])
             logger.info(f"Current page: {current_page}")
         except:
             pass
             
-    # Construct next page URL
-    next_page = current_page + 1
-    if '?' in base_without_page:
-        next_url = f"{base_without_page}&currentpage={next_page}"
-    else:
-        next_url = f"{base_without_page}?currentpage={next_page}"
+    # Look for next page link
+    next_link = soup.find('a', href=lambda x: x and f'currentpage={current_page + 1}' in x)
+    if next_link:
+        next_url = next_link['href']
+        if not next_url.startswith('http'):
+            next_url = urljoin(base_url, next_url)
+        return next_url
         
-    logger.info(f"Trying constructed URL: {next_url}")
-    
-    try:
-        response = requests.get(next_url, headers=headers, verify=False)
-        if response.status_code == 200:
-            # Verify the page has products
-            next_soup = BeautifulSoup(response.text, 'html.parser')
-            product_links = [link['href'] for link in next_soup.find_all('a', href=True) 
-                           if 'productdtls.asp' in link['href']]
-            if product_links:
-                logger.info(f"Found {len(product_links)} products on next page")
-                return next_url
-            else:
-                logger.info("No products found on next page")
-                return None
-    except Exception as e:
-        logger.error(f"Error checking constructed URL: {str(e)}")
-    
-    logger.info("No valid next page URL found")
     return None
 
 def get_pyrobuy_product_details(url, headers=None):

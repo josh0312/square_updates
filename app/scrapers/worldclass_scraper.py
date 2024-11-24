@@ -84,13 +84,19 @@ def get_next_page_url(soup, current_url):
     base_url = current_url.split('/page/')[0].rstrip('/')
     next_url = f"{base_url}/page/{current_page + 1}/"
     
-    # Verify next page exists by making a request
+    # Verify next page exists and has different products
     try:
+        current_products = set(link['href'] for link in soup.find_all('a', href=True) 
+                             if '/fireworks/' in link['href'])
+        
         response = requests.get(next_url, verify=False)
         if response.status_code == 200:
             next_soup = BeautifulSoup(response.text, 'html.parser')
-            # Check if page has products
-            if get_product_links(next_soup):
+            next_products = set(link['href'] for link in next_soup.find_all('a', href=True) 
+                              if '/fireworks/' in link['href'])
+            
+            # Only return next URL if it has different products
+            if next_products and next_products != current_products:
                 return next_url
     except:
         pass
