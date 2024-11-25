@@ -20,3 +20,20 @@ SQLAlchemy>=2.0.0
 aiohttp==3.8.1
 cachetools==4.2.4
 ratelimit==2.2.1
+
+# Web Scraping
+beautifulsoup4==4.12.2
+requests==2.31.0
+urllib3==2.0.7
+
+# Database
+SQLAlchemy==2.0.23
+
+# Square API
+squareup==35.0.0.20240118
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Logging & Utilities
+PyYAML==6.0.1
