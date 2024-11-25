@@ -195,6 +195,34 @@ To add a new website to the scraper:
 - Generates detailed logs:
   - `square_catalog.log`: API interactions and operations
   - `square.log`: Testing and debugging information
+
+### Square Image Upload
+- Uploads matched images directly to Square catalog
+- Associates images with catalog items and variations
+- Features:
+  - Single image upload testing
+  - Idempotent operations
+  - Error handling and logging
+  - Image-to-item association
+- Generates detailed logs:
+  - `square_image_upload.log`: Image upload operations and results
+
+## Testing Image Upload
+To test image uploads to Square:
+
+1. Set up environment variables:
+   ```
+   SQUARE_ACCESS_TOKEN=your_access_token
+   SQUARE_ENVIRONMENT=sandbox  # or production
+   ```
+
+2. Run the test script:
+   ```
+   python square_image_uploader_test.py
+   ```
+
+3. Check `square_image_upload.log` for results
+
 ## Setup
 
 1. Clone the repository

@@ -7,16 +7,23 @@ from pprint import pformat
 # Load environment variables
 load_dotenv()
 
-# Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('square_catalog.log'),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+# Set up logging specifically for square_catalog
+logger = logging.getLogger('square_catalog')
+logger.setLevel(logging.INFO)
+logger.handlers = []  # Clear any existing handlers
+
+# Create handlers
+file_handler = logging.FileHandler('square_catalog.log', mode='w')
+console_handler = logging.StreamHandler()
+
+# Create formatters and add it to handlers
+log_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(log_format)
+console_handler.setFormatter(log_format)
+
+# Add handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
 
 class SquareCatalog:
     def __init__(self):
@@ -69,55 +76,100 @@ class SquareCatalog:
             return {}
         
     def get_items_without_images(self):
-        """Fetch catalog items that don't have images assigned"""
+        """Fetch catalog items that need images (either item-level or variation-level)"""
         try:
-            items_without_images = []
+            items_needing_images = []
             cursor = None
             
             while True:
-                result = self.client.catalog.list_catalog(
-                    types="ITEM",
-                    cursor=cursor
+                body = {
+                    "product_types": ["REGULAR"],
+                    "state_filters": {
+                        "states": ["ACTIVE"]  # Only active items
+                    }
+                }
+                
+                if cursor:
+                    body["cursor"] = cursor
+                
+                result = self.client.catalog.search_catalog_items(
+                    body=body
                 )
                 
                 if result.is_success():
-                    for item in result.body.get('objects', []):
-                        item_data = {
+                    for item in result.body.get('items', []):
+                        item_data = item.get('item_data', {})
+                        variations = item_data.get('variations', [])
+                        
+                        # Check if item has any images at all
+                        item_image_ids = item_data.get('image_ids', [])
+                        needs_item_image = len(item_image_ids) == 0
+                        
+                        if needs_item_image:
+                            logger.info(f"Item {item_data.get('name')} needs primary image")
+                        
+                        item_data_formatted = {
                             'id': item.get('id'),
                             'type': item.get('type'),
                             'item_data': {
-                                'name': item.get('item_data', {}).get('name'),
+                                'name': item_data.get('name'),
+                                'needs_primary_image': needs_item_image,
                                 'variations': []
                             }
                         }
                         
-                        # Check if item has no image
-                        if not item.get('item_data', {}).get('image_ids'):
-                            variations = item.get('item_data', {}).get('variations', [])
-                            for variation in variations:
-                                var_data = variation.get('item_variation_data', {})
-                                vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                        has_variations_needing_images = False
+                        
+                        for variation in variations:
+                            var_data = variation.get('item_variation_data', {})
+                            var_image_ids = variation.get('image_ids', [])
+                            
+                            # Check if variation needs image
+                            if len(var_image_ids) == 0:
+                                # Get vendor name from variation name
+                                var_name = var_data.get('name', '')
+                                vendor_name = 'Unknown'
                                 
-                                if vendor_infos:
-                                    vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {})
-                                    var_vendor_id = vendor_info.get('vendor_id')
-                                    var_vendor_name = self.vendor_map.get(var_vendor_id, 'Unknown')
-                                else:
-                                    var_vendor_id = None
-                                    var_vendor_name = 'Unknown'
+                                # Map common vendor codes
+                                if var_name.startswith('WN'):
+                                    vendor_name = 'Winco'
+                                elif var_name.startswith('RR'):
+                                    vendor_name = 'Red Rhino'
+                                elif var_name.startswith('RN'):
+                                    vendor_name = 'Raccoon'
+                                elif var_name.startswith('WC'):
+                                    vendor_name = 'Jakes'  # World Class = Jakes
+                                
+                                # If still unknown, try vendor_infos
+                                if vendor_name == 'Unknown':
+                                    vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                                    if vendor_infos:
+                                        vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {})
+                                        var_vendor_id = vendor_info.get('vendor_id')
+                                        vendor_name = self.vendor_map.get(var_vendor_id, 'Unknown')
                                 
                                 variation_data = {
                                     'id': variation.get('id'),
                                     'name': var_data.get('name'),
                                     'sku': var_data.get('sku'),
-                                    'vendor_id': var_vendor_id,
-                                    'vendor_name': var_vendor_name
+                                    'vendor_name': vendor_name,
+                                    'needs_image': True
                                 }
-                                item_data['item_data']['variations'].append(variation_data)
+                                item_data_formatted['item_data']['variations'].append(variation_data)
+                                has_variations_needing_images = True
+                                logger.info(f"Variation {var_name} of {item_data.get('name')} needs image")
+                        
+                        # Add item if it needs any images
+                        if needs_item_image or has_variations_needing_images:
+                            items_needing_images.append(item_data_formatted)
+                            logger.info(f"Found item needing images: {item_data.get('name')}")
+                            logger.info(f"  Needs primary image: {needs_item_image}")
+                            logger.info(f"  Has variations needing images: {has_variations_needing_images}")
                             
-                            items_without_images.append(item_data)
-                            logger.info(f"Found item without image: {item_data['item_data']['name']}")
-                    
+                            # Log vendor info for debugging
+                            for var in item_data_formatted['item_data']['variations']:
+                                logger.info(f"  Variation: {var['name']} -> Vendor: {var['vendor_name']}")
+                        
                     cursor = result.body.get('cursor')
                     if not cursor:
                         break
@@ -125,8 +177,8 @@ class SquareCatalog:
                     logger.error(f"Error fetching catalog: {result.errors}")
                     break
             
-            logger.info(f"Found total of {len(items_without_images)} items without images")
-            return items_without_images
+            logger.info(f"Found total of {len(items_needing_images)} items needing images")
+            return items_needing_images
             
         except Exception as e:
             logger.error(f"Error accessing Square catalog: {str(e)}")
