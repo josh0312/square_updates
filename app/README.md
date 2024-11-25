@@ -227,3 +227,39 @@ To test image uploads to Square:
 
 1. Clone the repository
 2. Install dependencies:
+
+## Square Image Management System
+
+## Recent Updates (Nov 25, 2024)
+
+### Image Matching and Upload Improvements
+- Added selective image upload system:
+  - Checks if items/variations already have images before uploading
+  - Only uploads to items/variations that need images
+  - Properly associates images with both parent items and variations
+  - Supports primary image designation for items
+
+### Square Catalog Integration
+- Added active item filtering:
+  - Only processes non-archived items
+  - Checks image status at both item and variation level
+  - Improved vendor code resolution (WN -> Winco, RR -> Red Rhino, etc.)
+  - Better logging of item/variation status
+
+### Testing Features
+- Added test limiting:
+  - Can limit to first 3 successful uploads for testing
+  - Detailed logging of match attempts and results
+  - Shows which items were processed and why
+  - Logs successful uploads with match scores
+
+### Usage
+To test with limited uploads:
+```bash
+python image_matcher.py
+```
+This will:
+1. Process items until 3 successful uploads
+2. Show detailed matching process
+3. Log results to matcher.log
+4. Write unmatched items to unmatched.txt

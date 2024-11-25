@@ -56,3 +56,1307 @@ Item Name: #3 Cone
 Variation: BC
 Vendor: Winco
 --------------------------------------------------
+Item Name: 1 Hr Punk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 10 Ball - Baby Shot
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 10 Ball - Color Pearls
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 10 Ball - With Bang
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: 10" Missile
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: 10" Missile
+Variation: SP1
+Vendor: Supreme
+--------------------------------------------------
+Item Name: 100 Strap 20pk
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: 100 Strap 20pk
+Variation: BC
+Vendor: Winco
+--------------------------------------------------
+Item Name: 1000 Roll
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 12" Missile
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: 12" Missile
+Variation: SP1
+Vendor: Supreme
+--------------------------------------------------
+Item Name: 16000 Roll
+Variation: 
+Vendor: Winco
+--------------------------------------------------
+Item Name: 2,000 Roll
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 2-Color Spaceship
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 200 Strap
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 200 Strap 10 Pack
+Variation: 
+Vendor: Winco
+--------------------------------------------------
+Item Name: 2000 Roll
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 21 gun salute
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 3 MIN Fountain
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: 40/16 Pack
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 4000 Roll
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 4Ever America
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 5 Ball Candle
+Variation: 5 Ball
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: 50 Strap
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 50 Strap 40 Pack
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 500 Roll
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 8000 Roll
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: 9 Lives
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Action Zone
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Adult Snappers
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Air Supremacy
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Air Trooper
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: All Sparks
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Americas Battery - Saturn 1000s
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Animal Pack
+Variation: Regular
+Vendor: Garrets
+--------------------------------------------------
+Item Name: Apocalypse Artillery
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Arctic Vibes
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Armored Car
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Artificial Satellite
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Artillery Shells - Assorted Color
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Artillery Shells - Assorted Color
+Variation: RN1
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Artillery Shells - Assorted Color
+Variation: WN
+Vendor: Winco
+--------------------------------------------------
+Item Name: Artillery Shells - Crackling
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Artillery Shells - Crackling
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Artillery Shells - Crackling
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Artillery Shells - Whistling
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Artillery Shells - Whistling
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Artillery Shells - Whistling
+Variation: RN1
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Assorted Fountains
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Atlas 4 pk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Atlas Missile
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Backyard Hero
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Big Win
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Blasting Pack
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Blazin' Gun
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Bouncy Beans
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Bring It
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Captain America
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Charger
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Cherry Bomber
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Chevelle
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Chevy II
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Chili Pepper
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Clear Bag Assortment
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Cobra Copters
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Cobra Kai
+Variation: 
+Vendor: Winco
+--------------------------------------------------
+Item Name: Color & Boom
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Color Pearl 96
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Confetti Blaster
+Variation: 
+Vendor: Winco
+--------------------------------------------------
+Item Name: Confetti Blaster - 12
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Confetti Blaster - 12
+Variation: WN1
+Vendor: Winco
+--------------------------------------------------
+Item Name: Confetti Tube
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Courageous!
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Crackling Ball
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Crackling Ball
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Crackling Tail - Saturn 200s
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Decimator
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Desert at Night
+Variation: WN
+Vendor: Winco
+--------------------------------------------------
+Item Name: Desert at Night
+Variation: WN1
+Vendor: Winco
+--------------------------------------------------
+Item Name: Desert at Night
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Dino Eggs
+Variation: Regular
+Vendor: Garrets
+--------------------------------------------------
+Item Name: Double Tap
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Eagle Eye
+Variation: Regular
+Vendor: Garrets
+--------------------------------------------------
+Item Name: Festival Balls
+Variation: RN1
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Festival Balls
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Festival Balls
+Variation: RN2
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Festival Balls - With Tails
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Fidget Spinner
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Firefall
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Fizz Off
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Flashing Strobe
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: For Our Flag
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Forged of Fire
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Freak show
+Variation: Regular
+Vendor: Garrets
+--------------------------------------------------
+Item Name: Free Ride
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Freedom's Wings
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Frog Bomb
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Fuse
+Variation: Regular
+Vendor: AWF
+--------------------------------------------------
+Item Name: Galaxy Quest
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Gambler
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Gamefish
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Garden in Spring
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Giant Chute
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Giant Parachute
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Glow Sticks
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Gold crackers
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Gold Sparkler 10"
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Gold Sparkler 20"
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Gold Sparkler 36"
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Gold Sparkler 7" (12 Pack)
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Golden Girl
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ground Blooms
+Variation: JK
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Ground Blooms
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ground Blooms
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ground Blooms
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Gun Safe
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Happy 49s
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Hens Laying Eggs
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Heritage #4
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Holy Copter
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Home of the Brave
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Honey Badger
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Hot as Hell
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Hot Dog
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Huntress
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Jack-O-Latern
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Jaw-Breaker
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Jr. Pyro Tote Bag
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Jumbo Punk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Jumbo Strobe
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Junebug
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Junior pyro
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Just Light It
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Kids Garage
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Kryptonite
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Let's Celebrate
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Liberty Force
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Light 'Em Up
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Light Saber
+Variation: 
+Vendor: CHW
+--------------------------------------------------
+Item Name: Liquid Fire
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Lord of War
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Lotus Lantern
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Lunatic Fringe
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: M-150 Assorted - 36pk
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: M-200 Salute
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: M-60's
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Magic Gems
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Magic Wand
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Magical Barrage
+Variation: Red Rhino
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Magical Barrage
+Variation: Winco
+Vendor: Winco
+--------------------------------------------------
+Item Name: Magical Smoke
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Mania Coin
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Massive Attack
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Medusa
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Mexican Jumping Beans
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Minecraft
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Mini Blaster
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Mini Fountain
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Miraculous Magic Box
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Monkey's Pyro Pack
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Morning Glory 14"
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Morning Glory 14"
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Morning Glory 14" - 15pk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Morning Glory 14” - 24 pk
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Morning Glory 36"
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Mustang
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Mystical Beasts
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Naughty Dog
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Neon Fish
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Neon Smoke Sticks
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Neon Sparkler
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Neon Sticks
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Neptune 7"
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: New Small Bee
+Variation: UPC1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: New Small Bee
+Variation: UPC2
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Night Raven
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: No Trespassing
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Nut Buster
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Open Carry
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ouch!
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Our America
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Our Baby Reveal
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Outlaw Bullets
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Overlord
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Pack a Punch
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Paparazi 12's
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Party Popper - 6pk
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Party popper 12pk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Party Poppers (2 For $1)
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Pink Smoke
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Pirates Code
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Playing For Keeps
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Poking the Bear
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Polar Divide
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Pop Snappers
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Power Crackers - 40/16
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Power of Pride
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Powerful Fountain
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Predator
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Premium artillery
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Quiet
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Raiden
+Variation: 
+Vendor: Winco
+--------------------------------------------------
+Item Name: Red Hot chili pepper
+Variation: Regular
+Vendor: Garrets
+--------------------------------------------------
+Item Name: Red to Blue Smoke
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Redneck Woman
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Revolver
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Rhinomite
+Variation: Outlaw
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Rhinomite
+Variation: Nitro
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Rhinomite
+Variation: UPC1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Righteous Warrior
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ripper 6pk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ripper Missile
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ripper Missile
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Roadshow
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Rocket Fire
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Rocket Shoot Tube
+Variation: Regular
+Vendor: NyTex
+--------------------------------------------------
+Item Name: Route 66
+Variation: RR2
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Route 66
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: RR 16,000 Roll
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Sabotage
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Sack Race
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Saturn 100s
+Variation: MM
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Saturn 100s
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Saturn 25s
+Variation: RR2
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Saturn 25s
+Variation: MM
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Saturn 25s
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Saturn 25s
+Variation: JWC
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Saturn 300s
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Saturn 300s
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Saturn 300s
+Variation: MM
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Saturn 325
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Scarlet Thread
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Scream
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Serious Cracker
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Serious Cracker
+Variation: SP1
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Seven Sabres
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Sharkpedo
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Shotgun
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Show of Force
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Single Day Parachute
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Sky Howler
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Sky Painter
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Sky Shooter
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Sky Smoke
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Smiling From Ear to Ear
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Smoke Balls
+Variation: RN
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Smoke Grenade
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Snakes
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Snakes
+Variation: WCF
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Snakes
+Variation: WN1
+Vendor: Winco
+--------------------------------------------------
+Item Name: Snaps
+Variation: HW
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Snaps
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Soldier
+Variation: 
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Sonic Shells
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Space Falcon
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Spin Dragon
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Spin Monkey
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Spirit of Diwali
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Star Dust
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Star Light Shimmer
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Stellar
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Strato Launcher
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Sun Flower
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Super Punk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Surf's Up
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: T-800 Canisters
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Tactical Cannon
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Tank
+Variation: Red Rhino
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Tank
+Variation: Winco
+Vendor: Winco
+--------------------------------------------------
+Item Name: Tank
+Variation: WCF
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Tank
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Tank (Plastic)
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Tank Dzn
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Tank Dzn
+Variation: RR-1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Tank Dzn
+Variation: Boomer
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Tank Dzn
+Variation: SP
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Tank Dzn
+Variation: RR2
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Tasty Treats
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Tequila Party
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Texas Battery - Saturn 504s
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Texas Mega Pop Rocket
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Texas Outlaw Assortment
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Texas Pop Rocket
+Variation: 
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Texas Sword
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: The Bean Squad
+Variation: Monkeyato
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: The Bean Squad
+Variation: Catffeine
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: The Bean Squad
+Variation: Puppyccino
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: The Bean Squad
+Variation: Moclaw
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: The Flag - Saturn 800s
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: The Giant Shot
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Thor Missile
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Thrashin
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Three Minute Smoke Tube (White)
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Thunder bomb
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Thunder Bomb 2000
+Variation: Regular
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Thunder Club
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Thunderbird
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Titan 6pk
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Titan Missile
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Toilet Raider
+Variation: plunger
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Toilet Raider
+Variation: toilet
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Toilet Raider
+Variation: TP
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Toilet Raider
+Variation: Poop
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Torpedo Cracker
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Triple Threat
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Twisted
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: UFO
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Ultimate Battle
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Uncle Sam’s answer
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Undertaker
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Universal Darkness
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Urban Jedi
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: USA Rocks
+Variation: RR
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: USA Rocks
+Variation: RR1
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: USA Rocks
+Variation: RR2
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: USA Smoke
+Variation: Regular
+Vendor: Winco
+--------------------------------------------------
+Item Name: Voodoo
+Variation: Regular
+Vendor: Raccoon
+--------------------------------------------------
+Item Name: Warrior Princess
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Whistling Chaser With Report
+Variation: 
+Vendor: Supreme
+--------------------------------------------------
+Item Name: Widows Kiss
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Wild Life
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Worms for Sale
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Xtreme Energy
+Variation: Regular
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Zingers
+Variation: 
+Vendor: Red Rhino
+--------------------------------------------------
+Item Name: Zombie
+Variation: Regular
+Vendor: Jakes
+--------------------------------------------------
+Item Name: Zoom of Doom
+Variation: 
+Vendor: Raccoon
+--------------------------------------------------
