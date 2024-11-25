@@ -29,10 +29,11 @@ websites:
       Pagination: Standard WooCommerce with ?page=X parameter
 
   - name: Red Rhino Fireworks
+    url: https://www.redrhinofireworks.com/firework-brands/red-rhino/
     url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
     scraper: redrhino_scraper
-    enabled: false
-    limit: -1
+    enabled: true
+    limit: 2
     note: >
       Uses WordPress/Elementor structure.
       Product Images: Found in multiple locations:
@@ -92,7 +93,7 @@ websites:
   - name: Raccoon Fireworks
     url: https://www.raccoonfireworksusa.com/raccoon-1-4g-1
     scraper: raccoon_scraper
-    enabled: true
+    enabled: false
     limit: -1
     note: >
       Uses Wix platform with dynamic product pages.

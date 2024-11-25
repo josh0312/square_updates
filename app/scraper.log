@@ -22582,3 +22582,1877 @@ Processing page 351...
 2024-11-24 21:25:29,508 - INFO - Moving to next page: https://www.raccoonfireworksusa.com/raccoon-1-4g-1?page=352
 2024-11-24 21:25:31,513 - INFO - 
 Processing page 352...
+2024-11-25 08:35:46,424 - INFO - Starting scraper...
+2024-11-25 08:39:00,164 - INFO - Starting scraper...
+2024-11-25 08:39:00,170 - INFO - 
+Attempting to scrape Red Rhino Fireworks...
+2024-11-25 08:39:00,218 - INFO - Found 110 existing images in directory
+2024-11-25 08:39:00,218 - INFO - 
+Processing page 1...
+2024-11-25 08:39:01,238 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:39:01,241 - INFO - Found 16 unique product links
+2024-11-25 08:39:01,241 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/enraged/
+2024-11-25 08:39:01,769 - INFO - Found product: Enraged
+2024-11-25 08:39:01,773 - WARNING - No valid product image found for: Enraged
+2024-11-25 08:39:02,778 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/wooly-bully/
+2024-11-25 08:39:03,344 - INFO - Found product: Wooly Bully
+2024-11-25 08:39:03,347 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301367-Wooly-Bully-1024x1017.png
+2024-11-25 08:39:03,347 - INFO - 
+📦 Found product: Wooly Bully
+2024-11-25 08:39:03,355 - INFO - ⏩ Image already exists: 6301367-Wooly-Bully-1024x1017.png
+2024-11-25 08:39:03,356 - INFO - 📋 Metadata found:
+2024-11-25 08:39:03,356 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:03,356 - INFO -   - product_name: Wooly Bully
+2024-11-25 08:39:03,356 - INFO -   - sku: 6301367
+2024-11-25 08:39:03,356 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:03,356 - INFO -   - effects: None
+2024-11-25 08:39:03,356 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/wooly-bully/
+2024-11-25 08:39:03,356 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301367-Wooly-Bully-1024x1017.png
+2024-11-25 08:39:03,356 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301367-Wooly-Bully-1024x1017.png
+2024-11-25 08:39:03,363 - INFO - ⏩ No database updates needed for: Wooly Bully
+2024-11-25 08:39:04,366 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/4-logo-pennants/
+2024-11-25 08:39:04,889 - INFO - Found product: 4 Logo Pennants
+2024-11-25 08:39:04,892 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/1101934-3Pennants-Red-White-Blue-Yellow-串旗-1024x239.jpg.webp
+2024-11-25 08:39:04,892 - INFO - 
+📦 Found product: 4 Logo Pennants
+2024-11-25 08:39:04,898 - INFO - ⏩ Image already exists: 1101934-3Pennants-Red-White-Blue-Yellow-串旗-1024x239.jpg.webp
+2024-11-25 08:39:04,898 - INFO - 📋 Metadata found:
+2024-11-25 08:39:04,898 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:04,898 - INFO -   - product_name: 4 Logo Pennants
+2024-11-25 08:39:04,898 - INFO -   - sku: 1101934
+2024-11-25 08:39:04,898 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:04,898 - INFO -   - effects: None
+2024-11-25 08:39:04,898 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/4-logo-pennants/
+2024-11-25 08:39:04,898 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/1101934-3Pennants-Red-White-Blue-Yellow-串旗-1024x239.jpg.webp
+2024-11-25 08:39:04,898 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1101934-3Pennants-Red-White-Blue-Yellow-串旗-1024x239.jpg.webp
+2024-11-25 08:39:04,899 - INFO - ⏩ No database updates needed for: 4 Logo Pennants
+2024-11-25 08:39:05,900 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/orange-blossom-special/
+2024-11-25 08:39:06,554 - INFO - Found product: Orange Blossom Special
+2024-11-25 08:39:06,558 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301357-Orange-Blossom-Special-186x1024.png.webp
+2024-11-25 08:39:06,558 - INFO - 
+📦 Found product: Orange Blossom Special
+2024-11-25 08:39:06,566 - INFO - ⏩ Image already exists: 6301357-Orange-Blossom-Special-186x1024.png.webp
+2024-11-25 08:39:06,566 - INFO - 📋 Metadata found:
+2024-11-25 08:39:06,566 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:06,566 - INFO -   - product_name: Orange Blossom Special
+2024-11-25 08:39:06,566 - INFO -   - sku: 6301357
+2024-11-25 08:39:06,566 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:06,566 - INFO -   - effects: None
+2024-11-25 08:39:06,566 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/orange-blossom-special/
+2024-11-25 08:39:06,566 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301357-Orange-Blossom-Special-186x1024.png.webp
+2024-11-25 08:39:06,566 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301357-Orange-Blossom-Special-186x1024.png.webp
+2024-11-25 08:39:06,567 - INFO - ⏩ No database updates needed for: Orange Blossom Special
+2024-11-25 08:39:07,572 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/dark-oblivion/
+2024-11-25 08:39:08,215 - INFO - Found product: Dark Oblivion
+2024-11-25 08:39:08,219 - WARNING - No valid product image found for: Dark Oblivion
+2024-11-25 08:39:09,225 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/bunting/
+2024-11-25 08:39:09,873 - INFO - Found product: RWB Bunting
+2024-11-25 08:39:09,875 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/1101903-150X75-BUNTING-1-1024x509.jpg.webp
+2024-11-25 08:39:09,875 - INFO - 
+📦 Found product: RWB Bunting
+2024-11-25 08:39:09,881 - INFO - ⏩ Image already exists: 1101903-150X75-BUNTING-1-1024x509.jpg.webp
+2024-11-25 08:39:09,881 - INFO - 📋 Metadata found:
+2024-11-25 08:39:09,881 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:09,881 - INFO -   - product_name: RWB Bunting
+2024-11-25 08:39:09,881 - INFO -   - sku: 1101903
+2024-11-25 08:39:09,881 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:09,881 - INFO -   - effects: None
+2024-11-25 08:39:09,881 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/bunting/
+2024-11-25 08:39:09,881 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/1101903-150X75-BUNTING-1-1024x509.jpg.webp
+2024-11-25 08:39:09,881 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1101903-150X75-BUNTING-1-1024x509.jpg.webp
+2024-11-25 08:39:09,883 - INFO - ⏩ No database updates needed for: RWB Bunting
+2024-11-25 08:39:10,883 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hog-wild-flag/
+2024-11-25 08:39:11,471 - INFO - Found product: Hog Wild Flag
+2024-11-25 08:39:11,474 - WARNING - No valid product image found for: Hog Wild Flag
+2024-11-25 08:39:12,478 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hell-fire/
+2024-11-25 08:39:13,098 - INFO - Found product: Hell Fire
+2024-11-25 08:39:13,102 - WARNING - No valid product image found for: Hell Fire
+2024-11-25 08:39:14,104 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/dumpster-fire/
+2024-11-25 08:39:14,658 - INFO - Found product: Dumpster Fire
+2024-11-25 08:39:14,662 - WARNING - No valid product image found for: Dumpster Fire
+2024-11-25 08:39:15,668 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hog-wild-battery/
+2024-11-25 08:39:16,228 - INFO - Found product: Hog Wild Battery
+2024-11-25 08:39:16,232 - WARNING - No valid product image found for: Hog Wild Battery
+2024-11-25 08:39:17,233 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/natural-born-pyros/
+2024-11-25 08:39:17,825 - INFO - Found product: Natural Born Pyros
+2024-11-25 08:39:17,828 - WARNING - No valid product image found for: Natural Born Pyros
+2024-11-25 08:39:18,834 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/high-fliers/
+2024-11-25 08:39:19,373 - INFO - Found product: High Fliers
+2024-11-25 08:39:19,377 - WARNING - No valid product image found for: High Fliers
+2024-11-25 08:39:20,383 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/ghost-rail/
+2024-11-25 08:39:21,059 - INFO - Found product: Ghost Rail
+2024-11-25 08:39:21,061 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301375-Ghost-Rail-1011x1024.png
+2024-11-25 08:39:21,062 - INFO - 
+📦 Found product: Ghost Rail
+2024-11-25 08:39:21,068 - INFO - ⏩ Image already exists: 6301375-Ghost-Rail-1011x1024.png
+2024-11-25 08:39:21,068 - INFO - 📋 Metadata found:
+2024-11-25 08:39:21,068 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:21,068 - INFO -   - product_name: Ghost Rail
+2024-11-25 08:39:21,068 - INFO -   - sku: 6301375
+2024-11-25 08:39:21,068 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:21,068 - INFO -   - effects: None
+2024-11-25 08:39:21,068 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/ghost-rail/
+2024-11-25 08:39:21,068 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301375-Ghost-Rail-1011x1024.png
+2024-11-25 08:39:21,068 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301375-Ghost-Rail-1011x1024.png
+2024-11-25 08:39:21,069 - INFO - ⏩ No database updates needed for: Ghost Rail
+2024-11-25 08:39:22,071 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/lets-go-bro/
+2024-11-25 08:39:22,624 - INFO - Found product: Let’s Go Bro!
+2024-11-25 08:39:22,627 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301370-Lets-Go-Bro-1024x653.png.webp
+2024-11-25 08:39:22,627 - INFO - 
+📦 Found product: Let’s Go Bro!
+2024-11-25 08:39:22,635 - INFO - ⏩ Image already exists: 6301370-Lets-Go-Bro-1024x653.png.webp
+2024-11-25 08:39:22,636 - INFO - 📋 Metadata found:
+2024-11-25 08:39:22,636 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:22,636 - INFO -   - product_name: Let’s Go Bro!
+2024-11-25 08:39:22,636 - INFO -   - sku: 6301370
+2024-11-25 08:39:22,636 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:22,636 - INFO -   - effects: None
+2024-11-25 08:39:22,636 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/lets-go-bro/
+2024-11-25 08:39:22,636 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301370-Lets-Go-Bro-1024x653.png.webp
+2024-11-25 08:39:22,636 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301370-Lets-Go-Bro-1024x653.png.webp
+2024-11-25 08:39:22,637 - INFO - ⏩ No database updates needed for: Let’s Go Bro!
+2024-11-25 08:39:23,638 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/eagle-command/
+2024-11-25 08:39:24,187 - INFO - Found product: Eagle Command
+2024-11-25 08:39:24,191 - WARNING - No valid product image found for: Eagle Command
+2024-11-25 08:39:25,197 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/motor-boating/
+2024-11-25 08:39:25,805 - INFO - Found product: Motor Boating
+2024-11-25 08:39:25,809 - WARNING - No valid product image found for: Motor Boating
+2024-11-25 08:39:26,812 - INFO - Completed processing 0 products
+2024-11-25 08:39:26,812 - INFO - Looking for next page...
+2024-11-25 08:39:26,820 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/2/
+2024-11-25 08:39:26,820 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/2/
+2024-11-25 08:39:27,825 - INFO - 
+Processing page 2...
+2024-11-25 08:39:28,689 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:39:28,692 - INFO - Found 16 unique product links
+2024-11-25 08:39:28,692 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/masquerade/
+2024-11-25 08:39:29,232 - INFO - Found product: Masquerade
+2024-11-25 08:39:29,235 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW711_2-1024x766.png.webp
+2024-11-25 08:39:29,235 - INFO - 
+📦 Found product: Masquerade
+2024-11-25 08:39:29,244 - INFO - ⏩ Image already exists: HW711_2-1024x766.png.webp
+2024-11-25 08:39:29,244 - INFO - 📋 Metadata found:
+2024-11-25 08:39:29,244 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:29,244 - INFO -   - product_name: Masquerade
+2024-11-25 08:39:29,244 - INFO -   - sku: 1202711
+2024-11-25 08:39:29,244 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:29,244 - INFO -   - effects: None
+2024-11-25 08:39:29,244 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/masquerade/
+2024-11-25 08:39:29,244 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW711_2-1024x766.png.webp
+2024-11-25 08:39:29,244 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW711_2-1024x766.png.webp
+2024-11-25 08:39:29,245 - INFO - ⏩ No database updates needed for: Masquerade
+2024-11-25 08:39:30,251 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/beach-nut/
+2024-11-25 08:39:30,797 - INFO - Found product: Beach Nut
+2024-11-25 08:39:30,800 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW505_2-933x1024.png.webp
+2024-11-25 08:39:30,800 - INFO - 
+📦 Found product: Beach Nut
+2024-11-25 08:39:30,806 - INFO - ⏩ Image already exists: HW505_2-933x1024.png.webp
+2024-11-25 08:39:30,806 - INFO - 📋 Metadata found:
+2024-11-25 08:39:30,806 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:30,806 - INFO -   - product_name: Beach Nut
+2024-11-25 08:39:30,806 - INFO -   - sku: 1202505
+2024-11-25 08:39:30,806 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:30,806 - INFO -   - effects: None
+2024-11-25 08:39:30,806 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/beach-nut/
+2024-11-25 08:39:30,807 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW505_2-933x1024.png.webp
+2024-11-25 08:39:30,807 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW505_2-933x1024.png.webp
+2024-11-25 08:39:30,808 - INFO - ⏩ No database updates needed for: Beach Nut
+2024-11-25 08:39:31,811 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/pyro-darts/
+2024-11-25 08:39:32,346 - INFO - Found product: Pyro Darts
+2024-11-25 08:39:32,349 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301307-Pyro-Darts-200G-1024x932.png.webp
+2024-11-25 08:39:32,349 - INFO - 
+📦 Found product: Pyro Darts
+2024-11-25 08:39:32,358 - INFO - ⏩ Image already exists: 6301307-Pyro-Darts-200G-1024x932.png.webp
+2024-11-25 08:39:32,359 - INFO - 📋 Metadata found:
+2024-11-25 08:39:32,359 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:32,359 - INFO -   - product_name: Pyro Darts
+2024-11-25 08:39:32,359 - INFO -   - sku: 6301307
+2024-11-25 08:39:32,359 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:32,359 - INFO -   - effects: None
+2024-11-25 08:39:32,359 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/pyro-darts/
+2024-11-25 08:39:32,359 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301307-Pyro-Darts-200G-1024x932.png.webp
+2024-11-25 08:39:32,359 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301307-Pyro-Darts-200G-1024x932.png.webp
+2024-11-25 08:39:32,360 - INFO - ⏩ No database updates needed for: Pyro Darts
+2024-11-25 08:39:33,365 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/tuned-up/
+2024-11-25 08:39:33,916 - INFO - Found product: Tuned Up
+2024-11-25 08:39:33,919 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301334-Tuned-Up-1024x741.png.webp
+2024-11-25 08:39:33,919 - INFO - 
+📦 Found product: Tuned Up
+2024-11-25 08:39:33,928 - INFO - ⏩ Image already exists: 6301334-Tuned-Up-1024x741.png.webp
+2024-11-25 08:39:33,928 - INFO - 📋 Metadata found:
+2024-11-25 08:39:33,928 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:33,928 - INFO -   - product_name: Tuned Up
+2024-11-25 08:39:33,928 - INFO -   - sku: 6301334
+2024-11-25 08:39:33,928 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:33,928 - INFO -   - effects: None
+2024-11-25 08:39:33,928 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/tuned-up/
+2024-11-25 08:39:33,928 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301334-Tuned-Up-1024x741.png.webp
+2024-11-25 08:39:33,928 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301334-Tuned-Up-1024x741.png.webp
+2024-11-25 08:39:33,929 - INFO - ⏩ No database updates needed for: Tuned Up
+2024-11-25 08:39:34,934 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/speedshow/
+2024-11-25 08:39:35,489 - INFO - Found product: Speedshow
+2024-11-25 08:39:35,492 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301196-Speedshow-1024x986.png.webp
+2024-11-25 08:39:35,493 - INFO - 
+📦 Found product: Speedshow
+2024-11-25 08:39:35,501 - INFO - ⏩ Image already exists: 6301196-Speedshow-1024x986.png.webp
+2024-11-25 08:39:35,501 - INFO - 📋 Metadata found:
+2024-11-25 08:39:35,501 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:35,501 - INFO -   - product_name: Speedshow
+2024-11-25 08:39:35,501 - INFO -   - sku: 6301196
+2024-11-25 08:39:35,501 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:35,501 - INFO -   - effects: None
+2024-11-25 08:39:35,501 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/speedshow/
+2024-11-25 08:39:35,501 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301196-Speedshow-1024x986.png.webp
+2024-11-25 08:39:35,501 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301196-Speedshow-1024x986.png.webp
+2024-11-25 08:39:35,502 - INFO - ⏩ No database updates needed for: Speedshow
+2024-11-25 08:39:36,507 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/10-color-bamboo-sparklers/
+2024-11-25 08:39:37,163 - INFO - Found product: #10 Color Bamboo Sparklers
+2024-11-25 08:39:37,166 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW388_2-1024x729.png.webp
+2024-11-25 08:39:37,166 - INFO - 
+📦 Found product: #10 Color Bamboo Sparklers
+2024-11-25 08:39:37,174 - INFO - ⏩ Image already exists: HW388_2-1024x729.png.webp
+2024-11-25 08:39:37,174 - INFO - 📋 Metadata found:
+2024-11-25 08:39:37,174 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:37,175 - INFO -   - product_name: #10 Color Bamboo Sparklers
+2024-11-25 08:39:37,175 - INFO -   - sku: 1202388
+2024-11-25 08:39:37,175 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:37,175 - INFO -   - effects: None
+2024-11-25 08:39:37,175 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/10-color-bamboo-sparklers/
+2024-11-25 08:39:37,175 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW388_2-1024x729.png.webp
+2024-11-25 08:39:37,175 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW388_2-1024x729.png.webp
+2024-11-25 08:39:37,176 - INFO - ⏩ No database updates needed for: #10 Color Bamboo Sparklers
+2024-11-25 08:39:38,181 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/ring-of-fire/
+2024-11-25 08:39:38,722 - INFO - Found product: Ring of Fire
+2024-11-25 08:39:38,725 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw704_ring_of_fire-1024x906.png.webp
+2024-11-25 08:39:38,726 - INFO - 
+📦 Found product: Ring of Fire
+2024-11-25 08:39:38,734 - INFO - ⏩ Image already exists: hw704_ring_of_fire-1024x906.png.webp
+2024-11-25 08:39:38,734 - INFO - 📋 Metadata found:
+2024-11-25 08:39:38,734 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:38,734 - INFO -   - product_name: Ring of Fire
+2024-11-25 08:39:38,734 - INFO -   - sku: 1202704
+2024-11-25 08:39:38,734 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:38,734 - INFO -   - effects: None
+2024-11-25 08:39:38,734 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/ring-of-fire/
+2024-11-25 08:39:38,734 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw704_ring_of_fire-1024x906.png.webp
+2024-11-25 08:39:38,734 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/hw704_ring_of_fire-1024x906.png.webp
+2024-11-25 08:39:38,735 - INFO - ⏩ No database updates needed for: Ring of Fire
+2024-11-25 08:39:39,740 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hog-wild-snaps/
+2024-11-25 08:39:40,282 - INFO - Found product: Hog Wild Snaps
+2024-11-25 08:39:40,285 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/1202132-Hog-Wild-Snaps-1024x836.png.webp
+2024-11-25 08:39:40,285 - INFO - 
+📦 Found product: Hog Wild Snaps
+2024-11-25 08:39:40,293 - INFO - ⏩ Image already exists: 1202132-Hog-Wild-Snaps-1024x836.png.webp
+2024-11-25 08:39:40,293 - INFO - 📋 Metadata found:
+2024-11-25 08:39:40,293 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:40,293 - INFO -   - product_name: Hog Wild Snaps
+2024-11-25 08:39:40,293 - INFO -   - sku: 1202132
+2024-11-25 08:39:40,293 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:40,293 - INFO -   - effects: None
+2024-11-25 08:39:40,293 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hog-wild-snaps/
+2024-11-25 08:39:40,293 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/1202132-Hog-Wild-Snaps-1024x836.png.webp
+2024-11-25 08:39:40,293 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1202132-Hog-Wild-Snaps-1024x836.png.webp
+2024-11-25 08:39:40,294 - INFO - ⏩ No database updates needed for: Hog Wild Snaps
+2024-11-25 08:39:41,300 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/night-race/
+2024-11-25 08:39:41,874 - INFO - Found product: Night Race
+2024-11-25 08:39:41,878 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301304-Night-Race-920x1024.png.webp
+2024-11-25 08:39:41,878 - INFO - 
+📦 Found product: Night Race
+2024-11-25 08:39:41,887 - INFO - ⏩ Image already exists: 6301304-Night-Race-920x1024.png.webp
+2024-11-25 08:39:41,887 - INFO - 📋 Metadata found:
+2024-11-25 08:39:41,887 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:41,887 - INFO -   - product_name: Night Race
+2024-11-25 08:39:41,887 - INFO -   - sku: 6301304
+2024-11-25 08:39:41,887 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:41,887 - INFO -   - effects: None
+2024-11-25 08:39:41,887 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/night-race/
+2024-11-25 08:39:41,887 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301304-Night-Race-920x1024.png.webp
+2024-11-25 08:39:41,887 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301304-Night-Race-920x1024.png.webp
+2024-11-25 08:39:41,888 - INFO - ⏩ No database updates needed for: Night Race
+2024-11-25 08:39:42,893 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hard-hitter/
+2024-11-25 08:39:43,512 - INFO - Found product: Hard Hitter
+2024-11-25 08:39:43,516 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301184-Hard-Hitter-921x1024.jpg.webp
+2024-11-25 08:39:43,516 - INFO - 
+📦 Found product: Hard Hitter
+2024-11-25 08:39:43,524 - INFO - ⏩ Image already exists: 6301184-Hard-Hitter-921x1024.jpg.webp
+2024-11-25 08:39:43,524 - INFO - 📋 Metadata found:
+2024-11-25 08:39:43,524 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:43,524 - INFO -   - product_name: Hard Hitter
+2024-11-25 08:39:43,524 - INFO -   - sku: 6301184
+2024-11-25 08:39:43,524 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:43,524 - INFO -   - effects: None
+2024-11-25 08:39:43,524 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hard-hitter/
+2024-11-25 08:39:43,524 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301184-Hard-Hitter-921x1024.jpg.webp
+2024-11-25 08:39:43,524 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301184-Hard-Hitter-921x1024.jpg.webp
+2024-11-25 08:39:43,525 - INFO - ⏩ No database updates needed for: Hard Hitter
+2024-11-25 08:39:44,530 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/5-ball-with-tail/
+2024-11-25 08:39:45,048 - INFO - Found product: 5 Ball with tail
+2024-11-25 08:39:45,051 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW340-5-ball-with-tail-2-1024x336.png.webp
+2024-11-25 08:39:45,051 - INFO - 
+📦 Found product: 5 Ball with tail
+2024-11-25 08:39:45,059 - INFO - ⏩ Image already exists: HW340-5-ball-with-tail-2-1024x336.png.webp
+2024-11-25 08:39:45,060 - INFO - 📋 Metadata found:
+2024-11-25 08:39:45,060 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:45,060 - INFO -   - product_name: 5 Ball with tail
+2024-11-25 08:39:45,060 - INFO -   - sku: 1202340
+2024-11-25 08:39:45,060 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:45,060 - INFO -   - effects: None
+2024-11-25 08:39:45,060 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/5-ball-with-tail/
+2024-11-25 08:39:45,060 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW340-5-ball-with-tail-2-1024x336.png.webp
+2024-11-25 08:39:45,060 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW340-5-ball-with-tail-2-1024x336.png.webp
+2024-11-25 08:39:45,061 - INFO - ⏩ No database updates needed for: 5 Ball with tail
+2024-11-25 08:39:46,066 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/fat-sassy/
+2024-11-25 08:39:46,678 - INFO - Found product: Fat & Sassy
+2024-11-25 08:39:46,681 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788025680_hw668_fat_sassy-1024x887.jpg.webp
+2024-11-25 08:39:46,681 - INFO - 
+📦 Found product: Fat & Sassy
+2024-11-25 08:39:46,690 - INFO - ⏩ Image already exists: 810788025680_hw668_fat_sassy-1024x887.jpg.webp
+2024-11-25 08:39:46,690 - INFO - 📋 Metadata found:
+2024-11-25 08:39:46,690 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:46,690 - INFO -   - product_name: Fat & Sassy
+2024-11-25 08:39:46,690 - INFO -   - sku: 1202668
+2024-11-25 08:39:46,690 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:46,690 - INFO -   - effects: None
+2024-11-25 08:39:46,690 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/fat-sassy/
+2024-11-25 08:39:46,690 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788025680_hw668_fat_sassy-1024x887.jpg.webp
+2024-11-25 08:39:46,690 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/810788025680_hw668_fat_sassy-1024x887.jpg.webp
+2024-11-25 08:39:46,692 - INFO - ⏩ No database updates needed for: Fat & Sassy
+2024-11-25 08:39:47,695 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hyped-up/
+2024-11-25 08:39:48,315 - INFO - Found product: Hyped Up
+2024-11-25 08:39:48,319 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301202-Hyped-Up-1024x432.png.webp
+2024-11-25 08:39:48,319 - INFO - 
+📦 Found product: Hyped Up
+2024-11-25 08:39:48,327 - INFO - ⏩ Image already exists: 6301202-Hyped-Up-1024x432.png.webp
+2024-11-25 08:39:48,327 - INFO - 📋 Metadata found:
+2024-11-25 08:39:48,327 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:48,328 - INFO -   - product_name: Hyped Up
+2024-11-25 08:39:48,328 - INFO -   - sku: 6301202
+2024-11-25 08:39:48,328 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:48,328 - INFO -   - effects: None
+2024-11-25 08:39:48,328 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hyped-up/
+2024-11-25 08:39:48,328 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/10/6301202-Hyped-Up-1024x432.png.webp
+2024-11-25 08:39:48,328 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301202-Hyped-Up-1024x432.png.webp
+2024-11-25 08:39:48,329 - INFO - ⏩ No database updates needed for: Hyped Up
+2024-11-25 08:39:49,334 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/rocket-crackers-50s/
+2024-11-25 08:39:49,889 - INFO - Found product: Rocket Crackers 50s
+2024-11-25 08:39:49,891 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202001-Rocket-Cracker-50s-w-Blue-foil.png.webp
+2024-11-25 08:39:49,891 - INFO - 
+📦 Found product: Rocket Crackers 50s
+2024-11-25 08:39:49,897 - INFO - ⏩ Image already exists: 1202001-Rocket-Cracker-50s-w-Blue-foil.png.webp
+2024-11-25 08:39:49,897 - INFO - 📋 Metadata found:
+2024-11-25 08:39:49,897 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:49,897 - INFO -   - product_name: Rocket Crackers 50s
+2024-11-25 08:39:49,897 - INFO -   - sku: 1202001
+2024-11-25 08:39:49,897 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:49,897 - INFO -   - effects: None
+2024-11-25 08:39:49,897 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/rocket-crackers-50s/
+2024-11-25 08:39:49,897 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202001-Rocket-Cracker-50s-w-Blue-foil.png.webp
+2024-11-25 08:39:49,897 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1202001-Rocket-Cracker-50s-w-Blue-foil.png.webp
+2024-11-25 08:39:49,898 - INFO - ⏩ No database updates needed for: Rocket Crackers 50s
+2024-11-25 08:39:50,900 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/magic-gems/
+2024-11-25 08:39:51,543 - INFO - Found product: Magic Gems
+2024-11-25 08:39:51,546 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW093-scaled-1-1024x484.jpg.webp
+2024-11-25 08:39:51,546 - INFO - 
+📦 Found product: Magic Gems
+2024-11-25 08:39:51,553 - INFO - ⏩ Image already exists: HW093-scaled-1-1024x484.jpg.webp
+2024-11-25 08:39:51,553 - INFO - 📋 Metadata found:
+2024-11-25 08:39:51,553 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:51,553 - INFO -   - product_name: Magic Gems
+2024-11-25 08:39:51,553 - INFO -   - sku: 1202093
+2024-11-25 08:39:51,553 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:51,553 - INFO -   - effects: None
+2024-11-25 08:39:51,553 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/magic-gems/
+2024-11-25 08:39:51,553 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW093-scaled-1-1024x484.jpg.webp
+2024-11-25 08:39:51,553 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW093-scaled-1-1024x484.jpg.webp
+2024-11-25 08:39:51,554 - INFO - ⏩ No database updates needed for: Magic Gems
+2024-11-25 08:39:52,559 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/rocket-crackers-200s/
+2024-11-25 08:39:53,118 - INFO - Found product: Rocket Crackers 200s
+2024-11-25 08:39:53,122 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202003-Rocket-Cracker-200s-w-Blue-foil.png.webp
+2024-11-25 08:39:53,122 - INFO - 
+📦 Found product: Rocket Crackers 200s
+2024-11-25 08:39:53,130 - INFO - ⏩ Image already exists: 1202003-Rocket-Cracker-200s-w-Blue-foil.png.webp
+2024-11-25 08:39:53,130 - INFO - 📋 Metadata found:
+2024-11-25 08:39:53,130 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:53,130 - INFO -   - product_name: Rocket Crackers 200s
+2024-11-25 08:39:53,130 - INFO -   - sku: 1202003
+2024-11-25 08:39:53,130 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:53,130 - INFO -   - effects: None
+2024-11-25 08:39:53,130 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/rocket-crackers-200s/
+2024-11-25 08:39:53,130 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202003-Rocket-Cracker-200s-w-Blue-foil.png.webp
+2024-11-25 08:39:53,131 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1202003-Rocket-Cracker-200s-w-Blue-foil.png.webp
+2024-11-25 08:39:53,132 - INFO - ⏩ No database updates needed for: Rocket Crackers 200s
+2024-11-25 08:39:54,137 - INFO - Completed processing 0 products
+2024-11-25 08:39:54,138 - INFO - Looking for next page...
+2024-11-25 08:39:54,146 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/3/
+2024-11-25 08:39:54,146 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/3/
+2024-11-25 08:39:55,154 - INFO - 
+Processing page 3...
+2024-11-25 08:39:55,952 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:39:55,954 - INFO - Found 16 unique product links
+2024-11-25 08:39:55,954 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/super-charged/
+2024-11-25 08:39:56,454 - INFO - Found product: Super Charged
+2024-11-25 08:39:56,458 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW749_2-1024x856.png.webp
+2024-11-25 08:39:56,458 - INFO - 
+📦 Found product: Super Charged
+2024-11-25 08:39:56,467 - INFO - ⏩ Image already exists: HW749_2-1024x856.png.webp
+2024-11-25 08:39:56,467 - INFO - 📋 Metadata found:
+2024-11-25 08:39:56,467 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:56,467 - INFO -   - product_name: Super Charged
+2024-11-25 08:39:56,467 - INFO -   - sku: 1202749
+2024-11-25 08:39:56,467 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:56,467 - INFO -   - effects: None
+2024-11-25 08:39:56,467 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/super-charged/
+2024-11-25 08:39:56,467 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW749_2-1024x856.png.webp
+2024-11-25 08:39:56,467 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW749_2-1024x856.png.webp
+2024-11-25 08:39:56,468 - INFO - ⏩ No database updates needed for: Super Charged
+2024-11-25 08:39:57,470 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/jet-fire/
+2024-11-25 08:39:58,036 - INFO - Found product: Jet Fire
+2024-11-25 08:39:58,040 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw756_jet_fire-1024x753.png.webp
+2024-11-25 08:39:58,040 - INFO - 
+📦 Found product: Jet Fire
+2024-11-25 08:39:58,048 - INFO - ⏩ Image already exists: hw756_jet_fire-1024x753.png.webp
+2024-11-25 08:39:58,048 - INFO - 📋 Metadata found:
+2024-11-25 08:39:58,048 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:58,048 - INFO -   - product_name: Jet Fire
+2024-11-25 08:39:58,048 - INFO -   - sku: 1202756
+2024-11-25 08:39:58,048 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:58,048 - INFO -   - effects: None
+2024-11-25 08:39:58,048 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/jet-fire/
+2024-11-25 08:39:58,049 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw756_jet_fire-1024x753.png.webp
+2024-11-25 08:39:58,049 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/hw756_jet_fire-1024x753.png.webp
+2024-11-25 08:39:58,050 - INFO - ⏩ No database updates needed for: Jet Fire
+2024-11-25 08:39:59,054 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/sinister/
+2024-11-25 08:39:59,651 - INFO - Found product: Sinister
+2024-11-25 08:39:59,655 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw758_sinister-1024x823.png.webp
+2024-11-25 08:39:59,655 - INFO - 
+📦 Found product: Sinister
+2024-11-25 08:39:59,663 - INFO - ⏩ Image already exists: hw758_sinister-1024x823.png.webp
+2024-11-25 08:39:59,664 - INFO - 📋 Metadata found:
+2024-11-25 08:39:59,664 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:39:59,664 - INFO -   - product_name: Sinister
+2024-11-25 08:39:59,664 - INFO -   - sku: 1202758
+2024-11-25 08:39:59,664 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:39:59,664 - INFO -   - effects: None
+2024-11-25 08:39:59,664 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/sinister/
+2024-11-25 08:39:59,664 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw758_sinister-1024x823.png.webp
+2024-11-25 08:39:59,664 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/hw758_sinister-1024x823.png.webp
+2024-11-25 08:39:59,665 - INFO - ⏩ No database updates needed for: Sinister
+2024-11-25 08:40:00,670 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/venom-artillery/
+2024-11-25 08:40:01,246 - INFO - Found product: Venom Artillery
+2024-11-25 08:40:01,249 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw453_venom_artillery-1024x979.png.webp
+2024-11-25 08:40:01,249 - INFO - 
+📦 Found product: Venom Artillery
+2024-11-25 08:40:01,257 - INFO - ⏩ Image already exists: hw453_venom_artillery-1024x979.png.webp
+2024-11-25 08:40:01,258 - INFO - 📋 Metadata found:
+2024-11-25 08:40:01,258 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:01,258 - INFO -   - product_name: Venom Artillery
+2024-11-25 08:40:01,258 - INFO -   - sku: 1202453
+2024-11-25 08:40:01,258 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:01,258 - INFO -   - effects: None
+2024-11-25 08:40:01,258 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/venom-artillery/
+2024-11-25 08:40:01,258 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw453_venom_artillery-1024x979.png.webp
+2024-11-25 08:40:01,258 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/hw453_venom_artillery-1024x979.png.webp
+2024-11-25 08:40:01,259 - INFO - ⏩ No database updates needed for: Venom Artillery
+2024-11-25 08:40:02,264 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/nude-beach/
+2024-11-25 08:40:02,804 - INFO - Found product: Nude Beach
+2024-11-25 08:40:02,808 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW546_2-1024x956.png.webp
+2024-11-25 08:40:02,808 - INFO - 
+📦 Found product: Nude Beach
+2024-11-25 08:40:02,816 - INFO - ⏩ Image already exists: HW546_2-1024x956.png.webp
+2024-11-25 08:40:02,816 - INFO - 📋 Metadata found:
+2024-11-25 08:40:02,816 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:02,816 - INFO -   - product_name: Nude Beach
+2024-11-25 08:40:02,816 - INFO -   - sku: 1202546
+2024-11-25 08:40:02,816 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:02,816 - INFO -   - effects: None
+2024-11-25 08:40:02,816 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/nude-beach/
+2024-11-25 08:40:02,816 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW546_2-1024x956.png.webp
+2024-11-25 08:40:02,816 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW546_2-1024x956.png.webp
+2024-11-25 08:40:02,817 - INFO - ⏩ No database updates needed for: Nude Beach
+2024-11-25 08:40:03,820 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/piggy-pack-safe-and-sane/
+2024-11-25 08:40:04,402 - INFO - Found product: Piggy Pack – Safe and Sane
+2024-11-25 08:40:04,405 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW818_2-768x1024.png.webp
+2024-11-25 08:40:04,405 - INFO - 
+📦 Found product: Piggy Pack – Safe and Sane
+2024-11-25 08:40:04,413 - INFO - ⏩ Image already exists: HW818_2-768x1024.png.webp
+2024-11-25 08:40:04,413 - INFO - 📋 Metadata found:
+2024-11-25 08:40:04,413 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:04,413 - INFO -   - product_name: Piggy Pack – Safe and Sane
+2024-11-25 08:40:04,413 - INFO -   - sku: 1202818
+2024-11-25 08:40:04,414 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:04,414 - INFO -   - effects: None
+2024-11-25 08:40:04,414 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/piggy-pack-safe-and-sane/
+2024-11-25 08:40:04,414 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW818_2-768x1024.png.webp
+2024-11-25 08:40:04,414 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW818_2-768x1024.png.webp
+2024-11-25 08:40:04,415 - INFO - ⏩ No database updates needed for: Piggy Pack – Safe and Sane
+2024-11-25 08:40:05,417 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/eye-in-the-sky/
+2024-11-25 08:40:05,998 - INFO - Found product: Eye in the Sky
+2024-11-25 08:40:06,002 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788027410_eye_in_the_sky.jpg.webp
+2024-11-25 08:40:06,002 - INFO - 
+📦 Found product: Eye in the Sky
+2024-11-25 08:40:06,010 - INFO - ⏩ Image already exists: 810788027410_eye_in_the_sky.jpg.webp
+2024-11-25 08:40:06,011 - INFO - 📋 Metadata found:
+2024-11-25 08:40:06,011 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:06,011 - INFO -   - product_name: Eye in the Sky
+2024-11-25 08:40:06,011 - INFO -   - sku: 1202741
+2024-11-25 08:40:06,011 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:06,011 - INFO -   - effects: None
+2024-11-25 08:40:06,011 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/eye-in-the-sky/
+2024-11-25 08:40:06,011 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788027410_eye_in_the_sky.jpg.webp
+2024-11-25 08:40:06,011 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/810788027410_eye_in_the_sky.jpg.webp
+2024-11-25 08:40:06,012 - INFO - ⏩ No database updates needed for: Eye in the Sky
+2024-11-25 08:40:07,015 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/showstopper/
+2024-11-25 08:40:07,538 - INFO - Found product: Showstopper
+2024-11-25 08:40:07,541 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW753_2-1024x798.png.webp
+2024-11-25 08:40:07,542 - INFO - 
+📦 Found product: Showstopper
+2024-11-25 08:40:07,550 - INFO - ⏩ Image already exists: HW753_2-1024x798.png.webp
+2024-11-25 08:40:07,550 - INFO - 📋 Metadata found:
+2024-11-25 08:40:07,550 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:07,550 - INFO -   - product_name: Showstopper
+2024-11-25 08:40:07,550 - INFO -   - sku: 1202753
+2024-11-25 08:40:07,550 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:07,550 - INFO -   - effects: None
+2024-11-25 08:40:07,550 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/showstopper/
+2024-11-25 08:40:07,550 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW753_2-1024x798.png.webp
+2024-11-25 08:40:07,550 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW753_2-1024x798.png.webp
+2024-11-25 08:40:07,551 - INFO - ⏩ No database updates needed for: Showstopper
+2024-11-25 08:40:08,554 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/air-supremacy/
+2024-11-25 08:40:09,213 - INFO - Found product: Air Supremacy
+2024-11-25 08:40:09,217 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW731_2-1024x798.png.webp
+2024-11-25 08:40:09,217 - INFO - 
+📦 Found product: Air Supremacy
+2024-11-25 08:40:09,225 - INFO - ⏩ Image already exists: HW731_2-1024x798.png.webp
+2024-11-25 08:40:09,225 - INFO - 📋 Metadata found:
+2024-11-25 08:40:09,225 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:09,225 - INFO -   - product_name: Air Supremacy
+2024-11-25 08:40:09,225 - INFO -   - sku: 1202731
+2024-11-25 08:40:09,226 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:09,226 - INFO -   - effects: None
+2024-11-25 08:40:09,226 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/air-supremacy/
+2024-11-25 08:40:09,226 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW731_2-1024x798.png.webp
+2024-11-25 08:40:09,226 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW731_2-1024x798.png.webp
+2024-11-25 08:40:09,227 - INFO - ⏩ No database updates needed for: Air Supremacy
+2024-11-25 08:40:10,232 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hog-wild-pyro/
+2024-11-25 08:40:10,812 - INFO - Found product: Hog Wild Pyro
+2024-11-25 08:40:10,818 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw451_hog_wild_pyro-637x1024.png.webp
+2024-11-25 08:40:10,820 - INFO - 
+📦 Found product: Hog Wild Pyro
+2024-11-25 08:40:10,832 - INFO - ⏩ Image already exists: hw451_hog_wild_pyro-637x1024.png.webp
+2024-11-25 08:40:10,832 - INFO - 📋 Metadata found:
+2024-11-25 08:40:10,832 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:10,832 - INFO -   - product_name: Hog Wild Pyro
+2024-11-25 08:40:10,832 - INFO -   - sku: 1202451
+2024-11-25 08:40:10,832 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:10,832 - INFO -   - effects: None
+2024-11-25 08:40:10,832 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hog-wild-pyro/
+2024-11-25 08:40:10,832 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw451_hog_wild_pyro-637x1024.png.webp
+2024-11-25 08:40:10,832 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/hw451_hog_wild_pyro-637x1024.png.webp
+2024-11-25 08:40:10,833 - INFO - ⏩ No database updates needed for: Hog Wild Pyro
+2024-11-25 08:40:11,839 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/fire-of-battle/
+2024-11-25 08:40:12,490 - INFO - Found product: Fire Of Battle
+2024-11-25 08:40:12,493 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788027620-Fire-of-Battle.jpg.webp
+2024-11-25 08:40:12,493 - INFO - 
+📦 Found product: Fire Of Battle
+2024-11-25 08:40:12,501 - INFO - ⏩ Image already exists: 810788027620-Fire-of-Battle.jpg.webp
+2024-11-25 08:40:12,502 - INFO - 📋 Metadata found:
+2024-11-25 08:40:12,502 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:12,502 - INFO -   - product_name: Fire Of Battle
+2024-11-25 08:40:12,502 - INFO -   - sku: 1200762
+2024-11-25 08:40:12,502 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:12,502 - INFO -   - effects: None
+2024-11-25 08:40:12,502 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/fire-of-battle/
+2024-11-25 08:40:12,502 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788027620-Fire-of-Battle.jpg.webp
+2024-11-25 08:40:12,502 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/810788027620-Fire-of-Battle.jpg.webp
+2024-11-25 08:40:12,503 - INFO - ⏩ No database updates needed for: Fire Of Battle
+2024-11-25 08:40:13,505 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/daddys-shoes/
+2024-11-25 08:40:14,048 - INFO - Found product: Daddy’s Shoes
+2024-11-25 08:40:14,052 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW285_2-766x1024.png.webp
+2024-11-25 08:40:14,052 - INFO - 
+📦 Found product: Daddy’s Shoes
+2024-11-25 08:40:14,060 - INFO - ⏩ Image already exists: HW285_2-766x1024.png.webp
+2024-11-25 08:40:14,060 - INFO - 📋 Metadata found:
+2024-11-25 08:40:14,060 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:14,060 - INFO -   - product_name: Daddy’s Shoes
+2024-11-25 08:40:14,061 - INFO -   - sku: 1202285
+2024-11-25 08:40:14,061 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:14,061 - INFO -   - effects: None
+2024-11-25 08:40:14,061 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/daddys-shoes/
+2024-11-25 08:40:14,061 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW285_2-766x1024.png.webp
+2024-11-25 08:40:14,061 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW285_2-766x1024.png.webp
+2024-11-25 08:40:14,062 - INFO - ⏩ No database updates needed for: Daddy’s Shoes
+2024-11-25 08:40:15,067 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/crusher/
+2024-11-25 08:40:15,667 - INFO - Found product: Crusher
+2024-11-25 08:40:15,671 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW541_2-1024x1009.png.webp
+2024-11-25 08:40:15,671 - INFO - 
+📦 Found product: Crusher
+2024-11-25 08:40:15,679 - INFO - ⏩ Image already exists: HW541_2-1024x1009.png.webp
+2024-11-25 08:40:15,679 - INFO - 📋 Metadata found:
+2024-11-25 08:40:15,679 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:15,679 - INFO -   - product_name: Crusher
+2024-11-25 08:40:15,679 - INFO -   - sku: 1202541
+2024-11-25 08:40:15,679 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:15,679 - INFO -   - effects: None
+2024-11-25 08:40:15,679 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/crusher/
+2024-11-25 08:40:15,680 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW541_2-1024x1009.png.webp
+2024-11-25 08:40:15,680 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW541_2-1024x1009.png.webp
+2024-11-25 08:40:15,681 - INFO - ⏩ No database updates needed for: Crusher
+2024-11-25 08:40:16,684 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/surfer-girl/
+2024-11-25 08:40:17,239 - INFO - Found product: Surfer Girl
+2024-11-25 08:40:17,242 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW522_2-1024x985.png.webp
+2024-11-25 08:40:17,243 - INFO - 
+📦 Found product: Surfer Girl
+2024-11-25 08:40:17,251 - INFO - ⏩ Image already exists: HW522_2-1024x985.png.webp
+2024-11-25 08:40:17,251 - INFO - 📋 Metadata found:
+2024-11-25 08:40:17,251 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:17,251 - INFO -   - product_name: Surfer Girl
+2024-11-25 08:40:17,251 - INFO -   - sku: 1202522
+2024-11-25 08:40:17,251 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:17,251 - INFO -   - effects: None
+2024-11-25 08:40:17,251 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/surfer-girl/
+2024-11-25 08:40:17,251 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW522_2-1024x985.png.webp
+2024-11-25 08:40:17,251 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW522_2-1024x985.png.webp
+2024-11-25 08:40:17,252 - INFO - ⏩ No database updates needed for: Surfer Girl
+2024-11-25 08:40:18,257 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/adrenaline-rush-500g/
+2024-11-25 08:40:18,838 - INFO - Found product: Adrenaline Rush 500G
+2024-11-25 08:40:18,841 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788022970-Adrenaline-Rush.jpg.webp
+2024-11-25 08:40:18,841 - INFO - 
+📦 Found product: Adrenaline Rush 500G
+2024-11-25 08:40:18,850 - INFO - ⏩ Image already exists: 810788022970-Adrenaline-Rush.jpg.webp
+2024-11-25 08:40:18,850 - INFO - 📋 Metadata found:
+2024-11-25 08:40:18,850 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:18,850 - INFO -   - product_name: Adrenaline Rush 500G
+2024-11-25 08:40:18,850 - INFO -   - sku: 1200297
+2024-11-25 08:40:18,850 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:18,850 - INFO -   - effects: None
+2024-11-25 08:40:18,850 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/adrenaline-rush-500g/
+2024-11-25 08:40:18,850 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788022970-Adrenaline-Rush.jpg.webp
+2024-11-25 08:40:18,850 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/810788022970-Adrenaline-Rush.jpg.webp
+2024-11-25 08:40:18,851 - INFO - ⏩ No database updates needed for: Adrenaline Rush 500G
+2024-11-25 08:40:19,856 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/color-smoke-ball-clay-12s/
+2024-11-25 08:40:20,376 - INFO - Found product: Color Smoke Ball Clay 12’s
+2024-11-25 08:40:20,380 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw236_colored_smoke_balls-1024x665.png.webp
+2024-11-25 08:40:20,380 - INFO - 
+📦 Found product: Color Smoke Ball Clay 12’s
+2024-11-25 08:40:20,388 - INFO - ⏩ Image already exists: hw236_colored_smoke_balls-1024x665.png.webp
+2024-11-25 08:40:20,388 - INFO - 📋 Metadata found:
+2024-11-25 08:40:20,388 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:20,388 - INFO -   - product_name: Color Smoke Ball Clay 12’s
+2024-11-25 08:40:20,388 - INFO -   - sku: 1202236
+2024-11-25 08:40:20,388 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:20,388 - INFO -   - effects: None
+2024-11-25 08:40:20,388 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/color-smoke-ball-clay-12s/
+2024-11-25 08:40:20,388 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/hw236_colored_smoke_balls-1024x665.png.webp
+2024-11-25 08:40:20,389 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/hw236_colored_smoke_balls-1024x665.png.webp
+2024-11-25 08:40:20,390 - INFO - ⏩ No database updates needed for: Color Smoke Ball Clay 12’s
+2024-11-25 08:40:21,392 - INFO - Completed processing 0 products
+2024-11-25 08:40:21,393 - INFO - Looking for next page...
+2024-11-25 08:40:21,402 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/4/
+2024-11-25 08:40:21,402 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/4/
+2024-11-25 08:40:22,410 - INFO - 
+Processing page 4...
+2024-11-25 08:40:23,322 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:40:23,324 - INFO - Found 16 unique product links
+2024-11-25 08:40:23,324 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/crossfire/
+2024-11-25 08:40:23,958 - INFO - Found product: Crossfire
+2024-11-25 08:40:23,962 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301013-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:23,962 - INFO - 
+📦 Found product: Crossfire
+2024-11-25 08:40:23,971 - INFO - ⏩ Image already exists: 6301013-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:23,971 - INFO - 📋 Metadata found:
+2024-11-25 08:40:23,972 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:23,972 - INFO -   - product_name: Crossfire
+2024-11-25 08:40:23,972 - INFO -   - sku: 6301013
+2024-11-25 08:40:23,972 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:23,972 - INFO -   - effects: None
+2024-11-25 08:40:23,972 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/crossfire/
+2024-11-25 08:40:23,972 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301013-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:23,972 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301013-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:23,974 - INFO - ⏩ No database updates needed for: Crossfire
+2024-11-25 08:40:24,979 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/orange-crush-500g/
+2024-11-25 08:40:25,488 - INFO - Found product: Orange Crush 500G
+2024-11-25 08:40:25,491 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301021-1024x1024.jpg.webp
+2024-11-25 08:40:25,491 - INFO - 
+📦 Found product: Orange Crush 500G
+2024-11-25 08:40:25,500 - INFO - ⏩ Image already exists: 6301021-1024x1024.jpg.webp
+2024-11-25 08:40:25,500 - INFO - 📋 Metadata found:
+2024-11-25 08:40:25,500 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:25,500 - INFO -   - product_name: Orange Crush 500G
+2024-11-25 08:40:25,500 - INFO -   - sku: 6301021
+2024-11-25 08:40:25,500 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:25,500 - INFO -   - effects: None
+2024-11-25 08:40:25,500 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/orange-crush-500g/
+2024-11-25 08:40:25,500 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301021-1024x1024.jpg.webp
+2024-11-25 08:40:25,500 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301021-1024x1024.jpg.webp
+2024-11-25 08:40:25,502 - INFO - ⏩ No database updates needed for: Orange Crush 500G
+2024-11-25 08:40:26,507 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/pyro-gal/
+2024-11-25 08:40:27,141 - INFO - Found product: Pyro Gal
+2024-11-25 08:40:27,144 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301012-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:27,144 - INFO - 
+📦 Found product: Pyro Gal
+2024-11-25 08:40:27,152 - INFO - ⏩ Image already exists: 6301012-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:27,152 - INFO - 📋 Metadata found:
+2024-11-25 08:40:27,152 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:27,153 - INFO -   - product_name: Pyro Gal
+2024-11-25 08:40:27,153 - INFO -   - sku: 6301012
+2024-11-25 08:40:27,153 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:27,153 - INFO -   - effects: None
+2024-11-25 08:40:27,153 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/pyro-gal/
+2024-11-25 08:40:27,153 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301012-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:27,153 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301012-scaled-1-1024x1024.jpg.webp
+2024-11-25 08:40:27,154 - INFO - ⏩ No database updates needed for: Pyro Gal
+2024-11-25 08:40:28,159 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/wild-life-safe-and-sane/
+2024-11-25 08:40:28,758 - INFO - Found product: Wild Life – Safe and Sane
+2024-11-25 08:40:28,761 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301047-Wild-Life.png.webp
+2024-11-25 08:40:28,761 - INFO - 
+📦 Found product: Wild Life – Safe and Sane
+2024-11-25 08:40:28,766 - INFO - ⏩ Image already exists: 6301047-Wild-Life.png.webp
+2024-11-25 08:40:28,766 - INFO - 📋 Metadata found:
+2024-11-25 08:40:28,767 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:28,767 - INFO -   - product_name: Wild Life – Safe and Sane
+2024-11-25 08:40:28,767 - INFO -   - sku: 6301047
+2024-11-25 08:40:28,767 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:28,767 - INFO -   - effects: None
+2024-11-25 08:40:28,767 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/wild-life-safe-and-sane/
+2024-11-25 08:40:28,767 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301047-Wild-Life.png.webp
+2024-11-25 08:40:28,767 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301047-Wild-Life.png.webp
+2024-11-25 08:40:28,768 - INFO - ⏩ No database updates needed for: Wild Life – Safe and Sane
+2024-11-25 08:40:29,772 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/here-fishy-fishy/
+2024-11-25 08:40:30,351 - INFO - Found product: Here Fishy Fishy
+2024-11-25 08:40:30,354 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301007-scaled-1-1024x778.jpg.webp
+2024-11-25 08:40:30,355 - INFO - 
+📦 Found product: Here Fishy Fishy
+2024-11-25 08:40:30,363 - INFO - ⏩ Image already exists: 6301007-scaled-1-1024x778.jpg.webp
+2024-11-25 08:40:30,363 - INFO - 📋 Metadata found:
+2024-11-25 08:40:30,363 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:30,363 - INFO -   - product_name: Here Fishy Fishy
+2024-11-25 08:40:30,363 - INFO -   - sku: 6301007
+2024-11-25 08:40:30,363 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:30,363 - INFO -   - effects: None
+2024-11-25 08:40:30,363 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/here-fishy-fishy/
+2024-11-25 08:40:30,363 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301007-scaled-1-1024x778.jpg.webp
+2024-11-25 08:40:30,363 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301007-scaled-1-1024x778.jpg.webp
+2024-11-25 08:40:30,366 - INFO - ⏩ No database updates needed for: Here Fishy Fishy
+2024-11-25 08:40:31,370 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/seven-sabres/
+2024-11-25 08:40:31,957 - INFO - Found product: Seven Sabres
+2024-11-25 08:40:31,961 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/19197010069-Seven-Sabres.jpg.webp
+2024-11-25 08:40:31,961 - INFO - 
+📦 Found product: Seven Sabres
+2024-11-25 08:40:31,969 - INFO - ⏩ Image already exists: 19197010069-Seven-Sabres.jpg.webp
+2024-11-25 08:40:31,969 - INFO - 📋 Metadata found:
+2024-11-25 08:40:31,969 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:31,969 - INFO -   - product_name: Seven Sabres
+2024-11-25 08:40:31,969 - INFO -   - sku: 6301006
+2024-11-25 08:40:31,969 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:31,969 - INFO -   - effects: None
+2024-11-25 08:40:31,969 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/seven-sabres/
+2024-11-25 08:40:31,969 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/19197010069-Seven-Sabres.jpg.webp
+2024-11-25 08:40:31,969 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/19197010069-Seven-Sabres.jpg.webp
+2024-11-25 08:40:31,970 - INFO - ⏩ No database updates needed for: Seven Sabres
+2024-11-25 08:40:32,976 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/rocket-fire/
+2024-11-25 08:40:33,587 - INFO - Found product: Rocket Fire
+2024-11-25 08:40:33,590 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788021990-Rocket-Fire.jpg.webp
+2024-11-25 08:40:33,590 - INFO - 
+📦 Found product: Rocket Fire
+2024-11-25 08:40:33,599 - INFO - ⏩ Image already exists: 810788021990-Rocket-Fire.jpg.webp
+2024-11-25 08:40:33,599 - INFO - 📋 Metadata found:
+2024-11-25 08:40:33,599 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:33,599 - INFO -   - product_name: Rocket Fire
+2024-11-25 08:40:33,599 - INFO -   - sku: 1200199
+2024-11-25 08:40:33,599 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:33,599 - INFO -   - effects: None
+2024-11-25 08:40:33,599 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/rocket-fire/
+2024-11-25 08:40:33,599 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/810788021990-Rocket-Fire.jpg.webp
+2024-11-25 08:40:33,599 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/810788021990-Rocket-Fire.jpg.webp
+2024-11-25 08:40:33,600 - INFO - ⏩ No database updates needed for: Rocket Fire
+2024-11-25 08:40:34,600 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/pyro-vault/
+2024-11-25 08:40:35,224 - INFO - Found product: Pyro Vault
+2024-11-25 08:40:35,227 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301045-Pyro-Vault-1024x659.png.webp
+2024-11-25 08:40:35,227 - INFO - 
+📦 Found product: Pyro Vault
+2024-11-25 08:40:35,235 - INFO - ⏩ Image already exists: 6301045-Pyro-Vault-1024x659.png.webp
+2024-11-25 08:40:35,235 - INFO - 📋 Metadata found:
+2024-11-25 08:40:35,236 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:35,236 - INFO -   - product_name: Pyro Vault
+2024-11-25 08:40:35,236 - INFO -   - sku: 6301044
+2024-11-25 08:40:35,236 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:35,236 - INFO -   - effects: None
+2024-11-25 08:40:35,236 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/pyro-vault/
+2024-11-25 08:40:35,236 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301045-Pyro-Vault-1024x659.png.webp
+2024-11-25 08:40:35,236 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301045-Pyro-Vault-1024x659.png.webp
+2024-11-25 08:40:35,237 - INFO - ⏩ No database updates needed for: Pyro Vault
+2024-11-25 08:40:36,242 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/rifle/
+2024-11-25 08:40:36,876 - INFO - Found product: Rifle
+2024-11-25 08:40:36,880 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301084-Rifle-3D-1024x922.jpg.webp
+2024-11-25 08:40:36,880 - INFO - 
+📦 Found product: Rifle
+2024-11-25 08:40:36,889 - INFO - ⏩ Image already exists: 6301084-Rifle-3D-1024x922.jpg.webp
+2024-11-25 08:40:36,889 - INFO - 📋 Metadata found:
+2024-11-25 08:40:36,889 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:36,889 - INFO -   - product_name: Rifle
+2024-11-25 08:40:36,889 - INFO -   - sku: 6301084
+2024-11-25 08:40:36,889 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:36,889 - INFO -   - effects: None
+2024-11-25 08:40:36,889 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/rifle/
+2024-11-25 08:40:36,889 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301084-Rifle-3D-1024x922.jpg.webp
+2024-11-25 08:40:36,889 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301084-Rifle-3D-1024x922.jpg.webp
+2024-11-25 08:40:36,890 - INFO - ⏩ No database updates needed for: Rifle
+2024-11-25 08:40:37,892 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/air-force/
+2024-11-25 08:40:38,604 - INFO - Found product: Air Force
+2024-11-25 08:40:38,608 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301042-Air-Force.png.webp
+2024-11-25 08:40:38,608 - INFO - 
+📦 Found product: Air Force
+2024-11-25 08:40:38,616 - INFO - ⏩ Image already exists: 6301042-Air-Force.png.webp
+2024-11-25 08:40:38,616 - INFO - 📋 Metadata found:
+2024-11-25 08:40:38,616 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:38,616 - INFO -   - product_name: Air Force
+2024-11-25 08:40:38,616 - INFO -   - sku: 6301042
+2024-11-25 08:40:38,616 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:38,616 - INFO -   - effects: None
+2024-11-25 08:40:38,616 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/air-force/
+2024-11-25 08:40:38,616 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301042-Air-Force.png.webp
+2024-11-25 08:40:38,616 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301042-Air-Force.png.webp
+2024-11-25 08:40:38,617 - INFO - ⏩ No database updates needed for: Air Force
+2024-11-25 08:40:39,623 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/americas-candle/
+2024-11-25 08:40:40,239 - INFO - Found product: America’s Candle
+2024-11-25 08:40:40,243 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301080-Americas-Candle-Bundle-pic.png.webp
+2024-11-25 08:40:40,243 - INFO - 
+📦 Found product: America’s Candle
+2024-11-25 08:40:40,251 - INFO - ⏩ Image already exists: 6301080-Americas-Candle-Bundle-pic.png.webp
+2024-11-25 08:40:40,251 - INFO - 📋 Metadata found:
+2024-11-25 08:40:40,251 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:40,251 - INFO -   - product_name: America’s Candle
+2024-11-25 08:40:40,251 - INFO -   - sku: 6301080
+2024-11-25 08:40:40,251 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:40,252 - INFO -   - effects: None
+2024-11-25 08:40:40,252 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/americas-candle/
+2024-11-25 08:40:40,252 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301080-Americas-Candle-Bundle-pic.png.webp
+2024-11-25 08:40:40,252 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301080-Americas-Candle-Bundle-pic.png.webp
+2024-11-25 08:40:40,253 - INFO - ⏩ No database updates needed for: America’s Candle
+2024-11-25 08:40:41,255 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/take-down-the-town-safe-and-sane/
+2024-11-25 08:40:41,752 - INFO - Found product: Take Down the Town – Safe and Sane
+2024-11-25 08:40:41,755 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/Take-Down-the-Town-408x1024.png.webp
+2024-11-25 08:40:41,755 - INFO - 
+📦 Found product: Take Down the Town – Safe and Sane
+2024-11-25 08:40:41,760 - INFO - ⏩ Image already exists: Take-Down-the-Town-408x1024.png.webp
+2024-11-25 08:40:41,760 - INFO - 📋 Metadata found:
+2024-11-25 08:40:41,760 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:41,760 - INFO -   - product_name: Take Down the Town – Safe and Sane
+2024-11-25 08:40:41,760 - INFO -   - sku: 6301049
+2024-11-25 08:40:41,760 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:41,761 - INFO -   - effects: None
+2024-11-25 08:40:41,761 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/take-down-the-town-safe-and-sane/
+2024-11-25 08:40:41,761 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/Take-Down-the-Town-408x1024.png.webp
+2024-11-25 08:40:41,761 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/Take-Down-the-Town-408x1024.png.webp
+2024-11-25 08:40:41,761 - INFO - ⏩ No database updates needed for: Take Down the Town – Safe and Sane
+2024-11-25 08:40:42,767 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/premium-crackling-canister-shells/
+2024-11-25 08:40:43,298 - INFO - Found product: Premium Crackling Canister Shells
+2024-11-25 08:40:43,301 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301052-scaled-1-900x1024.jpg.webp
+2024-11-25 08:40:43,302 - INFO - 
+📦 Found product: Premium Crackling Canister Shells
+2024-11-25 08:40:43,309 - INFO - ⏩ Image already exists: 6301052-scaled-1-900x1024.jpg.webp
+2024-11-25 08:40:43,309 - INFO - 📋 Metadata found:
+2024-11-25 08:40:43,310 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:43,310 - INFO -   - product_name: Premium Crackling Canister Shells
+2024-11-25 08:40:43,310 - INFO -   - sku: 6301052
+2024-11-25 08:40:43,310 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:43,310 - INFO -   - effects: None
+2024-11-25 08:40:43,310 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/premium-crackling-canister-shells/
+2024-11-25 08:40:43,310 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301052-scaled-1-900x1024.jpg.webp
+2024-11-25 08:40:43,310 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301052-scaled-1-900x1024.jpg.webp
+2024-11-25 08:40:43,312 - INFO - ⏩ No database updates needed for: Premium Crackling Canister Shells
+2024-11-25 08:40:44,317 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/premium-whistling-moon-travelers/
+2024-11-25 08:40:44,914 - INFO - Found product: Premium Whistling Moon Travelers
+2024-11-25 08:40:44,917 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301089-Premium-Whistling-Moon-Travellers-1024x694.jpg.webp
+2024-11-25 08:40:44,917 - INFO - 
+📦 Found product: Premium Whistling Moon Travelers
+2024-11-25 08:40:44,923 - INFO - ⏩ Image already exists: 6301089-Premium-Whistling-Moon-Travellers-1024x694.jpg.webp
+2024-11-25 08:40:44,923 - INFO - 📋 Metadata found:
+2024-11-25 08:40:44,923 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:44,923 - INFO -   - product_name: Premium Whistling Moon Travelers
+2024-11-25 08:40:44,923 - INFO -   - sku: 6301089
+2024-11-25 08:40:44,923 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:44,923 - INFO -   - effects: None
+2024-11-25 08:40:44,923 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/premium-whistling-moon-travelers/
+2024-11-25 08:40:44,923 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301089-Premium-Whistling-Moon-Travellers-1024x694.jpg.webp
+2024-11-25 08:40:44,923 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301089-Premium-Whistling-Moon-Travellers-1024x694.jpg.webp
+2024-11-25 08:40:44,924 - INFO - ⏩ No database updates needed for: Premium Whistling Moon Travelers
+2024-11-25 08:40:45,929 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/semi-auto/
+2024-11-25 08:40:46,531 - INFO - Found product: Semi Auto
+2024-11-25 08:40:46,535 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301086-Semi-Auto-3D-1024x922.jpg.webp
+2024-11-25 08:40:46,535 - INFO - 
+📦 Found product: Semi Auto
+2024-11-25 08:40:46,543 - INFO - ⏩ Image already exists: 6301086-Semi-Auto-3D-1024x922.jpg.webp
+2024-11-25 08:40:46,543 - INFO - 📋 Metadata found:
+2024-11-25 08:40:46,543 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:46,543 - INFO -   - product_name: Semi Auto
+2024-11-25 08:40:46,544 - INFO -   - sku: 6301086
+2024-11-25 08:40:46,544 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:46,544 - INFO -   - effects: None
+2024-11-25 08:40:46,544 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/semi-auto/
+2024-11-25 08:40:46,544 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301086-Semi-Auto-3D-1024x922.jpg.webp
+2024-11-25 08:40:46,544 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301086-Semi-Auto-3D-1024x922.jpg.webp
+2024-11-25 08:40:46,545 - INFO - ⏩ No database updates needed for: Semi Auto
+2024-11-25 08:40:47,547 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/wild-boar/
+2024-11-25 08:40:48,042 - INFO - Found product: Wild Boar
+2024-11-25 08:40:48,045 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301058-1024x761.jpg.webp
+2024-11-25 08:40:48,046 - INFO - 
+📦 Found product: Wild Boar
+2024-11-25 08:40:48,054 - INFO - ⏩ Image already exists: 6301058-1024x761.jpg.webp
+2024-11-25 08:40:48,054 - INFO - 📋 Metadata found:
+2024-11-25 08:40:48,054 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:48,054 - INFO -   - product_name: Wild Boar
+2024-11-25 08:40:48,054 - INFO -   - sku: 6301058
+2024-11-25 08:40:48,054 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:48,054 - INFO -   - effects: None
+2024-11-25 08:40:48,054 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/wild-boar/
+2024-11-25 08:40:48,054 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301058-1024x761.jpg.webp
+2024-11-25 08:40:48,054 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301058-1024x761.jpg.webp
+2024-11-25 08:40:48,055 - INFO - ⏩ No database updates needed for: Wild Boar
+2024-11-25 08:40:49,056 - INFO - Completed processing 0 products
+2024-11-25 08:40:49,057 - INFO - Looking for next page...
+2024-11-25 08:40:49,066 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/5/
+2024-11-25 08:40:49,066 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/5/
+2024-11-25 08:40:50,072 - INFO - 
+Processing page 5...
+2024-11-25 08:40:50,914 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:40:50,916 - INFO - Found 16 unique product links
+2024-11-25 08:40:50,916 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/open-mic-night/
+2024-11-25 08:40:51,504 - INFO - Found product: Open Mic Night
+2024-11-25 08:40:51,507 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301119-Open-Mic-Night.jpg.webp
+2024-11-25 08:40:51,508 - INFO - 
+📦 Found product: Open Mic Night
+2024-11-25 08:40:51,516 - INFO - ⏩ Image already exists: 6301119-Open-Mic-Night.jpg.webp
+2024-11-25 08:40:51,516 - INFO - 📋 Metadata found:
+2024-11-25 08:40:51,516 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:51,516 - INFO -   - product_name: Open Mic Night
+2024-11-25 08:40:51,516 - INFO -   - sku: 6301119
+2024-11-25 08:40:51,516 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:51,516 - INFO -   - effects: None
+2024-11-25 08:40:51,516 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/open-mic-night/
+2024-11-25 08:40:51,516 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301119-Open-Mic-Night.jpg.webp
+2024-11-25 08:40:51,516 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301119-Open-Mic-Night.jpg.webp
+2024-11-25 08:40:51,517 - INFO - ⏩ No database updates needed for: Open Mic Night
+2024-11-25 08:40:52,522 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/dang-it-carl/
+2024-11-25 08:40:53,145 - INFO - Found product: Dang It Carl!!
+2024-11-25 08:40:53,149 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301103-Dang-it-Carl-1024x715.jpg.webp
+2024-11-25 08:40:53,149 - INFO - 
+📦 Found product: Dang It Carl!!
+2024-11-25 08:40:53,157 - INFO - ⏩ Image already exists: 6301103-Dang-it-Carl-1024x715.jpg.webp
+2024-11-25 08:40:53,157 - INFO - 📋 Metadata found:
+2024-11-25 08:40:53,158 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:53,158 - INFO -   - product_name: Dang It Carl!!
+2024-11-25 08:40:53,158 - INFO -   - sku: 6301103
+2024-11-25 08:40:53,158 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:53,158 - INFO -   - effects: None
+2024-11-25 08:40:53,158 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/dang-it-carl/
+2024-11-25 08:40:53,158 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301103-Dang-it-Carl-1024x715.jpg.webp
+2024-11-25 08:40:53,158 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301103-Dang-it-Carl-1024x715.jpg.webp
+2024-11-25 08:40:53,159 - INFO - ⏩ No database updates needed for: Dang It Carl!!
+2024-11-25 08:40:54,164 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/wild-side-candle-pack/
+2024-11-25 08:40:54,823 - INFO - Found product: Wild Side Candle Pack
+2024-11-25 08:40:54,825 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301100-Wild-Side-Candle-Pack-1024x519.png.webp
+2024-11-25 08:40:54,825 - INFO - 
+📦 Found product: Wild Side Candle Pack
+2024-11-25 08:40:54,832 - INFO - ⏩ Image already exists: 6301100-Wild-Side-Candle-Pack-1024x519.png.webp
+2024-11-25 08:40:54,832 - INFO - 📋 Metadata found:
+2024-11-25 08:40:54,832 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:54,832 - INFO -   - product_name: Wild Side Candle Pack
+2024-11-25 08:40:54,832 - INFO -   - sku: 6301100
+2024-11-25 08:40:54,832 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:54,832 - INFO -   - effects: None
+2024-11-25 08:40:54,832 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/wild-side-candle-pack/
+2024-11-25 08:40:54,832 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301100-Wild-Side-Candle-Pack-1024x519.png.webp
+2024-11-25 08:40:54,832 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301100-Wild-Side-Candle-Pack-1024x519.png.webp
+2024-11-25 08:40:54,833 - INFO - ⏩ No database updates needed for: Wild Side Candle Pack
+2024-11-25 08:40:55,836 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/3x15-hw-fireworks-sold-here-banner/
+2024-11-25 08:40:56,382 - INFO - Found product: Hog Wild “Sold Here” Banner
+2024-11-25 08:40:56,386 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1101917-HW-Fireworks-Sold-Here-3-x-15-1024x218.png.webp
+2024-11-25 08:40:56,386 - INFO - 
+📦 Found product: Hog Wild “Sold Here” Banner
+2024-11-25 08:40:56,394 - INFO - ⏩ Image already exists: 1101917-HW-Fireworks-Sold-Here-3-x-15-1024x218.png.webp
+2024-11-25 08:40:56,394 - INFO - 📋 Metadata found:
+2024-11-25 08:40:56,394 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:56,394 - INFO -   - product_name: Hog Wild “Sold Here” Banner
+2024-11-25 08:40:56,394 - INFO -   - sku: 1101917
+2024-11-25 08:40:56,394 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:56,394 - INFO -   - effects: None
+2024-11-25 08:40:56,394 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/3x15-hw-fireworks-sold-here-banner/
+2024-11-25 08:40:56,394 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1101917-HW-Fireworks-Sold-Here-3-x-15-1024x218.png.webp
+2024-11-25 08:40:56,394 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1101917-HW-Fireworks-Sold-Here-3-x-15-1024x218.png.webp
+2024-11-25 08:40:56,396 - INFO - ⏩ No database updates needed for: Hog Wild “Sold Here” Banner
+2024-11-25 08:40:57,400 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/popping-smoke/
+2024-11-25 08:40:58,056 - INFO - Found product: Popping Smoke
+2024-11-25 08:40:58,059 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301081.jpg.webp
+2024-11-25 08:40:58,060 - INFO - 
+📦 Found product: Popping Smoke
+2024-11-25 08:40:58,067 - INFO - ⏩ Image already exists: 6301081.jpg.webp
+2024-11-25 08:40:58,067 - INFO - 📋 Metadata found:
+2024-11-25 08:40:58,067 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:58,067 - INFO -   - product_name: Popping Smoke
+2024-11-25 08:40:58,068 - INFO -   - sku: 6301081
+2024-11-25 08:40:58,068 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:58,068 - INFO -   - effects: None
+2024-11-25 08:40:58,068 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/popping-smoke/
+2024-11-25 08:40:58,068 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301081.jpg.webp
+2024-11-25 08:40:58,068 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301081.jpg.webp
+2024-11-25 08:40:58,069 - INFO - ⏩ No database updates needed for: Popping Smoke
+2024-11-25 08:40:59,074 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/silver-sticks/
+2024-11-25 08:40:59,685 - INFO - Found product: Silver Sticks
+2024-11-25 08:40:59,689 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301126-Silver-Sticks-302x1024.jpg.webp
+2024-11-25 08:40:59,689 - INFO - 
+📦 Found product: Silver Sticks
+2024-11-25 08:40:59,697 - INFO - ⏩ Image already exists: 6301126-Silver-Sticks-302x1024.jpg.webp
+2024-11-25 08:40:59,697 - INFO - 📋 Metadata found:
+2024-11-25 08:40:59,697 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:40:59,697 - INFO -   - product_name: Silver Sticks
+2024-11-25 08:40:59,697 - INFO -   - sku: 6301126
+2024-11-25 08:40:59,697 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:40:59,697 - INFO -   - effects: None
+2024-11-25 08:40:59,697 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/silver-sticks/
+2024-11-25 08:40:59,697 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301126-Silver-Sticks-302x1024.jpg.webp
+2024-11-25 08:40:59,697 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301126-Silver-Sticks-302x1024.jpg.webp
+2024-11-25 08:40:59,699 - INFO - ⏩ No database updates needed for: Silver Sticks
+2024-11-25 08:41:00,700 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/mondays-suck/
+2024-11-25 08:41:01,296 - INFO - Found product: Mondays Suck
+2024-11-25 08:41:01,300 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301107-Mondays-Suck-969x1024.jpg.webp
+2024-11-25 08:41:01,301 - INFO - 
+📦 Found product: Mondays Suck
+2024-11-25 08:41:01,310 - INFO - ⏩ Image already exists: 6301107-Mondays-Suck-969x1024.jpg.webp
+2024-11-25 08:41:01,310 - INFO - 📋 Metadata found:
+2024-11-25 08:41:01,310 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:01,310 - INFO -   - product_name: Mondays Suck
+2024-11-25 08:41:01,310 - INFO -   - sku: 6301107
+2024-11-25 08:41:01,310 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:01,310 - INFO -   - effects: None
+2024-11-25 08:41:01,310 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/mondays-suck/
+2024-11-25 08:41:01,310 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301107-Mondays-Suck-969x1024.jpg.webp
+2024-11-25 08:41:01,310 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301107-Mondays-Suck-969x1024.jpg.webp
+2024-11-25 08:41:01,312 - INFO - ⏩ No database updates needed for: Mondays Suck
+2024-11-25 08:41:02,317 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/crazy-ape/
+2024-11-25 08:41:02,825 - INFO - Found product: Crazy Ape
+2024-11-25 08:41:02,828 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301175-Crazy-Ape-1024x563.png.webp
+2024-11-25 08:41:02,828 - INFO - 
+📦 Found product: Crazy Ape
+2024-11-25 08:41:02,836 - INFO - ⏩ Image already exists: 6301175-Crazy-Ape-1024x563.png.webp
+2024-11-25 08:41:02,836 - INFO - 📋 Metadata found:
+2024-11-25 08:41:02,836 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:02,836 - INFO -   - product_name: Crazy Ape
+2024-11-25 08:41:02,836 - INFO -   - sku: 6301175
+2024-11-25 08:41:02,836 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:02,836 - INFO -   - effects: None
+2024-11-25 08:41:02,836 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/crazy-ape/
+2024-11-25 08:41:02,836 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301175-Crazy-Ape-1024x563.png.webp
+2024-11-25 08:41:02,836 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301175-Crazy-Ape-1024x563.png.webp
+2024-11-25 08:41:02,837 - INFO - ⏩ No database updates needed for: Crazy Ape
+2024-11-25 08:41:03,843 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/bring-it/
+2024-11-25 08:41:04,372 - INFO - Found product: Bring It!
+2024-11-25 08:41:04,376 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202265-Bring-it.png.webp
+2024-11-25 08:41:04,376 - INFO - 
+📦 Found product: Bring It!
+2024-11-25 08:41:04,384 - INFO - ⏩ Image already exists: 1202265-Bring-it.png.webp
+2024-11-25 08:41:04,384 - INFO - 📋 Metadata found:
+2024-11-25 08:41:04,384 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:04,384 - INFO -   - product_name: Bring It!
+2024-11-25 08:41:04,384 - INFO -   - sku: 1202265
+2024-11-25 08:41:04,385 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:04,385 - INFO -   - effects: None
+2024-11-25 08:41:04,385 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/bring-it/
+2024-11-25 08:41:04,385 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202265-Bring-it.png.webp
+2024-11-25 08:41:04,385 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1202265-Bring-it.png.webp
+2024-11-25 08:41:04,386 - INFO - ⏩ No database updates needed for: Bring It!
+2024-11-25 08:41:05,391 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/38-special/
+2024-11-25 08:41:05,976 - INFO - Found product: .38 Special
+2024-11-25 08:41:05,979 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW707-.38-Special-min-1024x916.png.webp
+2024-11-25 08:41:05,979 - INFO - 
+📦 Found product: .38 Special
+2024-11-25 08:41:05,987 - INFO - ⏩ Image already exists: HW707-.38-Special-min-1024x916.png.webp
+2024-11-25 08:41:05,987 - INFO - 📋 Metadata found:
+2024-11-25 08:41:05,987 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:05,987 - INFO -   - product_name: .38 Special
+2024-11-25 08:41:05,988 - INFO -   - sku: 1202707
+2024-11-25 08:41:05,988 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:05,988 - INFO -   - effects: None
+2024-11-25 08:41:05,988 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/38-special/
+2024-11-25 08:41:05,988 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/HW707-.38-Special-min-1024x916.png.webp
+2024-11-25 08:41:05,988 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/HW707-.38-Special-min-1024x916.png.webp
+2024-11-25 08:41:05,989 - INFO - ⏩ No database updates needed for: .38 Special
+2024-11-25 08:41:06,994 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/slingshot/
+2024-11-25 08:41:07,559 - INFO - Found product: Slingshot
+2024-11-25 08:41:07,562 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301117-Slingshot-1024x1024.jpg.webp
+2024-11-25 08:41:07,563 - INFO - 
+📦 Found product: Slingshot
+2024-11-25 08:41:07,570 - INFO - ⏩ Image already exists: 6301117-Slingshot-1024x1024.jpg.webp
+2024-11-25 08:41:07,571 - INFO - 📋 Metadata found:
+2024-11-25 08:41:07,571 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:07,571 - INFO -   - product_name: Slingshot
+2024-11-25 08:41:07,571 - INFO -   - sku: 6301117
+2024-11-25 08:41:07,571 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:07,571 - INFO -   - effects: None
+2024-11-25 08:41:07,571 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/slingshot/
+2024-11-25 08:41:07,571 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301117-Slingshot-1024x1024.jpg.webp
+2024-11-25 08:41:07,571 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301117-Slingshot-1024x1024.jpg.webp
+2024-11-25 08:41:07,572 - INFO - ⏩ No database updates needed for: Slingshot
+2024-11-25 08:41:08,577 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/brute-force/
+2024-11-25 08:41:09,187 - INFO - Found product: Brute Force
+2024-11-25 08:41:09,191 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301112-Brute-Force-954x1024.jpg.webp
+2024-11-25 08:41:09,191 - INFO - 
+📦 Found product: Brute Force
+2024-11-25 08:41:09,199 - INFO - ⏩ Image already exists: 6301112-Brute-Force-954x1024.jpg.webp
+2024-11-25 08:41:09,199 - INFO - 📋 Metadata found:
+2024-11-25 08:41:09,199 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:09,199 - INFO -   - product_name: Brute Force
+2024-11-25 08:41:09,199 - INFO -   - sku: 6301112
+2024-11-25 08:41:09,199 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:09,199 - INFO -   - effects: None
+2024-11-25 08:41:09,199 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/brute-force/
+2024-11-25 08:41:09,200 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301112-Brute-Force-954x1024.jpg.webp
+2024-11-25 08:41:09,200 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301112-Brute-Force-954x1024.jpg.webp
+2024-11-25 08:41:09,200 - INFO - ⏩ No database updates needed for: Brute Force
+2024-11-25 08:41:10,202 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/blown-away/
+2024-11-25 08:41:10,768 - INFO - Found product: Blown Away
+2024-11-25 08:41:10,772 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301105-Blown-Away-1024x709.jpg.webp
+2024-11-25 08:41:10,772 - INFO - 
+📦 Found product: Blown Away
+2024-11-25 08:41:10,781 - INFO - ⏩ Image already exists: 6301105-Blown-Away-1024x709.jpg.webp
+2024-11-25 08:41:10,781 - INFO - 📋 Metadata found:
+2024-11-25 08:41:10,781 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:10,781 - INFO -   - product_name: Blown Away
+2024-11-25 08:41:10,781 - INFO -   - sku: 6301105
+2024-11-25 08:41:10,781 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:10,781 - INFO -   - effects: None
+2024-11-25 08:41:10,781 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/blown-away/
+2024-11-25 08:41:10,781 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301105-Blown-Away-1024x709.jpg.webp
+2024-11-25 08:41:10,781 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301105-Blown-Away-1024x709.jpg.webp
+2024-11-25 08:41:10,782 - INFO - ⏩ No database updates needed for: Blown Away
+2024-11-25 08:41:11,783 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/8x8-hog-wild-american-flag-banner/
+2024-11-25 08:41:12,398 - INFO - Found product: Hog Wild American Banner
+2024-11-25 08:41:12,402 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1101927-HW-American-Flag-8-x-8.png.webp
+2024-11-25 08:41:12,404 - INFO - 
+📦 Found product: Hog Wild American Banner
+2024-11-25 08:41:12,412 - INFO - ⏩ Image already exists: 1101927-HW-American-Flag-8-x-8.png.webp
+2024-11-25 08:41:12,412 - INFO - 📋 Metadata found:
+2024-11-25 08:41:12,412 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:12,412 - INFO -   - product_name: Hog Wild American Banner
+2024-11-25 08:41:12,412 - INFO -   - sku: 1101927
+2024-11-25 08:41:12,412 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:12,412 - INFO -   - effects: None
+2024-11-25 08:41:12,412 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/8x8-hog-wild-american-flag-banner/
+2024-11-25 08:41:12,412 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1101927-HW-American-Flag-8-x-8.png.webp
+2024-11-25 08:41:12,412 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1101927-HW-American-Flag-8-x-8.png.webp
+2024-11-25 08:41:12,413 - INFO - ⏩ No database updates needed for: Hog Wild American Banner
+2024-11-25 08:41:13,418 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/aerial-attack/
+2024-11-25 08:41:13,942 - INFO - Found product: Aerial Attack
+2024-11-25 08:41:13,946 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301132-Aerial-Attack-1024x820.jpg.webp
+2024-11-25 08:41:13,946 - INFO - 
+📦 Found product: Aerial Attack
+2024-11-25 08:41:13,954 - INFO - ⏩ Image already exists: 6301132-Aerial-Attack-1024x820.jpg.webp
+2024-11-25 08:41:13,954 - INFO - 📋 Metadata found:
+2024-11-25 08:41:13,954 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:13,954 - INFO -   - product_name: Aerial Attack
+2024-11-25 08:41:13,954 - INFO -   - sku: 6301132
+2024-11-25 08:41:13,954 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:13,954 - INFO -   - effects: None
+2024-11-25 08:41:13,954 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/aerial-attack/
+2024-11-25 08:41:13,954 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301132-Aerial-Attack-1024x820.jpg.webp
+2024-11-25 08:41:13,954 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301132-Aerial-Attack-1024x820.jpg.webp
+2024-11-25 08:41:13,955 - INFO - ⏩ No database updates needed for: Aerial Attack
+2024-11-25 08:41:14,957 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/mammoth-smoke-assorted/
+2024-11-25 08:41:15,568 - INFO - Found product: Mammoth Smoke Assorted
+2024-11-25 08:41:15,572 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202230-Mammoth-Smoke-Assorted.png.webp
+2024-11-25 08:41:15,572 - INFO - 
+📦 Found product: Mammoth Smoke Assorted
+2024-11-25 08:41:15,580 - INFO - ⏩ Image already exists: 1202230-Mammoth-Smoke-Assorted.png.webp
+2024-11-25 08:41:15,584 - INFO - 📋 Metadata found:
+2024-11-25 08:41:15,584 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:15,585 - INFO -   - product_name: Mammoth Smoke Assorted
+2024-11-25 08:41:15,585 - INFO -   - sku: 1202230
+2024-11-25 08:41:15,585 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:15,585 - INFO -   - effects: None
+2024-11-25 08:41:15,585 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/mammoth-smoke-assorted/
+2024-11-25 08:41:15,585 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/1202230-Mammoth-Smoke-Assorted.png.webp
+2024-11-25 08:41:15,585 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/1202230-Mammoth-Smoke-Assorted.png.webp
+2024-11-25 08:41:15,586 - INFO - ⏩ No database updates needed for: Mammoth Smoke Assorted
+2024-11-25 08:41:16,591 - INFO - Completed processing 0 products
+2024-11-25 08:41:16,592 - INFO - Looking for next page...
+2024-11-25 08:41:16,600 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/6/
+2024-11-25 08:41:16,601 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/6/
+2024-11-25 08:41:17,609 - INFO - 
+Processing page 6...
+2024-11-25 08:41:18,443 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:41:18,446 - INFO - Found 16 unique product links
+2024-11-25 08:41:18,446 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/super-beast-3/
+2024-11-25 08:41:18,935 - INFO - Found product: Super Beast – 3″
+2024-11-25 08:41:18,939 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301161-Super-Beast-949x1024.jpg.webp
+2024-11-25 08:41:18,939 - INFO - 
+📦 Found product: Super Beast – 3″
+2024-11-25 08:41:18,948 - INFO - ⏩ Image already exists: 6301161-Super-Beast-949x1024.jpg.webp
+2024-11-25 08:41:18,948 - INFO - 📋 Metadata found:
+2024-11-25 08:41:18,948 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:18,948 - INFO -   - product_name: Super Beast – 3″
+2024-11-25 08:41:18,948 - INFO -   - sku: 6301161
+2024-11-25 08:41:18,948 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:18,948 - INFO -   - effects: None
+2024-11-25 08:41:18,948 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/super-beast-3/
+2024-11-25 08:41:18,948 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301161-Super-Beast-949x1024.jpg.webp
+2024-11-25 08:41:18,948 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301161-Super-Beast-949x1024.jpg.webp
+2024-11-25 08:41:18,949 - INFO - ⏩ No database updates needed for: Super Beast – 3″
+2024-11-25 08:41:19,954 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/neon-streak/
+2024-11-25 08:41:20,587 - INFO - Found product: Neon Streak
+2024-11-25 08:41:20,591 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301157-Neon-Streak-1024x629.png.webp
+2024-11-25 08:41:20,591 - INFO - 
+📦 Found product: Neon Streak
+2024-11-25 08:41:20,599 - INFO - ⏩ Image already exists: 6301157-Neon-Streak-1024x629.png.webp
+2024-11-25 08:41:20,599 - INFO - 📋 Metadata found:
+2024-11-25 08:41:20,599 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:20,599 - INFO -   - product_name: Neon Streak
+2024-11-25 08:41:20,599 - INFO -   - sku: 6301157
+2024-11-25 08:41:20,600 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:20,600 - INFO -   - effects: None
+2024-11-25 08:41:20,600 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/neon-streak/
+2024-11-25 08:41:20,600 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301157-Neon-Streak-1024x629.png.webp
+2024-11-25 08:41:20,600 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301157-Neon-Streak-1024x629.png.webp
+2024-11-25 08:41:20,601 - INFO - ⏩ No database updates needed for: Neon Streak
+2024-11-25 08:41:21,606 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/betty-rocket-2/
+2024-11-25 08:41:22,130 - INFO - Found product: Betty Rocket
+2024-11-25 08:41:22,134 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301148-Betty-Rocket-1-1024x971.jpg.webp
+2024-11-25 08:41:22,134 - INFO - 
+📦 Found product: Betty Rocket
+2024-11-25 08:41:22,142 - INFO - ⏩ Image already exists: 6301148-Betty-Rocket-1-1024x971.jpg.webp
+2024-11-25 08:41:22,142 - INFO - 📋 Metadata found:
+2024-11-25 08:41:22,142 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:22,142 - INFO -   - product_name: Betty Rocket
+2024-11-25 08:41:22,143 - INFO -   - sku: 6301148
+2024-11-25 08:41:22,143 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:22,143 - INFO -   - effects: None
+2024-11-25 08:41:22,143 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/betty-rocket-2/
+2024-11-25 08:41:22,143 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301148-Betty-Rocket-1-1024x971.jpg.webp
+2024-11-25 08:41:22,143 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301148-Betty-Rocket-1-1024x971.jpg.webp
+2024-11-25 08:41:22,144 - INFO - ⏩ No database updates needed for: Betty Rocket
+2024-11-25 08:41:23,145 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/tropical-chaos/
+2024-11-25 08:41:23,739 - INFO - Found product: Tropical Chaos
+2024-11-25 08:41:23,742 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301159-Tropical-Chaos-1024x473.png.webp
+2024-11-25 08:41:23,742 - INFO - 
+📦 Found product: Tropical Chaos
+2024-11-25 08:41:23,751 - INFO - ⏩ Image already exists: 6301159-Tropical-Chaos-1024x473.png.webp
+2024-11-25 08:41:23,751 - INFO - 📋 Metadata found:
+2024-11-25 08:41:23,751 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:23,751 - INFO -   - product_name: Tropical Chaos
+2024-11-25 08:41:23,751 - INFO -   - sku: 6301159
+2024-11-25 08:41:23,751 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:23,751 - INFO -   - effects: None
+2024-11-25 08:41:23,751 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/tropical-chaos/
+2024-11-25 08:41:23,751 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301159-Tropical-Chaos-1024x473.png.webp
+2024-11-25 08:41:23,751 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301159-Tropical-Chaos-1024x473.png.webp
+2024-11-25 08:41:23,752 - INFO - ⏩ No database updates needed for: Tropical Chaos
+2024-11-25 08:41:24,753 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/killer-willow-5-shell/
+2024-11-25 08:41:25,302 - INFO - Found product: Killer Willow – 5″ Shell
+2024-11-25 08:41:25,306 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301177-Killer-Willow-503x1024.jpg.webp
+2024-11-25 08:41:25,306 - INFO - 
+📦 Found product: Killer Willow – 5″ Shell
+2024-11-25 08:41:25,314 - INFO - ⏩ Image already exists: 6301177-Killer-Willow-503x1024.jpg.webp
+2024-11-25 08:41:25,314 - INFO - 📋 Metadata found:
+2024-11-25 08:41:25,314 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:25,314 - INFO -   - product_name: Killer Willow – 5″ Shell
+2024-11-25 08:41:25,314 - INFO -   - sku: 6301177
+2024-11-25 08:41:25,314 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:25,314 - INFO -   - effects: None
+2024-11-25 08:41:25,314 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/killer-willow-5-shell/
+2024-11-25 08:41:25,314 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301177-Killer-Willow-503x1024.jpg.webp
+2024-11-25 08:41:25,314 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301177-Killer-Willow-503x1024.jpg.webp
+2024-11-25 08:41:25,315 - INFO - ⏩ No database updates needed for: Killer Willow – 5″ Shell
+2024-11-25 08:41:26,320 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/spartan/
+2024-11-25 08:41:26,882 - INFO - Found product: Spartan
+2024-11-25 08:41:26,885 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301194-Spartan-1024x937.png.webp
+2024-11-25 08:41:26,885 - INFO - 
+📦 Found product: Spartan
+2024-11-25 08:41:26,891 - INFO - ⏩ Image already exists: 6301194-Spartan-1024x937.png.webp
+2024-11-25 08:41:26,891 - INFO - 📋 Metadata found:
+2024-11-25 08:41:26,891 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:26,891 - INFO -   - product_name: Spartan
+2024-11-25 08:41:26,892 - INFO -   - sku: 6301194
+2024-11-25 08:41:26,892 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:26,892 - INFO -   - effects: None
+2024-11-25 08:41:26,892 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/spartan/
+2024-11-25 08:41:26,892 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301194-Spartan-1024x937.png.webp
+2024-11-25 08:41:26,892 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301194-Spartan-1024x937.png.webp
+2024-11-25 08:41:26,893 - INFO - ⏩ No database updates needed for: Spartan
+2024-11-25 08:41:27,894 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/digital-vice/
+2024-11-25 08:41:28,455 - INFO - Found product: Digital Vice
+2024-11-25 08:41:28,458 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301197-Digital-Vice-1024x822.png.webp
+2024-11-25 08:41:28,458 - INFO - 
+📦 Found product: Digital Vice
+2024-11-25 08:41:28,467 - INFO - ⏩ Image already exists: 6301197-Digital-Vice-1024x822.png.webp
+2024-11-25 08:41:28,467 - INFO - 📋 Metadata found:
+2024-11-25 08:41:28,467 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:28,467 - INFO -   - product_name: Digital Vice
+2024-11-25 08:41:28,467 - INFO -   - sku: 6301197
+2024-11-25 08:41:28,467 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:28,467 - INFO -   - effects: None
+2024-11-25 08:41:28,467 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/digital-vice/
+2024-11-25 08:41:28,467 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301197-Digital-Vice-1024x822.png.webp
+2024-11-25 08:41:28,467 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301197-Digital-Vice-1024x822.png.webp
+2024-11-25 08:41:28,468 - INFO - ⏩ No database updates needed for: Digital Vice
+2024-11-25 08:41:29,469 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hip-hop/
+2024-11-25 08:41:30,015 - INFO - Found product: Hip Hop
+2024-11-25 08:41:30,018 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301167-Hip-Hop-605x1024.png.webp
+2024-11-25 08:41:30,018 - INFO - 
+📦 Found product: Hip Hop
+2024-11-25 08:41:30,025 - INFO - ⏩ Image already exists: 6301167-Hip-Hop-605x1024.png.webp
+2024-11-25 08:41:30,025 - INFO - 📋 Metadata found:
+2024-11-25 08:41:30,025 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:30,025 - INFO -   - product_name: Hip Hop
+2024-11-25 08:41:30,025 - INFO -   - sku: 6301167
+2024-11-25 08:41:30,025 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:30,025 - INFO -   - effects: None
+2024-11-25 08:41:30,025 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hip-hop/
+2024-11-25 08:41:30,025 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301167-Hip-Hop-605x1024.png.webp
+2024-11-25 08:41:30,025 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301167-Hip-Hop-605x1024.png.webp
+2024-11-25 08:41:30,026 - INFO - ⏩ No database updates needed for: Hip Hop
+2024-11-25 08:41:31,032 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/smooth-criminal/
+2024-11-25 08:41:31,566 - INFO - Found product: Smooth Criminal
+2024-11-25 08:41:31,569 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301189-Smooth-Criminal-1024x997.png.webp
+2024-11-25 08:41:31,570 - INFO - 
+📦 Found product: Smooth Criminal
+2024-11-25 08:41:31,578 - INFO - ⏩ Image already exists: 6301189-Smooth-Criminal-1024x997.png.webp
+2024-11-25 08:41:31,578 - INFO - 📋 Metadata found:
+2024-11-25 08:41:31,578 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:31,578 - INFO -   - product_name: Smooth Criminal
+2024-11-25 08:41:31,578 - INFO -   - sku: 6301189
+2024-11-25 08:41:31,578 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:31,578 - INFO -   - effects: None
+2024-11-25 08:41:31,579 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/smooth-criminal/
+2024-11-25 08:41:31,579 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301189-Smooth-Criminal-1024x997.png.webp
+2024-11-25 08:41:31,579 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301189-Smooth-Criminal-1024x997.png.webp
+2024-11-25 08:41:31,580 - INFO - ⏩ No database updates needed for: Smooth Criminal
+2024-11-25 08:41:32,581 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/pool-party/
+2024-11-25 08:41:33,214 - INFO - Found product: Pool Party
+2024-11-25 08:41:33,217 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301147-Pool-Party-825x1024.jpg.webp
+2024-11-25 08:41:33,218 - INFO - 
+📦 Found product: Pool Party
+2024-11-25 08:41:33,226 - INFO - ⏩ Image already exists: 6301147-Pool-Party-825x1024.jpg.webp
+2024-11-25 08:41:33,226 - INFO - 📋 Metadata found:
+2024-11-25 08:41:33,226 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:33,226 - INFO -   - product_name: Pool Party
+2024-11-25 08:41:33,226 - INFO -   - sku: 6301147
+2024-11-25 08:41:33,226 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:33,226 - INFO -   - effects: None
+2024-11-25 08:41:33,226 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/pool-party/
+2024-11-25 08:41:33,226 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301147-Pool-Party-825x1024.jpg.webp
+2024-11-25 08:41:33,226 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301147-Pool-Party-825x1024.jpg.webp
+2024-11-25 08:41:33,228 - INFO - ⏩ No database updates needed for: Pool Party
+2024-11-25 08:41:34,233 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/usa-usa/
+2024-11-25 08:41:34,786 - INFO - Found product: USA! USA!
+2024-11-25 08:41:34,790 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/USA-USA-999x1024.png.webp
+2024-11-25 08:41:34,791 - INFO - 
+📦 Found product: USA! USA!
+2024-11-25 08:41:34,799 - INFO - ⏩ Image already exists: USA-USA-999x1024.png.webp
+2024-11-25 08:41:34,799 - INFO - 📋 Metadata found:
+2024-11-25 08:41:34,799 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:34,799 - INFO -   - product_name: USA! USA!
+2024-11-25 08:41:34,799 - INFO -   - sku: 6301223
+2024-11-25 08:41:34,799 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:34,799 - INFO -   - effects: None
+2024-11-25 08:41:34,799 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/usa-usa/
+2024-11-25 08:41:34,799 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/USA-USA-999x1024.png.webp
+2024-11-25 08:41:34,799 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/USA-USA-999x1024.png.webp
+2024-11-25 08:41:34,801 - INFO - ⏩ No database updates needed for: USA! USA!
+2024-11-25 08:41:35,807 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/the-dude/
+2024-11-25 08:41:36,460 - INFO - Found product: The Dude
+2024-11-25 08:41:36,463 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301191-The-Dude-1024x993.png.webp
+2024-11-25 08:41:36,463 - INFO - 
+📦 Found product: The Dude
+2024-11-25 08:41:36,471 - INFO - ⏩ Image already exists: 6301191-The-Dude-1024x993.png.webp
+2024-11-25 08:41:36,472 - INFO - 📋 Metadata found:
+2024-11-25 08:41:36,472 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:36,472 - INFO -   - product_name: The Dude
+2024-11-25 08:41:36,472 - INFO -   - sku: 6301191
+2024-11-25 08:41:36,472 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:36,472 - INFO -   - effects: None
+2024-11-25 08:41:36,472 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/the-dude/
+2024-11-25 08:41:36,472 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301191-The-Dude-1024x993.png.webp
+2024-11-25 08:41:36,472 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301191-The-Dude-1024x993.png.webp
+2024-11-25 08:41:36,473 - INFO - ⏩ No database updates needed for: The Dude
+2024-11-25 08:41:37,474 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/witch-blade/
+2024-11-25 08:41:38,089 - INFO - Found product: Witch Blade
+2024-11-25 08:41:38,093 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301195-Witch-Blade-1024x971.png.webp
+2024-11-25 08:41:38,093 - INFO - 
+📦 Found product: Witch Blade
+2024-11-25 08:41:38,101 - INFO - ⏩ Image already exists: 6301195-Witch-Blade-1024x971.png.webp
+2024-11-25 08:41:38,101 - INFO - 📋 Metadata found:
+2024-11-25 08:41:38,102 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:38,102 - INFO -   - product_name: Witch Blade
+2024-11-25 08:41:38,102 - INFO -   - sku: 6301195
+2024-11-25 08:41:38,102 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:38,102 - INFO -   - effects: None
+2024-11-25 08:41:38,102 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/witch-blade/
+2024-11-25 08:41:38,102 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301195-Witch-Blade-1024x971.png.webp
+2024-11-25 08:41:38,102 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301195-Witch-Blade-1024x971.png.webp
+2024-11-25 08:41:38,103 - INFO - ⏩ No database updates needed for: Witch Blade
+2024-11-25 08:41:39,108 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/cosmic-titan/
+2024-11-25 08:41:39,675 - INFO - Found product: Cosmic Titan
+2024-11-25 08:41:39,679 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301163-Cosmic-Titan-1024x408.png.webp
+2024-11-25 08:41:39,679 - INFO - 
+📦 Found product: Cosmic Titan
+2024-11-25 08:41:39,687 - INFO - ⏩ Image already exists: 6301163-Cosmic-Titan-1024x408.png.webp
+2024-11-25 08:41:39,687 - INFO - 📋 Metadata found:
+2024-11-25 08:41:39,687 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:39,687 - INFO -   - product_name: Cosmic Titan
+2024-11-25 08:41:39,687 - INFO -   - sku: 6301163
+2024-11-25 08:41:39,687 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:39,687 - INFO -   - effects: None
+2024-11-25 08:41:39,687 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/cosmic-titan/
+2024-11-25 08:41:39,688 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301163-Cosmic-Titan-1024x408.png.webp
+2024-11-25 08:41:39,688 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301163-Cosmic-Titan-1024x408.png.webp
+2024-11-25 08:41:39,689 - INFO - ⏩ No database updates needed for: Cosmic Titan
+2024-11-25 08:41:40,694 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/missile-base-bravo/
+2024-11-25 08:41:41,374 - INFO - Found product: Missile Base Bravo
+2024-11-25 08:41:41,378 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301173-Missile-Base-Bravo-1024x801.png.webp
+2024-11-25 08:41:41,378 - INFO - 
+📦 Found product: Missile Base Bravo
+2024-11-25 08:41:41,386 - INFO - ⏩ Image already exists: 6301173-Missile-Base-Bravo-1024x801.png.webp
+2024-11-25 08:41:41,386 - INFO - 📋 Metadata found:
+2024-11-25 08:41:41,386 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:41,386 - INFO -   - product_name: Missile Base Bravo
+2024-11-25 08:41:41,386 - INFO -   - sku: 6301173
+2024-11-25 08:41:41,386 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:41,386 - INFO -   - effects: None
+2024-11-25 08:41:41,386 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/missile-base-bravo/
+2024-11-25 08:41:41,386 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301173-Missile-Base-Bravo-1024x801.png.webp
+2024-11-25 08:41:41,386 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301173-Missile-Base-Bravo-1024x801.png.webp
+2024-11-25 08:41:41,387 - INFO - ⏩ No database updates needed for: Missile Base Bravo
+2024-11-25 08:41:42,390 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/boss-frog/
+2024-11-25 08:41:42,908 - INFO - Found product: Boss Frog
+2024-11-25 08:41:42,911 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301190-Boss-Frog-1024x982.png.webp
+2024-11-25 08:41:42,912 - INFO - 
+📦 Found product: Boss Frog
+2024-11-25 08:41:42,920 - INFO - ⏩ Image already exists: 6301190-Boss-Frog-1024x982.png.webp
+2024-11-25 08:41:42,920 - INFO - 📋 Metadata found:
+2024-11-25 08:41:42,920 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:42,920 - INFO -   - product_name: Boss Frog
+2024-11-25 08:41:42,920 - INFO -   - sku: 6301190
+2024-11-25 08:41:42,920 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:42,920 - INFO -   - effects: None
+2024-11-25 08:41:42,920 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/boss-frog/
+2024-11-25 08:41:42,920 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301190-Boss-Frog-1024x982.png.webp
+2024-11-25 08:41:42,920 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301190-Boss-Frog-1024x982.png.webp
+2024-11-25 08:41:42,921 - INFO - ⏩ No database updates needed for: Boss Frog
+2024-11-25 08:41:43,924 - INFO - Completed processing 0 products
+2024-11-25 08:41:43,925 - INFO - Looking for next page...
+2024-11-25 08:41:43,933 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/7/
+2024-11-25 08:41:43,933 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/7/
+2024-11-25 08:41:44,941 - INFO - 
+Processing page 7...
+2024-11-25 08:41:45,802 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:41:45,804 - INFO - Found 16 unique product links
+2024-11-25 08:41:45,804 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/tasty-treats/
+2024-11-25 08:41:46,494 - INFO - Found product: Tasty Treats
+2024-11-25 08:41:46,498 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301211-Tasty-Treats.png.webp
+2024-11-25 08:41:46,498 - INFO - 
+📦 Found product: Tasty Treats
+2024-11-25 08:41:46,507 - INFO - ⏩ Image already exists: 6301211-Tasty-Treats.png.webp
+2024-11-25 08:41:46,507 - INFO - 📋 Metadata found:
+2024-11-25 08:41:46,507 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:46,507 - INFO -   - product_name: Tasty Treats
+2024-11-25 08:41:46,507 - INFO -   - sku: 6301211
+2024-11-25 08:41:46,507 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:46,507 - INFO -   - effects: None
+2024-11-25 08:41:46,507 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/tasty-treats/
+2024-11-25 08:41:46,507 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301211-Tasty-Treats.png.webp
+2024-11-25 08:41:46,507 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301211-Tasty-Treats.png.webp
+2024-11-25 08:41:46,508 - INFO - ⏩ No database updates needed for: Tasty Treats
+2024-11-25 08:41:47,512 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/backstreet-diva/
+2024-11-25 08:41:48,121 - INFO - Found product: Backstreet Diva
+2024-11-25 08:41:48,125 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301283-Backstreet-Diva-1024x692.png.webp
+2024-11-25 08:41:48,125 - INFO - 
+📦 Found product: Backstreet Diva
+2024-11-25 08:41:48,133 - INFO - ⏩ Image already exists: 6301283-Backstreet-Diva-1024x692.png.webp
+2024-11-25 08:41:48,133 - INFO - 📋 Metadata found:
+2024-11-25 08:41:48,133 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:48,133 - INFO -   - product_name: Backstreet Diva
+2024-11-25 08:41:48,133 - INFO -   - sku: 6301283
+2024-11-25 08:41:48,134 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:48,134 - INFO -   - effects: None
+2024-11-25 08:41:48,134 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/backstreet-diva/
+2024-11-25 08:41:48,134 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301283-Backstreet-Diva-1024x692.png.webp
+2024-11-25 08:41:48,134 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301283-Backstreet-Diva-1024x692.png.webp
+2024-11-25 08:41:48,135 - INFO - ⏩ No database updates needed for: Backstreet Diva
+2024-11-25 08:41:49,140 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/drift-racer/
+2024-11-25 08:41:49,674 - INFO - Found product: Drift Racer
+2024-11-25 08:41:49,678 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301185-Drift-Racer-1024x815.png.webp
+2024-11-25 08:41:49,678 - INFO - 
+📦 Found product: Drift Racer
+2024-11-25 08:41:49,686 - INFO - ⏩ Image already exists: 6301185-Drift-Racer-1024x815.png.webp
+2024-11-25 08:41:49,686 - INFO - 📋 Metadata found:
+2024-11-25 08:41:49,687 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:49,687 - INFO -   - product_name: Drift Racer
+2024-11-25 08:41:49,687 - INFO -   - sku: 6301185
+2024-11-25 08:41:49,687 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:49,687 - INFO -   - effects: None
+2024-11-25 08:41:49,687 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/drift-racer/
+2024-11-25 08:41:49,687 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301185-Drift-Racer-1024x815.png.webp
+2024-11-25 08:41:49,687 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301185-Drift-Racer-1024x815.png.webp
+2024-11-25 08:41:49,688 - INFO - ⏩ No database updates needed for: Drift Racer
+2024-11-25 08:41:50,693 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/star-racer/
+2024-11-25 08:41:51,306 - INFO - Found product: Star Racer
+2024-11-25 08:41:51,309 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301262-Star-Racer-773x1024.png.webp
+2024-11-25 08:41:51,309 - INFO - 
+📦 Found product: Star Racer
+2024-11-25 08:41:51,318 - INFO - ⏩ Image already exists: 6301262-Star-Racer-773x1024.png.webp
+2024-11-25 08:41:51,318 - INFO - 📋 Metadata found:
+2024-11-25 08:41:51,318 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:51,318 - INFO -   - product_name: Star Racer
+2024-11-25 08:41:51,318 - INFO -   - sku: 6301262
+2024-11-25 08:41:51,318 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:51,318 - INFO -   - effects: None
+2024-11-25 08:41:51,318 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/star-racer/
+2024-11-25 08:41:51,318 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301262-Star-Racer-773x1024.png.webp
+2024-11-25 08:41:51,318 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301262-Star-Racer-773x1024.png.webp
+2024-11-25 08:41:51,319 - INFO - ⏩ No database updates needed for: Star Racer
+2024-11-25 08:41:52,325 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/ordinance-disposal/
+2024-11-25 08:41:53,042 - INFO - Found product: Ordinance Disposal
+2024-11-25 08:41:53,045 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301243-Ordinance-Disposal-768x1024.png.webp
+2024-11-25 08:41:53,045 - INFO - 
+📦 Found product: Ordinance Disposal
+2024-11-25 08:41:53,053 - INFO - ⏩ Image already exists: 6301243-Ordinance-Disposal-768x1024.png.webp
+2024-11-25 08:41:53,054 - INFO - 📋 Metadata found:
+2024-11-25 08:41:53,054 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:53,054 - INFO -   - product_name: Ordinance Disposal
+2024-11-25 08:41:53,054 - INFO -   - sku: 6301243
+2024-11-25 08:41:53,054 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:53,054 - INFO -   - effects: None
+2024-11-25 08:41:53,054 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/ordinance-disposal/
+2024-11-25 08:41:53,054 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301243-Ordinance-Disposal-768x1024.png.webp
+2024-11-25 08:41:53,054 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301243-Ordinance-Disposal-768x1024.png.webp
+2024-11-25 08:41:53,055 - INFO - ⏩ No database updates needed for: Ordinance Disposal
+2024-11-25 08:41:54,057 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/americas-battery-1000-shot-saturn-missile-battery/
+2024-11-25 08:41:54,571 - INFO - Found product: America’s Battery – 1000 Shot Saturn Missile Battery
+2024-11-25 08:41:54,574 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301203-Americas-Battery-1024x312.png.webp
+2024-11-25 08:41:54,574 - INFO - 
+📦 Found product: America’s Battery – 1000 Shot Saturn Missile Battery
+2024-11-25 08:41:54,580 - INFO - ⏩ Image already exists: 6301203-Americas-Battery-1024x312.png.webp
+2024-11-25 08:41:54,580 - INFO - 📋 Metadata found:
+2024-11-25 08:41:54,580 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:54,580 - INFO -   - product_name: America’s Battery – 1000 Shot Saturn Missile Battery
+2024-11-25 08:41:54,580 - INFO -   - sku: 6301203
+2024-11-25 08:41:54,580 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:54,580 - INFO -   - effects: None
+2024-11-25 08:41:54,580 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/americas-battery-1000-shot-saturn-missile-battery/
+2024-11-25 08:41:54,580 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301203-Americas-Battery-1024x312.png.webp
+2024-11-25 08:41:54,580 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301203-Americas-Battery-1024x312.png.webp
+2024-11-25 08:41:54,581 - INFO - ⏩ No database updates needed for: America’s Battery – 1000 Shot Saturn Missile Battery
+2024-11-25 08:41:55,585 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/cajun-kid/
+2024-11-25 08:41:56,112 - INFO - Found product: Cajun Kid
+2024-11-25 08:41:56,115 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301241-Cajun-Kid_1-768x1024.png.webp
+2024-11-25 08:41:56,115 - INFO - 
+📦 Found product: Cajun Kid
+2024-11-25 08:41:56,123 - INFO - ⏩ Image already exists: 6301241-Cajun-Kid_1-768x1024.png.webp
+2024-11-25 08:41:56,123 - INFO - 📋 Metadata found:
+2024-11-25 08:41:56,124 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:56,124 - INFO -   - product_name: Cajun Kid
+2024-11-25 08:41:56,124 - INFO -   - sku: 6301241
+2024-11-25 08:41:56,124 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:56,124 - INFO -   - effects: None
+2024-11-25 08:41:56,124 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/cajun-kid/
+2024-11-25 08:41:56,124 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301241-Cajun-Kid_1-768x1024.png.webp
+2024-11-25 08:41:56,124 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301241-Cajun-Kid_1-768x1024.png.webp
+2024-11-25 08:41:56,125 - INFO - ⏩ No database updates needed for: Cajun Kid
+2024-11-25 08:41:57,128 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/hallows-eve/
+2024-11-25 08:41:57,756 - INFO - Found product: Hallow’s Eve
+2024-11-25 08:41:57,760 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301275-Hallows-Eve-1024x945.png.webp
+2024-11-25 08:41:57,760 - INFO - 
+📦 Found product: Hallow’s Eve
+2024-11-25 08:41:57,768 - INFO - ⏩ Image already exists: 6301275-Hallows-Eve-1024x945.png.webp
+2024-11-25 08:41:57,769 - INFO - 📋 Metadata found:
+2024-11-25 08:41:57,769 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:57,769 - INFO -   - product_name: Hallow’s Eve
+2024-11-25 08:41:57,769 - INFO -   - sku: 6301275
+2024-11-25 08:41:57,769 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:57,769 - INFO -   - effects: None
+2024-11-25 08:41:57,769 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/hallows-eve/
+2024-11-25 08:41:57,769 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301275-Hallows-Eve-1024x945.png.webp
+2024-11-25 08:41:57,769 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301275-Hallows-Eve-1024x945.png.webp
+2024-11-25 08:41:57,770 - INFO - ⏩ No database updates needed for: Hallow’s Eve
+2024-11-25 08:41:58,771 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/carnage-artillery/
+2024-11-25 08:41:59,359 - INFO - Found product: Carnage Artillery
+2024-11-25 08:41:59,362 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301221-CARNAGE-A-572x1024.png.webp
+2024-11-25 08:41:59,362 - INFO - 
+📦 Found product: Carnage Artillery
+2024-11-25 08:41:59,368 - INFO - ⏩ Image already exists: 6301221-CARNAGE-A-572x1024.png.webp
+2024-11-25 08:41:59,368 - INFO - 📋 Metadata found:
+2024-11-25 08:41:59,368 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:41:59,368 - INFO -   - product_name: Carnage Artillery
+2024-11-25 08:41:59,368 - INFO -   - sku: 6301221
+2024-11-25 08:41:59,368 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:41:59,368 - INFO -   - effects: None
+2024-11-25 08:41:59,368 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/carnage-artillery/
+2024-11-25 08:41:59,369 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301221-CARNAGE-A-572x1024.png.webp
+2024-11-25 08:41:59,369 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301221-CARNAGE-A-572x1024.png.webp
+2024-11-25 08:41:59,369 - INFO - ⏩ No database updates needed for: Carnage Artillery
+2024-11-25 08:42:00,375 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/flower-child/
+2024-11-25 08:42:00,884 - INFO - Found product: Flower Child
+2024-11-25 08:42:00,887 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301210-Flower-Child-1024x783.png.webp
+2024-11-25 08:42:00,887 - INFO - 
+📦 Found product: Flower Child
+2024-11-25 08:42:00,895 - INFO - ⏩ Image already exists: 6301210-Flower-Child-1024x783.png.webp
+2024-11-25 08:42:00,895 - INFO - 📋 Metadata found:
+2024-11-25 08:42:00,895 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:00,895 - INFO -   - product_name: Flower Child
+2024-11-25 08:42:00,895 - INFO -   - sku: 6301210
+2024-11-25 08:42:00,895 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:00,895 - INFO -   - effects: None
+2024-11-25 08:42:00,896 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/flower-child/
+2024-11-25 08:42:00,896 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301210-Flower-Child-1024x783.png.webp
+2024-11-25 08:42:00,896 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301210-Flower-Child-1024x783.png.webp
+2024-11-25 08:42:00,897 - INFO - ⏩ No database updates needed for: Flower Child
+2024-11-25 08:42:01,899 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/skyfire/
+2024-11-25 08:42:02,424 - INFO - Found product: Skyfire
+2024-11-25 08:42:02,428 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301266-Skyfire-1024x451.png.webp
+2024-11-25 08:42:02,428 - INFO - 
+📦 Found product: Skyfire
+2024-11-25 08:42:02,436 - INFO - ⏩ Image already exists: 6301266-Skyfire-1024x451.png.webp
+2024-11-25 08:42:02,436 - INFO - 📋 Metadata found:
+2024-11-25 08:42:02,436 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:02,436 - INFO -   - product_name: Skyfire
+2024-11-25 08:42:02,436 - INFO -   - sku: 6301266
+2024-11-25 08:42:02,436 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:02,436 - INFO -   - effects: None
+2024-11-25 08:42:02,436 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/skyfire/
+2024-11-25 08:42:02,437 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301266-Skyfire-1024x451.png.webp
+2024-11-25 08:42:02,437 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301266-Skyfire-1024x451.png.webp
+2024-11-25 08:42:02,437 - INFO - ⏩ No database updates needed for: Skyfire
+2024-11-25 08:42:03,443 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/eminent-domain/
+2024-11-25 08:42:03,959 - INFO - Found product: Eminent Domain
+2024-11-25 08:42:03,962 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301253-Eminent-Domain-1024x1012.png.webp
+2024-11-25 08:42:03,962 - INFO - 
+📦 Found product: Eminent Domain
+2024-11-25 08:42:03,970 - INFO - ⏩ Image already exists: 6301253-Eminent-Domain-1024x1012.png.webp
+2024-11-25 08:42:03,970 - INFO - 📋 Metadata found:
+2024-11-25 08:42:03,971 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:03,971 - INFO -   - product_name: Eminent Domain
+2024-11-25 08:42:03,971 - INFO -   - sku: 6301253
+2024-11-25 08:42:03,971 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:03,971 - INFO -   - effects: None
+2024-11-25 08:42:03,971 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/eminent-domain/
+2024-11-25 08:42:03,971 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301253-Eminent-Domain-1024x1012.png.webp
+2024-11-25 08:42:03,971 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301253-Eminent-Domain-1024x1012.png.webp
+2024-11-25 08:42:03,972 - INFO - ⏩ No database updates needed for: Eminent Domain
+2024-11-25 08:42:04,977 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/night-graffiti-2/
+2024-11-25 08:42:05,491 - INFO - Found product: Night Graffiti
+2024-11-25 08:42:05,495 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301248-Night-Graffiti-555x1024.png.webp
+2024-11-25 08:42:05,495 - INFO - 
+📦 Found product: Night Graffiti
+2024-11-25 08:42:05,503 - INFO - ⏩ Image already exists: 6301248-Night-Graffiti-555x1024.png.webp
+2024-11-25 08:42:05,503 - INFO - 📋 Metadata found:
+2024-11-25 08:42:05,503 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:05,504 - INFO -   - product_name: Night Graffiti
+2024-11-25 08:42:05,504 - INFO -   - sku: 6301248
+2024-11-25 08:42:05,504 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:05,504 - INFO -   - effects: None
+2024-11-25 08:42:05,504 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/night-graffiti-2/
+2024-11-25 08:42:05,504 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301248-Night-Graffiti-555x1024.png.webp
+2024-11-25 08:42:05,504 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301248-Night-Graffiti-555x1024.png.webp
+2024-11-25 08:42:05,505 - INFO - ⏩ No database updates needed for: Night Graffiti
+2024-11-25 08:42:06,510 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/fireworks-spectacular/
+2024-11-25 08:42:07,042 - INFO - Found product: Fireworks Spectacular
+2024-11-25 08:42:07,046 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301278-Fireworks-Spectacular-1-1024x651.png.webp
+2024-11-25 08:42:07,046 - INFO - 
+📦 Found product: Fireworks Spectacular
+2024-11-25 08:42:07,054 - INFO - ⏩ Image already exists: 6301278-Fireworks-Spectacular-1-1024x651.png.webp
+2024-11-25 08:42:07,054 - INFO - 📋 Metadata found:
+2024-11-25 08:42:07,054 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:07,054 - INFO -   - product_name: Fireworks Spectacular
+2024-11-25 08:42:07,054 - INFO -   - sku: 6301278
+2024-11-25 08:42:07,054 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:07,054 - INFO -   - effects: None
+2024-11-25 08:42:07,054 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/fireworks-spectacular/
+2024-11-25 08:42:07,054 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301278-Fireworks-Spectacular-1-1024x651.png.webp
+2024-11-25 08:42:07,054 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301278-Fireworks-Spectacular-1-1024x651.png.webp
+2024-11-25 08:42:07,055 - INFO - ⏩ No database updates needed for: Fireworks Spectacular
+2024-11-25 08:42:08,060 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/star-fighter/
+2024-11-25 08:42:08,607 - INFO - Found product: Star Fighter
+2024-11-25 08:42:08,611 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301270-Star-Fighter-1024x822.png.webp
+2024-11-25 08:42:08,611 - INFO - 
+📦 Found product: Star Fighter
+2024-11-25 08:42:08,619 - INFO - ⏩ Image already exists: 6301270-Star-Fighter-1024x822.png.webp
+2024-11-25 08:42:08,620 - INFO - 📋 Metadata found:
+2024-11-25 08:42:08,620 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:08,620 - INFO -   - product_name: Star Fighter
+2024-11-25 08:42:08,620 - INFO -   - sku: 6301270
+2024-11-25 08:42:08,620 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:08,620 - INFO -   - effects: None
+2024-11-25 08:42:08,620 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/star-fighter/
+2024-11-25 08:42:08,620 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301270-Star-Fighter-1024x822.png.webp
+2024-11-25 08:42:08,620 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301270-Star-Fighter-1024x822.png.webp
+2024-11-25 08:42:08,621 - INFO - ⏩ No database updates needed for: Star Fighter
+2024-11-25 08:42:09,626 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/dogs-days-of-summer/
+2024-11-25 08:42:10,177 - INFO - Found product: Dogs Days of Summer
+2024-11-25 08:42:10,181 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301259-Dogs-Days-of-Summer-913x1024.png.webp
+2024-11-25 08:42:10,181 - INFO - 
+📦 Found product: Dogs Days of Summer
+2024-11-25 08:42:10,189 - INFO - ⏩ Image already exists: 6301259-Dogs-Days-of-Summer-913x1024.png.webp
+2024-11-25 08:42:10,189 - INFO - 📋 Metadata found:
+2024-11-25 08:42:10,189 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:10,189 - INFO -   - product_name: Dogs Days of Summer
+2024-11-25 08:42:10,189 - INFO -   - sku: 6301259
+2024-11-25 08:42:10,189 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:10,190 - INFO -   - effects: None
+2024-11-25 08:42:10,190 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/dogs-days-of-summer/
+2024-11-25 08:42:10,190 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301259-Dogs-Days-of-Summer-913x1024.png.webp
+2024-11-25 08:42:10,190 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301259-Dogs-Days-of-Summer-913x1024.png.webp
+2024-11-25 08:42:10,191 - INFO - ⏩ No database updates needed for: Dogs Days of Summer
+2024-11-25 08:42:11,195 - INFO - Completed processing 0 products
+2024-11-25 08:42:11,196 - INFO - Looking for next page...
+2024-11-25 08:42:11,204 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/8/
+2024-11-25 08:42:11,204 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/8/
+2024-11-25 08:42:12,213 - INFO - 
+Processing page 8...
+2024-11-25 08:42:12,870 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:42:12,873 - INFO - Found 8 unique product links
+2024-11-25 08:42:12,873 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/alien-generation/
+2024-11-25 08:42:13,422 - INFO - Found product: Alien Generation
+2024-11-25 08:42:13,426 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301310-Alien-Generation-1024x951.png.webp
+2024-11-25 08:42:13,426 - INFO - 
+📦 Found product: Alien Generation
+2024-11-25 08:42:13,435 - INFO - ⏩ Image already exists: 6301310-Alien-Generation-1024x951.png.webp
+2024-11-25 08:42:13,435 - INFO - 📋 Metadata found:
+2024-11-25 08:42:13,435 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:13,435 - INFO -   - product_name: Alien Generation
+2024-11-25 08:42:13,435 - INFO -   - sku: 6301310
+2024-11-25 08:42:13,435 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:13,435 - INFO -   - effects: None
+2024-11-25 08:42:13,435 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/alien-generation/
+2024-11-25 08:42:13,435 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301310-Alien-Generation-1024x951.png.webp
+2024-11-25 08:42:13,435 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301310-Alien-Generation-1024x951.png.webp
+2024-11-25 08:42:13,436 - INFO - ⏩ No database updates needed for: Alien Generation
+2024-11-25 08:42:14,442 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/bestfireworksever/
+2024-11-25 08:42:15,053 - INFO - Found product: #BESTFIREWORKSEVER!
+2024-11-25 08:42:15,056 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/17171066246658f7c0bc9f5-1024x642.png.webp
+2024-11-25 08:42:15,056 - INFO - 
+📦 Found product: #BESTFIREWORKSEVER!
+2024-11-25 08:42:15,063 - INFO - ⏩ Image already exists: 17171066246658f7c0bc9f5-1024x642.png.webp
+2024-11-25 08:42:15,063 - INFO - 📋 Metadata found:
+2024-11-25 08:42:15,063 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:15,063 - INFO -   - product_name: #BESTFIREWORKSEVER!
+2024-11-25 08:42:15,063 - INFO -   - sku: 6301300
+2024-11-25 08:42:15,063 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:15,063 - INFO -   - effects: None
+2024-11-25 08:42:15,063 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/bestfireworksever/
+2024-11-25 08:42:15,063 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/17171066246658f7c0bc9f5-1024x642.png.webp
+2024-11-25 08:42:15,063 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/17171066246658f7c0bc9f5-1024x642.png.webp
+2024-11-25 08:42:15,064 - INFO - ⏩ No database updates needed for: #BESTFIREWORKSEVER!
+2024-11-25 08:42:16,066 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/crackling-tail-saturn-200-shot/
+2024-11-25 08:42:16,601 - INFO - Found product: Crackling Tail Saturn 200 Shot
+2024-11-25 08:42:16,604 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301299-200-Saturn-Crackling-1024x349.png.webp
+2024-11-25 08:42:16,604 - INFO - 
+📦 Found product: Crackling Tail Saturn 200 Shot
+2024-11-25 08:42:16,612 - INFO - ⏩ Image already exists: 6301299-200-Saturn-Crackling-1024x349.png.webp
+2024-11-25 08:42:16,613 - INFO - 📋 Metadata found:
+2024-11-25 08:42:16,613 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:16,613 - INFO -   - product_name: Crackling Tail Saturn 200 Shot
+2024-11-25 08:42:16,613 - INFO -   - sku: 6301299
+2024-11-25 08:42:16,613 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:16,613 - INFO -   - effects: None
+2024-11-25 08:42:16,613 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/crackling-tail-saturn-200-shot/
+2024-11-25 08:42:16,613 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301299-200-Saturn-Crackling-1024x349.png.webp
+2024-11-25 08:42:16,613 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301299-200-Saturn-Crackling-1024x349.png.webp
+2024-11-25 08:42:16,614 - INFO - ⏩ No database updates needed for: Crackling Tail Saturn 200 Shot
+2024-11-25 08:42:17,625 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/solo-spinner/
+2024-11-25 08:42:18,186 - INFO - Found product: Solo Spinner
+2024-11-25 08:42:18,190 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301294-Solo-Spinner-929x1024.png.webp
+2024-11-25 08:42:18,190 - INFO - 
+📦 Found product: Solo Spinner
+2024-11-25 08:42:18,199 - INFO - ⏩ Image already exists: 6301294-Solo-Spinner-929x1024.png.webp
+2024-11-25 08:42:18,199 - INFO - 📋 Metadata found:
+2024-11-25 08:42:18,199 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:18,199 - INFO -   - product_name: Solo Spinner
+2024-11-25 08:42:18,199 - INFO -   - sku: 6301294
+2024-11-25 08:42:18,199 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:18,199 - INFO -   - effects: None
+2024-11-25 08:42:18,199 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/solo-spinner/
+2024-11-25 08:42:18,199 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301294-Solo-Spinner-929x1024.png.webp
+2024-11-25 08:42:18,199 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301294-Solo-Spinner-929x1024.png.webp
+2024-11-25 08:42:18,200 - INFO - ⏩ No database updates needed for: Solo Spinner
+2024-11-25 08:42:19,205 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/magic-geyser/
+2024-11-25 08:42:19,708 - INFO - Found product: Magic Geyser
+2024-11-25 08:42:19,711 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301321-Magic-Geyser-710x1024.png.webp
+2024-11-25 08:42:19,711 - INFO - 
+📦 Found product: Magic Geyser
+2024-11-25 08:42:19,720 - INFO - ⏩ Image already exists: 6301321-Magic-Geyser-710x1024.png.webp
+2024-11-25 08:42:19,720 - INFO - 📋 Metadata found:
+2024-11-25 08:42:19,720 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:19,720 - INFO -   - product_name: Magic Geyser
+2024-11-25 08:42:19,720 - INFO -   - sku: 6301321
+2024-11-25 08:42:19,720 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:19,720 - INFO -   - effects: None
+2024-11-25 08:42:19,720 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/magic-geyser/
+2024-11-25 08:42:19,720 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301321-Magic-Geyser-710x1024.png.webp
+2024-11-25 08:42:19,720 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301321-Magic-Geyser-710x1024.png.webp
+2024-11-25 08:42:19,721 - INFO - ⏩ No database updates needed for: Magic Geyser
+2024-11-25 08:42:20,726 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/v-8-redline/
+2024-11-25 08:42:21,301 - INFO - Found product: V-8 Redline
+2024-11-25 08:42:21,304 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301312-V-8-Redline-1024x969.png.webp
+2024-11-25 08:42:21,304 - INFO - 
+📦 Found product: V-8 Redline
+2024-11-25 08:42:21,313 - INFO - ⏩ Image already exists: 6301312-V-8-Redline-1024x969.png.webp
+2024-11-25 08:42:21,313 - INFO - 📋 Metadata found:
+2024-11-25 08:42:21,313 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:21,313 - INFO -   - product_name: V-8 Redline
+2024-11-25 08:42:21,313 - INFO -   - sku: 6301312
+2024-11-25 08:42:21,313 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:21,313 - INFO -   - effects: None
+2024-11-25 08:42:21,313 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/v-8-redline/
+2024-11-25 08:42:21,313 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301312-V-8-Redline-1024x969.png.webp
+2024-11-25 08:42:21,313 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301312-V-8-Redline-1024x969.png.webp
+2024-11-25 08:42:21,314 - INFO - ⏩ No database updates needed for: V-8 Redline
+2024-11-25 08:42:22,320 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/lady-samurai/
+2024-11-25 08:42:22,846 - INFO - Found product: Lady Samurai
+2024-11-25 08:42:22,850 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301333-Lady-Samurai-1024x795.png.webp
+2024-11-25 08:42:22,850 - INFO - 
+📦 Found product: Lady Samurai
+2024-11-25 08:42:22,858 - INFO - ⏩ Image already exists: 6301333-Lady-Samurai-1024x795.png.webp
+2024-11-25 08:42:22,858 - INFO - 📋 Metadata found:
+2024-11-25 08:42:22,858 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:22,858 - INFO -   - product_name: Lady Samurai
+2024-11-25 08:42:22,858 - INFO -   - sku: 6301333
+2024-11-25 08:42:22,858 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:22,858 - INFO -   - effects: None
+2024-11-25 08:42:22,858 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/lady-samurai/
+2024-11-25 08:42:22,859 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301333-Lady-Samurai-1024x795.png.webp
+2024-11-25 08:42:22,859 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301333-Lady-Samurai-1024x795.png.webp
+2024-11-25 08:42:22,860 - INFO - ⏩ No database updates needed for: Lady Samurai
+2024-11-25 08:42:23,865 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/popsicles/
+2024-11-25 08:42:24,484 - INFO - Found product: Popsicles
+2024-11-25 08:42:24,487 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301318-Popsicles-1024x388.png.webp
+2024-11-25 08:42:24,488 - INFO - 
+📦 Found product: Popsicles
+2024-11-25 08:42:24,496 - INFO - ⏩ Image already exists: 6301318-Popsicles-1024x388.png.webp
+2024-11-25 08:42:24,496 - INFO - 📋 Metadata found:
+2024-11-25 08:42:24,496 - INFO -   - site_name: Red Rhino Fireworks
+2024-11-25 08:42:24,496 - INFO -   - product_name: Popsicles
+2024-11-25 08:42:24,496 - INFO -   - sku: 6301318
+2024-11-25 08:42:24,496 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-11-25 08:42:24,496 - INFO -   - effects: None
+2024-11-25 08:42:24,496 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/popsicles/
+2024-11-25 08:42:24,496 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/08/6301318-Popsicles-1024x388.png.webp
+2024-11-25 08:42:24,496 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301318-Popsicles-1024x388.png.webp
+2024-11-25 08:42:24,497 - INFO - ⏩ No database updates needed for: Popsicles
+2024-11-25 08:42:25,501 - INFO - Completed processing 0 products
+2024-11-25 08:42:25,502 - INFO - Looking for next page...
+2024-11-25 08:42:25,509 - INFO - Found next page URL: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/9/
+2024-11-25 08:42:25,510 - INFO - Found next page: https://www.redrhinofireworks.com/firework-brands/hog-wild/page/9/
+2024-11-25 08:42:26,518 - INFO - 
+Processing page 9...
+2024-11-25 08:42:27,211 - INFO - Using Red Rhino specific approach...
+2024-11-25 08:42:27,212 - INFO - Found 0 unique product links
+2024-11-25 08:42:27,212 - INFO - Completed processing 0 products
+2024-11-25 08:42:27,212 - INFO - Looking for next page...
+2024-11-25 08:42:27,213 - INFO - No more products found, stopping pagination
+2024-11-25 08:42:27,213 - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-25 08:42:27,213 - INFO - No more product links found and no next page. Stopping scraper.
+2024-11-25 08:42:27,216 - INFO - 
+Final Summary:
+2024-11-25 08:42:27,216 - INFO - Pages processed: 9
+2024-11-25 08:42:27,216 - INFO - Existing images found: 110
+2024-11-25 08:42:27,216 - INFO - New images downloaded: 0
+2024-11-25 08:42:27,216 - INFO - Total images in directory: 110
