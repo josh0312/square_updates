@@ -20,6 +20,7 @@ go to any `endpoint-rule-set.json` file in /botocore/data/<service>/<api version
 or you can look at the test files in /tests/unit/data/endpoints/valid-rules/
 """
 
+
 import logging
 import re
 from enum import Enum
@@ -638,7 +639,7 @@ class ParameterDefinition:
                 return self.default
             if self.required:
                 raise EndpointResolutionError(
-                    msg=f"Cannot find value for required parameter {self.name}"
+                    f"Cannot find value for required parameter {self.name}"
                 )
             # in all other cases, the parameter will keep the value None
         else:

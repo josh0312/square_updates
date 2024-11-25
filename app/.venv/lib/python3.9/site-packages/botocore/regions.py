@@ -16,7 +16,6 @@ This module implements endpoint resolution, including resolving endpoints for a
 given service and region and resolving the available endpoints for a service
 in a specific AWS partition.
 """
-
 import copy
 import logging
 import re
@@ -262,7 +261,7 @@ class EndpointResolver(BaseEndpointResolver):
         ):
             error_msg = (
                 "Dualstack endpoints are currently not supported"
-                f" for {partition_name} partition"
+                " for %s partition" % partition_name
             )
             raise EndpointVariantError(tags=['dualstack'], error_msg=error_msg)
 
@@ -358,7 +357,8 @@ class EndpointResolver(BaseEndpointResolver):
 
         if endpoint_data.get('deprecated'):
             LOG.warning(
-                f'Client is configured with the deprecated endpoint: {endpoint_name}'
+                'Client is configured with the deprecated endpoint: %s'
+                % (endpoint_name)
             )
 
         service_defaults = service_data.get('defaults', {})
@@ -450,9 +450,6 @@ class EndpointResolverBuiltins(str, Enum):
     AWS_S3_DISABLE_MRAP = "AWS::S3::DisableMultiRegionAccessPoints"
     # Whether a custom endpoint has been configured (str)
     SDK_ENDPOINT = "SDK::Endpoint"
-    # Currently not implemented:
-    ACCOUNT_ID = "AWS::Auth::AccountId"
-    ACCOUNT_ID_ENDPOINT_MODE = "AWS::Auth::AccountIdEndpointMode"
 
 
 class EndpointRulesetResolver:
@@ -499,7 +496,7 @@ class EndpointRulesetResolver:
             operation_model, call_args, request_context
         )
         LOG.debug(
-            f'Calling endpoint provider with parameters: {provider_params}'
+            'Calling endpoint provider with parameters: %s' % provider_params
         )
         try:
             provider_result = self._provider.resolve_endpoint(
@@ -513,7 +510,7 @@ class EndpointRulesetResolver:
                 raise
             else:
                 raise botocore_exception from ex
-        LOG.debug(f'Endpoint provider result: {provider_result.url}')
+        LOG.debug('Endpoint provider result: %s' % provider_result.url)
 
         # The endpoint provider does not support non-secure transport.
         if not self._use_ssl and provider_result.url.startswith('https://'):
@@ -636,7 +633,7 @@ class EndpointRulesetResolver:
         customized_builtins = copy.copy(self._builtins)
         # Handlers are expected to modify the builtins dict in place.
         self._event_emitter.emit(
-            f'before-endpoint-resolution.{service_id}',
+            'before-endpoint-resolution.%s' % service_id,
             builtins=customized_builtins,
             model=operation_model,
             params=call_args,
@@ -725,9 +722,7 @@ class EndpointRulesetResolver:
             signing_context['region'] = scheme['signingRegion']
         elif 'signingRegionSet' in scheme:
             if len(scheme['signingRegionSet']) > 0:
-                signing_context['region'] = ','.join(
-                    scheme['signingRegionSet']
-                )
+                signing_context['region'] = scheme['signingRegionSet'][0]
         if 'signingName' in scheme:
             signing_context.update(signing_name=scheme['signingName'])
         if 'disableDoubleEncoding' in scheme:

@@ -16,7 +16,6 @@ This module (and all function/classes within this module) should be
 considered internal, and *not* a public API.
 
 """
-
 import copy
 import logging
 import socket
@@ -268,15 +267,11 @@ class ClientArgsCreator:
                     client_config.disable_request_compression
                 ),
                 client_context_params=client_config.client_context_params,
-                sigv4a_signing_region_set=(
-                    client_config.sigv4a_signing_region_set
-                ),
             )
         self._compute_retry_config(config_kwargs)
         self._compute_connect_timeout(config_kwargs)
         self._compute_user_agent_appid_config(config_kwargs)
         self._compute_request_compression_config(config_kwargs)
-        self._compute_sigv4a_signing_region_set_config(config_kwargs)
         s3_config = self.compute_s3_config(client_config)
 
         is_s3_service = self._is_s3_service(service_name)
@@ -465,7 +460,7 @@ class ClientArgsCreator:
 
     def _set_global_sts_endpoint(self, endpoint_config, is_secure):
         scheme = 'https' if is_secure else 'http'
-        endpoint_config['endpoint_url'] = f'{scheme}://sts.amazonaws.com'
+        endpoint_config['endpoint_url'] = '%s://sts.amazonaws.com' % scheme
         endpoint_config['signing_region'] = 'us-east-1'
 
     def _resolve_endpoint(
@@ -772,13 +767,3 @@ class ClientArgsCreator:
                 f'maximum length of {USERAGENT_APPID_MAXLEN} characters.'
             )
         config_kwargs['user_agent_appid'] = user_agent_appid
-
-    def _compute_sigv4a_signing_region_set_config(self, config_kwargs):
-        sigv4a_signing_region_set = config_kwargs.get(
-            'sigv4a_signing_region_set'
-        )
-        if sigv4a_signing_region_set is None:
-            sigv4a_signing_region_set = self._config_store.get_config_variable(
-                'sigv4a_signing_region_set'
-            )
-        config_kwargs['sigv4a_signing_region_set'] = sigv4a_signing_region_set

@@ -114,7 +114,6 @@ Each call to ``parse()`` returns a dict has this form::
     }
 
 """
-
 import base64
 import http.client
 import json
@@ -316,7 +315,7 @@ class ResponseParser:
         }
 
     def _do_parse(self, response, shape):
-        raise NotImplementedError(f"{self.__class__.__name__}._do_parse")
+        raise NotImplementedError("%s._do_parse" % self.__class__.__name__)
 
     def _do_error_parse(self, response, shape):
         raise NotImplementedError(f"{self.__class__.__name__}._do_error_parse")
@@ -399,7 +398,7 @@ class BaseXMLResponseParser(ResponseParser):
                 elif tag_name == value_location_name:
                     val_name = self._parse_shape(value_shape, single_pair)
                 else:
-                    raise ResponseParserError(f"Unknown tag: {tag_name}")
+                    raise ResponseParserError("Unknown tag: %s" % tag_name)
             parsed[key_name] = val_name
         return parsed
 
@@ -507,8 +506,9 @@ class BaseXMLResponseParser(ResponseParser):
             root = parser.close()
         except XMLParseError as e:
             raise ResponseParserError(
-                f"Unable to parse response ({e}), "
-                f"invalid XML received. Further retries may succeed:\n{xml_string}"
+                "Unable to parse response (%s), "
+                "invalid XML received. Further retries may succeed:\n%s"
+                % (e, xml_string)
             )
         return root
 

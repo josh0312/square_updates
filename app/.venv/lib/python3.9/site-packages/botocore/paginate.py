@@ -179,7 +179,7 @@ class PaginatorModel:
             single_paginator_config = self._paginator_config[operation_name]
         except KeyError:
             raise ValueError(
-                f"Paginator for operation does not exist: {operation_name}"
+                "Paginator for operation does not exist: %s" % operation_name
             )
         return single_paginator_config
 
@@ -232,7 +232,7 @@ class PageIterator:
     @resume_token.setter
     def resume_token(self, value):
         if not isinstance(value, dict):
-            raise ValueError(f"Bad starting token: {value}")
+            raise ValueError("Bad starting token: %s" % value)
 
         if 'boto_truncate_amount' in value:
             token_keys = sorted(self._input_token + ['boto_truncate_amount'])
@@ -243,7 +243,7 @@ class PageIterator:
         if token_keys == dict_keys:
             self._resume_token = self._token_encoder.encode(value)
         else:
-            raise ValueError(f"Bad starting token: {value}")
+            raise ValueError("Bad starting token: %s" % value)
 
     @property
     def non_aggregate_part(self):
@@ -546,7 +546,7 @@ class PageIterator:
         """
         log.debug(
             "Attempting to fall back to old starting token parser. For "
-            f"token: {self._starting_token}"
+            "token: %s" % self._starting_token
         )
         if self._starting_token is None:
             return None
@@ -577,7 +577,7 @@ class PageIterator:
         len_deprecated_token = len(deprecated_token)
         len_input_token = len(self._input_token)
         if len_deprecated_token > len_input_token:
-            raise ValueError(f"Bad starting token: {self._starting_token}")
+            raise ValueError("Bad starting token: %s" % self._starting_token)
         elif len_deprecated_token < len_input_token:
             log.debug(
                 "Old format starting token does not contain all input "

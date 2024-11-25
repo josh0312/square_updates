@@ -83,7 +83,9 @@ class SquareCatalogTest:
         """Get detailed information for catalog items"""
         try:
             logger.info("\n=== Starting Catalog Items Test ===")
-            logger.info(f"Vendor Map: {pformat(self.vendor_map)}\n")
+            logger.info("\nVendor Map:")
+            for vendor_id, vendor_name in self.vendor_map.items():
+                logger.info(f"{vendor_id}: {vendor_name}")
             
             result = self.client.catalog.list_catalog(
                 types="ITEM"
@@ -91,11 +93,11 @@ class SquareCatalogTest:
             
             if result.is_success():
                 items = result.body.get('objects', [])[:limit]
-                logger.info(f"Analyzing {len(items)} items:\n")
+                logger.info(f"\nAnalyzing {len(items)} items:")
                 
                 for idx, item in enumerate(items, 1):
                     item_data = item.get('item_data', {})
-                    logger.info(f"Item {idx}: {item_data.get('name')}")
+                    logger.info(f"\nItem {idx}: {item_data.get('name')}")
                     
                     # Check variations
                     variations = item_data.get('variations', [])
@@ -104,17 +106,22 @@ class SquareCatalogTest:
                             var_data = var.get('item_variation_data', {})
                             vendor_infos = var_data.get('item_variation_vendor_infos', [])
                             
+                            # Log the complete vendor info structure
+                            logger.info(f"\nVariation: {var_data.get('name')}")
+                            logger.info(f"Raw vendor_infos: {pformat(vendor_infos)}")
+                            
                             if vendor_infos:
                                 vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {})
                                 var_vendor_id = vendor_info.get('vendor_id')
-                                var_vendor_name = self.vendor_map.get(var_vendor_id, 'Unknown')
+                                var_vendor_name = self.vendor_map.get(var_vendor_id, f"Unknown (ID: {var_vendor_id})")
                                 
-                                logger.info(f"  - SKU {var_data.get('sku')}: {var_data.get('name')} | {var_vendor_name}")
+                                logger.info(f"  SKU: {var_data.get('sku')}")
+                                logger.info(f"  Vendor ID: {var_vendor_id}")
+                                logger.info(f"  Vendor Name: {var_vendor_name}")
                             else:
-                                logger.info(f"  - SKU {var_data.get('sku')}: {var_data.get('name')} | No vendor")
+                                logger.info("  No vendor info found")
                     else:
                         logger.info("  No variations")
-                    logger.info("")  # Empty line between items
                     
             else:
                 logger.error("API call failed:")

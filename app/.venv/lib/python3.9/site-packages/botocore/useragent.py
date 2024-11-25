@@ -22,7 +22,6 @@ configuration options:
 * The ``user_agent_extra`` field in the :py:class:`botocore.config.Config`.
 
 """
-
 import os
 import platform
 from copy import copy

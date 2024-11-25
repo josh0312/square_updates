@@ -13,7 +13,6 @@
 """This module contains the interface for controlling how configuration
 is loaded.
 """
-
 import copy
 import logging
 import os
@@ -144,6 +143,12 @@ BOTOCORE_DEFAUT_SESSION_VARIABLES = {
         'auto',
         None,
     ),
+    'sts_regional_endpoints': (
+        'sts_regional_endpoints',
+        'AWS_STS_REGIONAL_ENDPOINTS',
+        'legacy',
+        None,
+    ),
     'retry_mode': ('retry_mode', 'AWS_RETRY_MODE', 'legacy', None),
     'defaults_mode': ('defaults_mode', 'AWS_DEFAULTS_MODE', 'legacy', None),
     # We can't have a default here for v1 because we need to defer to
@@ -162,35 +167,7 @@ BOTOCORE_DEFAUT_SESSION_VARIABLES = {
         False,
         utils.ensure_boolean,
     ),
-    'sigv4a_signing_region_set': (
-        'sigv4a_signing_region_set',
-        'AWS_SIGV4A_SIGNING_REGION_SET',
-        None,
-        None,
-    ),
 }
-
-# Evaluate AWS_STS_REGIONAL_ENDPOINTS settings
-try:
-    # This is not a public interface and is subject to abrupt breaking changes.
-    # Any usage is not advised or supported in external code bases.
-    from botocore.customizations.sts import (
-        sts_default_setting as _sts_default_setting,
-    )
-except ImportError:
-    _sts_default_setting = 'legacy'
-
-_STS_DEFAULT_SETTINGS = {
-    'sts_regional_endpoints': (
-        'sts_regional_endpoints',
-        'AWS_STS_REGIONAL_ENDPOINTS',
-        _sts_default_setting,
-        None,
-    ),
-}
-BOTOCORE_DEFAUT_SESSION_VARIABLES.update(_STS_DEFAULT_SETTINGS)
-
-
 # A mapping for the s3 specific configuration vars. These are the configuration
 # vars that typically go in the s3 section of the config file. This mapping
 # follows the same schema as the previous session variable mapping.
@@ -720,7 +697,7 @@ class ChainProvider(BaseProvider):
         return value
 
     def __repr__(self):
-        return '[{}]'.format(', '.join([str(p) for p in self._providers]))
+        return '[%s]' % ', '.join([str(p) for p in self._providers])
 
 
 class InstanceVarProvider(BaseProvider):
@@ -751,7 +728,10 @@ class InstanceVarProvider(BaseProvider):
         return value
 
     def __repr__(self):
-        return f'InstanceVarProvider(instance_var={self._instance_var}, session={self._session})'
+        return 'InstanceVarProvider(instance_var={}, session={})'.format(
+            self._instance_var,
+            self._session,
+        )
 
 
 class ScopedConfigProvider(BaseProvider):
@@ -787,7 +767,10 @@ class ScopedConfigProvider(BaseProvider):
         return scoped_config.get(self._config_var_name)
 
     def __repr__(self):
-        return f'ScopedConfigProvider(config_var_name={self._config_var_name}, session={self._session})'
+        return 'ScopedConfigProvider(config_var_name={}, session={})'.format(
+            self._config_var_name,
+            self._session,
+        )
 
 
 class EnvironmentProvider(BaseProvider):
@@ -895,7 +878,7 @@ class ConstantProvider(BaseProvider):
         return self._value
 
     def __repr__(self):
-        return f'ConstantProvider(value={self._value})'
+        return 'ConstantProvider(value=%s)' % self._value
 
 
 class ConfiguredEndpointProvider(BaseProvider):
