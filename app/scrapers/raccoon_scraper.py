@@ -54,6 +54,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     successful_downloads = 0
     current_url = url
     page_number = 1
+    empty_pages_count = 0  # Track consecutive empty pages
     
     while current_url and (limit == -1 or successful_downloads < limit):
         logger.info(f"\nProcessing page {page_number}...")
@@ -66,6 +67,16 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
         unique_product_links = list(set([link.get('href') for link in product_links if link.get('href')]))
         logger.info(f"Found {len(unique_product_links)} unique product links")
         
+        # Check for empty pages
+        if len(unique_product_links) == 0:
+            empty_pages_count += 1
+            logger.info(f"Empty page found. {empty_pages_count} consecutive empty pages so far.")
+            if empty_pages_count >= 3:
+                logger.info("Found 3 consecutive empty pages. Assuming end of catalog reached.")
+                break
+        else:
+            empty_pages_count = 0  # Reset counter when we find products
+            
         # Process each product page
         for product_url in unique_product_links:
             if limit != -1 and successful_downloads >= limit:
