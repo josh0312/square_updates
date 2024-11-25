@@ -1,6 +1,6 @@
-# Fireworks Product Scraper
+# NyTex Fireworks Square Updates
 
-A robust web scraping system designed to collect product information and images from various firework retailer websites. The scraper stores product metadata in a SQLite database and downloads high-resolution product images locally.
+This project manages the Square catalog for NyTex Fireworks, including image management, vendor data synchronization, and web scraping capabilities.
 
 ## Features
 
@@ -147,3 +147,55 @@ To add a new website to the scraper:
 - Ensure you have proper permissions to scrape target websites
 - Adjust rate limiting as needed to be respectful to servers
 - Monitor scraper.log for detailed operation information
+
+### Image Matcher
+- Automatically matches Square catalog items with vendor product images
+- Uses fuzzy string matching to handle naming variations
+- Supports multiple image formats (PNG, JPG, JPEG, GIF, WEBP)
+- Generates detailed logs and reports:
+  - `matcher.log`: Detailed matching process logs
+  - `unmatched.txt`: List of items without image matches
+- Provides match statistics and success rates
+- Handles vendor aliases and directory mappings
+
+### Square Catalog Management
+- Fetches and updates catalog items
+- Manages vendor relationships
+- Handles product variations and SKUs
+- Supports image assignments
+- Supports both exact and fuzzy matching with configurable thresholds
+- Generates detailed matching statistics and reports
+
+### Web Scraping
+- Scrapes product images from vendor websites
+- Handles pagination and rate limiting
+- Supports multiple vendor sites
+- Organizes images by vendor
+- Features:
+  - Rate limiting to respect server resources
+  - Automatic file naming and organization
+  - Duplicate detection
+  - Error handling and retry logic
+- Generates scraping logs:
+  - `scraper.log`: Detailed scraping progress
+  - `logs/scraper.log`: Additional debug information
+
+
+### Square Catalog Management
+- Fetches and updates catalog items through Square API
+- Manages vendor relationships and mappings
+- Handles product variations and SKUs
+- Supports image assignments
+- Features:
+  - Vendor mapping and ID resolution
+  - Item variation tracking
+  - SKU management
+  - Image status tracking
+  - Bulk operations support
+- Generates detailed logs:
+  - `square_catalog.log`: API interactions and operations
+  - `square.log`: Testing and debugging information
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
