@@ -114,13 +114,23 @@ class ImageMatcher:
             logger.warning("No valid image names to match against")
             return None, 0
         
-        logger.info(f"\nMatching item: '{name_to_match}'")
+        logger.info(f"\n=== Starting Match Process ===")
+        logger.info(f"Looking for match: '{name_to_match}'")
+        logger.info(f"Number of images to check: {len(image_files)}")
+        
+        # For Red Rhino, remove everything before first hyphen in name_to_match
+        if 'redrhinofireworks.com' in str(image_files):
+            if '-' in name_to_match:
+                name_to_match = name_to_match.split('-', 1)[1]
+            elif ' ' in name_to_match:  # Handle space-separated codes
+                name_to_match = ' '.join(name_to_match.split(' ')[1:])
+            logger.info(f"Cleaned Red Rhino name to: '{name_to_match}'")
         
         # Clean the name to match
         clean_name = self.clean_name(name_to_match)
-        logger.info(f"Cleaned name: '{name_to_match}' -> '{clean_name}'")
+        logger.info(f"Final name to match: '{clean_name}'")
         
-        logger.info(f"Processing {len(image_files)} potential image matches:")
+        logger.info("\nChecking each image:")
         best_match = None
         best_ratio = 0
         
@@ -131,25 +141,33 @@ class ImageMatcher:
             # For Red Rhino, remove everything up to and including first hyphen
             if 'redrhinofireworks.com' in str(image_files):
                 if '-' in base_name:
-                    base_name = base_name.split('-', 1)[1]  # Keep everything after first hyphen
+                    base_name = base_name.split('-', 1)[1]
+                    logger.info(f"Cleaned image name from '{image_file}' to '{base_name}'")
             
             # Clean the image name
             clean_image = self.clean_name(base_name)
-            logger.info(f"Cleaned name: '{base_name}' -> '{clean_image}'")
-            logger.info(f"  Image: '{image_file}' -> '{clean_image}'")
             
             # Calculate match ratio
             ratio = fuzz.ratio(clean_name, clean_image)
+            logger.info(f"Comparing:")
+            logger.info(f"  Clean name: '{clean_name}'")
+            logger.info(f"  Image name: '{clean_image}'")
+            logger.info(f"  Match ratio: {ratio}%")
             
             # Update best match if better ratio found
             if ratio > best_ratio:
                 best_ratio = ratio
                 best_match = image_file
+                logger.info(f"  New best match! Score: {ratio}%")
                 
-        if best_match and best_ratio >= 80:  # Require at least 80% match
-            logger.info(f"Found match: '{name_to_match}' -> '{best_match}' (Score: {best_ratio})")
+        if best_match and best_ratio >= 80:
+            logger.info(f"\nFinal Match Found:")
+            logger.info(f"Original name: '{name_to_match}'")
+            logger.info(f"Matched with: '{best_match}'")
+            logger.info(f"Match score: {best_ratio}%")
             return best_match, best_ratio
         else:
+            logger.info("\nNo match found meeting minimum score (80%)")
             return None, 0
     
     def find_matches(self):
@@ -164,15 +182,24 @@ class ImageMatcher:
         for item in items:
             item_name = item['item_data']['name']
             variations = item['item_data']['variations']
+            needs_primary = item['item_data']['needs_primary_image']
             
             logger.info(f"\nProcessing Square Item: '{item_name}'")
+            logger.info(f"Needs primary image: {needs_primary}")
             
             for var in variations:
                 var_name = var['name']
                 vendor_name = var['vendor_name']
+                needs_image = var.get('needs_image', False)
                 
                 logger.info(f"  Variation: '{var_name}'")
                 logger.info(f"  Vendor: {vendor_name}")
+                logger.info(f"  Needs image: {needs_image}")
+                
+                # Skip if neither item nor variation needs an image
+                if not needs_image and not needs_primary:
+                    logger.info("  Skipping - no image needed")
+                    continue
                 
                 vendor_dir = self.get_vendor_directory(vendor_name)
                 if not vendor_dir:
@@ -182,11 +209,8 @@ class ImageMatcher:
                 logger.info(f"  Looking in directory: {vendor_dir}")
                 image_files = self.get_image_files(vendor_dir)
                 
-                # Use item name for matching unless variation name is more specific
+                # Use item name for matching
                 name_to_match = item_name
-                if var_name != "Regular" and var_name != item_name:
-                    name_to_match = f"{item_name} {var_name}"
-                
                 logger.info(f"  Using name for matching: '{name_to_match}'")
                 
                 best_match, match_ratio = self.find_best_match(name_to_match, image_files)
@@ -200,7 +224,8 @@ class ImageMatcher:
                         'vendor': vendor_name,
                         'image_file': best_match,
                         'image_path': os.path.join(self.base_dir, vendor_dir, best_match),
-                        'match_ratio': match_ratio
+                        'match_ratio': match_ratio,
+                        'needs_primary': needs_primary
                     }
                     matches.append(match_data)
                     logger.info(f"  Found match: {best_match} ({match_ratio}%)")
@@ -451,11 +476,8 @@ if __name__ == "__main__":
             logger.info(f"  Looking in directory: {vendor_dir}")
             image_files = matcher.get_image_files(vendor_dir)
             
-            # Use item name for matching unless variation name is more specific
-            name_to_match = item_name
-            if var_name != "Regular" and var_name != item_name:
-                name_to_match = f"{item_name} {var_name}"
-            
+            # Use item name for matching, don't add variation name
+            name_to_match = item_name  # Just use the item name
             logger.info(f"  Using name for matching: '{name_to_match}'")
             
             best_match, match_ratio = matcher.find_best_match(name_to_match, image_files)
@@ -483,7 +505,7 @@ if __name__ == "__main__":
                 if image_id:
                     successful_uploads += 1
                     matches.append(match_data)
-                    logger.info(f"Successfully uploaded image ({successful_uploads}/3)")
+                    logger.info(f"Successfully processed {successful_uploads} of unlimited")
                     matched_items.add(item_name)
                     matched_variations += 1
                     # Clear needs_primary flag after successful primary upload
@@ -501,7 +523,7 @@ if __name__ == "__main__":
     
     # Log summary
     logger.info("\n=== Summary ===")
-    logger.info(f"Items processed until 3 successful uploads")
+    logger.info(f"Total items processed: {total_items}")
     logger.info(f"Total variations processed: {total_variations}")
     logger.info(f"Successful uploads: {successful_uploads}")
     logger.info(f"Items with at least one match: {len(matched_items)}")
