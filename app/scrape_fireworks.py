@@ -130,21 +130,35 @@ def scrape_all_websites():
             scraper_module = importlib.import_module(f"scrapers.{scraper_name}")
             scraper_function = getattr(scraper_module, 'scrape_website')
             
-            # Create website-specific directory
-            website_dir = BASE_DIR
+            # Get limit from website config
+            limit = website.get('limit', -1)
+            logging.info(f"Using limit: {limit if limit != -1 else 'unlimited'}")
             
-            scraper_function(
-                website['url'],
-                limit=website.get('limit', -1),
-                base_dir=website_dir,
-                headers=headers
-            )
+            # Get URL - handle both single URL and list of URLs
+            if 'urls' in website:
+                urls = website['urls']
+            elif 'url' in website:
+                urls = [website['url']]
+            else:
+                logging.error(f"No URL found for {website['name']}")
+                continue
             
-        except requests.exceptions.ConnectionError as e:
-            logging.error(f"Failed to connect to {website['name']}: {str(e)}")
-            continue
+            # Process each URL
+            for url in urls:
+                logging.info(f"Processing URL: {url}")
+                try:
+                    scraper_function(
+                        url=url,
+                        limit=limit,
+                        base_dir=BASE_DIR,
+                        headers=headers
+                    )
+                except Exception as e:
+                    logging.error(f"Error scraping URL {url}: {str(e)}")
+                    continue
+                    
         except Exception as e:
-            logging.error(f"Error scraping {website['name']}: {str(e)}")
+            logging.error(f"Error processing website {website['name']}: {str(e)}")
             continue
 
 @sleep_and_retry

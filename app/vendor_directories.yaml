@@ -1,0 +1,35 @@
+# Base directory for all firework images
+base_directory: "/Users/joshgoble/Downloads/firework_pics"
+
+# Vendor to directory mappings
+vendors:
+  "Red Rhino": "redrhinofireworks.com"
+  "Raccoon": "raccoonfireworksusa.com"
+  "Garrets": "garretsfireworks.com"
+  "Winco": "wincofireworks.com"
+  "Supreme": "supremefireworks.com"
+  "NyTex": "nytexfireworks.com"
+  "CHW": "chwfireworks.com"
+  "AWF": "americanwholesalefireworks.com"
+  "Jakes": "worldclassfireworks.com"
+  "Pyro Buy": "pyrobuy.com"
+
+# Vendor code aliases
+aliases:
+  "RR": "Red Rhino"
+  "American Wholesale": "AWF"
+  "American Wholesale Fireworks": "AWF"
+  "China West": "CHW"
+  "Garrett's": "Garrets"
+  "Jake's": "Jakes"
+  "WC": "Jakes"
+  "PB": "Pyro Buy"
+  "WCF": "Jakes"
+  "WN": "Winco"
+  "WN1": "Winco"
+  "WN2": "Winco"
+  "RR1": "Red Rhino"
+  "RR2": "Red Rhino"
+  "RN": "Raccoon"
+  "RN1": "Raccoon"
+  "RN2": "Raccoon" 

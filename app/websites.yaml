@@ -1,6 +1,6 @@
 websites:
-  - name: Winco Fireworks Texas
-    url: https://www.wincofireworks.com/fireworks/?swoof=1&stock_location=texas
+  - name: Winco Fireworks
+    url: https://www.wincofireworks.com/fireworks/
     scraper: winco_scraper
     enabled: false
     limit: -1
@@ -29,11 +29,14 @@ websites:
       Pagination: Standard WooCommerce with ?page=X parameter
 
   - name: Red Rhino Fireworks
-    url: https://www.redrhinofireworks.com/firework-brands/red-rhino/
-    url: https://www.redrhinofireworks.com/firework-brands/hog-wild/
+    urls:
+      - https://www.redrhinofireworks.com/firework-brands/red-rhino/
+      - https://www.redrhinofireworks.com/firework-brands/hog-wild/
+      - https://www.redrhinofireworks.com/firework-brands/subtle-fireworks/
+      - https://www.redrhinofireworks.com/firework-brands/texas-outlaw/
     scraper: redrhino_scraper
     enabled: true
-    limit: 2
+    limit: -1
     note: >
       Uses WordPress/Elementor structure.
       Product Images: Found in multiple locations:
@@ -91,7 +94,9 @@ websites:
         - Images hosted on both pyrobuy.com and dominatorfireworks.com domains
 
   - name: Raccoon Fireworks
-    url: https://www.raccoonfireworksusa.com/raccoon-1-4g-1
+    urls:
+      - https://www.raccoonfireworksusa.com/monkey-mania-1
+      - https://www.raccoonfireworksusa.com/raccoon-1-4g-1
     scraper: raccoon_scraper
     enabled: false
     limit: -1

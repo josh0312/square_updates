@@ -108,70 +108,49 @@ class ImageMatcher:
         logger.info(f"Cleaned name: '{name}' -> '{cleaned}'")  # Added logging to see the transformation
         return cleaned
     
-    def find_best_match(self, item_name, image_files):
-        """Find best matching image for an item name"""
-        # Special debug for our test case
-        if "girl wants backpack" in item_name.lower():
-            logger.info(f"\n=== DEBUG: Processing '{item_name}' ===")
-            logger.info("Available images:")
-            for img in image_files:
-                logger.info(f"  {img}")
-        
-        logger.info(f"\nMatching item: '{item_name}'")
-        cleaned_name = self.clean_name(item_name)
-        
-        # More debug for our test case
-        if "girl wants backpack" in item_name.lower():
-            logger.info(f"Cleaned name to match: '{cleaned_name}'")
-            logger.info("\nCleaned image names:")
-            for img in image_files:
-                cleaned_img = self.clean_name(os.path.splitext(img)[0])
-                logger.info(f"  '{img}' -> '{cleaned_img}'")
-                # Try all matching methods
-                ratio = fuzz.ratio(cleaned_name, cleaned_img)
-                partial = fuzz.partial_ratio(cleaned_name, cleaned_img)
-                token_sort = fuzz.token_sort_ratio(cleaned_name, cleaned_img)
-                token_set = fuzz.token_set_ratio(cleaned_name, cleaned_img)
-                logger.info(f"  Ratios - Simple: {ratio}, Partial: {partial}, Token Sort: {token_sort}, Token Set: {token_set}")
-        
-        if not cleaned_name:
-            logger.warning(f"No valid name to match for: {item_name}")
-            return None, 0
-        
-        # Clean image names and prepare for matching
-        cleaned_images = []
-        logger.info(f"Processing {len(image_files)} potential image matches:")
-        for img_file in image_files:
-            base_name = os.path.splitext(img_file)[0]
-            cleaned_img_name = self.clean_name(base_name)
-            if cleaned_img_name:
-                cleaned_images.append((cleaned_img_name, img_file))
-                logger.info(f"  Image: '{img_file}' -> '{cleaned_img_name}'")
-            else:
-                logger.warning(f"  Skipping image due to empty cleaned name: {img_file}")
-        
-        if not cleaned_images:
+    def find_best_match(self, name_to_match, image_files):
+        """Find best matching image file for a given name"""
+        if not image_files:
             logger.warning("No valid image names to match against")
             return None, 0
         
-        # Find best match using fuzzywuzzy
-        best_match = process.extractOne(
-            cleaned_name,
-            [name for name, _ in cleaned_images],
-            scorer=fuzz.token_set_ratio
-        )
+        logger.info(f"\nMatching item: '{name_to_match}'")
         
-        if best_match and best_match[1] >= 80:  # Minimum match ratio
-            # Find the original filename for the matched name
-            matched_name = best_match[0]
-            for cleaned, original in cleaned_images:
-                if fuzz.token_set_ratio(cleaned, matched_name) >= 80:  # Use fuzzy matching here too
-                    logger.info(f"Found match: '{item_name}' -> '{original}' (Score: {best_match[1]})")
-                    return original, best_match[1]
+        # Clean the name to match
+        clean_name = self.clean_name(name_to_match)
+        logger.info(f"Cleaned name: '{name_to_match}' -> '{clean_name}'")
         
-        # If we get here, no match was found that met our criteria
-        logger.info(f"No match found meeting criteria for: '{item_name}'")
-        return None, 0
+        logger.info(f"Processing {len(image_files)} potential image matches:")
+        best_match = None
+        best_ratio = 0
+        
+        for image_file in image_files:
+            # Get base name without extension
+            base_name = os.path.splitext(image_file)[0]
+            
+            # For Red Rhino, remove everything up to and including first hyphen
+            if 'redrhinofireworks.com' in str(image_files):
+                if '-' in base_name:
+                    base_name = base_name.split('-', 1)[1]  # Keep everything after first hyphen
+            
+            # Clean the image name
+            clean_image = self.clean_name(base_name)
+            logger.info(f"Cleaned name: '{base_name}' -> '{clean_image}'")
+            logger.info(f"  Image: '{image_file}' -> '{clean_image}'")
+            
+            # Calculate match ratio
+            ratio = fuzz.ratio(clean_name, clean_image)
+            
+            # Update best match if better ratio found
+            if ratio > best_ratio:
+                best_ratio = ratio
+                best_match = image_file
+                
+        if best_match and best_ratio >= 80:  # Require at least 80% match
+            logger.info(f"Found match: '{name_to_match}' -> '{best_match}' (Score: {best_ratio})")
+            return best_match, best_ratio
+        else:
+            return None, 0
     
     def find_matches(self):
         """Find matches for all items without images"""
@@ -439,12 +418,11 @@ if __name__ == "__main__":
     items = matcher.square.get_items_without_images()
     total_items = len(items)
     
-    # Process items until we get 3 successful uploads
+    logger.info(f"\n=== Processing {total_items} items ===")
+    
+    # Process all items
     matches = []
     for item in items:
-        if successful_uploads >= 3:
-            break
-            
         item_name = item['item_data']['name']
         variations = item['item_data']['variations']
         needs_primary = item['item_data']['needs_primary_image']
@@ -453,9 +431,6 @@ if __name__ == "__main__":
         logger.info(f"Needs primary image: {needs_primary}")
         
         for var in variations:
-            if successful_uploads >= 3:
-                break
-                
             var_name = var['name']
             vendor_name = var['vendor_name']
             

@@ -44,7 +44,7 @@ def process_redrhino_product(product_name, product_url, image_url, product_soup,
         session = Session()
         log_product_found(logger, product_name, product_url)
         
-        # Get metadata - Red Rhino uses specific text patterns
+        # Get metadata first
         sku = None
         description = None
         
@@ -64,33 +64,49 @@ def process_redrhino_product(product_name, product_url, image_url, product_soup,
         # Download image
         local_image_path = None
         if image_url:
-            # Extract filename from URL, handling query parameters
-            filename = os.path.basename(image_url.split('?')[0])
+            # Extract original filename from URL
+            original_filename = os.path.basename(image_url.split('?')[0])
+            
+            # Get the code part (usually starts with numbers)
+            base_name = original_filename.split('.')[0]  # Get part before first dot
+            
+            # Clean product name
+            clean_product_name = re.sub(r'[^\w\s-]', '', product_name)
+            clean_product_name = re.sub(r'\s+', '-', clean_product_name).strip('-')
+            
+            # Remove dimensions (like 395x1024) from base_name
+            base_name = re.sub(r'-\d+x\d+', '', base_name)
+            
+            # Remove duplicate product names from base_name
+            if clean_product_name.lower() in base_name.lower():
+                # Split by hyphen and get first part (usually the code)
+                parts = base_name.split('-')
+                base_name = parts[0]
+            
+            # Create new filename
+            new_filename = f"{base_name}-{clean_product_name}.png"
             
             # Create full filepath
-            filepath = os.path.join(domain_dir, filename)
+            filepath = os.path.join(domain_dir, new_filename)
             local_image_path = filepath
             
             # Only download if file doesn't exist
             if not os.path.exists(filepath):
                 try:
-                    response = requests.get(image_url, headers=headers, verify=False, timeout=10)
+                    response = requests.get(image_url, headers=headers, verify=False)
                     if response.status_code == 200:
-                        # Ensure directory exists
                         os.makedirs(os.path.dirname(filepath), exist_ok=True)
-                        
-                        # Write file
                         with open(filepath, 'wb') as f:
                             f.write(response.content)
-                        log_image_download(logger, "success", filename)
+                        log_image_download(logger, "success", new_filename)
                     else:
                         logger.error(f"Failed to download image, status code: {response.status_code}")
-                        log_image_download(logger, "failed", filename)
+                        log_image_download(logger, "failed", new_filename)
                 except Exception as e:
                     logger.error(f"Failed to download image: {str(e)}")
                     local_image_path = None
             else:
-                log_image_download(logger, "exists", filename)
+                log_image_download(logger, "exists", new_filename)
         
         # Store in database
         product_data = {
@@ -301,32 +317,53 @@ def handle_redrhino_site(current_url, soup, domain_dir, limit, headers):
         logger.error(f"Error details:", exc_info=True)
         return None
 
-def get_next_page_url(soup, base_url):
+def get_next_page_url(soup, current_url):
     """Extract the next page URL if it exists"""
     logger.info("Looking for next page...")
     
-    # Check if we're already on a page number
+    # First check if we're already on a page number
     current_page = 1
-    if '/page/' in base_url:
+    if '/page/' in current_url:
         try:
-            current_page = int(base_url.split('/page/')[1].rstrip('/'))
+            current_page = int(current_url.split('/page/')[1].rstrip('/'))
+            logger.info(f"Currently on page {current_page}")
         except:
             pass
+    
+    # Get current products for comparison
+    current_products = [link['href'] for link in soup.find_all('a', href=True) 
+                       if '/firework/' in link['href']]
+    
+    if current_products:
+        # Try next page
+        test_url = current_url
+        if '/page/' in test_url:
+            # Already on a page, increment the number
+            test_url = re.sub(r'/page/\d+/', f'/page/{current_page + 1}/', test_url)
+        else:
+            # First page, add page number
+            test_url = test_url.rstrip('/') + f'/page/{current_page + 1}/'
             
-    # Construct next page URL
-    next_page = current_page + 1
-    base_path = base_url.split('/page/')[0].rstrip('/')
-    next_url = f"{base_path}/page/{next_page}/"
+        try:
+            logger.info(f"Testing next page URL: {test_url}")
+            response = requests.get(test_url, verify=False)
+            if response.status_code == 200:
+                test_soup = BeautifulSoup(response.text, 'html.parser')
+                next_products = [link['href'] for link in test_soup.find_all('a', href=True) 
+                               if '/firework/' in link['href']]
+                
+                # Check if next page has products and they're different
+                if next_products and set(next_products) != set(current_products):
+                    logger.info(f"Found valid page {current_page + 1} with {len(next_products)} different products")
+                    return test_url
+                else:
+                    logger.info(f"Page {current_page + 1} has no new products")
+            else:
+                logger.info(f"Page {current_page + 1} returned status code {response.status_code}")
+        except Exception as e:
+            logger.error(f"Error testing next page URL: {str(e)}")
     
-    # Verify the next page exists by checking if current page has products
-    product_links = [link['href'] for link in soup.find_all('a', href=True) 
-                    if '/firework/' in link['href']]
-    
-    if product_links:
-        logger.info(f"Found next page URL: {next_url}")
-        return next_url
-    
-    logger.info("No more products found, stopping pagination")
+    logger.info("No next page found")
     return None
 
 def scrape_website(url, limit=5, base_dir=None, headers=None):
