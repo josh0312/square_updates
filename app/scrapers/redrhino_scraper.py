@@ -10,6 +10,8 @@ from models.product import Product, Base
 from datetime import datetime
 import os
 from utils.logger import log_product_found, log_image_download, log_database_update, log_metadata
+from PIL import Image
+import io
 
 logger = logging.getLogger(__name__)
 
@@ -77,14 +79,14 @@ def process_redrhino_product(product_name, product_url, image_url, product_soup,
             # Remove dimensions (like 395x1024) from base_name
             base_name = re.sub(r'-\d+x\d+', '', base_name)
             
-            # Remove duplicate product names from base_name
-            if clean_product_name.lower() in base_name.lower():
-                # Split by hyphen and get first part (usually the code)
-                parts = base_name.split('-')
-                base_name = parts[0]
+            # Extract any product code (letters and/or numbers at start)
+            product_code = re.match(r'^[A-Za-z0-9]+', base_name)
             
-            # Create new filename
-            new_filename = f"{base_name}-{clean_product_name}.png"
+            # Always include both code (if available) and product name
+            if product_code:
+                new_filename = f"{product_code.group(0)}-{clean_product_name}.png"
+            else:
+                new_filename = f"{clean_product_name}.png"
             
             # Create full filepath
             filepath = os.path.join(domain_dir, new_filename)
@@ -96,8 +98,19 @@ def process_redrhino_product(product_name, product_url, image_url, product_soup,
                     response = requests.get(image_url, headers=headers, verify=False)
                     if response.status_code == 200:
                         os.makedirs(os.path.dirname(filepath), exist_ok=True)
-                        with open(filepath, 'wb') as f:
-                            f.write(response.content)
+                        
+                        # Convert webp to PNG if needed
+                        image = Image.open(io.BytesIO(response.content))
+                        
+                        # Convert to RGB if needed (in case of RGBA)
+                        if image.mode in ('RGBA', 'LA'):
+                            background = Image.new('RGB', image.size, (255, 255, 255))
+                            background.paste(image, mask=image.split()[-1])
+                            image = background
+                        
+                        # Save as PNG
+                        image.save(filepath, 'PNG', optimize=True)
+                        
                         log_image_download(logger, "success", new_filename)
                     else:
                         logger.error(f"Failed to download image, status code: {response.status_code}")

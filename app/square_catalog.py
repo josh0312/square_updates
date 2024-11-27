@@ -101,75 +101,83 @@ class SquareCatalog:
                         item_data = item.get('item_data', {})
                         variations = item_data.get('variations', [])
                         
-                        # Check if item has any images at all
+                        # Check if item needs a primary image
                         item_image_ids = item_data.get('image_ids', [])
-                        needs_item_image = len(item_image_ids) == 0
+                        needs_primary_image = len(item_image_ids) == 0
                         
-                        if needs_item_image:
-                            logger.info(f"Item {item_data.get('name')} needs primary image")
+                        # If item has a primary image, we can skip checking variations
+                        if not needs_primary_image:
+                            continue
                         
                         item_data_formatted = {
                             'id': item.get('id'),
                             'type': item.get('type'),
                             'item_data': {
                                 'name': item_data.get('name'),
-                                'needs_primary_image': needs_item_image,
+                                'needs_primary_image': needs_primary_image,
                                 'variations': []
                             }
                         }
                         
-                        has_variations_needing_images = False
-                        
+                        # Process each variation independently
                         for variation in variations:
                             var_data = variation.get('item_variation_data', {})
                             var_image_ids = variation.get('image_ids', [])
                             
-                            # Check if variation needs image
-                            if len(var_image_ids) == 0:
-                                # Get vendor name from variation name
-                                var_name = var_data.get('name', '')
-                                vendor_name = 'Unknown'
-                                
-                                # Map common vendor codes
-                                if var_name.startswith('WN'):
-                                    vendor_name = 'Winco'
-                                elif var_name.startswith('RR'):
-                                    vendor_name = 'Red Rhino'
-                                elif var_name.startswith('RN'):
-                                    vendor_name = 'Raccoon'
-                                elif var_name.startswith('WC'):
-                                    vendor_name = 'Jakes'  # World Class = Jakes
-                                
-                                # If still unknown, try vendor_infos
-                                if vendor_name == 'Unknown':
-                                    vendor_infos = var_data.get('item_variation_vendor_infos', [])
-                                    if vendor_infos:
-                                        vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {})
-                                        var_vendor_id = vendor_info.get('vendor_id')
-                                        vendor_name = self.vendor_map.get(var_vendor_id, 'Unknown')
-                                
-                                variation_data = {
-                                    'id': variation.get('id'),
-                                    'name': var_data.get('name'),
-                                    'sku': var_data.get('sku'),
-                                    'vendor_name': vendor_name,
-                                    'needs_image': True
-                                }
+                            # Get vendor name from variation name
+                            var_name = var_data.get('name', '')
+                            vendor_name = 'Unknown'
+                            
+                            # Map common vendor codes
+                            if var_name.startswith('WN'):
+                                vendor_name = 'Winco'
+                            elif var_name.startswith('RR'):
+                                vendor_name = 'Red Rhino'
+                            elif var_name.startswith('RN'):
+                                vendor_name = 'Raccoon'
+                            elif var_name.startswith('WC'):
+                                vendor_name = 'Jakes'  # World Class = Jakes
+                            
+                            # If still unknown, try vendor_infos
+                            if vendor_name == 'Unknown':
+                                vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                                if vendor_infos:
+                                    vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {})
+                                    var_vendor_id = vendor_info.get('vendor_id')
+                                    vendor_name = self.vendor_map.get(var_vendor_id, 'Unknown')
+                            
+                            # Check if variation needs an image
+                            needs_variation_image = len(var_image_ids) == 0
+                            
+                            variation_data = {
+                                'id': variation.get('id'),
+                                'name': var_data.get('name'),
+                                'sku': var_data.get('sku'),
+                                'vendor_name': vendor_name,
+                                'needs_image': needs_variation_image
+                            }
+                            
+                            # Only add variation if it needs an image
+                            if needs_variation_image:
                                 item_data_formatted['item_data']['variations'].append(variation_data)
-                                has_variations_needing_images = True
-                                logger.info(f"Variation {var_name} of {item_data.get('name')} needs image")
+                                
+                                if needs_primary_image:
+                                    logger.info(f"Item {item_data.get('name')} needs primary image")
+                                if needs_variation_image:
+                                    logger.info(f"Variation {var_name} needs its own image")
                         
-                        # Add item if it needs any images
-                        if needs_item_image or has_variations_needing_images:
+                        # Only add item if it needs a primary image AND has variations needing images
+                        if needs_primary_image and item_data_formatted['item_data']['variations']:
                             items_needing_images.append(item_data_formatted)
-                            logger.info(f"Found item needing images: {item_data.get('name')}")
-                            logger.info(f"  Needs primary image: {needs_item_image}")
-                            logger.info(f"  Has variations needing images: {has_variations_needing_images}")
+                            logger.info(f"\nFound item with image needs: {item_data.get('name')}")
+                            logger.info(f"  Needs primary image: {needs_primary_image}")
+                            logger.info(f"  Variations needing images: {len(item_data_formatted['item_data']['variations'])}")
                             
                             # Log vendor info for debugging
                             for var in item_data_formatted['item_data']['variations']:
                                 logger.info(f"  Variation: {var['name']} -> Vendor: {var['vendor_name']}")
-                        
+                                logger.info(f"    Needs image: {var['needs_image']}")
+                    
                     cursor = result.body.get('cursor')
                     if not cursor:
                         break
@@ -177,7 +185,7 @@ class SquareCatalog:
                     logger.error(f"Error fetching catalog: {result.errors}")
                     break
             
-            logger.info(f"Found total of {len(items_needing_images)} items needing images")
+            logger.info(f"\nFound total of {len(items_needing_images)} items needing images")
             return items_needing_images
             
         except Exception as e:
