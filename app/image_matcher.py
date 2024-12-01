@@ -78,7 +78,7 @@ class ImageMatcher:
         return [f for f in os.listdir(full_path) 
                 if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp'))]
     
-    def clean_name(self, name):
+    def clean_name(self, name, is_red_rhino=False):
         """Clean product name for better matching"""
         if not name:
             logger.warning("Received empty name for cleaning")
@@ -87,25 +87,69 @@ class ImageMatcher:
         # Convert to string and lowercase
         name = str(name).lower().strip()
         
-        # Replace specific characters with spaces
+        # For Red Rhino images, remove product code if present
+        if is_red_rhino:
+            # Remove product codes
+            name = re.sub(r'^[a-z0-9]{3,30}-', '', name, flags=re.IGNORECASE)
+            name = re.sub(r'^[a-z0-9]{3,30}\s+', '', name, flags=re.IGNORECASE)
+            logger.info(f"After product code removal: '{name}'")
+        
+        # Define descriptive terms to remove
+        descriptive_terms = [
+            'artillery',
+            'shells',
+            'shots',
+            'canister',
+            'cake',
+            'finale',
+            'repeater',
+            'multi shot',
+            'multishot',
+            '500 gram',
+            '500g',
+            '200 gram',
+            '200g',
+            'safe and sane'
+        ]
+        
+        # Define stop words
+        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'with', 'by'}
+        
+        # First clean special characters
         name = re.sub(r'[_\-/\\]', ' ', name)
         
         # Keep alphanumeric characters and spaces
         name = re.sub(r'[^a-z0-9\s]', '', name)
         
-        # Remove common words that don't help with matching
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'with', 'by'}
+        # Split into words
         words = name.split()
-        words = [w for w in words if w not in stop_words]
+        
+        # Remove descriptive terms
+        cleaned_words = []
+        i = 0
+        while i < len(words):
+            skip = False
+            # Check each descriptive term
+            for term in descriptive_terms:
+                term_words = term.split()
+                if i + len(term_words) <= len(words):
+                    # Check if the next few words match the term
+                    if ' '.join(words[i:i+len(term_words)]).lower() == term.lower():
+                        i += len(term_words)
+                        skip = True
+                        break
+            if not skip and words[i] not in stop_words:
+                cleaned_words.append(words[i])
+            i += 1
         
         # Remove extra whitespace and join
-        cleaned = ' '.join(words).strip()
+        cleaned = ' '.join(cleaned_words).strip()
         
         if not cleaned:
             logger.warning(f"Cleaning resulted in empty string for input: '{name}'")
-            return name  # Return original if cleaning emptied it
+            return name
         
-        logger.info(f"Cleaned name: '{name}' -> '{cleaned}'")  # Added logging to see the transformation
+        logger.info(f"Cleaned name: '{name}' -> '{cleaned}'")
         return cleaned
     
     def find_best_match(self, name_to_match, image_files):
@@ -114,20 +158,14 @@ class ImageMatcher:
             logger.warning("No valid image names to match against")
             return None, 0
         
+        is_red_rhino = 'redrhinofireworks.com' in str(image_files)
+        
         logger.info(f"\n=== Starting Match Process ===")
         logger.info(f"Looking for match: '{name_to_match}'")
         logger.info(f"Number of images to check: {len(image_files)}")
         
-        # For Red Rhino, remove everything before first hyphen in name_to_match
-        if 'redrhinofireworks.com' in str(image_files):
-            if '-' in name_to_match:
-                name_to_match = name_to_match.split('-', 1)[1]
-            elif ' ' in name_to_match:  # Handle space-separated codes
-                name_to_match = ' '.join(name_to_match.split(' ')[1:])
-            logger.info(f"Cleaned Red Rhino name to: '{name_to_match}'")
-        
-        # Clean the name to match
-        clean_name = self.clean_name(name_to_match)
+        # Clean the name to match (no product code removal needed for Square name)
+        clean_name = self.clean_name(name_to_match, is_red_rhino=False)
         logger.info(f"Final name to match: '{clean_name}'")
         
         logger.info("\nChecking each image:")
@@ -138,14 +176,8 @@ class ImageMatcher:
             # Get base name without extension
             base_name = os.path.splitext(image_file)[0]
             
-            # For Red Rhino, remove everything up to and including first hyphen
-            if 'redrhinofireworks.com' in str(image_files):
-                if '-' in base_name:
-                    base_name = base_name.split('-', 1)[1]
-                    logger.info(f"Cleaned image name from '{image_file}' to '{base_name}'")
-            
-            # Clean the image name
-            clean_image = self.clean_name(base_name)
+            # Clean the image name WITH product code removal for Red Rhino
+            clean_image = self.clean_name(base_name, is_red_rhino=True)
             
             # Calculate match ratio
             ratio = fuzz.ratio(clean_name, clean_image)
@@ -172,8 +204,9 @@ class ImageMatcher:
             logger.info(f"Match score: {best_ratio}%")
             return best_match, best_ratio
         else:
-            logger.info("\nNo match found meeting minimum score (80%)")
-            return None, 0
+            logger.info(f"\nNo match found meeting minimum score (80%)")
+            logger.info(f"Best match was: '{best_match}' with score: {best_ratio}%")
+            return None, best_ratio
     
     def find_matches(self):
         """Find matches for all items without images"""
@@ -294,12 +327,6 @@ class ImageMatcher:
                 logger.info("Item already has images - skipping upload")
                 return "SKIPPED"
             
-            # Check if any variations have images
-            for var in item_result.body['object']['item_data']['variations']:
-                if var.get('image_ids'):
-                    logger.info(f"Variation {var['id']} already has images - skipping upload")
-                    return "SKIPPED"
-            
             # Get file info
             image_file = Path(image_path)
             file_name = image_file.name
@@ -313,20 +340,20 @@ class ImageMatcher:
             ]
             logger.info(f"Found variations: {variation_ids}")
             
-            # Create unique idempotency key using timestamp and UUID
+            # Create unique idempotency key
             idempotency_key = f"test_upload_{int(time.time())}_{uuid.uuid4()}"
             
-            # Create request for testing - including item ID and all variation IDs
+            # Create request for image upload
             request = {
                 "idempotency_key": idempotency_key,
-                "object_id": item_id,  # Associate with parent item
+                "object_id": item_id,
                 "image": {
                     "type": "IMAGE",
                     "id": "#TEMP_ID",
                     "image_data": {
                         "name": file_name,
                         "caption": f"Image for item {item_id}",
-                        "is_primary": needs_primary  # Use the parameter
+                        "is_primary": needs_primary
                     }
                 }
             }
@@ -334,20 +361,19 @@ class ImageMatcher:
             logger.info(f"Request data: {request}")
             logger.info(f"Setting as {'primary' if needs_primary else 'additional'} image")
             
-            # Create a file-like object from the image data
+            # Upload the image
             with open(image_path, 'rb') as f:
                 image_data = f.read()
                 image_file_obj = io.BytesIO(image_data)
                 image_file_obj.name = file_name
                 
-                # Make the API call with the file-like object
                 result = self.catalog_api.create_catalog_image(
                     request=request,
                     image_file=image_file_obj
                 )
             
             if result.is_success():
-                # Check if we have the expected data structure
+                # Get the image ID
                 if 'image' in result.body:
                     image_id = result.body['image']['id']
                 elif 'catalog_object' in result.body:
@@ -358,35 +384,33 @@ class ImageMatcher:
                     
                 logger.info(f"Upload successful! Image ID: {image_id}")
                 
-                # Associate image with each variation individually
-                success = True
-                for var_id in variation_ids:
-                    update_request = {
-                        "idempotency_key": f"update_{image_id}_{var_id}_{int(time.time())}",
-                        "object": {
-                            "type": "ITEM_VARIATION",
-                            "id": var_id,
-                            "item_variation_data": {
-                                "image_ids": [image_id]
+                # Try to associate with variations, but don't fail if it doesn't work
+                if variation_ids:
+                    for var_id in variation_ids:
+                        try:
+                            update_request = {
+                                "idempotency_key": f"update_{image_id}_{var_id}_{int(time.time())}",
+                                "object": {
+                                    "type": "ITEM_VARIATION",
+                                    "id": var_id,
+                                    "item_variation_data": {
+                                        "image_ids": [image_id]
+                                    }
+                                }
                             }
-                        }
-                    }
-                    
-                    update_result = self.catalog_api.upsert_catalog_object(
-                        body=update_request
-                    )
-                    
-                    if not update_result.is_success():
-                        success = False
-                        logger.error(f"Failed to associate image with variation {var_id}")
-                        logger.error(f"Error: {update_result.errors}")
+                            
+                            update_result = self.catalog_api.upsert_catalog_object(
+                                body=update_request
+                            )
+                            
+                            if not update_result.is_success():
+                                logger.warning(f"Failed to associate image with variation {var_id}")
+                                logger.warning(f"Error: {update_result.errors}")
+                        except Exception as e:
+                            logger.warning(f"Error associating image with variation {var_id}: {str(e)}")
                 
-                if success:
-                    logger.info("Successfully associated image with all variations")
-                    return image_id
-                else:
-                    logger.error("Failed to associate image with one or more variations")
-                    return None
+                # Return success since the image was uploaded to the parent item
+                return image_id
                 
             else:
                 logger.error("Upload failed!")
@@ -436,14 +460,16 @@ class ImageMatcher:
             
             image_id = self.upload_image_to_square(
                 match['image_path'],
-                match['variation_id']
+                match['variation_id'],
+                needs_primary=match['needs_primary']
             )
             
             if image_id:
-                successful_uploads += 1
-                logger.info(f"Successfully processed match with image ID: {image_id}")
-            elif image_id == "SKIPPED":
-                logger.info(f"Skipped upload for {match['item_name']} - item already has images")
+                if image_id == "SKIPPED":
+                    logger.info(f"Skipped upload for {match['item_name']} - item already has images")
+                else:
+                    successful_uploads += 1
+                    logger.info(f"Successfully processed match with image ID: {image_id}")
             else:
                 failed_uploads += 1
                 logger.error(f"Failed to process match for variation {match['variation_id']}")

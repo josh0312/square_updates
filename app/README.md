@@ -263,3 +263,19 @@ This will:
 2. Show detailed matching process
 3. Log results to matcher.log
 4. Write unmatched items to unmatched.txt
+
+### Image Matching Improvements (Dec 1, 2024)
+- Enhanced product name cleaning and matching:
+  - Intelligent removal of product codes (e.g., "1101717-", "814327019540-")
+  - Filtering of descriptive terms ("artillery", "shells", "500g", etc.)
+  - Improved matching accuracy for Red Rhino products
+  - Better handling of variations vs parent items
+- Logging improvements:
+  - Detailed match scoring information
+  - Clear indication of why matches succeed or fail
+  - Product code removal tracking
+  - Best match reporting even when below threshold
+- Upload process improvements:
+  - Successful parent item uploads counted even if variation association fails
+  - Better handling of items without variations
+  - More detailed upload status reporting
