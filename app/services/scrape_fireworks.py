@@ -4,7 +4,7 @@ import logging
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models.product import Base, Product
+from app.models.product import Base, Product
 import importlib
 import requests
 import asyncio
@@ -12,24 +12,16 @@ import aiohttp
 from aiohttp import ClientSession
 from cachetools import TTLCache
 from ratelimit import limits, sleep_and_retry
+from app.utils.paths import paths
+from app.utils.verify_paths import PathVerifier
+from app.utils.logger import setup_logger
 from app.config import websites, vendor_directories
+from app.scrapers import redrhino_scraper, winco_scraper, raccoon_scraper
 
-# Add logging configuration at the top of the file after imports
-def setup_logging():
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler('scraper.log'),
-            logging.StreamHandler(sys.stdout)
-        ]
-    )
-    return logging.getLogger(__name__)
+logger = setup_logger('scrape_fireworks')
 
-logger = setup_logging()
-
-# Base directory
-BASE_DIR = '/Users/joshgoble/Downloads/firework_pics'
+# Base directory from paths
+BASE_DIR = paths.DATA_DIR
 
 # Default headers for requests
 headers = {
@@ -39,8 +31,8 @@ headers = {
     'Connection': 'keep-alive',
 }
 
-# Add at top of file with other imports
-engine = create_engine('sqlite:///fireworks.db')  # You can change to PostgreSQL or MySQL later
+# Database setup
+engine = create_engine(f'sqlite:///{paths.DB_FILE}')  # Use path from paths.py
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 
@@ -115,42 +107,42 @@ def scrape_all_websites():
             continue
             
         try:
-            logging.info(f"\nAttempting to scrape {website['name']}...")
+            logger.info(f"\nAttempting to scrape {website['name']}...")
             
-            # Remove .py extension if it exists in the scraper name
-            scraper_name = website['scraper'].replace('.py', '')
-            scraper_module = importlib.import_module(f"scrapers.{scraper_name}")
-            scraper_function = getattr(scraper_module, 'scrape_website')
+            # Get appropriate scraper function
+            scraper_func = None
+            if 'Red Rhino' in website['name']:
+                scraper_func = redrhino_scraper.scrape_website
+            elif 'Winco' in website['name']:
+                scraper_func = winco_scraper.scrape_website
+            elif 'Raccoon' in website['name']:
+                scraper_func = raccoon_scraper.scrape_website
+            else:
+                logger.error(f"No scraper found for {website['name']}")
+                continue
             
             # Get limit from website config
             limit = website.get('limit', -1)
-            logging.info(f"Using limit: {limit if limit != -1 else 'unlimited'}")
+            logger.info(f"Using limit: {limit if limit != -1 else 'unlimited'}")
             
             # Get URL - handle both single URL and list of URLs
-            if 'urls' in website:
-                urls = website['urls']
-            elif 'url' in website:
-                urls = [website['url']]
-            else:
-                logging.error(f"No URL found for {website['name']}")
-                continue
+            urls = website.get('urls', [website.get('url')] if website.get('url') else [])
             
             # Process each URL
             for url in urls:
-                logging.info(f"Processing URL: {url}")
                 try:
-                    scraper_function(
+                    scraper_func(
                         url=url,
                         limit=limit,
                         base_dir=BASE_DIR,
                         headers=headers
                     )
                 except Exception as e:
-                    logging.error(f"Error scraping URL {url}: {str(e)}")
+                    logger.error(f"Error scraping URL {url}: {str(e)}")
                     continue
                     
         except Exception as e:
-            logging.error(f"Error processing website {website['name']}: {str(e)}")
+            logger.error(f"Error processing website {website['name']}: {str(e)}")
             continue
 
 @sleep_and_retry
@@ -159,8 +151,14 @@ def rate_limited_request(url, headers):
     return requests.get(url, headers=headers, verify=False)
 
 if __name__ == "__main__":
+    # Verify paths first
+    verifier = PathVerifier()
+    if not verifier.verify_all():
+        logger.error("Path verification failed!")
+        sys.exit(1)
+    
     logger.info("Starting scraper...")
     try:
         scrape_all_websites()
     except Exception as e:
-        logger.error("Fatal error in main execution", exc_info=True) 
+        logger.error("Fatal error in main execution", exc_info=True)

@@ -1,0 +1,88 @@
+Project Structure - Generated 2024-12-01 16:38:00
+================================================================================
+
+app/
+├── README.md
+├── api
+│   └── endpoints
+│       ├── catalog.py
+│       ├── images.py
+│       ├── items.py
+│       └── scraping.py
+├── config
+│   ├── vendor_directories.yaml
+│   └── websites.yaml
+├── core
+│   └── config.py
+├── db
+│   └── session.py
+├── fireworks.db
+├── logs
+│   ├── api.endpoints.images.log
+│   ├── app.services.scraper.log
+│   ├── app.services.square_client.log
+│   ├── matcher.log
+│   ├── matcher_test.log
+│   ├── scraper.log
+│   ├── square.log
+│   ├── square_catalog.log
+│   ├── square_catalog_test.log
+│   ├── square_check.log
+│   ├── test_endpoints.log
+│   ├── test_image_matcher.log
+│   ├── test_scraper.log
+│   └── test_square_catalog.log
+├── main.py
+├── middleware
+│   └── error_handler.py
+├── models
+│   └── product.py
+├── requirements.txt
+├── schemas
+│   └── product.py
+├── scrapers
+│   ├── pyrobuy_scraper.py
+│   ├── raccoon_scraper.py
+│   ├── redrhino_scraper.py
+│   ├── winco_scraper.py
+│   └── worldclass_scraper.py
+├── services
+│   ├── image_matcher.py
+│   ├── scrape_fireworks.py
+│   ├── scraper.py
+│   ├── square_catalog.py
+│   ├── square_client.py
+│   └── square_image_uploader.py
+├── setup.py
+├── tests
+│   ├── conftest.py
+│   ├── fixtures
+│   │   └── square_responses.py
+│   ├── requirements-test.txt
+│   ├── test_db_items.py
+│   ├── test_endpoints.py
+│   ├── test_image_matcher.py
+│   ├── test_scraper.py
+│   ├── test_square_catalog.py
+│   ├── test_square_image_uploader.py
+│   ├── test_square_items.py
+│   └── test_winco_scraper.py
+├── unmatched.txt
+└── utils
+    ├── logger.py
+    ├── project_structure.txt
+    └── tree_view.py
+
+File Descriptions
+================================================================================
+
+websites.yaml........................... Configuration for web scraping targets and rules
+vendor_directories.yaml................. Configuration mapping vendors to their directories and aliases
+test_square_catalog.py.................. Tests for Square catalog functionality
+square_responses.py..................... Test fixtures for Square API responses
+tree_view.py............................ Utility to generate project structure documentation
+project_structure.txt................... Generated project structure documentation
+catalog.py.............................. FastAPI endpoints for catalog operations
+square_catalog.py....................... Square API integration for catalog management
+scraper.py.............................. Service for handling web scraping operations
+scrape_fireworks.py..................... Main web scraping orchestration script

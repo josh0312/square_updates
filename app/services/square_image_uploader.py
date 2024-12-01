@@ -6,6 +6,12 @@ from bs4 import BeautifulSoup
 from fastapi import HTTPException
 from square.client import Client
 from app.config import ImageDownloadConfig
+from app.utils.logger import setup_logger
+from app.utils.paths import paths
+from app.core.config import settings
+from app.utils.verify_paths import PathVerifier
+
+logger = setup_logger('square_image_uploader')
 
 class SquareImageUploader:
     def __init__(self, image_download_configs: List[ImageDownloadConfig], square_access_token: str):

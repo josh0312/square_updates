@@ -1,12 +1,19 @@
+from square.client import Client
+from fastapi import HTTPException
+from typing import List, Optional
+from pprint import pformat
 from app.core.config import settings
 from app.utils.logger import setup_logger
-from app.config import vendor_directories  # New import for yaml config
+from app.utils.paths import paths
+from app.utils.verify_paths import PathVerifier
+
+logger = setup_logger('square_catalog')
 
 class SquareCatalog:
     def __init__(self):
         self.client = Client(
             access_token=settings.SQUARE_ACCESS_TOKEN,
-            environment='production'
+            environment=settings.SQUARE_ENVIRONMENT
         )
         # Get vendor mapping on initialization
         self.vendor_map = self.get_vendors()
@@ -207,6 +214,13 @@ class SquareCatalog:
             return None
 
 if __name__ == "__main__":
+    # Verify paths first
+    verifier = PathVerifier()
+    if not verifier.verify_all():
+        logger.error("Path verification failed!")
+        sys.exit(1)
+    
+    # Continue with existing code
     catalog = SquareCatalog()
     items = catalog.get_items_without_images()
     

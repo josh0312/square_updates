@@ -1,14 +1,22 @@
+from app.models.product import Product, Base
+from app.utils.logger import setup_logger
+from app.utils.paths import paths
 import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin, urlparse
 import re
-import logging
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 import os
 
-# Set up logging
-logger = logging.getLogger('winco_scraper')
-logger.setLevel(logging.INFO)
+# Set up logger
+logger = setup_logger('winco_scraper')
+
+# Database setup
+engine = create_engine(f'sqlite:///{paths.DB_FILE}')
+Base.metadata.create_all(engine)
+Session = sessionmaker(bind=engine)
 
 def scrape_website(url, limit=5, base_dir=None, headers=None):
     """Main scraper function"""
@@ -89,8 +97,8 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                                                 logger.error(f"Error downloading image: {str(e)}")
                                         else:
                                             logger.info(f"Image already exists: {filename}")
-                            
-                            time.sleep(1)  # Polite delay between products
+                                
+                                time.sleep(1)  # Polite delay between products
                 
                 # Look for next page link
                 next_link = soup.find('a', class_='next page-numbers')

@@ -1,35 +1,23 @@
+from app.models.product import Product, Base
+from app.utils.logger import setup_logger
+from app.utils.paths import paths
 import requests
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin, urlparse
 import re
-import logging
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models.product import Product, Base
 from datetime import datetime
 import os
 
-# Only initialize logger once
-logger = logging.getLogger(__name__)
+# Set up logger
+logger = setup_logger('raccoon_scraper')
 
 # Database setup
-engine = create_engine('sqlite:///fireworks.db')
+engine = create_engine(f'sqlite:///{paths.DB_FILE}')
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
-
-def get_domain_folder(url):
-    """Create folder name from domain"""
-    parsed_url = urlparse(url)
-    domain = parsed_url.netloc.replace('www.', '')
-    return domain
-
-def count_existing_images(directory):
-    """Count number of images in directory"""
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-        return 0
-    return len([f for f in os.listdir(directory) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp'))])
 
 def scrape_website(url, limit=5, base_dir=None, headers=None):
     """Main scraper function"""
@@ -81,10 +69,10 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
         for product_url in unique_product_links:
             if limit != -1 and successful_downloads >= limit:
                 break
-                
+                    
             if not product_url.startswith(('http://', 'https://')):
                 product_url = urljoin(current_url, product_url)
-            
+                
             logger.info(f"Visiting product page: {product_url}")
             try:
                 # Get product details
@@ -108,7 +96,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                             logger.info("Product already exists with no changes")
                     else:
                         logger.warning(f"No image found for product: {product_name}")
-            
+                
                 time.sleep(2)  # Delay between product pages
                 
             except Exception as e:
@@ -130,6 +118,19 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     logger.info(f"Existing images found: {existing_count}")
     logger.info(f"New images downloaded: {successful_downloads}")
     logger.info(f"Total images in directory: {count_existing_images(domain_dir)}") 
+
+def get_domain_folder(url):
+    """Create folder name from domain"""
+    parsed_url = urlparse(url)
+    domain = parsed_url.netloc.replace('www.', '')
+    return domain
+
+def count_existing_images(directory):
+    """Count number of images in directory"""
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+        return 0
+    return len([f for f in os.listdir(directory) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp'))])
 
 def get_raccoon_product_details(product_url, headers):
     """Extract product details from a Raccoon product page"""
@@ -170,9 +171,9 @@ def get_raccoon_product_details(product_url, headers):
                 'name': product_name,
                 'image_url': image_url
             }
-            
+                
         return {'name': product_name, 'image_url': None}
-        
+            
     except Exception as e:
         logger.error(f"Error getting product details: {str(e)}")
         return None
@@ -185,16 +186,14 @@ def process_raccoon_product(product_name, product_url, image_url, soup, domain_d
         image_path = os.path.join(domain_dir, f"{safe_name}.png")
         
         # Check if product exists in database
-        session = Session()
         existing = session.query(Product).filter_by(
             site_name="Raccoon Fireworks",
             product_name=product_name
         ).first()
         
         if existing and existing.image_url == image_url:
-            session.close()
             return False
-            
+                
         # Download image if it doesn't exist
         if not os.path.exists(image_path):
             os.makedirs(os.path.dirname(image_path), exist_ok=True)
@@ -202,7 +201,7 @@ def process_raccoon_product(product_name, product_url, image_url, soup, domain_d
             if response.status_code == 200:
                 with open(image_path, 'wb') as f:
                     f.write(response.content)
-        
+            
         # Create or update product in database
         product_data = {
             'site_name': "Raccoon Fireworks",
@@ -219,11 +218,10 @@ def process_raccoon_product(product_name, product_url, image_url, soup, domain_d
         else:
             new_product = Product(**product_data)
             session.add(new_product)
-            
+                
         session.commit()
-        session.close()
         return True
-        
+            
     except Exception as e:
         logger.error(f"Error processing product: {str(e)}")
         if 'session' in locals():
@@ -246,22 +244,22 @@ def get_next_page_url(soup, current_url):
                 next_link = pagination.find('a', string=str(next_page))
                 if next_link:
                     return urljoin(current_url, next_link['href'])
-        
+            
         # Alternative: Look for "Next" button
         next_button = soup.find('a', string=re.compile(r'Next|»|>'))
         if next_button and next_button.get('href'):
             return urljoin(current_url, next_button['href'])
-            
+                
         # If current URL has page parameter, increment it
         if 'page=' in current_url:
             current_page = int(re.search(r'page=(\d+)', current_url).group(1))
             return re.sub(r'page=\d+', f'page={current_page + 1}', current_url)
-            
+                
         # If no page parameter exists, add it
         if '?' in current_url:
             return f"{current_url}&page=2"
         return f"{current_url}?page=2"
-            
+                
     except Exception as e:
         logger.error(f"Error getting next page URL: {str(e)}")
         return None 

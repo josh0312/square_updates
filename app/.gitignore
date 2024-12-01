@@ -22,9 +22,26 @@ var/
 .installed.cfg
 *.egg
 
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
 # Logs
+*.log
 logs/*
 !logs/.gitkeep
 
-# Test files
-.pytest_cache/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+fireworks.db
+matcher_test.log
+winco_test.log
+square_check.log

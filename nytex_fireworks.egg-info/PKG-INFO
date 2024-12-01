@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: nytex-fireworks
+Version: 0.1
+Summary: NyTex Fireworks Square catalog management and image processing
+Author: Josh Goble
+Requires-Python: >=3.9
+Requires-Dist: fastapi>=0.104.0
+Requires-Dist: uvicorn[standard]>=0.24.0
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: pydantic>=2.4.2
+Requires-Dist: pydantic-settings>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: squareup>=39.0.0.20241120
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: requests>=2.31.0
+Requires-Dist: Pillow>=10.0.0
+Requires-Dist: python-Levenshtein>=0.21.1
+Requires-Dist: fuzzywuzzy>=0.18.0
+Requires-Dist: ratelimit>=2.2.1
+Requires-Dist: cachetools>=4.2.4

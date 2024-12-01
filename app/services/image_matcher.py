@@ -4,13 +4,20 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 import logging.config
 import re
-from square_catalog import SquareCatalog
+from app.services.square_catalog import SquareCatalog
 from square.client import Client
 from dotenv import load_dotenv
 from pathlib import Path
 import time
 import uuid
 import io
+from datetime import datetime
+from app.utils.paths import paths
+from app.utils.verify_paths import PathVerifier
+import sys
+
+# Use paths instead of local definitions
+file_handler = logging.FileHandler(paths.get_log_file('image_matcher'), mode='w')
 
 # Remove all handlers from the root logger
 logging.getLogger().handlers = []
@@ -21,7 +28,7 @@ logger.setLevel(logging.INFO)
 logger.handlers = []  # Remove any existing handlers
 
 # Create handlers
-file_handler = logging.FileHandler('matcher.log', mode='w')
+file_handler = logging.FileHandler(paths.get_log_file('image_matcher'), mode='w')
 console_handler = logging.StreamHandler()
 
 # Create formatters and add it to handlers
@@ -35,8 +42,8 @@ logger.addHandler(console_handler)
 
 class ImageMatcher:
     def __init__(self):
-        # Load vendor directory mappings
-        with open('vendor_directories.yaml', 'r') as f:
+        # Load vendor directory mappings from config directory
+        with open(paths.VENDOR_CONFIG, 'r') as f:
             self.config = yaml.safe_load(f)
         
         self.base_dir = self.config['base_directory']
@@ -517,8 +524,19 @@ class ImageMatcher:
         logger.info(f"Failed uploads: {failed_uploads}")
         
         return successful_uploads, failed_uploads
+    
+    def write_unmatched(self, unmatched_items):
+        unmatched_log = paths.get_log_file('image_matcher_unmatched')
+        # ... rest of the code ...
 
 if __name__ == "__main__":
+    # Verify paths first
+    verifier = PathVerifier()
+    if not verifier.verify_all():
+        logger.error("Path verification failed!")
+        sys.exit(1)
+    
+    # Continue with existing code
     matcher = ImageMatcher()
     
     logger.info("\n=== Starting Image Matcher ===")
@@ -657,11 +675,13 @@ if __name__ == "__main__":
         logger.info(f"  Match Score: {match['match_ratio']}%")
         logger.info("-" * 50)
     
-    logger.info("\nUnmatched items have been written to 'unmatched.txt'")
+    # Write unmatched items to file in logs directory
+    unmatched_log_path = paths.get_log_file('image_matcher_unmatched')
+    logger.info(f"\nUnmatched items have been written to '{unmatched_log_path}'")
     
     # Write unmatched items to file
-    with open('unmatched.txt', 'w') as f:
-        f.write("=== Unmatched Items ===\n\n")
+    with open(unmatched_log_path, 'w') as f:
+        f.write(f"=== Unmatched Items - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n\n")
         for item in unmatched_items:
             f.write(f"Item Name: {item['item_name']}\n")
             f.write(f"Variation: {item['variation_name']}\n")

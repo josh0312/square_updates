@@ -5,6 +5,9 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.schemas.product import Product, ProductCreate
 from app.services.square_catalog import SquareCatalog
+from app.utils.logger import setup_logger
+
+logger = setup_logger(__name__)
 
 router = APIRouter()
 square_client = SquareCatalog()

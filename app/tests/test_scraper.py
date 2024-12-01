@@ -1,6 +1,7 @@
 import pytest
 from app.utils.logger import setup_logger
 from app.services.scraper import ScraperService
+from app.utils.paths import paths
 
 logger = setup_logger('test_scraper')
 
