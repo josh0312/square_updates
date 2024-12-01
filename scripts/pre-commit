@@ -1,0 +1,3 @@
+#!/bin/bash
+./scripts/sync_dependencies.py
+git add setup.py 

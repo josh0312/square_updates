@@ -3,6 +3,7 @@ import asyncio
 from fastapi import HTTPException
 from datetime import datetime
 import os
+import sys
 
 from app.models.product import Product, Base  # Update import path
 from app.utils.logger import setup_logger  # Add centralized logger

@@ -6,6 +6,7 @@ from app.core.config import settings
 from app.utils.logger import setup_logger
 from app.utils.paths import paths
 from app.utils.verify_paths import PathVerifier
+import sys
 
 logger = setup_logger('square_catalog')
 

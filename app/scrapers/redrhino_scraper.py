@@ -10,6 +10,7 @@ import io
 import re
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+from urllib.parse import urlparse
 
 # Set up logger
 logger = setup_logger('redrhino_scraper')
