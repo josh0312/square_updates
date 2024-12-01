@@ -148,20 +148,12 @@ Item Name: Fuse
 Variation: Regular
 Vendor: AWF
 --------------------------------------------------
-Item Name: Giant Chute
-Variation: Regular
-Vendor: Red Rhino
---------------------------------------------------
 Item Name: Giant Parachute
 Variation: 
 Vendor: Supreme
 --------------------------------------------------
 Item Name: Gold crackers
 Variation: Regular
-Vendor: Red Rhino
---------------------------------------------------
-Item Name: Happy 49s
-Variation: RR
 Vendor: Red Rhino
 --------------------------------------------------
 Item Name: Heritage #4
@@ -240,10 +232,6 @@ Item Name: Neon Smoke Sticks
 Variation: 
 Vendor: Red Rhino
 --------------------------------------------------
-Item Name: Neptune 7"
-Variation: Regular
-Vendor: Red Rhino
---------------------------------------------------
 Item Name: New Small Bee
 Variation: UPC1
 Vendor: Red Rhino
@@ -282,18 +270,6 @@ Vendor: Garrets
 --------------------------------------------------
 Item Name: Redneck Woman
 Variation: 
-Vendor: Red Rhino
---------------------------------------------------
-Item Name: Rhinomite
-Variation: Outlaw
-Vendor: Red Rhino
---------------------------------------------------
-Item Name: Rhinomite
-Variation: Nitro
-Vendor: Red Rhino
---------------------------------------------------
-Item Name: Rhinomite
-Variation: UPC1
 Vendor: Red Rhino
 --------------------------------------------------
 Item Name: Ripper 6pk

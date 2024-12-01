@@ -86,6 +86,7 @@ class ImageMatcher:
         
         # Convert to string and lowercase
         name = str(name).lower().strip()
+        logger.debug(f"After lowercase: '{name}'")
         
         # For Red Rhino images, remove product code if present
         if is_red_rhino:
@@ -109,7 +110,26 @@ class ImageMatcher:
             '500g',
             '200 gram',
             '200g',
-            'safe and sane'
+            'safe and sane',
+            'parachute',
+            'chute',
+            'candle',
+            'assortment',
+            'missile',
+            'launcher',
+            'cracker',
+            'crackers',
+            '6pk',
+            '4pk',
+            '12pk',
+            'dzn',
+            'battery',
+            '20pk',
+            'head',
+            'bomb',
+            'shot',
+            'shell',
+            'fireworks'
         ]
         
         # Define stop words
@@ -117,33 +137,47 @@ class ImageMatcher:
         
         # First clean special characters
         name = re.sub(r'[_\-/\\]', ' ', name)
+        logger.debug(f"After special char cleanup: '{name}'")
         
         # Keep alphanumeric characters and spaces
         name = re.sub(r'[^a-z0-9\s]', '', name)
+        logger.debug(f"After keeping alphanumeric: '{name}'")
         
         # Split into words
         words = name.split()
+        logger.debug(f"Split words: {words}")
         
         # Remove descriptive terms
         cleaned_words = []
         i = 0
         while i < len(words):
             skip = False
+            current_word = words[i]
+            logger.debug(f"Processing word: '{current_word}'")
+            
             # Check each descriptive term
             for term in descriptive_terms:
                 term_words = term.split()
                 if i + len(term_words) <= len(words):
                     # Check if the next few words match the term
-                    if ' '.join(words[i:i+len(term_words)]).lower() == term.lower():
-                        i += len(term_words)
+                    potential_match = ' '.join(words[i:i+len(term_words)]).lower()
+                    logger.debug(f"Checking term '{term}' against '{potential_match}'")
+                    if potential_match == term.lower():
+                        i += len(term_words) - 1
                         skip = True
+                        logger.debug(f"Removed descriptive term: '{potential_match}'")
                         break
+            
             if not skip and words[i] not in stop_words:
                 cleaned_words.append(words[i])
+                logger.debug(f"Kept word: '{words[i]}'")
+            elif words[i] in stop_words:
+                logger.debug(f"Removed stop word: '{words[i]}'")
             i += 1
         
         # Remove extra whitespace and join
         cleaned = ' '.join(cleaned_words).strip()
+        logger.debug(f"Final cleaned result: '{cleaned}'")
         
         if not cleaned:
             logger.warning(f"Cleaning resulted in empty string for input: '{name}'")
@@ -176,8 +210,8 @@ class ImageMatcher:
             # Get base name without extension
             base_name = os.path.splitext(image_file)[0]
             
-            # Clean the image name WITH product code removal for Red Rhino
             clean_image = self.clean_name(base_name, is_red_rhino=True)
+            logger.info(f"Original image filename: '{image_file}' -> {clean_image}")
             
             # Calculate match ratio
             ratio = fuzz.ratio(clean_name, clean_image)
@@ -485,23 +519,45 @@ if __name__ == "__main__":
     
     logger.info("\n=== Starting Image Matcher ===")
     
-    # Track statistics
-    total_items = 0
-    total_variations = 0
-    matched_items = set()
-    matched_variations = 0
-    unmatched_items = []
-    successful_uploads = 0
-    
     # Get all items needing images
-    items = matcher.square.get_items_without_images()
-    total_items = len(items)
+    catalog_items = matcher.square.get_items_without_images()
+    total_items = len(catalog_items)
+    
+    # Group items by vendor
+    vendor_items = {}
+    for item in catalog_items:
+        item_name = item['item_data']['name']
+        variations = item['item_data']['variations']
+        
+        for var in variations:
+            vendor_name = var['vendor_name']
+            if not vendor_name:
+                vendor_name = 'Unknown Vendor'
+                
+            if vendor_name not in vendor_items:
+                vendor_items[vendor_name] = set()
+            
+            vendor_items[vendor_name].add(item_name)
+    
+    # Log items grouped by vendor
+    logger.info("\n=== Items Needing Images By Vendor ===")
+    for vendor, vendor_item_names in sorted(vendor_items.items()):
+        logger.info(f"\n{vendor}:")
+        for item_name in sorted(vendor_item_names):
+            logger.info(f"  - {item_name}")
     
     logger.info(f"\n=== Processing {total_items} items ===")
     
+    # Track statistics
+    matched_items = set()
+    matched_variations = 0
+    total_variations = 0
+    unmatched_items = []
+    successful_uploads = 0
+    
     # Process all items
     matches = []
-    for item in items:
+    for item in catalog_items:
         item_name = item['item_data']['name']
         variations = item['item_data']['variations']
         needs_primary = item['item_data']['needs_primary_image']
@@ -510,6 +566,7 @@ if __name__ == "__main__":
         logger.info(f"Needs primary image: {needs_primary}")
         
         for var in variations:
+            total_variations += 1
             var_name = var['name']
             vendor_name = var['vendor_name']
             
