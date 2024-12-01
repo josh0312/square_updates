@@ -1,0 +1,678 @@
+2024-11-24 23:12:23,998 - INFO - === Initializing Square Catalog Test ===
+2024-11-24 23:12:23,998 - INFO - 
+=== Fetching Vendors Using Vendors API ===
+2024-11-24 23:12:24,405 - INFO - 
+Found 9 vendors
+2024-11-24 23:12:24,405 - INFO - 
+Raw vendor response:
+2024-11-24 23:12:24,407 - INFO - {'vendors': [{'address': {'country': 'US'},
+              'created_at': '2023-05-18T03:00:45.599Z',
+              'id': 'J3BYFIHESKMOU4GK',
+              'name': 'AWF',
+              'status': 'ACTIVE',
+              'updated_at': '2023-05-18T03:00:45.599Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2023-05-27T01:05:00.719Z',
+              'id': 'IJFUKAPBRHG3U3KH',
+              'name': 'CHW',
+              'status': 'ACTIVE',
+              'updated_at': '2023-05-27T01:05:00.719Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2023-04-25T19:43:17.788Z',
+              'id': '5PK6CQG743EOQCKC',
+              'name': 'Garrets',
+              'status': 'ACTIVE',
+              'updated_at': '2023-04-25T19:43:17.788Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2022-05-26T22:47:31.932Z',
+              'id': 'RKX7VIRZELRIFQUJ',
+              'name': 'Jakes',
+              'status': 'ACTIVE',
+              'updated_at': '2022-05-26T22:47:31.932Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2024-09-25T17:47:37.001Z',
+              'id': 'GMC34BUSRBI5WTUO',
+              'name': 'NyTex',
+              'status': 'ACTIVE',
+              'updated_at': '2024-09-25T17:47:37.001Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2022-01-26T00:10:14.164Z',
+              'id': 'V6FVR64ERUYJPNJX',
+              'name': 'Raccoon',
+              'status': 'ACTIVE',
+              'updated_at': '2022-01-26T00:10:14.164Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2022-01-25T22:44:05.231Z',
+              'id': 'IZOEX4YIWFE7LR44',
+              'name': 'Red Rhino',
+              'status': 'ACTIVE',
+              'updated_at': '2022-01-25T22:44:05.231Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2024-05-07T02:56:51.831Z',
+              'id': 'GHMUS634PORASCHI',
+              'name': 'Supreme',
+              'status': 'ACTIVE',
+              'updated_at': '2024-05-07T02:56:51.831Z',
+              'version': 1},
+             {'address': {'country': 'US'},
+              'created_at': '2022-01-25T23:41:02.668Z',
+              'id': 'DTGL6YXYOJPKKUTN',
+              'name': 'Winco',
+              'status': 'ACTIVE',
+              'updated_at': '2022-01-25T23:41:02.668Z',
+              'version': 1}]}
+2024-11-24 23:12:24,407 - INFO - Mapped vendor: AWF (ID: J3BYFIHESKMOU4GK)
+2024-11-24 23:12:24,407 - INFO - Full vendor data:
+2024-11-24 23:12:24,408 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2023-05-18T03:00:45.599Z',
+ 'id': 'J3BYFIHESKMOU4GK',
+ 'name': 'AWF',
+ 'status': 'ACTIVE',
+ 'updated_at': '2023-05-18T03:00:45.599Z',
+ 'version': 1}
+2024-11-24 23:12:24,408 - INFO - Mapped vendor: CHW (ID: IJFUKAPBRHG3U3KH)
+2024-11-24 23:12:24,408 - INFO - Full vendor data:
+2024-11-24 23:12:24,408 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2023-05-27T01:05:00.719Z',
+ 'id': 'IJFUKAPBRHG3U3KH',
+ 'name': 'CHW',
+ 'status': 'ACTIVE',
+ 'updated_at': '2023-05-27T01:05:00.719Z',
+ 'version': 1}
+2024-11-24 23:12:24,408 - INFO - Mapped vendor: Garrets (ID: 5PK6CQG743EOQCKC)
+2024-11-24 23:12:24,408 - INFO - Full vendor data:
+2024-11-24 23:12:24,408 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2023-04-25T19:43:17.788Z',
+ 'id': '5PK6CQG743EOQCKC',
+ 'name': 'Garrets',
+ 'status': 'ACTIVE',
+ 'updated_at': '2023-04-25T19:43:17.788Z',
+ 'version': 1}
+2024-11-24 23:12:24,408 - INFO - Mapped vendor: Jakes (ID: RKX7VIRZELRIFQUJ)
+2024-11-24 23:12:24,408 - INFO - Full vendor data:
+2024-11-24 23:12:24,409 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2022-05-26T22:47:31.932Z',
+ 'id': 'RKX7VIRZELRIFQUJ',
+ 'name': 'Jakes',
+ 'status': 'ACTIVE',
+ 'updated_at': '2022-05-26T22:47:31.932Z',
+ 'version': 1}
+2024-11-24 23:12:24,409 - INFO - Mapped vendor: NyTex (ID: GMC34BUSRBI5WTUO)
+2024-11-24 23:12:24,409 - INFO - Full vendor data:
+2024-11-24 23:12:24,409 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2024-09-25T17:47:37.001Z',
+ 'id': 'GMC34BUSRBI5WTUO',
+ 'name': 'NyTex',
+ 'status': 'ACTIVE',
+ 'updated_at': '2024-09-25T17:47:37.001Z',
+ 'version': 1}
+2024-11-24 23:12:24,409 - INFO - Mapped vendor: Raccoon (ID: V6FVR64ERUYJPNJX)
+2024-11-24 23:12:24,409 - INFO - Full vendor data:
+2024-11-24 23:12:24,409 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2022-01-26T00:10:14.164Z',
+ 'id': 'V6FVR64ERUYJPNJX',
+ 'name': 'Raccoon',
+ 'status': 'ACTIVE',
+ 'updated_at': '2022-01-26T00:10:14.164Z',
+ 'version': 1}
+2024-11-24 23:12:24,409 - INFO - Mapped vendor: Red Rhino (ID: IZOEX4YIWFE7LR44)
+2024-11-24 23:12:24,409 - INFO - Full vendor data:
+2024-11-24 23:12:24,409 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2022-01-25T22:44:05.231Z',
+ 'id': 'IZOEX4YIWFE7LR44',
+ 'name': 'Red Rhino',
+ 'status': 'ACTIVE',
+ 'updated_at': '2022-01-25T22:44:05.231Z',
+ 'version': 1}
+2024-11-24 23:12:24,409 - INFO - Mapped vendor: Supreme (ID: GHMUS634PORASCHI)
+2024-11-24 23:12:24,409 - INFO - Full vendor data:
+2024-11-24 23:12:24,410 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2024-05-07T02:56:51.831Z',
+ 'id': 'GHMUS634PORASCHI',
+ 'name': 'Supreme',
+ 'status': 'ACTIVE',
+ 'updated_at': '2024-05-07T02:56:51.831Z',
+ 'version': 1}
+2024-11-24 23:12:24,410 - INFO - Mapped vendor: Winco (ID: DTGL6YXYOJPKKUTN)
+2024-11-24 23:12:24,410 - INFO - Full vendor data:
+2024-11-24 23:12:24,410 - INFO - {'address': {'country': 'US'},
+ 'created_at': '2022-01-25T23:41:02.668Z',
+ 'id': 'DTGL6YXYOJPKKUTN',
+ 'name': 'Winco',
+ 'status': 'ACTIVE',
+ 'updated_at': '2022-01-25T23:41:02.668Z',
+ 'version': 1}
+2024-11-24 23:12:24,410 - INFO - Loaded 9 vendors
+2024-11-24 23:12:24,410 - INFO - 
+=== Starting Catalog Items Test ===
+2024-11-24 23:12:24,410 - INFO - 
+Vendor Map:
+2024-11-24 23:12:24,410 - INFO - J3BYFIHESKMOU4GK: AWF
+2024-11-24 23:12:24,410 - INFO - IJFUKAPBRHG3U3KH: CHW
+2024-11-24 23:12:24,410 - INFO - 5PK6CQG743EOQCKC: Garrets
+2024-11-24 23:12:24,410 - INFO - RKX7VIRZELRIFQUJ: Jakes
+2024-11-24 23:12:24,410 - INFO - GMC34BUSRBI5WTUO: NyTex
+2024-11-24 23:12:24,410 - INFO - V6FVR64ERUYJPNJX: Raccoon
+2024-11-24 23:12:24,410 - INFO - IZOEX4YIWFE7LR44: Red Rhino
+2024-11-24 23:12:24,410 - INFO - GHMUS634PORASCHI: Supreme
+2024-11-24 23:12:24,411 - INFO - DTGL6YXYOJPKKUTN: Winco
+2024-11-24 23:12:24,844 - INFO - 
+Analyzing 10 items:
+2024-11-24 23:12:24,844 - INFO - 
+Item 1: Masquerade
+2024-11-24 23:12:24,844 - INFO - 
+Variation: Regular
+2024-11-24 23:12:24,844 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': '3I5GSLTCDSP5E36BLLENX6L7',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'YKKATXOJUFDAVLFMIC3A4I4K',
+                                      'ordinal': 1,
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,844 - INFO -   SKU: 8107880271116
+2024-11-24 23:12:24,845 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,845 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,845 - INFO - 
+Item 2: The Flag - Saturn 800s
+2024-11-24 23:12:24,845 - INFO - 
+Variation: Regular
+2024-11-24 23:12:24,845 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'IRGDRNOQJHZSB4WD5JE5DOEF',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'E3XCLW5ORODXXSUNIX6CHY7M',
+                                      'ordinal': 1,
+                                      'sku': '1101808',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,846 - INFO -   SKU: 8143270180811
+2024-11-24 23:12:24,846 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,846 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,846 - INFO - 
+Item 3: Neon Nights
+2024-11-24 23:12:24,846 - INFO - 
+Variation: red
+2024-11-24 23:12:24,846 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'CZKHDDMDBGSNSYQXRUMXSYG5',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'ZXT3POKQD6BXEBWPMN5QIHBC',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 290,
+                                                      'currency': 'USD'},
+                                      'sku': 'FNBP-A095',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,846 - INFO -   SKU: 687985909513
+2024-11-24 23:12:24,847 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,847 - INFO -   Vendor Name: Winco
+2024-11-24 23:12:24,847 - INFO - 
+Variation: green
+2024-11-24 23:12:24,847 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'OLHZSQTGP7ILGKM5VUTHFXBV',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'XWQ2V23GDC7JNA7VNMOGM52S',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 200,
+                                                      'currency': 'USD'}},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,847 - INFO -   SKU: 687985909520
+2024-11-24 23:12:24,847 - INFO -   Vendor ID: None
+2024-11-24 23:12:24,847 - INFO -   Vendor Name: Unknown (ID: None)
+2024-11-24 23:12:24,847 - INFO - 
+Variation: orange
+2024-11-24 23:12:24,847 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'OT6OD6ZPKVOAXU4NZOTY3VLW',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'IIAMVQRNS5GWPNHFJGIIXO2N',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 200,
+                                                      'currency': 'USD'}},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,847 - INFO -   SKU: 687985909551
+2024-11-24 23:12:24,847 - INFO -   Vendor ID: None
+2024-11-24 23:12:24,847 - INFO -   Vendor Name: Unknown (ID: None)
+2024-11-24 23:12:24,847 - INFO - 
+Variation: blue
+2024-11-24 23:12:24,848 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': '5QRSHKE5HT5PUQ3IGJ6ERB3A',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'Q6HLTPQXG2B7YOQKAL3JZBHY',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 200,
+                                                      'currency': 'USD'}},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,848 - INFO -   SKU: 687985909537
+2024-11-24 23:12:24,848 - INFO -   Vendor ID: None
+2024-11-24 23:12:24,848 - INFO -   Vendor Name: Unknown (ID: None)
+2024-11-24 23:12:24,848 - INFO - 
+Variation: purple
+2024-11-24 23:12:24,848 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'S6V3OG2NE36O63PIXW6LPUXH',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'UQXCXUQI6TOK5R4WYM4YFTT2',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 200,
+                                                      'currency': 'USD'}},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,848 - INFO -   SKU: 687985909544
+2024-11-24 23:12:24,848 - INFO -   Vendor ID: None
+2024-11-24 23:12:24,848 - INFO -   Vendor Name: Unknown (ID: None)
+2024-11-24 23:12:24,848 - INFO - 
+Item 4: M-150 12pk
+2024-11-24 23:12:24,848 - INFO - 
+Variation: BC Old SKU
+2024-11-24 23:12:24,848 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'JBCPTRG6FQB4SJYEDRDPVGLO',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'GF6Y44MNATBZ2QP6SQGZPGUR',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 55,
+                                                      'currency': 'USD'},
+                                      'sku': 'FCBC117',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,848 - INFO -   SKU: 715244001170
+2024-11-24 23:12:24,848 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,848 - INFO -   Vendor Name: Winco
+2024-11-24 23:12:24,848 - INFO - 
+Variation: BC New SKU
+2024-11-24 23:12:24,848 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'KLJHIWQQIFBDX3ITDZF7HUZC',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'YQQ7ILIXHDIMBV5WZWABHOHN',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 58,
+                                                      'currency': 'USD'},
+                                      'sku': 'FCBC117',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,849 - INFO -   SKU: 652009901514
+2024-11-24 23:12:24,849 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,849 - INFO -   Vendor Name: Winco
+2024-11-24 23:12:24,849 - INFO - 
+Item 5: Backyard Hero
+2024-11-24 23:12:24,849 - INFO - 
+Variation: Regular
+2024-11-24 23:12:24,849 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'C5CHETNQZ7AQXXJKS6I3SMPJ',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'KWXYSVWFFEGQY2TZR2GH7Q6K',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 22846,
+                                                      'currency': 'USD'},
+                                      'sku': '1014018',
+                                      'vendor_id': 'RKX7VIRZELRIFQUJ'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,849 - INFO -   SKU: 8052531401810
+2024-11-24 23:12:24,849 - INFO -   Vendor ID: RKX7VIRZELRIFQUJ
+2024-11-24 23:12:24,849 - INFO -   Vendor Name: Jakes
+2024-11-24 23:12:24,849 - INFO - 
+Item 6: Tank Dzn
+2024-11-24 23:12:24,849 - INFO - 
+Variation: RR
+2024-11-24 23:12:24,850 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'YXAD3ZKAH5OO62RYBP3DTTQ5',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'YRS5TO3466LV6FI5W3NSUG6J',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 441,
+                                                      'currency': 'USD'},
+                                      'sku': '1101351-DZN',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,850 - INFO -   SKU: 8143270135125
+2024-11-24 23:12:24,850 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,850 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,850 - INFO - 
+Variation: RR-1
+2024-11-24 23:12:24,850 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'FTGPKRYNDSEQCE33DLXFMKAG',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': '5QI4EYXT7BTZUWRDSCNYQAPH',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 412,
+                                                      'currency': 'USD'},
+                                      'sku': '1101351-DZN',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,850 - INFO -   SKU: 705108070503
+2024-11-24 23:12:24,850 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,850 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,850 - INFO - 
+Variation: Boomer
+2024-11-24 23:12:24,850 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'V6ADFY5GLKUTKNDOXK5EPDET',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': '72XKAPLZ3AB2BSPRHXSBPZTY',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 412,
+                                                      'currency': 'USD'},
+                                      'sku': '1101351-DZN',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'LAMAV4FTTT56M'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,850 - INFO -   SKU: 8052530163320
+2024-11-24 23:12:24,850 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,850 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,850 - INFO - 
+Variation: SP
+2024-11-24 23:12:24,851 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': '62L25ZN7EK5MKKRLBT6SCDYC',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'QYARMX5WAYQZ2G7NW7CDVD5J',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 252,
+                                                      'currency': 'USD'},
+                                      'sku': 'SP-W705',
+                                      'vendor_id': 'GHMUS634PORASCHI'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,851 - INFO -   SKU: 888000007058
+2024-11-24 23:12:24,851 - INFO -   Vendor ID: GHMUS634PORASCHI
+2024-11-24 23:12:24,851 - INFO -   Vendor Name: Supreme
+2024-11-24 23:12:24,851 - INFO - 
+Variation: RR2
+2024-11-24 23:12:24,851 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'B6HNPL5QM3YGUZSVMAI42Y7B',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'WMEVSGXJRJJJDGZBLUUMKKF2',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 412,
+                                                      'currency': 'USD'},
+                                      'sku': '1101351-DZN',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,851 - INFO -   SKU: 8052530163221
+2024-11-24 23:12:24,851 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,851 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,851 - INFO - 
+Item 7: Blown Away
+2024-11-24 23:12:24,851 - INFO - 
+Variation: Regular
+2024-11-24 23:12:24,852 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'LAJIWKSKZHLGEI6733B24XAB',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'NIBPT5IILMUYA4ZQIFWKZXN5',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 1152,
+                                                      'currency': 'USD'},
+                                      'sku': '6301105',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,852 - INFO -   SKU: 191970110513
+2024-11-24 23:12:24,852 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,852 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,852 - INFO - 
+Item 8: Fountastic
+2024-11-24 23:12:24,852 - INFO - 
+Variation: Regular
+2024-11-24 23:12:24,852 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'OOSEIVF5AWKKVA4ESQVBRYWW',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'WK3OZ4GFZ2ZDUSYS2KNB3YEP',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 186,
+                                                      'currency': 'USD'},
+                                      'sku': 'FNBC2174',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,852 - INFO -   SKU: 715244021741
+2024-11-24 23:12:24,852 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,852 - INFO -   Vendor Name: Winco
+2024-11-24 23:12:24,852 - INFO - 
+Item 9: Rifle
+2024-11-24 23:12:24,852 - INFO - 
+Variation: 
+2024-11-24 23:12:24,852 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'TXFP7TOO5N3DIE7KA5HJPPWP',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'NL7QG4OU3IOBPIOEETION74C',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 1845,
+                                                      'currency': 'USD'},
+                                      'sku': '6301084',
+                                      'vendor_id': 'IZOEX4YIWFE7LR44'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,852 - INFO -   SKU: 191970108411
+2024-11-24 23:12:24,852 - INFO -   Vendor ID: IZOEX4YIWFE7LR44
+2024-11-24 23:12:24,852 - INFO -   Vendor Name: Red Rhino
+2024-11-24 23:12:24,852 - INFO - 
+Item 10: Tres Amigos
+2024-11-24 23:12:24,852 - INFO - 
+Variation: Regular
+2024-11-24 23:12:24,853 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'VLMWSPBFCB4VLP6NT3RFIXQQ',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'CVHKDDUI6PKECUX6GLHWTDPC',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 196,
+                                                      'currency': 'USD'},
+                                      'sku': 'FNF203',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,853 - INFO -   SKU: 514677502038
+2024-11-24 23:12:24,853 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,853 - INFO -   Vendor Name: Winco
+2024-11-24 23:12:24,853 - INFO - 
+Variation: Yellow
+2024-11-24 23:12:24,853 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'W57XHJB3J5ISWF7D6FPBLVHW',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'LV53OKGGE5Q2JYU5JPBDPN3W',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 196,
+                                                      'currency': 'USD'},
+                                      'sku': 'FNF203',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,853 - INFO -   SKU: 514677402031
+2024-11-24 23:12:24,853 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,853 - INFO -   Vendor Name: Winco
+2024-11-24 23:12:24,853 - INFO - 
+Variation: Green
+2024-11-24 23:12:24,853 - INFO - Raw vendor_infos: [{'created_at': '2024-11-21T21:50:34.917Z',
+  'id': 'G4TXBBU37DW3EVI2YW2LADFP',
+  'is_deleted': False,
+  'item_variation_vendor_info_data': {'item_variation_id': 'BCPC7A63KG62UAGTFL7YEAZ5',
+                                      'ordinal': 1,
+                                      'price_money': {'amount': 196,
+                                                      'currency': 'USD'},
+                                      'sku': 'FNF203',
+                                      'vendor_id': 'DTGL6YXYOJPKKUTN'},
+  'present_at_all_locations': False,
+  'present_at_location_ids': ['448A77JK746T5',
+                              '4F46AFWP3V20Y',
+                              'G0EB635EZRSSE',
+                              'L9SCBMT0EXG7X',
+                              'LAMAV4FTTT56M',
+                              'LC9M31PCTTG60',
+                              'LP4RSF3PSKRPC'],
+  'type': 'ITEM_VARIATION_VENDOR_INFO',
+  'updated_at': '2024-11-21T21:50:34.51Z',
+  'version': 1732225834510}]
+2024-11-24 23:12:24,853 - INFO -   SKU: 514677602035
+2024-11-24 23:12:24,853 - INFO -   Vendor ID: DTGL6YXYOJPKKUTN
+2024-11-24 23:12:24,853 - INFO -   Vendor Name: Winco

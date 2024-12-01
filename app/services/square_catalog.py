@@ -1,34 +1,11 @@
-import os
-from dotenv import load_dotenv
-from square.client import Client
-import logging
-from pprint import pformat
-
-# Load environment variables
-load_dotenv()
-
-# Set up logging specifically for square_catalog
-logger = logging.getLogger('square_catalog')
-logger.setLevel(logging.INFO)
-logger.handlers = []  # Clear any existing handlers
-
-# Create handlers
-file_handler = logging.FileHandler('square_catalog.log', mode='w')
-console_handler = logging.StreamHandler()
-
-# Create formatters and add it to handlers
-log_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-file_handler.setFormatter(log_format)
-console_handler.setFormatter(log_format)
-
-# Add handlers to the logger
-logger.addHandler(file_handler)
-logger.addHandler(console_handler)
+from app.core.config import settings
+from app.utils.logger import setup_logger
+from app.config import vendor_directories  # New import for yaml config
 
 class SquareCatalog:
     def __init__(self):
         self.client = Client(
-            access_token=os.getenv('SQUARE_ACCESS_TOKEN'),
+            access_token=settings.SQUARE_ACCESS_TOKEN,
             environment='production'
         )
         # Get vendor mapping on initialization
@@ -76,7 +53,7 @@ class SquareCatalog:
             return {}
         
     def get_items_without_images(self):
-        """Fetch catalog items that need images (either item-level or variation-level)"""
+        """Fetch catalog items that need images"""
         try:
             items_needing_images = []
             cursor = None
@@ -169,14 +146,15 @@ class SquareCatalog:
                         # Only add item if it needs a primary image AND has variations needing images
                         if needs_primary_image and item_data_formatted['item_data']['variations']:
                             items_needing_images.append(item_data_formatted)
-                            logger.info(f"\nFound item with image needs: {item_data.get('name')}")
-                            logger.info(f"  Needs primary image: {needs_primary_image}")
-                            logger.info(f"  Variations needing images: {len(item_data_formatted['item_data']['variations'])}")
+                            item_name = item_data.get('name')
                             
-                            # Log vendor info for debugging
+                            # Log item details with all its variations
+                            logger.info(f"\nItem: {item_name}")
+                            logger.info(f"  Needs primary image: {needs_primary_image}")
+                            logger.info(f"  Total variations: {len(item_data_formatted['item_data']['variations'])}")
+                            logger.info("  Variations:")
                             for var in item_data_formatted['item_data']['variations']:
-                                logger.info(f"  Variation: {var['name']} -> Vendor: {var['vendor_name']}")
-                                logger.info(f"    Needs image: {var['needs_image']}")
+                                logger.info(f"    - {var['name']} ({var['vendor_name']})")
                     
                     cursor = result.body.get('cursor')
                     if not cursor:
@@ -184,6 +162,42 @@ class SquareCatalog:
                 else:
                     logger.error(f"Error fetching catalog: {result.errors}")
                     break
+            
+            # Summary section grouped by vendor
+            if items_needing_images:
+                logger.info("\n=== Summary by Vendor ===")
+                vendor_stats = {}
+                
+                # Collect stats by vendor
+                for item in items_needing_images:
+                    for var in item['item_data']['variations']:
+                        vendor = var['vendor_name']
+                        if vendor not in vendor_stats:
+                            vendor_stats[vendor] = {
+                                'items': set(),
+                                'variation_count': 0
+                            }
+                        vendor_stats[vendor]['items'].add(item['item_data']['name'])
+                        vendor_stats[vendor]['variation_count'] += 1
+                
+                # Log vendor summaries
+                total_items = 0
+                total_variations = 0
+                
+                for vendor, stats in sorted(vendor_stats.items()):
+                    num_items = len(stats['items'])
+                    num_variations = stats['variation_count']
+                    total_items += num_items
+                    total_variations += num_variations
+                    
+                    logger.info(f"\n{vendor}:")
+                    logger.info(f"  Items needing images: {num_items}")
+                    logger.info(f"  Variations needing images: {num_variations}")
+                
+                # Overall totals
+                logger.info("\n=== Overall Totals ===")
+                logger.info(f"Total unique items needing images: {total_items}")
+                logger.info(f"Total variations needing images: {total_variations}")
             
             logger.info(f"\nFound total of {len(items_needing_images)} items needing images")
             return items_needing_images

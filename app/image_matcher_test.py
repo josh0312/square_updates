@@ -1,5 +1,5 @@
 import os
-from image_matcher import ImageMatcher
+from app.services.image_matcher import ImageMatcher
 import logging
 from dotenv import load_dotenv
 from square.client import Client

@@ -418,32 +418,13 @@ class ImageMatcher:
                     
                 logger.info(f"Upload successful! Image ID: {image_id}")
                 
-                # Try to associate with variations, but don't fail if it doesn't work
-                if variation_ids:
-                    for var_id in variation_ids:
-                        try:
-                            update_request = {
-                                "idempotency_key": f"update_{image_id}_{var_id}_{int(time.time())}",
-                                "object": {
-                                    "type": "ITEM_VARIATION",
-                                    "id": var_id,
-                                    "item_variation_data": {
-                                        "image_ids": [image_id]
-                                    }
-                                }
-                            }
-                            
-                            update_result = self.catalog_api.upsert_catalog_object(
-                                body=update_request
-                            )
-                            
-                            if not update_result.is_success():
-                                logger.warning(f"Failed to associate image with variation {var_id}")
-                                logger.warning(f"Error: {update_result.errors}")
-                        except Exception as e:
-                            logger.warning(f"Error associating image with variation {var_id}: {str(e)}")
+                # Try to associate with variation
+                if variation_id:
+                    success = self._associate_image_with_variation(image_id, variation_id)
+                    if not success:
+                        logger.warning(f"Failed to associate image with variation {variation_id}")
+                        # Continue since the image was uploaded successfully
                 
-                # Return success since the image was uploaded to the parent item
                 return image_id
                 
             else:
@@ -464,23 +445,46 @@ class ImageMatcher:
     def _associate_image_with_variation(self, image_id, variation_id):
         """Associate an uploaded image with a catalog item variation."""
         try:
-            result = self.catalog_api.update_catalog_image(
-                body={
-                    "idempotency_key": f"associate_{image_id}_{variation_id}",
-                    "image": {
-                        "id": image_id,
-                        "item_variation_ids": [variation_id]
-                    }
-                }
+            # First get the variation to ensure it exists and has an item_id
+            variation_result = self.catalog_api.retrieve_catalog_object(
+                object_id=variation_id
             )
             
-            if result.is_success():
+            if not variation_result.is_success():
+                logger.error(f"Failed to retrieve variation {variation_id}")
+                return False
+            
+            # Get the item_id from the variation
+            item_id = variation_result.body['object']['item_variation_data']['item_id']
+            
+            # Update the variation with the image
+            update_request = {
+                "idempotency_key": f"update_{image_id}_{variation_id}_{int(time.time())}",
+                "object": {
+                    "type": "ITEM_VARIATION",
+                    "id": variation_id,
+                    "version": variation_result.body['object']['version'],  # Include version
+                    "item_variation_data": {
+                        "item_id": item_id,  # Include item_id
+                        "image_ids": [image_id]
+                    }
+                }
+            }
+            
+            update_result = self.catalog_api.upsert_catalog_object(
+                body=update_request
+            )
+            
+            if update_result.is_success():
                 logger.info(f"Successfully associated image {image_id} with variation {variation_id}")
+                return True
             else:
-                logger.error(f"Failed to associate image: {result.errors}")
+                logger.error(f"Failed to associate image: {update_result.errors}")
+                return False
                 
         except Exception as e:
             logger.error(f"Error associating image: {str(e)}")
+            return False
     
     def process_matches(self, matches):
         """Process matches and upload images to Square."""

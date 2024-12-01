@@ -12,8 +12,9 @@ def setup_logger(name):
     Returns:
         logging.Logger: Configured logger instance
     """
-    # Create logs directory if it doesn't exist
-    os.makedirs('logs', exist_ok=True)
+    # Create logs directory relative to the current file
+    logs_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
+    os.makedirs(logs_dir, exist_ok=True)
     
     # Get logger
     logger = logging.getLogger(name)
@@ -31,7 +32,7 @@ def setup_logger(name):
         )
         
         # File handler
-        file_handler = logging.FileHandler('logs/scraper.log')
+        file_handler = logging.FileHandler(os.path.join(logs_dir, f'{name}.log'))
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(file_formatter)
         

@@ -25431,3 +25431,46 @@ Final Summary:
 2024-11-26 16:29:10,870 - INFO - Existing images found: 389
 2024-11-26 16:29:10,870 - INFO - New images downloaded: 147
 2024-11-26 16:29:10,870 - INFO - Total images in directory: 536
+2024-12-01 12:17:25,414 - INFO - Starting scraper...
+2024-12-01 12:17:25,418 - INFO - 
+Attempting to scrape Red Rhino Fireworks...
+2024-12-01 12:17:27,990 - INFO - Using limit: unlimited
+2024-12-01 12:17:27,990 - INFO - Processing URL: https://www.redrhinofireworks.com/firework-brands/red-rhino/
+2024-12-01 12:17:28,002 - INFO - Found 536 existing images in directory
+2024-12-01 12:17:28,003 - INFO - 
+Processing page 1...
+2024-12-01 12:17:29,151 - INFO - Using Red Rhino specific approach...
+2024-12-01 12:17:29,153 - INFO - Found 16 unique product links
+2024-12-01 12:17:29,153 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/stone-breaker/
+2024-12-01 12:17:29,691 - INFO - Found product: Stone Breaker
+2024-12-01 12:17:29,694 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301380-Stone-Breaker-1024x949.png.webp
+2024-12-01 12:17:29,694 - INFO - 
+📦 Found product: Stone Breaker
+2024-12-01 12:17:29,701 - INFO - ⏩ Image already exists: 6301380-Stone-Breaker.png
+2024-12-01 12:17:29,701 - INFO - 📋 Metadata found:
+2024-12-01 12:17:29,701 - INFO -   - site_name: Red Rhino Fireworks
+2024-12-01 12:17:29,702 - INFO -   - product_name: Stone Breaker
+2024-12-01 12:17:29,702 - INFO -   - sku: 6301380
+2024-12-01 12:17:29,702 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-12-01 12:17:29,702 - INFO -   - effects: None
+2024-12-01 12:17:29,702 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/stone-breaker/
+2024-12-01 12:17:29,702 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301380-Stone-Breaker-1024x949.png.webp
+2024-12-01 12:17:29,702 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301380-Stone-Breaker.png
+2024-12-01 12:17:29,711 - INFO - ⏩ No database updates needed for: Stone Breaker
+2024-12-01 12:17:30,716 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/future-all-american/
+2024-12-01 12:17:31,243 - INFO - Found product: Future All American
+2024-12-01 12:17:31,246 - INFO - Found valid product image URL: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301372-Future-All-American-989x1024.png.webp
+2024-12-01 12:17:31,246 - INFO - 
+📦 Found product: Future All American
+2024-12-01 12:17:31,252 - INFO - ⏩ Image already exists: 6301372-Future-All-American.png
+2024-12-01 12:17:31,252 - INFO - 📋 Metadata found:
+2024-12-01 12:17:31,252 - INFO -   - site_name: Red Rhino Fireworks
+2024-12-01 12:17:31,252 - INFO -   - product_name: Future All American
+2024-12-01 12:17:31,252 - INFO -   - sku: 6301372
+2024-12-01 12:17:31,252 - INFO -   - description: Toll Free(866) 457-4466Local(417) 782-2977Send a Messageinfo@redrhinofireworks.com
+2024-12-01 12:17:31,253 - INFO -   - effects: None
+2024-12-01 12:17:31,253 - INFO -   - product_url: https://www.redrhinofireworks.com/firework/future-all-american/
+2024-12-01 12:17:31,253 - INFO -   - image_url: https://www.redrhinofireworks.com/wp-content/uploads/2024/11/6301372-Future-All-American-989x1024.png.webp
+2024-12-01 12:17:31,253 - INFO -   - local_image_path: /Users/joshgoble/Downloads/firework_pics/redrhinofireworks.com/6301372-Future-All-American.png
+2024-12-01 12:17:31,254 - INFO - ⏩ No database updates needed for: Future All American
+2024-12-01 12:17:32,255 - INFO - Fetching product page: https://www.redrhinofireworks.com/firework/flying-firecrackers/

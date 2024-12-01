@@ -1,0 +1,53 @@
+2024-11-25 20:55:00,877 - INFO - === Starting Winco Scraper Test ===
+2024-11-25 20:55:00,878 - INFO - Test URL: https://www.wincofireworks.com/fireworks/
+2024-11-25 20:55:01,149 - INFO - 
+Page 1 status code: 200
+2024-11-25 20:55:01,194 - INFO - Found 40 products on page 1
+2024-11-25 20:55:01,194 - INFO - 
+Product 1 details (Page 1):
+2024-11-25 20:55:01,194 - INFO - Name: #3 Assortment
+2024-11-25 20:55:01,194 - INFO - URL: https://www.wincofireworks.com/product/3-assortment/
+2024-11-25 20:55:01,194 - INFO - 
+Product 2 details (Page 1):
+2024-11-25 20:55:01,194 - INFO - Name: #3 Solar Wave Cone
+2024-11-25 20:55:01,195 - INFO - URL: https://www.wincofireworks.com/product/3-solar-wave-cone/
+2024-11-25 20:55:01,195 - INFO - 
+Product 3 details (Page 1):
+2024-11-25 20:55:01,195 - INFO - Name: #4 Turbo Flash Cone
+2024-11-25 20:55:01,195 - INFO - URL: https://www.wincofireworks.com/product/4-turbo-flash-cone/
+2024-11-25 20:55:01,196 - INFO - Moving to page 2
+2024-11-25 20:55:03,465 - INFO - 
+Page 2 status code: 200
+2024-11-25 20:55:03,490 - INFO - Found 40 products on page 2
+2024-11-25 20:55:03,491 - INFO - 
+Product 1 details (Page 2):
+2024-11-25 20:55:03,491 - INFO - Name: 36 Shot Happy
+2024-11-25 20:55:03,491 - INFO - URL: https://www.wincofireworks.com/product/36-shot-happy-2/
+2024-11-25 20:55:03,491 - INFO - 
+Product 2 details (Page 2):
+2024-11-25 20:55:03,491 - INFO - Name: 36″ Morning Glory
+2024-11-25 20:55:03,491 - INFO - URL: https://www.wincofireworks.com/product/36-morning-glory/
+2024-11-25 20:55:03,491 - INFO - 
+Product 3 details (Page 2):
+2024-11-25 20:55:03,491 - INFO - Name: 36″ Morning Glory
+2024-11-25 20:55:03,491 - INFO - URL: https://www.wincofireworks.com/product/36-inch-morning-glory/
+2024-11-25 20:55:03,492 - INFO - Moving to page 3
+2024-11-25 20:55:05,762 - INFO - 
+Page 3 status code: 200
+2024-11-25 20:55:05,797 - INFO - Found 40 products on page 3
+2024-11-25 20:55:05,797 - INFO - 
+Product 1 details (Page 3):
+2024-11-25 20:55:05,797 - INFO - Name: Allied Invasion
+2024-11-25 20:55:05,797 - INFO - URL: https://www.wincofireworks.com/product/allied-invasion/
+2024-11-25 20:55:05,797 - INFO - 
+Product 2 details (Page 3):
+2024-11-25 20:55:05,797 - INFO - Name: Amazing Ballet Mini
+2024-11-25 20:55:05,797 - INFO - URL: https://www.wincofireworks.com/product/amazing-ballet-mini/
+2024-11-25 20:55:05,797 - INFO - 
+Product 3 details (Page 3):
+2024-11-25 20:55:05,797 - INFO - Name: American Chief
+2024-11-25 20:55:05,797 - INFO - URL: https://www.wincofireworks.com/product/american-chief/
+2024-11-25 20:55:05,799 - INFO - Moving to page 4
+2024-11-25 20:55:07,804 - INFO - 
+Test completed successfully
+2024-11-25 20:55:07,805 - INFO - Total pages processed: 4

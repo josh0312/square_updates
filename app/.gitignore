@@ -23,5 +23,8 @@ var/
 *.egg
 
 # Logs
-*.log
-logs/ 
+logs/*
+!logs/.gitkeep
+
+# Test files
+.pytest_cache/

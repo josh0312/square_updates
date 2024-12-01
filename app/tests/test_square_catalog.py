@@ -1,0 +1,1 @@
+from app.services.square_catalog import SquareCatalog 

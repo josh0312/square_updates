@@ -1,0 +1,344 @@
+2024-11-25 00:19:52,930 - INFO - === Starting Specific Item Test ===
+2024-11-25 00:19:52,930 - INFO - Square Environment: production
+2024-11-25 00:19:52,930 - INFO - Access Token Present: Yes
+2024-11-25 00:19:52,930 - INFO - Looking for item: Artillery Shells - Assorted Color from any vendor
+2024-11-25 00:20:11,674 - INFO - 
+All available matches:
+2024-11-25 00:20:11,675 - INFO - Item: Neon Nights | Vendor: Winco
+2024-11-25 00:20:11,675 - INFO - Item: Blown Away | Vendor: Red Rhino
+2024-11-25 00:20:11,675 - INFO - Item: Fountastic | Vendor: Winco
+2024-11-25 00:20:11,675 - INFO - Item: Rifle | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Tres Amigos | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Tres Amigos | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Tres Amigos | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: 5" Canister - 12pk | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: America | Vendor: Jakes
+2024-11-25 00:20:11,676 - INFO - Item: The Reaper | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Ammo Crate | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Evil Temptation | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Strobing Willow 25's | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Killer Value | Vendor: Jakes
+2024-11-25 00:20:11,676 - INFO - Item: Frog | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Viper Strike | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Magnum Tremors | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Smoke Balls | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Smoke Balls | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Smoke Balls | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Backstreet Diva | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Intertwined | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Boss Frog | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Pound Rocket | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: 20 Alarm Fire | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Wheel in the Sky | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Neon Diablo - 6pk | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Echos Of Eternity | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Hazmat | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Holy Nishiki | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Holy Nishiki | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Raging Willow | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Semi-Auto | Vendor: Red Rhino
+2024-11-25 00:20:11,676 - INFO - Item: Breakthrough 17'S | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: High Def | Vendor: Jakes
+2024-11-25 00:20:11,676 - INFO - Item: America First | Vendor: Raccoon
+2024-11-25 00:20:11,676 - INFO - Item: Snakes | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Diamonds in the Sky | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Galaxy Pack | Vendor: Winco
+2024-11-25 00:20:11,676 - INFO - Item: Neon Web | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Cosmic Titan | Vendor: Red Rhino
+2024-11-25 00:20:11,677 - INFO - Item: Neon Boom | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Bitter Heat | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Shaken Not Stirred | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Big Man | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: Ghostacular | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Ammo Box | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Obsidian Throne | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Razor Lights | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Snakes | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: Sir Lancelot | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Frog Prince | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Excellent Bag | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: Redline | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Jungle Cat | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: 10 Ball - Color Pearls | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: 10 Ball - Color Pearls | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: BC Jet 9s | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: 5 Ball Candle | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: Pinnacle | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Endless Summer | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Black Angel | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: The Hulk Clap | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Join Us For BBQ | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: United States | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: I Want You | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Magic Crystal | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Magic Crystal | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: The Next Big Thing | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Smoke & Mirrors | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: Nishiki Blast - 6pk | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Colorful Whirlwind | Vendor: Raccoon
+2024-11-25 00:20:11,677 - INFO - Item: Psychedelic | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Hit The Road Jack | Vendor: Winco
+2024-11-25 00:20:11,677 - INFO - Item: Toxic | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Toxic | Vendor: Jakes
+2024-11-25 00:20:11,677 - INFO - Item: Parrots Prattle | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Loud and Proud | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Princess | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Dreams from Heaven | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Wine O’clock | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Koi Fish | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Cluster Bomb | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: 10 Ball - Assorted Effects | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: 10 Ball - Assorted Effects | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Double Day Parachute | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Skeleton Crew | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Peace Out | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: What a Girl Wants | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Raccoon Swoon | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Smoke Grenade | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Conspiracy Theory | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Neon Swimming Stars | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: King Dragon | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: King Dragon | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Welcome to the Jungle | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Mini Waffle Cone | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Mini Waffle Cone | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Mini Waffle Cone | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Mini Waffle Cone | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Morning Glory 36" | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Koto Collection | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Mess with the Bull, Get the Horns | Vendor: Jakes
+2024-11-25 00:20:11,678 - INFO - Item: Pastel Sunset | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Mother of all Fireworks | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Joker 20's | Vendor: Raccoon
+2024-11-25 00:20:11,678 - INFO - Item: Camo Smoke | Vendor: Winco
+2024-11-25 00:20:11,678 - INFO - Item: Camo Smoke | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Made To Explode | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Milk & Honey | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Dance in the Rain | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: 1000 Gram Display | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Gatling Pack | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Candle Bomb | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Dirt Bomb | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Star Racer | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: Hyped Up | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: Night Display | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Patriotic Waves | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Patriotic Waves | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Champagne Popper | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Gold Sparkler 14" | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Dang It Carl! | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: Great Night Extravaganza | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Slingshot | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: Hard Hitter | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: The Godfather | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Carnage | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: Protect / Serve | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Protect / Serve | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Sniper Fire | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Excalibur | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: American Trucker | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Fist Bump | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Biker's Pride | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Silver Sticks | Vendor: Red Rhino
+2024-11-25 00:20:11,679 - INFO - Item: #36 Sparkler | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Mischievous | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Pop Snappers | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Independence Day | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Independence Day | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Party Pack #3 | Vendor: Winco
+2024-11-25 00:20:11,679 - INFO - Item: Heavy Duty | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: Alien | Vendor: Jakes
+2024-11-25 00:20:11,679 - INFO - Item: A Million Roses | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Perfect Match | Vendor: Raccoon
+2024-11-25 00:20:11,679 - INFO - Item: Birthday Blitz | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: #20 Sparkler | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Made in America | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Lady Bug | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Morning Glory 14" | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Haunted Raccoon Dreams | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: USA! USA! | Vendor: Red Rhino
+2024-11-25 00:20:11,680 - INFO - Item: Saber Tooth | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Victory Sword | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Single Day Parachute | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Single Day Parachute | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Futurama | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Crackling Ball | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Crackling Ball | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Loud, Proud and Punk | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Neon Skies | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Sinister | Vendor: Red Rhino
+2024-11-25 00:20:11,680 - INFO - Item: Frosty Mug | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Wild Hunger | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Fat & Sassy | Vendor: Red Rhino
+2024-11-25 00:20:11,680 - INFO - Item: Killer Willow | Vendor: Red Rhino
+2024-11-25 00:20:11,680 - INFO - Item: Revolution Now | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Crossfire | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Color War | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Super Beast | Vendor: Red Rhino
+2024-11-25 00:20:11,680 - INFO - Item: Black Mamba | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Aggression 25's | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Poop | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: Hi-Tech Warfare | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Eagle Pride | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Professional Grade | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Pooping Elephant | Vendor: Winco
+2024-11-25 00:20:11,680 - INFO - Item: One Bad Granny | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Scorpion King | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Fighting Machine | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Battle Cry | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Iron Wolf | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: 9 MM | Vendor: Jakes
+2024-11-25 00:20:11,680 - INFO - Item: Earth Shaker | Vendor: Raccoon
+2024-11-25 00:20:11,680 - INFO - Item: Neon Jellyfish | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: THAAD | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Gold Vein | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Dirty Little Secret | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Attack! | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Raccoon Squad | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Arms Depot | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Willow Combustion | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Firefly Fantasy | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Planet Candle | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Color Rage | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Evil Clown | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Firefly | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Combat Zone | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Super Magnum with Tail | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Inked | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Reaper Smoke | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: High Falutin | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Best of Breed | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Out With A Bang | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Ghost Dragon | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Shark Attack | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Birds of Paradise | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Stealth Bomber | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Gunfighter from Hell | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Venom | Vendor: Red Rhino
+2024-11-25 00:20:11,681 - INFO - Item: Tiger | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Attack Zone | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Bug Zapper | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Yikes | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Galactic Empire | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Drone Attack | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Land That I Love | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Bootleggers dream | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Premium Candle Assortment | Vendor: Winco
+2024-11-25 00:20:11,681 - INFO - Item: Believe | Vendor: Jakes
+2024-11-25 00:20:11,681 - INFO - Item: Wicked Craving 25'S | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Nuclear Snaps | Vendor: Raccoon
+2024-11-25 00:20:11,681 - INFO - Item: Nuclear Snaps | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Smooth Criminal | Vendor: Red Rhino
+2024-11-25 00:20:11,682 - INFO - Item: Let Freedom Ring | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Let Freedom Ring | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Tasmanian Devils | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Neon Camo Smoke | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Neon Camo Smoke | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Neon Camo Smoke | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Neon Camo Smoke | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Mammoth Parachute | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Sucker Punch | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Outlaw | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Ring of Honor 6'S | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Cracker Bomb - Single | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Jet Fire | Vendor: Red Rhino
+2024-11-25 00:20:11,682 - INFO - Item: Bumpin Trumpin 42'S | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Growler | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: America's Candle | Vendor: Red Rhino
+2024-11-25 00:20:11,682 - INFO - Item: Pyro Vault | Vendor: Red Rhino
+2024-11-25 00:20:11,682 - INFO - Item: One Bad Mother | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Mutant strain | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: 10 Ball - With Bang | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Gold Sparkler 10" | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Instigator | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Single Night Parachute | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Single Night Parachute | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Single Night Parachute | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Single Night Parachute | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Ghost Killer | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Til Death Do We Part | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Willow Explosion | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Fluorescent Sparklers | Vendor: Jakes
+2024-11-25 00:20:11,682 - INFO - Item: Treasure Chest | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Little Big Show | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Splendid Shell | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Purely American | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Little Dynamite | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: Backyard Celebration | Vendor: Raccoon
+2024-11-25 00:20:11,682 - INFO - Item: Fireworks Fiesta | Vendor: Winco
+2024-11-25 00:20:11,682 - INFO - Item: King Arthur | Vendor: Jakes
+2024-11-25 00:20:11,683 - INFO - Item: Emoji Smiley | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Never Quit | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Dual Exhaust | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Adult Snappers | Vendor: Jakes
+2024-11-25 00:20:11,683 - INFO - Item: Star Chaser | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Laser Chaser | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Slammer Shells | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Bull Run | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Tower of Power | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Blonde Joke | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Hog Wild Pyro | Vendor: Red Rhino
+2024-11-25 00:20:11,683 - INFO - Item: The Dude | Vendor: Red Rhino
+2024-11-25 00:20:11,683 - INFO - Item: Ant Chant | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Princess Sword | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Princess Sword | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Americana | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Freedom Rider | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: 10 Ball - Pearls with Bang | Vendor: Jakes
+2024-11-25 00:20:11,683 - INFO - Item: Flower | Vendor: Red Rhino
+2024-11-25 00:20:11,683 - INFO - Item: Fun Pack | Vendor: Jakes
+2024-11-25 00:20:11,683 - INFO - Item: Big Color 9's | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Major Mojo | Vendor: Jakes
+2024-11-25 00:20:11,683 - INFO - Item: Break the Rules | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Air Bomb | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Return to Roswell | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Baby Dino | Vendor: Jakes
+2024-11-25 00:20:11,683 - INFO - Item: Meteor Shower | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Gold Rush | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Bang Bros. | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Spartan | Vendor: Red Rhino
+2024-11-25 00:20:11,683 - INFO - Item: Double Thump | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: State of the Union | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Uncle Sam | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: The Patriot | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Neon Sparkler | Vendor: Winco
+2024-11-25 00:20:11,683 - INFO - Item: Supernova | Vendor: Raccoon
+2024-11-25 00:20:11,683 - INFO - Item: Ordinance Disposal | Vendor: Red Rhino
+2024-11-25 00:20:11,683 - INFO - Item: Energizer | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Tiger Force | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Death Rider | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Into the Clouds | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Cracker Bomb | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Purple Dragon | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Scarface | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Color Storm 19's | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Hammer Time | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Chicken Blowing Balloon | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Peacock Spider | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Wicked Ways | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Seal Team | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: What Boys Are Made Of | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Rainbow Ghost | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Neon Blaster | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Jumping Jacks (2 For $1) | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Tank Girl | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Excalibur - Platinum | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Texas Bandit | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Flash Bang | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Brute Force | Vendor: Red Rhino
+2024-11-25 00:20:11,684 - INFO - Item: Texas Bandit Rocket | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Texas Bandit Rocket | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Night Graffiti | Vendor: Red Rhino
+2024-11-25 00:20:11,684 - INFO - Item: Golden Peacock | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Wild Hunt | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Neon Diablo - 24pk | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Sudden Crisis | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Cool Game | Vendor: Raccoon
+2024-11-25 00:20:11,684 - INFO - Item: Laying Down the Law | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Den of Snakes | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: FTN DEW | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Parachute Battalion | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Stars & Stripes | Vendor: Jakes
+2024-11-25 00:20:11,684 - INFO - Item: Saturday Night Special | Vendor: Winco
+2024-11-25 00:20:11,684 - INFO - Item: Country Boy | Vendor: Jakes
+2024-11-25 00:20:11,684 - ERROR - No items found containing 'Artillery Shells - Assorted Color'

@@ -12,6 +12,7 @@ import aiohttp
 from aiohttp import ClientSession
 from cachetools import TTLCache
 from ratelimit import limits, sleep_and_retry
+from app.config import websites, vendor_directories
 
 # Add logging configuration at the top of the file after imports
 def setup_logging():
@@ -55,17 +56,8 @@ def get_cached_page(url, headers):
     return response.text
 
 def load_websites():
-    """Load website configurations from yaml file"""
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(script_dir, 'websites.yaml')
-    
-    try:
-        with open(config_path, 'r') as file:
-            config = yaml.safe_load(file)
-            return config.get('websites', [])
-    except Exception as e:
-        print(f"Error loading websites.yaml: {str(e)}")
-        return []
+    """Load website configurations"""
+    return websites.get('websites', [])
 
 async def download_image(session, url, filepath, headers):
     try:
