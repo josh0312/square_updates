@@ -252,17 +252,50 @@ class ImageMatcher:
             logger.info(f"\nTrying to match by Square SKU: {sku}")
             for image_file in image_files:
                 base_name = os.path.splitext(image_file)[0].lower()
-                if sku.lower() in base_name:
-                    logger.info(f"Found Square SKU match: {image_file}")
+                logger.info(f"  Checking against: {base_name}")
+                
+                # Try exact match first
+                if sku.lower() == base_name:
+                    logger.info(f"  Found exact Square SKU match: {image_file}")
                     return image_file, 100
+                    
+                # Then try as part of filename
+                if sku.lower() in base_name:
+                    # Make sure it's a word boundary
+                    sku_pattern = rf'\b{re.escape(sku.lower())}\b'
+                    if re.search(sku_pattern, base_name):
+                        logger.info(f"  Found Square SKU in filename: {image_file}")
+                        return image_file, 100
+                    else:
+                        logger.debug(f"  SKU found but not at word boundary: {base_name}")
         
         # Then try to match by vendor SKU
         if vendor_sku:
             logger.info(f"\nTrying to match by Vendor SKU: {vendor_sku}")
             for image_file in image_files:
                 base_name = os.path.splitext(image_file)[0].lower()
+                logger.info(f"  Checking against: {base_name}")
+                
+                # Try exact match first
+                if vendor_sku.lower() == base_name:
+                    logger.info(f"  Found exact Vendor SKU match: {image_file}")
+                    return image_file, 100
+                
+                # Then try as part of filename
                 if vendor_sku.lower() in base_name:
-                    logger.info(f"Found Vendor SKU match: {image_file}")
+                    # Make sure it's a word boundary
+                    sku_pattern = rf'\b{re.escape(vendor_sku.lower())}\b'
+                    if re.search(sku_pattern, base_name):
+                        logger.info(f"  Found Vendor SKU in filename: {image_file}")
+                        return image_file, 100
+                    else:
+                        logger.debug(f"  Vendor SKU found but not at word boundary: {base_name}")
+                
+                # Try without special characters
+                clean_sku = re.sub(r'[^a-zA-Z0-9]', '', vendor_sku.lower())
+                clean_name = re.sub(r'[^a-zA-Z0-9]', '', base_name)
+                if clean_sku and clean_sku in clean_name:
+                    logger.info(f"  Found Vendor SKU (cleaned) in filename: {image_file}")
                     return image_file, 100
         
         # Finally, fall back to name matching
@@ -326,70 +359,71 @@ class ImageMatcher:
     def find_matches(self):
         """Find matches for all items without images"""
         items = self.square.get_items_without_images()
+        
+        # Add debug logging for received data
+        logger.info("\n=== Received Data from Square Catalog ===")
+        logger.info(f"Number of items: {len(items)}")
+        
         matches = []
         
         if not items:
-            logger.error("No items found in Square catalog")
+            logger.info("No items found needing images")
             return []
         
         for item in items:
-            item_name = item['item_data']['name']
-            variations = item['item_data']['variations']
-            needs_primary = item['item_data']['needs_primary_image']
+            item_name = item['name']
+            logger.debug(f"\nProcessing Square Item: '{item_name}'")
             
-            logger.info(f"\nProcessing Square Item: '{item_name}'")
-            logger.info(f"Needs primary image: {needs_primary}")
+            # Double check with Square API that this item still needs images
+            item_result = self.catalog_api.retrieve_catalog_object(
+                object_id=item['id']
+            )
             
-            # Check if item already has images
-            if 'image_ids' in item['item_data'] and item['item_data']['image_ids']:
-                logger.info("Item already has images - skipping")
+            if not item_result.is_success():
+                logger.error(f"Failed to verify item {item_name}")
+                continue
+                
+            item_data = item_result.body['object'].get('item_data', {})
+            if item_data.get('image_ids'):
+                logger.info(f"Skipping {item_name} - already has primary image")
                 continue
             
-            # Get all variations that need images
-            variations_needing_images = []
-            for var in variations:
-                var_name = var['name']
+            for var in item['variations']:
                 vendor_name = var['vendor_name']
-                needs_image = var.get('needs_image', False)
+                square_sku = var['square_sku']
+                vendor_sku = var['vendor_sku']
                 
-                # Get SKUs from the correct places
-                square_sku = var.get('item_variation_data', {}).get('sku')  # Get Square SKU
-                vendor_infos = var.get('item_variation_data', {}).get('item_variation_vendor_infos', [])
-                vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {}) if vendor_infos else {}
-                vendor_sku = vendor_info.get('sku')  # Get vendor SKU
+                # Double check variation still needs image
+                var_result = self.catalog_api.retrieve_catalog_object(
+                    object_id=var['id']
+                )
                 
-                logger.info(f"  Variation: '{var_name}'")
+                if not var_result.is_success():
+                    logger.error(f"Failed to verify variation {var['name']}")
+                    continue
+                    
+                var_data = var_result.body['object'].get('item_variation_data', {})
+                if var_data.get('image_ids'):
+                    logger.info(f"Skipping variation {var['name']} - already has images")
+                    continue
+                
+                logger.info(f"\nProcessing variation: {var['name']}")
                 logger.info(f"  Vendor: {vendor_name}")
                 logger.info(f"  Square SKU: {square_sku}")
                 logger.info(f"  Vendor SKU: {vendor_sku}")
-                logger.info(f"  Needs image: {needs_image}")
                 
-                variations_needing_images.append((var, square_sku, vendor_sku))
-            
-            # If no variations need images, skip this item
-            if not variations_needing_images:
-                logger.info("No variations need images - skipping item")
-                continue
-            
-            # Use first variation's vendor to find images
-            first_var, _, _ = variations_needing_images[0]
-            vendor_name = first_var['vendor_name']
-            vendor_dir = self.get_vendor_directory(vendor_name)
-            if not vendor_dir:
-                logger.warning(f"No directory mapping found for vendor: {vendor_name}")
-                continue
-            
-            logger.info(f"  Looking in directory: {vendor_dir}")
-            image_files = self.get_image_files(vendor_dir)
-            
-            # Find best match using item name and SKU
-            name_to_match = item_name
-            logger.info(f"  Using name for matching: '{name_to_match}'")
-            
-            for var, square_sku, vendor_sku in variations_needing_images:
+                # Focus on image matching
+                vendor_dir = self.get_vendor_directory(vendor_name)
+                if not vendor_dir:
+                    logger.warning(f"No directory mapping found for vendor: {vendor_name}")
+                    continue
+                
+                logger.info(f"  Looking in directory: {vendor_dir}")
+                image_files = self.get_image_files(vendor_dir)
+                
                 best_match, match_ratio = self.find_best_match(
-                    name_to_match, 
-                    image_files, 
+                    item_name,
+                    image_files,
                     sku=square_sku,
                     vendor_sku=vendor_sku
                 )
@@ -399,51 +433,56 @@ class ImageMatcher:
                         'item_name': item_name,
                         'variation_name': var['name'],
                         'variation_id': var['id'],
-                        'sku': var['sku'],
                         'vendor': vendor_name,
                         'image_file': best_match,
                         'image_path': os.path.join(self.base_dir, vendor_dir, best_match),
                         'match_ratio': match_ratio,
-                        'needs_primary': needs_primary
+                        'needs_primary': item['needs_primary_image']
                     }
                     matches.append(match_data)
                     logger.info(f"  Found match: {best_match} ({match_ratio}%)")
                 else:
-                    logger.warning(f"  No match found for: {name_to_match} (Vendor: {vendor_name})")
+                    logger.warning(f"  No match found for: {item_name} (Vendor: {vendor_name})")
         
         return matches
     
     def upload_image_to_square(self, image_path, variation_id, needs_primary=True):
         """Upload an image to Square and associate it with item/variations as needed."""
         try:
-            logger.info(f"Uploading image {image_path} for variation {variation_id}")
-            logger.info(f"Will set as primary: {needs_primary}")
-            
-            # First, get the item ID and all variation IDs from the variation
+            # First, get the variation to ensure it exists and get the item ID
             result = self.catalog_api.retrieve_catalog_object(
                 object_id=variation_id
             )
             
             if not result.is_success():
-                logger.error("Failed to get item ID from variation")
+                logger.error("Failed to get variation details")
                 return None
             
-            item_id = result.body['object']['item_variation_data']['item_id']
-            logger.info(f"Found parent item ID: {item_id}")
+            variation_data = result.body['object'].get('item_variation_data', {})
+            item_id = variation_data.get('item_id')
             
-            # Get all variations for this item
-            item_result = self.catalog_api.retrieve_catalog_object(
-                object_id=item_id
-            )
-            
-            if not item_result.is_success():
-                logger.error("Failed to get item details")
-                return None
-            
-            # Check if item already has images BEFORE proceeding
-            if item_result.body['object']['item_data'].get('image_ids'):
-                logger.info("Item already has images - skipping upload")
+            # Check if variation already has images
+            if variation_data.get('image_ids'):
+                logger.info(f"Variation {variation_id} already has images - skipping upload")
                 return "SKIPPED"
+            
+            # Get item details to check for primary image if needed
+            if needs_primary:
+                item_result = self.catalog_api.retrieve_catalog_object(
+                    object_id=item_id
+                )
+                
+                if not item_result.is_success():
+                    logger.error("Failed to get item details")
+                    return None
+                
+                if item_result.body['object']['item_data'].get('image_ids'):
+                    logger.info("Item already has primary image - skipping upload")
+                    return "SKIPPED"
+            
+            # If we get here, we need to upload the image
+            logger.info(f"Uploading image {image_path} for variation {variation_id}")
+            logger.info(f"Will set as primary: {needs_primary}")
             
             # Get file info
             image_file = Path(image_path)
@@ -452,32 +491,23 @@ class ImageMatcher:
             logger.info(f"File name: {file_name}")
             logger.info(f"File size: {image_file.stat().st_size} bytes")
             
-            variation_ids = [
-                var['id'] 
-                for var in item_result.body['object']['item_data']['variations']
-            ]
-            logger.info(f"Found variations: {variation_ids}")
-            
             # Create unique idempotency key
-            idempotency_key = f"test_upload_{int(time.time())}_{uuid.uuid4()}"
+            idempotency_key = f"upload_{variation_id}_{int(time.time())}"
             
-            # Create request for image upload
+            # Prepare upload request
             request = {
                 "idempotency_key": idempotency_key,
-                "object_id": item_id,
+                "object_id": item_id if needs_primary else None,
                 "image": {
                     "type": "IMAGE",
                     "id": "#TEMP_ID",
                     "image_data": {
                         "name": file_name,
-                        "caption": f"Image for item {item_id}",
+                        "caption": f"Image for {'item' if needs_primary else 'variation'} {item_id if needs_primary else variation_id}",
                         "is_primary": needs_primary
                     }
                 }
             }
-            
-            logger.info(f"Request data: {request}")
-            logger.info(f"Setting as {'primary' if needs_primary else 'additional'} image")
             
             # Upload the image
             with open(image_path, 'rb') as f:
@@ -492,22 +522,19 @@ class ImageMatcher:
             
             if result.is_success():
                 # Get the image ID
-                if 'image' in result.body:
-                    image_id = result.body['image']['id']
-                elif 'catalog_object' in result.body:
-                    image_id = result.body['catalog_object']['id']
-                else:
+                image_id = result.body.get('image', {}).get('id') or result.body.get('catalog_object', {}).get('id')
+                
+                if not image_id:
                     logger.error(f"Unexpected response structure: {result.body}")
                     return None
                     
                 logger.info(f"Upload successful! Image ID: {image_id}")
                 
-                # Try to associate with variation
-                if variation_id:
+                # Associate with variation if needed
+                if not needs_primary:
                     success = self._associate_image_with_variation(image_id, variation_id)
                     if not success:
                         logger.warning(f"Failed to associate image with variation {variation_id}")
-                        # Continue since the image was uploaded successfully
                 
                 return image_id
                 
@@ -529,7 +556,7 @@ class ImageMatcher:
     def _associate_image_with_variation(self, image_id, variation_id):
         """Associate an uploaded image with a catalog item variation."""
         try:
-            # First get the variation to ensure it exists and has an item_id
+            # First get the variation to ensure it exists and get its current data
             variation_result = self.catalog_api.retrieve_catalog_object(
                 object_id=variation_id
             )
@@ -538,20 +565,21 @@ class ImageMatcher:
                 logger.error(f"Failed to retrieve variation {variation_id}")
                 return False
             
-            # Get the item_id from the variation
-            item_id = variation_result.body['object']['item_variation_data']['item_id']
+            # Get the current variation data
+            current_variation = variation_result.body['object']
+            variation_data = current_variation['item_variation_data']
             
-            # Update the variation with the image
+            # Preserve all existing data and just add/update the image_ids
+            variation_data['image_ids'] = [image_id]
+            
+            # Update the variation with the image while preserving all other data
             update_request = {
                 "idempotency_key": f"update_{image_id}_{variation_id}_{int(time.time())}",
                 "object": {
                     "type": "ITEM_VARIATION",
                     "id": variation_id,
-                    "version": variation_result.body['object']['version'],  # Include version
-                    "item_variation_data": {
-                        "item_id": item_id,  # Include item_id
-                        "image_ids": [image_id]
-                    }
+                    "version": current_variation['version'],
+                    "item_variation_data": variation_data
                 }
             }
             
@@ -567,7 +595,7 @@ class ImageMatcher:
                 return False
                 
         except Exception as e:
-            logger.error(f"Error associating image: {str(e)}")
+            logger.error(f"Exception while associating image: {str(e)}")
             return False
     
     def process_matches(self, matches):
@@ -605,6 +633,31 @@ class ImageMatcher:
     def write_unmatched(self, unmatched_items):
         unmatched_log = paths.get_log_file('image_matcher_unmatched')
         # ... rest of the code ...
+    
+    def test_square_data(self):
+        """Test method to verify Square catalog data"""
+        logger.info("\n=== Testing Square Catalog Data ===")
+        
+        items = self.square.get_items_without_images()
+        
+        # Log overall statistics
+        logger.info(f"\nReceived {len(items)} items")
+        
+        # Count items by vendor
+        vendor_counts = {}
+        for item in items:
+            for var in item['variations']:
+                vendor = var['vendor_name']
+                vendor_counts[vendor] = vendor_counts.get(vendor, 0) + 1
+        
+        logger.info("\nItems by vendor:")
+        for vendor, count in vendor_counts.items():
+            logger.info(f"  {vendor}: {count} variations")
+        
+        # Sample the first few items
+        logger.info("\nSample of received data:")
+        for item in items[:3]:
+            logger.info(pformat(item))
 
 if __name__ == "__main__":
     # Verify paths first
@@ -613,9 +666,7 @@ if __name__ == "__main__":
         logger.error("Path verification failed!")
         sys.exit(1)
     
-    # Continue with existing code
     matcher = ImageMatcher()
-    
     logger.info("\n=== Starting Image Matcher ===")
     
     # Get all items needing images
@@ -625,10 +676,9 @@ if __name__ == "__main__":
     # Group items by vendor
     vendor_items = {}
     for item in catalog_items:
-        item_name = item['item_data']['name']
-        variations = item['item_data']['variations']
+        item_name = item['name']
         
-        for var in variations:
+        for var in item['variations']:
             vendor_name = var['vendor_name']
             if not vendor_name:
                 vendor_name = 'Unknown Vendor'
@@ -647,120 +697,24 @@ if __name__ == "__main__":
     
     logger.info(f"\n=== Processing {total_items} items ===")
     
-    # Track statistics
-    matched_items = set()
-    matched_variations = 0
-    total_variations = 0
-    unmatched_items = []
-    successful_uploads = 0
+    # Process matches
+    matches = matcher.find_matches()
     
-    # Process all items
-    matches = []
-    for item in catalog_items:
-        item_name = item['item_data']['name']
-        variations = item['item_data']['variations']
-        needs_primary = item['item_data']['needs_primary_image']
+    # Process uploads
+    if matches:
+        successful_uploads, failed_uploads = matcher.process_matches(matches)
         
-        logger.info(f"\nProcessing Square Item: '{item_name}'")
-        logger.info(f"Needs primary image: {needs_primary}")
+        # Write unmatched items
+        unmatched_items = [
+            {
+                'item_name': item['name'],
+                'variation_name': var['name'],
+                'vendor': var['vendor_name']
+            }
+            for item in catalog_items
+            for var in item['variations']
+            if not any(m['variation_id'] == var['id'] for m in matches)
+        ]
         
-        for var in variations:
-            total_variations += 1
-            var_name = var['name']
-            vendor_name = var['vendor_name']
-            
-            logger.info(f"  Variation: '{var_name}'")
-            logger.info(f"  Vendor: {vendor_name}")
-            logger.info(f"  Needs image: {var.get('needs_image', False)}")
-            
-            # Skip if variation doesn't need image
-            if not var.get('needs_image', False) and not needs_primary:
-                logger.info("  Skipping - no image needed")
-                continue
-            
-            vendor_dir = matcher.get_vendor_directory(vendor_name)
-            if not vendor_dir:
-                logger.warning(f"No directory mapping found for vendor: {vendor_name}")
-                continue
-            
-            logger.info(f"  Looking in directory: {vendor_dir}")
-            image_files = matcher.get_image_files(vendor_dir)
-            
-            # Use item name for matching, don't add variation name
-            name_to_match = item_name  # Just use the item name
-            logger.info(f"  Using name for matching: '{name_to_match}'")
-            
-            best_match, match_ratio = matcher.find_best_match(name_to_match, image_files)
-            
-            if best_match:
-                match_data = {
-                    'item_name': item_name,
-                    'variation_name': var_name,
-                    'variation_id': var['id'],
-                    'sku': var['sku'],
-                    'vendor': vendor_name,
-                    'image_file': best_match,
-                    'image_path': os.path.join(matcher.base_dir, vendor_dir, best_match),
-                    'match_ratio': match_ratio,
-                    'needs_primary': needs_primary
-                }
-                
-                # Try to upload immediately
-                image_id = matcher.upload_image_to_square(
-                    match_data['image_path'],
-                    match_data['variation_id'],
-                    needs_primary=needs_primary
-                )
-                
-                if image_id:
-                    successful_uploads += 1
-                    matches.append(match_data)
-                    logger.info(f"Successfully processed {successful_uploads} of unlimited")
-                    matched_items.add(item_name)
-                    matched_variations += 1
-                    # Clear needs_primary flag after successful primary upload
-                    if needs_primary:
-                        needs_primary = False
-                elif image_id == "SKIPPED":
-                    logger.info(f"Skipped upload for {name_to_match} - item already has images")
-                else:
-                    logger.error(f"Failed to upload image for {name_to_match}")
-            else:
-                logger.warning(f"  No match found for: {name_to_match} (Vendor: {vendor_name})")
-                unmatched_items.append({
-                    'item_name': item_name,
-                    'variation_name': var_name,
-                    'vendor': vendor_name
-                })
-    
-    # Log summary
-    logger.info("\n=== Summary ===")
-    logger.info(f"Total items processed: {total_items}")
-    logger.info(f"Total variations processed: {total_variations}")
-    logger.info(f"Successful uploads: {successful_uploads}")
-    logger.info(f"Items with at least one match: {len(matched_items)}")
-    logger.info(f"Total variations matched: {matched_variations}")
-    logger.info(f"Unmatched variations: {len(unmatched_items)}")
-    
-    # Add detailed successful uploads section
-    logger.info("\n=== Successfully Uploaded Images ===")
-    for match in matches:
-        logger.info(f"Item: {match['item_name']}")
-        logger.info(f"  Variation: {match['variation_name']}")
-        logger.info(f"  Vendor: {match['vendor']}")
-        logger.info(f"  Image: {match['image_file']}")
-        logger.info(f"  Match Score: {match['match_ratio']}%")
-        logger.info("-" * 50)
-    
-    # Write unmatched items to file in logs directory
-    unmatched_log_path = paths.get_log_file('image_matcher_unmatched')
-    logger.info(f"\nUnmatched items have been written to '{unmatched_log_path}'")
-    
-    # Write unmatched items to file
-    with open(unmatched_log_path, 'w') as f:
-        f.write(f"=== Unmatched Items - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n\n")
-        for item in unmatched_items:
-            f.write(f"Item Name: {item['item_name']}\n")
-            f.write(f"Variation: {item['variation_name']}\n")
-            f.write(f"Vendor: {item['vendor']}\n")
-            f.write("-" * 50 + "\n")
+        if unmatched_items:
+            matcher.write_unmatched(unmatched_items)

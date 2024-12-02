@@ -60,277 +60,502 @@ class SquareCatalog:
             logger.error(f"Error fetching vendors: {str(e)}")
             return {}
         
+    def verify_item_needs_images(self, item_id):
+        """Verify if an item needs images by checking directly with the API"""
+        result = self.client.catalog.retrieve_catalog_object(
+            object_id=item_id
+        )
+        if not result.is_success():
+            logger.error(f"Failed to verify item {item_id}")
+            return False, []
+            
+        item_data = result.body['object'].get('item_data', {})
+        needs_primary = not bool(item_data.get('image_ids'))
+        
+        # Get all variations in one batch request
+        variation_ids = [
+            var.get('id') for var in item_data.get('variations', [])
+            if var.get('id')
+        ]
+        
+        if not variation_ids:
+            return needs_primary, []
+            
+        # Batch request for all variations
+        batch_result = self.client.catalog.batch_retrieve_catalog_objects(
+            body={
+                "object_ids": variation_ids
+            }
+        )
+        
+        if not batch_result.is_success():
+            logger.error(f"Failed to fetch variations for item {item_id}")
+            return needs_primary, []
+            
+        variations_needing_images = []
+        for obj in batch_result.body.get('objects', []):
+            var_data = obj.get('item_variation_data', {})
+            if not var_data.get('image_ids'):
+                vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {}) if vendor_infos else {}
+                
+                variations_needing_images.append({
+                    'id': obj.get('id'),
+                    'name': var_data.get('name'),
+                    'square_sku': var_data.get('sku'),
+                    'vendor_sku': vendor_info.get('sku'),
+                    'vendor_name': self.vendor_map.get(vendor_info.get('vendor_id'), 'Unknown'),
+                    'needs_image': True
+                })
+        
+        return needs_primary, variations_needing_images
+
     def get_items_without_images(self):
         """Fetch catalog items that need images"""
         try:
-            logger.info("\n=== Starting Catalog Item Search ===")
-            items_needing_images = []
+            items = []
             cursor = None
+            total_processed = 0
+            batch_size = 100
+            
+            logger.info("\nFetching and analyzing items from Square...")
             
             while True:
                 body = {
                     "product_types": ["REGULAR"],
-                    "state_filters": {
-                        "states": ["ACTIVE"]  # Only active items
-                    }
+                    "state_filters": {"states": ["ACTIVE"]},
+                    "limit": batch_size,
+                    "include_related_objects": True,
+                    "include_deleted_objects": False
                 }
                 
                 if cursor:
                     body["cursor"] = cursor
                 
-                result = self.client.catalog.search_catalog_items(
-                    body=body
-                )
+                result = self.client.catalog.search_catalog_items(body=body)
                 
-                if result.is_success():
-                    for item in result.body.get('items', []):
-                        try:
-                            # Debug logging (commented out but preserved)
-                            # logger.info("\n=== Processing Item ===")
-                            # logger.info("Raw item data:")
-                            # logger.info(pformat(item))
-                            
-                            item_data = item.get('item_data', {})
-                            variations = item_data.get('variations', [])
-                            
-                            # Check if item needs a primary image
-                            item_image_ids = item_data.get('image_ids', [])
-                            needs_primary_image = len(item_image_ids) == 0
-                            logger.info(f"\nImage Status:")
-                            logger.info(f"  Has Primary Image: {not needs_primary_image}")
-                            if item_image_ids:
-                                logger.info(f"  Image IDs: {item_image_ids}")
-                            
-                            # Get item-level data
-                            item_gtin = item_data.get('gtin')
-                            item_name = item_data.get('name')
-                            item_sku = None
-                            item_vendor_name = 'Unknown'
-                            item_vendor_id = None
-                            item_vendor_sku = None
-                            
-                            # Get vendor info from first variation if it exists
-                            if variations:
-                                var_data = variations[0].get('item_variation_data', {})
-                                item_sku = var_data.get('sku')
-                                vendor_infos = var_data.get('item_variation_vendor_infos', [])
-                                if vendor_infos and vendor_infos[0].get('item_variation_vendor_info_data'):
-                                    vendor_info = vendor_infos[0]['item_variation_vendor_info_data']
-                                    item_vendor_id = vendor_info.get('vendor_id')
-                                    item_vendor_sku = vendor_info.get('sku')
-                                    item_vendor_name = self.vendor_map.get(item_vendor_id, 'Unknown')
-                            
-                            # Log item-level data
-                            logger.info(f"\nItem Details:")
-                            logger.info(f"  Name: {item_name}")
-                            logger.info(f"  GTIN: {item_gtin}")
-                            logger.info(f"  Square SKU: {item_sku}")
-                            logger.info(f"  Vendor ID: {item_vendor_id}")
-                            logger.info(f"  Vendor Name: {item_vendor_name}")
-                            logger.info(f"  Vendor SKU: {item_vendor_sku}")
-                            
-                            # Process variations
-                            logger.info(f"\nVariations ({len(variations)}):")
-                            
-                            # Check if we have any real variations (with IDs)
-                            real_variations = []
-                            for v in variations:
-                                if v and isinstance(v, dict) and v.get('id'):
-                                    real_variations.append(v)
-                                else:
-                                    logger.warning(f"Skipping invalid variation: {v}")
-                            
-                            logger.info(f"Found {len(real_variations)} real variations with IDs")
-                            
-                            if not real_variations:
-                                # Single item with no variations
-                                if needs_primary_image:
-                                    # Only process if it needs a primary image
-                                    variation_data = {
-                                        'id': None,
-                                        'name': item_name,
-                                        'sku': item_sku,
-                                        'gtin': item_gtin,
-                                        'vendor_name': item_vendor_name,
-                                        'vendor_id': item_vendor_id,
-                                        'vendor_sku': item_vendor_sku,
-                                        'needs_image': True  # Needs primary image
-                                    }
-                                    
-                                    items_needing_images.append({
-                                        'id': item.get('id'),
-                                        'type': item.get('type'),
-                                        'item_data': {
-                                            'name': item_name,
-                                            'gtin': item_gtin,
-                                            'sku': item_sku,
-                                            'vendor_name': item_vendor_name,
-                                            'vendor_id': item_vendor_id,
-                                            'vendor_sku': item_vendor_sku,
-                                            'needs_primary_image': True,
-                                            'variations': [variation_data]
-                                        }
-                                    })
-                            else:
-                                # Has variations - process each one
-                                first_variation = True
-                                current_vendor = None
-                                needs_processing = False
-                                
-                                for variation in real_variations:
-                                    try:
-                                        var_data = variation.get('item_variation_data', {})
-                                        var_name = var_data.get('name')
-                                        var_sku = var_data.get('sku')
-                                        var_gtin = var_data.get('gtin')
-                                        var_vendor_name = 'Unknown'
-                                        var_vendor_id = None
-                                        var_vendor_sku = None
-                                        
-                                        # Get variation vendor info
-                                        vendor_infos = var_data.get('item_variation_vendor_infos', [])
-                                        if vendor_infos and vendor_infos[0].get('item_variation_vendor_info_data'):
-                                            vendor_info = vendor_infos[0]['item_variation_vendor_info_data']
-                                            var_vendor_id = vendor_info.get('vendor_id')
-                                            var_vendor_sku = vendor_info.get('sku')
-                                            var_vendor_name = self.vendor_map.get(var_vendor_id, 'Unknown')
-                                        
-                                        # First variation can provide primary image if needed
-                                        needs_variation_image = True
-                                        if first_variation:
-                                            current_vendor = var_vendor_id
-                                            if needs_primary_image:
-                                                needs_processing = True
-                                            first_variation = False
-                                        else:
-                                            # Subsequent variations need images if:
-                                            # 1. They're from a different vendor than the first variation
-                                            # 2. Or if they don't have their own image
-                                            if var_vendor_id != current_vendor:
-                                                needs_variation_image = True
-                                                needs_processing = True
-                                            else:
-                                                needs_variation_image = len(var_data.get('image_ids', [])) == 0
-                                                if needs_variation_image:
-                                                    needs_processing = True
-                                        
-                                        if needs_processing:
-                                            # Create variation data
-                                            variation_data = {
-                                                'id': variation.get('id'),
-                                                'name': var_name,
-                                                'sku': var_data.get('sku'),
-                                                'gtin': var_gtin,
-                                                'vendor_name': var_vendor_name,
-                                                'vendor_id': var_vendor_id,
-                                                'vendor_sku': vendor_info.get('sku'),
-                                                'needs_image': needs_variation_image,
-                                                'item_variation_data': var_data
-                                            }
-                                            
-                                            # Log variation details
-                                            logger.info(f"  Variation Details:")
-                                            logger.info(f"    Name: {var_name}")
-                                            logger.info(f"    GTIN: {var_gtin}")
-                                            logger.info(f"    Square SKU: {var_data.get('sku')}")
-                                            logger.info(f"    Vendor ID: {var_vendor_id}")
-                                            logger.info(f"    Vendor Name: {var_vendor_name}")
-                                            logger.info(f"    Vendor SKU: {vendor_info.get('sku')}")
-                                            logger.info(f"    Has Own Image: {not needs_variation_image}")
-                                            
-                                            # Add to items needing images
-                                            if not any(item['id'] == item.get('id') for item in items_needing_images):
-                                                items_needing_images.append({
-                                                    'id': item.get('id'),
-                                                    'type': item.get('type'),
-                                                    'item_data': {
-                                                        'name': item_name,
-                                                        'gtin': item_gtin,
-                                                        'sku': item_sku,
-                                                        'vendor_name': item_vendor_name,
-                                                        'vendor_id': item_vendor_id,
-                                                        'vendor_sku': item_vendor_sku,
-                                                        'needs_primary_image': needs_primary_image,
-                                                        'variations': []
-                                                    }
-                                                })
-                                            
-                                            # Find the item and append the variation
-                                            for catalog_item in items_needing_images:
-                                                if catalog_item['id'] == item.get('id'):
-                                                    catalog_item['item_data']['variations'].append(variation_data)
-                                                    break
-                                    
-                                    except Exception as var_error:
-                                        logger.error(f"Error processing variation: {str(var_error)}")
-                                        continue
-                        
-                        except Exception as item_error:
-                            logger.error(f"Error processing item: {str(item_error)}")
-                            continue
-                    
-                    cursor = result.body.get('cursor')
-                    if not cursor:
-                        break
-                else:
+                if not result.is_success():
                     logger.error(f"Error fetching catalog: {result.errors}")
                     break
-            
-            # Summary section
-            if items_needing_images:
-                try:
-                    logger.info("\n" + "="*50)
-                    logger.info("SQUARE CATALOG IMAGE NEEDS SUMMARY")
-                    logger.info("="*50)
                     
-                    # Collect stats by vendor
-                    vendor_stats = {}
-                    for item in items_needing_images:
-                        item_data = item.get('item_data', {})
-                        for var in item_data.get('variations', []):
-                            vendor = var.get('vendor_name', 'Unknown')
-                            if vendor not in vendor_stats:
-                                vendor_stats[vendor] = {
-                                    'items': set(),
-                                    'variations': [],
-                                    'skus': set()
-                                }
-                            vendor_stats[vendor]['items'].add(item_data.get('name', ''))
-                            vendor_stats[vendor]['variations'].append(var.get('name', ''))
-                            if var.get('sku'):
-                                vendor_stats[vendor]['skus'].add(var['sku'])
+                # Log the raw response for debugging
+                logger.debug("\nSquare Search Response:")
+                logger.debug(pformat(result.body))
                     
-                    # Print vendor-specific summaries
-                    for vendor, stats in sorted(vendor_stats.items()):
-                        logger.info(f"\n{vendor} Details:")
-                        logger.info(f"  • Items needing images: {len(stats['items'])}")
-                        logger.info(f"  • Variations needing images: {len(stats['variations'])}")
-                        logger.info(f"  • Unique SKUs: {len(stats['skus'])}")
+                batch_items = result.body.get('items', [])
+                related_objects = result.body.get('related_objects', [])
+                
+                if not batch_items:
+                    break
+                    
+                logger.info(f"Processing batch of {len(batch_items)} items...")
+                logger.debug(f"Found {len(related_objects)} related objects")
+                
+                # Create lookup for related objects
+                variations_lookup = {}
+                vendor_infos_lookup = {}
+                category_lookup = {}
+                
+                for obj in related_objects:
+                    obj_type = obj.get('type')
+                    if obj_type == 'ITEM_VARIATION':
+                        variations_lookup[obj['id']] = obj
+                        logger.debug(f"\nVariation object:\n{pformat(obj)}")
+                    elif obj_type == 'CATEGORY':
+                        category_lookup[obj['id']] = obj
+                        logger.debug(f"\nCategory object:\n{pformat(obj)}")
+                    elif obj_type == 'ITEM_VARIATION_VENDOR_INFO_ASSOCIATION':
+                        vendor_infos_lookup[obj['id']] = obj
+                        logger.debug(f"\nVendor info object:\n{pformat(obj)}")
+                
+                # First, collect all items and variations that might need images
+                items_to_check = []
+                for item in batch_items:
+                    logger.debug(f"\nProcessing item:\n{pformat(item)}")
+                    item_data = item.get('item_data', {})
+                    variations = item_data.get('variations', [])
+                    
+                    # Check if this is a single-variation item
+                    is_single_variation = len(variations) <= 1
+                    
+                    # For single-variation items, only check primary image
+                    if is_single_variation:
+                        if not item_data.get('image_ids'):
+                            items_to_check.append(item.get('id'))
+                    else:
+                        # For multi-variation items, check both primary and variations
+                        needs_primary = not bool(item_data.get('image_ids'))
+                        has_variations_needing_images = any(
+                            not var.get('item_variation_data', {}).get('image_ids')
+                            for var in variations
+                        )
+                        if needs_primary or has_variations_needing_images:
+                            items_to_check.append(item.get('id'))
+                
+                if items_to_check:
+                    batch_result = self.client.catalog.batch_retrieve_catalog_objects(
+                        body={
+                            "object_ids": items_to_check,
+                            "include_related_objects": True,
+                            "include_deleted_objects": False
+                        }
+                    )
+                    
+                    if batch_result.is_success():
+                        # Log the raw batch response for debugging
+                        logger.debug("\nSquare Batch Retrieve Response:")
+                        logger.debug(pformat(batch_result.body))
                         
-                        if stats['skus']:
-                            logger.info("\n  SKUs missing images:")
-                            for sku in sorted(stats['skus']):
-                                logger.info(f"    - {sku}")
-                    
-                    # Overall totals
-                    total_items = sum(len(stats['items']) for stats in vendor_stats.values())
-                    total_variations = sum(len(stats['variations']) for stats in vendor_stats.values())
-                    total_skus = sum(len(stats['skus']) for stats in vendor_stats.values())
-                    
-                    logger.info("\nOverall Totals:")
-                    logger.info(f"  • Total unique items: {total_items}")
-                    logger.info(f"  • Total variations: {total_variations}")
-                    logger.info(f"  • Total unique SKUs: {total_skus}")
-                    logger.info("="*50 + "\n")
-                    
-                except Exception as summary_error:
-                    logger.error(f"Error generating summary: {str(summary_error)}")
+                        objects = batch_result.body.get('objects', [])
+                        related = batch_result.body.get('related_objects', [])
+                        
+                        # Update lookups with additional related objects
+                        for obj in related:
+                            obj_type = obj.get('type')
+                            if obj_type == 'ITEM_VARIATION':
+                                variations_lookup[obj['id']] = obj
+                                logger.debug(f"\nAdditional variation object:\n{pformat(obj)}")
+                            elif obj_type == 'CATEGORY':
+                                category_lookup[obj['id']] = obj
+                                logger.debug(f"\nAdditional category object:\n{pformat(obj)}")
+                            elif obj_type == 'ITEM_VARIATION_VENDOR_INFO_ASSOCIATION':
+                                vendor_infos_lookup[obj['id']] = obj
+                                logger.debug(f"\nAdditional vendor info object:\n{pformat(obj)}")
+                        
+                        # Process each item
+                        for obj in objects:
+                            logger.debug(f"\nProcessing batch item:\n{pformat(obj)}")
+                            item_data = obj.get('item_data', {})
+                            variations = item_data.get('variations', [])
+                            is_single_variation = len(variations) <= 1
+                            needs_primary = not bool(item_data.get('image_ids'))
+                            item_name = item_data.get('name', '')
+                            category_id = item_data.get('category_id')
+                            category = category_lookup.get(category_id, {}).get('category_data', {}).get('name', '') if category_id else ''
+                            
+                            # Skip if single variation and has primary image
+                            if is_single_variation and not needs_primary:
+                                continue
+                            
+                            # Process variations
+                            processed_variations = []
+                            all_variations = []
+                            
+                            # Get item-level vendor info first
+                            item_vendor_id = None
+                            item_vendor_sku = ''
+                            item_vendor_infos = item_data.get('item_vendor_infos', [])
+                            for vendor_info in item_vendor_infos:
+                                vendor_id = vendor_info.get('vendor_id')
+                                if vendor_id in self.vendor_map:
+                                    item_vendor_id = vendor_id
+                                    item_vendor_sku = vendor_info.get('sku', '')
+                                    logger.debug(f"\nFound item-level vendor info:\n{pformat(vendor_info)}")
+                                    break
+                            
+                            for var_ref in variations:
+                                var_id = var_ref.get('id')
+                                if not var_id:
+                                    continue
+                                    
+                                var = variations_lookup.get(var_id, {})
+                                logger.debug(f"\nProcessing variation:\n{pformat(var)}")
+                                var_data = var.get('item_variation_data', {})
+                                
+                                # Get Square SKU directly from variation data
+                                square_sku = var_data.get('sku', '')
+                                
+                                # Get vendor info and vendor SKU
+                                vendor_name = 'Unknown'
+                                vendor_sku = ''
+                                vendor_id = None
+                                vendor_info_data = None
+                                
+                                # Get vendor info from item_variation_vendor_infos array
+                                vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                                if vendor_infos:
+                                    vendor_info = vendor_infos[0]
+                                    if vendor_info:
+                                        vendor_info_data = vendor_info.get('item_variation_vendor_info_data', {})
+                                        if vendor_info_data:
+                                            vendor_id = vendor_info_data.get('vendor_id')
+                                            vendor_sku = vendor_info_data.get('sku', '')
+                                            if vendor_id in self.vendor_map:
+                                                vendor_name = self.vendor_map[vendor_id]
+                                
+                                # If no variation-level vendor info, use item-level
+                                if vendor_name == 'Unknown' and item_vendor_id:
+                                    vendor_id = item_vendor_id
+                                    vendor_name = self.vendor_map[item_vendor_id]
+                                    vendor_sku = item_vendor_sku
+                                
+                                # Get all three types of prices
+                                vendor_price = 0.0
+                                variation_price = 0.0
+                                default_cost = 0.0
+                                
+                                # 1. Get vendor price from vendor_info_data
+                                if vendor_info_data and vendor_info_data.get('price_money'):
+                                    vendor_price_amount = vendor_info_data['price_money'].get('amount', 0)
+                                    vendor_price = vendor_price_amount / 100.0 if vendor_price_amount else 0.0
+                                
+                                # 2. Get variation price from price_money
+                                price_money = var_data.get('price_money', {})
+                                variation_price_amount = price_money.get('amount', 0)
+                                variation_price = variation_price_amount / 100.0 if variation_price_amount else 0.0
+                                
+                                # 3. Get default unit cost
+                                default_cost_data = var_data.get('default_unit_cost', {})
+                                default_cost_amount = default_cost_data.get('amount', 0)
+                                default_cost = default_cost_amount / 100.0 if default_cost_amount else 0.0
+                                
+                                variation_name = var_data.get('name', '')
+                                upc = var_data.get('upc', '')
+                                
+                                # For single-variation items, only care about primary image
+                                needs_image = not is_single_variation and not var_data.get('image_ids')
+                                
+                                variation_info = {
+                                    'id': var_id,
+                                    'name': variation_name or item_name,  # Use item name if variation name is empty
+                                    'square_sku': square_sku,
+                                    'vendor_sku': vendor_sku,
+                                    'vendor_name': vendor_name,
+                                    'vendor_id': vendor_id,
+                                    'vendor_price': vendor_price,
+                                    'variation_price': variation_price,
+                                    'default_cost': default_cost,
+                                    'upc': upc,
+                                    'needs_image': needs_image
+                                }
+                                
+                                all_variations.append(variation_info)
+                                if needs_image:
+                                    processed_variations.append(variation_info)
+                            
+                            if needs_primary or (not is_single_variation and processed_variations):
+                                items.append({
+                                    'id': obj.get('id'),
+                                    'name': item_name,
+                                    'description': item_data.get('description', ''),
+                                    'category': category,
+                                    'needs_primary_image': needs_primary,
+                                    'is_single_variation': is_single_variation,
+                                    'variations': all_variations,
+                                    'variations_needing_images': processed_variations
+                                })
+                
+                total_processed += len(batch_items)
+                logger.info(f"Total items processed so far: {total_processed}")
+                
+                cursor = result.body.get('cursor')
+                if not cursor:
+                    break
             
-            return items_needing_images
+            # Log summary
+            logger.info(f"\nAnalysis complete!")
+            logger.info(f"Total items processed: {total_processed}")
+            logger.info(f"Found {len(items)} items needing images")
+            
+            if items:
+                # Count items and variations needing images
+                single_variation_count = 0
+                multi_variation_counts = {}
+                total_variations_needing = 0
+                
+                for item in items:
+                    if item['is_single_variation']:
+                        single_variation_count += 1
+                    else:
+                        for var in item['variations_needing_images']:
+                            vendor = var['vendor_name']
+                            multi_variation_counts[vendor] = multi_variation_counts.get(vendor, 0) + 1
+                            total_variations_needing += 1
+                
+                logger.info(f"\nSingle-variation items needing primary image: {single_variation_count}")
+                
+                if multi_variation_counts:
+                    logger.info("\nMulti-variation items - variations needing images by vendor:")
+                    for vendor, count in sorted(multi_variation_counts.items()):
+                        logger.info(f"  {vendor}: {count} variations")
+                    logger.info(f"\nTotal variations needing images: {total_variations_needing}")
+                
+                # Print detailed breakdown
+                logger.info("\nDetailed Item Breakdown:")
+                for item in items:
+                    logger.info(f"\n{'='*50}")
+                    logger.info(f"Item: {item['name']}")
+                    logger.info(f"{'='*50}")
+                    
+                    if item['description']:
+                        logger.info(f"Description: {item['description']}")
+                    if item['category']:
+                        logger.info(f"Category: {item['category']}")
+                    
+                    if item['is_single_variation']:
+                        logger.info("\nType: Single-variation item")
+                        logger.info(f"Needs primary image: Yes")
+                        var = item['variations'][0] if item['variations'] else {}
+                        if var:
+                            # Show SKUs first
+                            logger.info("\nIdentifiers:")
+                            logger.info(f"  • Square SKU: {var['square_sku'] or 'Not Set'}")
+                            logger.info(f"  • Vendor SKU: {var['vendor_sku'] or 'Not Set'}")
+                            if var['upc']:
+                                logger.info(f"  • UPC: {var['upc']}")
+                            
+                            # Show vendor info
+                            logger.info("\nVendor Information:")
+                            logger.info(f"  • Vendor: {var['vendor_name']}")
+                            logger.info(f"  • Vendor ID: {var['vendor_id'] or 'Not Set'}")
+                            
+                            # Show all prices
+                            logger.info("\nPricing:")
+                            logger.info(f"  • Vendor Price: ${var['vendor_price']:.2f}")
+                            logger.info(f"  • Retail Price: ${var['variation_price']:.2f}")
+                            logger.info(f"  • Unit Cost: ${var['default_cost']:.2f}")
+                    else:
+                        logger.info("\nType: Multi-variation item")
+                        logger.info(f"Needs primary image: {item['needs_primary_image']}")
+                        
+                        for var in item['variations']:
+                            logger.info(f"\n  Variation: {var['name']}")
+                            logger.info(f"  Status: {'NEEDS IMAGE' if var['needs_image'] else 'Has Image'}")
+                            
+                            # Show SKUs first
+                            logger.info("\n  Identifiers:")
+                            logger.info(f"    • Square SKU: {var['square_sku'] or 'Not Set'}")
+                            logger.info(f"    • Vendor SKU: {var['vendor_sku'] or 'Not Set'}")
+                            if var['upc']:
+                                logger.info(f"    • UPC: {var['upc']}")
+                            
+                            # Show vendor info
+                            logger.info("\n  Vendor Information:")
+                            logger.info(f"    • Vendor: {var['vendor_name']}")
+                            logger.info(f"    • Vendor ID: {var['vendor_id'] or 'Not Set'}")
+                            
+                            # Show all prices
+                            logger.info("\n  Pricing:")
+                            logger.info(f"    • Vendor Price: ${var['vendor_price']:.2f}")
+                            logger.info(f"    • Retail Price: ${var['variation_price']:.2f}")
+                            logger.info(f"    • Unit Cost: ${var['default_cost']:.2f}")
+                    logger.info(f"\n{'='*50}")
+            
+            return items
             
         except Exception as e:
-            logger.error(f"Error accessing Square catalog: {str(e)}")
+            logger.error(f"Error fetching items without images: {str(e)}")
             return []
+
+    def process_catalog_items(self, items_response):
+        """Process catalog items response and extract needed information."""
+        items = []
+        for item in items_response.get('items', []):
+            item_data = item.get('item_data', {})
+            item_id = item.get('id')
+            name = item_data.get('name', '')
+            description = item_data.get('description', '')
+            
+            # Check if item has a primary image
+            has_primary_image = bool(item_data.get('image_ids'))
+            needs_primary_image = not has_primary_image
+            
+            logger.debug(f"\n\nPROCESSING ITEM: {name}")
+            logger.debug("="*80)
+            logger.debug(f"Has Primary Image: {has_primary_image}")
+            logger.debug(f"Needs Primary Image: {needs_primary_image}")
+            
+            variations = []
+            raw_variations = item_data.get('variations', [])
+            is_single_variation = len(raw_variations) == 1
+            
+            logger.debug(f"Found {len(raw_variations)} variations")
+            
+            for idx, variation in enumerate(raw_variations, 1):
+                var_data = variation.get('item_variation_data', {})
+                
+                logger.debug(f"\nVARIATION {idx}:")
+                logger.debug("-"*40)
+                
+                # Square SKU
+                square_sku = var_data.get('sku', '')
+                logger.debug(f"Square SKU: {square_sku}")
+                
+                # Vendor Info
+                vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                if vendor_infos and len(vendor_infos) > 0:
+                    vendor_info_data = vendor_infos[0].get('item_variation_vendor_info_data', {})
+                    vendor_sku = vendor_info_data.get('sku', '')
+                    vendor_id = vendor_info_data.get('vendor_id')
+                    vendor_price = vendor_info_data.get('price_money', {}).get('amount', 0) / 100.0
+                    logger.debug(f"Vendor Info Found:")
+                    logger.debug(f"  Vendor SKU: {vendor_sku}")
+                    logger.debug(f"  Vendor ID: {vendor_id}")
+                    logger.debug(f"  Vendor Price: ${vendor_price:.2f}")
+                else:
+                    vendor_sku = ''
+                    vendor_id = None
+                    vendor_price = 0.0
+                    logger.debug("No vendor info found")
+                
+                # Retail Price
+                price_data = var_data.get('price_money', {})
+                retail_price = price_data.get('amount', 0) / 100.0
+                logger.debug(f"Retail Price: ${retail_price:.2f}")
+                
+                # Unit Cost
+                cost_data = var_data.get('default_unit_cost', {})
+                unit_cost = cost_data.get('amount', 0) / 100.0
+                logger.debug(f"Unit Cost: ${unit_cost:.2f}")
+                
+                vendor_name = self.vendor_map.get(vendor_id, 'Unknown')
+                logger.debug(f"Mapped Vendor Name: {vendor_name}")
+                
+                # Check variation image status
+                has_variation_image = bool(var_data.get('image_ids'))
+                needs_image = not is_single_variation and not has_variation_image
+                
+                variation_info = {
+                    'id': variation.get('id'),
+                    'name': var_data.get('name', ''),
+                    'square_sku': square_sku,
+                    'vendor_sku': vendor_sku,
+                    'vendor_id': vendor_id,
+                    'vendor_name': vendor_name,
+                    'vendor_price': vendor_price,
+                    'retail_price': retail_price,
+                    'unit_cost': unit_cost,
+                    'has_image': has_variation_image,
+                    'needs_image': needs_image
+                }
+                
+                logger.debug("\nFinal Variation Data:")
+                logger.debug(f"  Name: {variation_info['name']}")
+                logger.debug(f"  Square SKU: {variation_info['square_sku']}")
+                logger.debug(f"  Vendor SKU: {variation_info['vendor_sku']}")
+                logger.debug(f"  Vendor: {variation_info['vendor_name']} ({variation_info['vendor_id']})")
+                logger.debug(f"  Vendor Price: ${variation_info['vendor_price']:.2f}")
+                logger.debug(f"  Retail Price: ${variation_info['retail_price']:.2f}")
+                logger.debug(f"  Unit Cost: ${variation_info['unit_cost']:.2f}")
+                logger.debug(f"  Has Image: {variation_info['has_image']}")
+                logger.debug(f"  Needs Image: {variation_info['needs_image']}")
+                
+                variations.append(variation_info)
+            
+            item_info = {
+                'id': item_id,
+                'name': name,
+                'description': description,
+                'has_primary_image': has_primary_image,
+                'needs_primary_image': needs_primary_image,
+                'variations': variations,
+                'is_single_variation': is_single_variation
+            }
+            
+            items.append(item_info)
+            logger.debug("="*80 + "\n")
+        
+        return items
 
 if __name__ == "__main__":
     # Verify paths first
@@ -339,27 +564,126 @@ if __name__ == "__main__":
         logger.error("Path verification failed!")
         sys.exit(1)
     
-    # Continue with existing code
+    # Initialize Square Catalog
     catalog = SquareCatalog()
-    items = catalog.get_items_without_images()
     
-    if items:
-        logger.info("\nDetailed Item Breakdown:")
-        # Group by vendor
-        vendor_items = {}
-        for item in items:
-            for var in item['item_data']['variations']:
-                vendor = var['vendor_name']
-                if vendor not in vendor_items:
-                    vendor_items[vendor] = []
-                vendor_items[vendor].append({
-                    'name': item['item_data']['name'],
-                    'sku': var['sku'],
-                    'variation': var['name']
-                })
+    all_items = []
+    cursor = None
+    batch_size = 100
+    
+    logger.info("Fetching all items from Square...")
+    
+    while True:
+        # Get batch of items
+        body = {
+            "product_types": ["REGULAR"],
+            "state_filters": {"states": ["ACTIVE"]},
+            "limit": batch_size
+        }
         
-        # Print by vendor
-        for vendor, items in sorted(vendor_items.items()):
-            logger.info(f"\n{vendor} Items:")
-            for item in sorted(items, key=lambda x: x['sku']):
-                logger.info(f"  • {item['sku']}: {item['name']}")
+        if cursor:
+            body["cursor"] = cursor
+        
+        result = catalog.client.catalog.search_catalog_items(body=body)
+        
+        if not result.is_success():
+            logger.error("Failed to fetch items from Square API")
+            logger.error(pformat(result.errors))
+            break
+        
+        # Process this batch
+        batch_items = catalog.process_catalog_items(result.body)
+        all_items.extend(batch_items)
+        
+        # Get cursor for next batch
+        cursor = result.body.get('cursor')
+        logger.info(f"Fetched batch of {len(batch_items)} items. Total so far: {len(all_items)}")
+        
+        # If no cursor, we've got all items
+        if not cursor:
+            break
+    
+    logger.info(f"\nFetched {len(all_items)} total items")
+    
+    # Filter for items that need images
+    items_needing_images = []
+    for item in all_items:
+        needs_images = False
+        if item['needs_primary_image']:
+            needs_images = True
+        for var in item['variations']:
+            if var['needs_image']:
+                needs_images = True
+        if needs_images:
+            items_needing_images.append(item)
+    
+    # Print results
+    logger.info(f"Found {len(items_needing_images)} items needing images")
+    
+    # Print detailed breakdown of items needing images
+    for item in items_needing_images:
+        logger.info(f"\n{'='*80}")
+        logger.info(f"Item: {item['name']}")
+        
+        if item['description']:
+            logger.info(f"\nDescription: {item['description']}")
+        
+        if item['needs_primary_image']:
+            logger.info("\n*** Needs Primary Image ***")
+        
+        for var in item['variations']:
+            if item['is_single_variation']:
+                logger.info("\nSingle Variation Item")
+            else:
+                logger.info(f"\nVariation: {var['name']}")
+                if var['needs_image']:
+                    logger.info("*** Needs Variation Image ***")
+            
+            logger.info("\nIdentifiers:")
+            logger.info(f"  Square SKU: {var['square_sku']}")
+            logger.info(f"  Vendor SKU: {var['vendor_sku']}")
+            
+            logger.info("\nVendor Information:")
+            logger.info(f"  Vendor: {var['vendor_name']}")
+            logger.info(f"  Vendor ID: {var['vendor_id']}")
+            
+            logger.info("\nPricing:")
+            logger.info(f"  Vendor Price: ${var['vendor_price']:.2f}")
+            logger.info(f"  Retail Price: ${var['retail_price']:.2f}")
+            logger.info(f"  Unit Cost: ${var['unit_cost']:.2f}")
+        
+        logger.info(f"\n{'='*80}")
+    
+    # Generate summary by vendor
+    if items_needing_images:
+        logger.info("\nSUMMARY BY VENDOR")
+        logger.info("=" * 40)
+        
+        vendor_summary = {}
+        for item in items_needing_images:
+            # Group variations by vendor
+            for var in item['variations']:
+                vendor = var['vendor_name']
+                if vendor not in vendor_summary:
+                    vendor_summary[vendor] = {
+                        'primary_images_needed': 0,
+                        'variations_needing_images': 0,
+                        'items': set()  # Use set to avoid counting items twice
+                    }
+                
+                # Track unique items needing primary images
+                if item['needs_primary_image']:
+                    vendor_summary[vendor]['items'].add(item['id'])
+                    vendor_summary[vendor]['primary_images_needed'] += 1
+                
+                # Track variations needing images
+                if var['needs_image']:
+                    vendor_summary[vendor]['variations_needing_images'] += 1
+        
+        # Print summary
+        for vendor, stats in sorted(vendor_summary.items()):
+            logger.info(f"\n{vendor}:")
+            logger.info(f"  Items needing primary image: {stats['primary_images_needed']}")
+            logger.info(f"  Variations needing images: {stats['variations_needing_images']}")
+        
+        logger.info("\n" + "=" * 40)

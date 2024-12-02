@@ -1,67 +1,35 @@
 import logging
-from logging.handlers import RotatingFileHandler
-import sys
 import os
+from datetime import datetime
+from app.utils.paths import paths
 
 def setup_logger(name):
-    """
-    Set up a logger with standardized configuration and rotation
-    
-    Args:
-        name: Name of the logger (usually __name__ from the calling module)
-        
-    Returns:
-        logging.Logger: Configured logger instance
-    """
-    # Create logs directory relative to the current file
-    logs_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
-    os.makedirs(logs_dir, exist_ok=True)
-    
-    # Get logger
+    """Set up logger with file and console handlers"""
     logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)  # Set to DEBUG level
     
-    # Only add handlers if they haven't been added already
-    if not logger.handlers:
-        logger.setLevel(logging.DEBUG)
-        
-        # Create formatters
-        file_formatter = logging.Formatter(
-            '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-        )
-        console_formatter = logging.Formatter(
-            '%(asctime)s - %(levelname)s - %(message)s'
-        )
-        
-        # Individual log file with rotation
-        file_handler = RotatingFileHandler(
-            os.path.join(logs_dir, f'{name}.log'),
-            maxBytes=1024*1024,  # 1MB
-            backupCount=5,
-            encoding='utf-8'
-        )
-        file_handler.setLevel(logging.DEBUG)
-        file_handler.setFormatter(file_formatter)
-        
-        # Common scraper log file with rotation (for scrapers only)
-        if 'scraper' in name.lower():
-            common_handler = RotatingFileHandler(
-                os.path.join(logs_dir, 'all_scrapers.log'),
-                maxBytes=1024*1024,  # 1MB
-                backupCount=5,
-                encoding='utf-8'
-            )
-            common_handler.setLevel(logging.DEBUG)
-            common_handler.setFormatter(file_formatter)
-            logger.addHandler(common_handler)
-        
-        # Console handler
-        console_handler = logging.StreamHandler(sys.stdout)
-        console_handler.setLevel(logging.INFO)
-        console_handler.setFormatter(console_formatter)
-        
-        # Add handlers to logger
-        logger.addHandler(file_handler)
-        logger.addHandler(console_handler)
+    # Create logs directory if it doesn't exist
+    os.makedirs(paths.LOGS_DIR, exist_ok=True)
+    
+    # Create a unique log file for this run
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    log_file = os.path.join(paths.LOGS_DIR, f'{name}_{timestamp}.log')
+    
+    # File handler - include debug level
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(logging.DEBUG)
+    file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_formatter)
+    
+    # Console handler - keep at INFO level
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_formatter = logging.Formatter('%(message)s')
+    console_handler.setFormatter(console_formatter)
+    
+    # Add handlers
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
     
     return logger
 
