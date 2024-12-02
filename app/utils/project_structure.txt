@@ -1,140 +1,114 @@
-Project Structure - Generated 2024-12-01 18:47:47
+Project Structure - Generated 2024-12-01 21:56:09
 ================================================================================
 
-app/
-├── README.md
-├── api
-│   └── endpoints
-│       ├── catalog.py
-│       ├── images.py
-│       ├── items.py
-│       └── scraping.py
-├── config
-│   ├── vendor_directories.yaml
-│   └── websites.yaml
-├── core
-│   └── config.py
-├── data
-│   ├── redrhinofireworks.com
-│   │   ├── 1101117-Raging-Rhino.png
-│   │   ├── 1101211-Texas-Pop-Rockets.png
-│   │   ├── 1101235-Dancing-Butterfly.png
-│   │   ├── 1101306-B-3-Bomber-with-Report.png
-│   │   ├── 1101903-RWB-Bunting.png
-│   │   ├── 1101934-4-Logo-Pennants.png
-│   │   ├── 6301201-Galaxy-Quest.png
-│   │   ├── 6301254-Sorcerers-Stone.png
-│   │   ├── 6301279-Death-By-Stereo.png
-│   │   ├── 6301306-Swordplay.png
-│   │   ├── 6301308-Howling-Duel.png
-│   │   ├── 6301311-Fireworks-Are-Awesome.png
-│   │   ├── 6301338-Red-Rhino-8000-Roll-Crackers.png
-│   │   ├── 6301353-Reggae-Croc.png
-│   │   ├── 6301354-Summer-Bash.png
-│   │   ├── 6301358-Age-Of-Dragons.png
-│   │   ├── 6301365-Agent-Of-Chaos.png
-│   │   ├── 6301367-Wooly-Bully.png
-│   │   ├── 6301369-Rockin-The-Free-World.png
-│   │   ├── 6301372-Future-All-American.png
-│   │   ├── 6301373-Roswell-Reborn.png
-│   │   ├── 6301376-Good-Times.png
-│   │   ├── 6301380-Stone-Breaker.png
-│   │   ├── 6301382-One-Jacked-Quacker.png
-│   │   ├── CD246-Neptune-Missile.png
-│   │   ├── cd124-Giant-Smoke-Balls.png
-│   │   ├── cd130-Staff-of-Ra.png
-│   │   ├── cd331-Hens-Laying-Eggs.png
-│   │   └── cd667-Ravaged.png
-│   └── wincofireworks.com
-│       ├── 10-Ball-Assorted-Roman-Candle.png
-│       ├── 10-Ball-Candle.png
-│       ├── 10-Ball-China-6-pack.png
-│       ├── 10-Ball-Crackling.png
-│       ├── 10-Ball-Mini-Candle.png
-│       ├── 121-Gigawatts.png
-│       ├── 3-Assortment.png
-│       ├── 3-Solar-Wave-Cone.png
-│       ├── 4-Turbo-Flash-Cone.png
-│       └── 8-Pharaohs-Treasure.png
-├── db
-│   └── session.py
+square_updates/
+├── .cursorrules
+├── .git
+├── .pytest_cache
+├── app
+│   ├── .env
+│   ├── .gitignore
+│   ├── .pytest_cache
+│   ├── .venv
+│   ├── README.md
+│   ├── __pycache__
+│   ├── api
+│   │   ├── __pycache__
+│   │   └── endpoints
+│   │       ├── __pycache__
+│   │       ├── catalog.py
+│   │       ├── images.py
+│   │       ├── items.py
+│   │       └── scraping.py
+│   ├── config
+│   │   ├── __pycache__
+│   │   ├── vendor_directories.yaml
+│   │   └── websites.yaml
+│   ├── core
+│   │   ├── __pycache__
+│   │   └── config.py
+│   ├── data
+│   ├── db
+│   │   ├── __pycache__
+│   │   └── session.py
+│   ├── fireworks.db
+│   ├── logs
+│   ├── main.py
+│   ├── middleware
+│   │   ├── __pycache__
+│   │   └── error_handler.py
+│   ├── models
+│   │   ├── __pycache__
+│   │   └── product.py
+│   ├── schemas
+│   │   ├── __pycache__
+│   │   └── product.py
+│   ├── scrapers
+│   │   ├── __pycache__
+│   │   ├── base_scraper.py
+│   │   ├── pyrobuy_scraper.py
+│   │   ├── raccoon_scraper.py
+│   │   ├── redrhino_scraper.py
+│   │   ├── winco_scraper.py
+│   │   └── worldclass_scraper.py
+│   ├── services
+│   │   ├── __pycache__
+│   │   ├── image_matcher.py
+│   │   ├── scrape_fireworks.py
+│   │   ├── scraper.py
+│   │   ├── square_catalog.py
+│   │   ├── square_client.py
+│   │   └── square_image_uploader.py
+│   ├── tests
+│   │   ├── __pycache__
+│   │   ├── conftest.py
+│   │   ├── fixtures
+│   │   │   ├── __pycache__
+│   │   │   └── square_responses.py
+│   │   ├── requirements-test.txt
+│   │   ├── test_db_items.py
+│   │   ├── test_endpoints.py
+│   │   ├── test_image_matcher.py
+│   │   ├── test_scraper.py
+│   │   ├── test_square_catalog.py
+│   │   ├── test_square_image_uploader.py
+│   │   ├── test_square_items.py
+│   │   └── test_winco_scraper.py
+│   ├── utils
+│   │   ├── __pycache__
+│   │   ├── logger.py
+│   │   ├── paths.py
+│   │   ├── project_structure.txt
+│   │   ├── request_helpers.py
+│   │   ├── tree_view.py
+│   │   └── verify_paths.py
+│   └── venv
 ├── fireworks.db
-├── logs
-│   ├── all_scrapers.log
-│   ├── api.endpoints.images.log
-│   ├── app.services.scraper.log
-│   ├── app.services.square_catalog.log
-│   ├── app.services.square_client.log
-│   ├── image_matcher.log
-│   ├── image_matcher_unmatched.log
-│   ├── matcher.log
-│   ├── matcher_test.log
-│   ├── raccoon_scraper.log
-│   ├── redrhino_scraper.log
-│   ├── scrape_fireworks.log
-│   ├── scraper.log
-│   ├── square.log
-│   ├── square_catalog.log
-│   ├── square_catalog_test.log
-│   ├── square_check.log
-│   ├── test_endpoints.log
-│   ├── test_image_matcher.log
-│   ├── test_scraper.log
-│   ├── test_square_catalog.log
-│   ├── verify_paths.log
-│   └── winco_scraper.log
-├── main.py
-├── middleware
-│   └── error_handler.py
-├── models
-│   └── product.py
-├── schemas
-│   └── product.py
-├── scrapers
-│   ├── base_scraper.py
-│   ├── pyrobuy_scraper.py
-│   ├── raccoon_scraper.py
-│   ├── redrhino_scraper.py
-│   ├── winco_scraper.py
-│   └── worldclass_scraper.py
-├── services
-│   ├── image_matcher.py
-│   ├── scrape_fireworks.py
-│   ├── scraper.py
-│   ├── square_catalog.py
-│   ├── square_client.py
-│   └── square_image_uploader.py
-├── tests
-│   ├── conftest.py
-│   ├── fixtures
-│   │   └── square_responses.py
-│   ├── requirements-test.txt
-│   ├── test_db_items.py
-│   ├── test_endpoints.py
-│   ├── test_image_matcher.py
-│   ├── test_scraper.py
-│   ├── test_square_catalog.py
-│   ├── test_square_image_uploader.py
-│   ├── test_square_items.py
-│   └── test_winco_scraper.py
-└── utils
-    ├── logger.py
-    ├── paths.py
-    ├── project_structure.txt
-    ├── request_helpers.py
-    ├── tree_view.py
-    └── verify_paths.py
+├── nytex_fireworks.egg-info
+├── pyrightconfig.json
+├── pytest.ini
+├── requirements.txt
+├── scripts
+│   ├── pre-commit
+│   └── sync_dependencies.py
+├── setup.py
+└── venv
 
 File Descriptions
 ================================================================================
 
+requirements.txt........................ Project dependencies and versions
+setup.py................................ Python package configuration and dependencies
 websites.yaml........................... Configuration for web scraping targets and rules
 vendor_directories.yaml................. Configuration mapping vendors to their directories and aliases
 test_square_catalog.py.................. Tests for Square catalog functionality
 square_responses.py..................... Test fixtures for Square API responses
 tree_view.py............................ Utility to generate project structure documentation
 project_structure.txt................... Generated project structure documentation
+setup.py................................ Python package configuration and dependencies
 catalog.py.............................. FastAPI endpoints for catalog operations
+setup.py................................ Python package configuration and dependencies
 square_catalog.py....................... Square API integration for catalog management
 scraper.py.............................. Service for handling web scraping operations
 scrape_fireworks.py..................... Main web scraping orchestration script
+setup.py................................ Python package configuration and dependencies

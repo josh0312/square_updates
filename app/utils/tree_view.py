@@ -1,5 +1,8 @@
 import os
 from datetime import datetime
+from pathlib import Path
+from pathspec import PathSpec
+from pathspec.patterns import GitWildMatchPattern
 
 # File descriptions as a separate dictionary
 FILE_DESCRIPTIONS = {
@@ -12,20 +15,110 @@ FILE_DESCRIPTIONS = {
     'square_responses.py': 'Test fixtures for Square API responses',
     'test_square_catalog.py': 'Tests for Square catalog functionality',
     'project_structure.txt': 'Generated project structure documentation',
-    'tree_view.py': 'Utility to generate project structure documentation'
+    'tree_view.py': 'Utility to generate project structure documentation',
+    'setup.py': 'Python package configuration and dependencies',
+    'requirements.txt': 'Project dependencies and versions'
 }
 
-def create_tree_view(root_dir='app'):
+def get_gitignore_spec(root_dir):
+    """Create a PathSpec object from .gitignore patterns"""
+    patterns = []
+    gitignore_path = os.path.join(root_dir, '.gitignore')
+    
+    # Add default patterns - make patterns more comprehensive
+    default_patterns = [
+        # Version Control
+        '.git/',
+        
+        # Python specific
+        '__pycache__/',
+        '*.py[cod]',
+        '*$py.class',
+        '*.so',
+        '.Python',
+        'develop-eggs/',
+        'dist/',
+        'downloads/',
+        'eggs/',
+        '.eggs/',
+        'lib/',
+        'lib64/',
+        'parts/',
+        'sdist/',
+        'var/',
+        'wheels/',
+        '*.egg-info/',
+        '.installed.cfg',
+        '*.egg',
+        
+        # Virtual environments
+        '.env/',
+        '.venv/',
+        'env/',
+        'venv/',
+        'ENV/',
+        'env.bak/',
+        'venv.bak/',
+        
+        # Testing
+        '.tox/',
+        '.coverage',
+        '.coverage.*',
+        '.cache/',
+        '.pytest_cache/',
+        'htmlcov/',
+        
+        # IDE specific
+        '.idea/',
+        '.vscode/',
+        '*.swp',
+        '*.swo',
+        
+        # OS specific
+        '.DS_Store',
+        'Thumbs.db',
+        '*~',
+        '._*',
+        '.*.sw?',
+        
+        # Project specific
+        'data/',
+        '__init__.py',
+        'logs/',
+        '*.log',
+    ]
+    patterns.extend(default_patterns)
+    
+    # Add patterns from .gitignore if it exists
+    if os.path.exists(gitignore_path):
+        with open(gitignore_path) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    patterns.append(line)
+    
+    return PathSpec.from_lines(GitWildMatchPattern, patterns)
+
+def should_include(path, name, gitignore_spec, root_parent):
+    """Check if file/directory should be included based on .gitignore patterns"""
+    # Get relative path from project root
+    full_path = os.path.join(path, name)
+    rel_path = os.path.relpath(full_path, root_parent)
+    
+    # Check if path matches any gitignore pattern
+    return not gitignore_spec.match_file(rel_path)
+
+def create_tree_view(root_dir=None):
     """Create a simple tree view of the project structure"""
     
-    def should_include(name):
-        """Check if file/directory should be included"""
-        excludes = {
-            '__pycache__', '.git', '.env', 'venv', '.pytest_cache',
-            '.pyc', '.pyo', '.pyd', '.DS_Store', '.coverage',
-            'egg-info', '__init__.py'
-        }
-        return not any(ex in name for ex in excludes)
+    # If no root_dir specified, use the project root (parent of app directory)
+    if root_dir is None:
+        current_dir = os.path.dirname(os.path.abspath(__file__))  # utils directory
+        app_dir = os.path.dirname(current_dir)  # app directory
+        root_dir = os.path.dirname(app_dir)  # project root
+    
+    root_parent = os.path.dirname(root_dir)
+    gitignore_spec = get_gitignore_spec(root_dir)
     
     def print_tree(dir_path, prefix=''):
         """Recursively print directory tree"""
@@ -33,7 +126,7 @@ def create_tree_view(root_dir='app'):
             return []
 
         entries = sorted(os.listdir(dir_path))
-        entries = [e for e in entries if should_include(e)]
+        entries = [e for e in entries if should_include(dir_path, e, gitignore_spec, root_parent)]
         
         tree = []
         for i, entry in enumerate(entries):
@@ -51,8 +144,9 @@ def create_tree_view(root_dir='app'):
                 
         return tree
 
-    # Generate tree view
-    tree_lines = ['app/'] + print_tree(root_dir)
+    # Generate tree view starting with root directory name
+    root_name = os.path.basename(root_dir)
+    tree_lines = [f'{root_name}/'] + print_tree(root_dir)
     
     # Add descriptions section
     tree_lines.extend([

@@ -35,3 +35,6 @@ ratelimit==2.2.1
 # Fuzzy String Matching
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.23.0
+
+# Add pathspec for gitignore pattern matching
+pathspec>=0.11.0
