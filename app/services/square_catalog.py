@@ -173,39 +173,49 @@ class SquareCatalog:
             
             # Summary section grouped by vendor
             if items_needing_images:
-                logger.info("\n=== Summary by Vendor ===")
-                vendor_stats = {}
+                logger.info("\n" + "="*50)
+                logger.info("SQUARE CATALOG IMAGE NEEDS SUMMARY")
+                logger.info("="*50)
                 
                 # Collect stats by vendor
+                vendor_stats = {}
                 for item in items_needing_images:
                     for var in item['item_data']['variations']:
                         vendor = var['vendor_name']
                         if vendor not in vendor_stats:
                             vendor_stats[vendor] = {
-                                'items': set(),
-                                'variation_count': 0
+                                'items': set(),  # Use set to avoid duplicates
+                                'variations': [],
+                                'skus': set()
                             }
                         vendor_stats[vendor]['items'].add(item['item_data']['name'])
-                        vendor_stats[vendor]['variation_count'] += 1
-                
-                # Log vendor summaries
-                total_items = 0
-                total_variations = 0
-                
+                        vendor_stats[vendor]['variations'].append(var['name'])
+                        if var.get('sku'):
+                            vendor_stats[vendor]['skus'].add(var['sku'])
+
+                # Print vendor-specific summaries
                 for vendor, stats in sorted(vendor_stats.items()):
-                    num_items = len(stats['items'])
-                    num_variations = stats['variation_count']
-                    total_items += num_items
-                    total_variations += num_variations
+                    logger.info(f"\n{vendor} Details:")
+                    logger.info(f"  • Items needing images: {len(stats['items'])}")
+                    logger.info(f"  • Variations needing images: {len(stats['variations'])}")
+                    logger.info(f"  • Unique SKUs: {len(stats['skus'])}")
                     
-                    logger.info(f"\n{vendor}:")
-                    logger.info(f"  Items needing images: {num_items}")
-                    logger.info(f"  Variations needing images: {num_variations}")
-                
+                    # List SKUs if available
+                    if stats['skus']:
+                        logger.info("\n  SKUs missing images:")
+                        for sku in sorted(stats['skus']):
+                            logger.info(f"    - {sku}")
+
                 # Overall totals
-                logger.info("\n=== Overall Totals ===")
-                logger.info(f"Total unique items needing images: {total_items}")
-                logger.info(f"Total variations needing images: {total_variations}")
+                total_items = sum(len(stats['items']) for stats in vendor_stats.values())
+                total_variations = sum(len(stats['variations']) for stats in vendor_stats.values())
+                total_skus = sum(len(stats['skus']) for stats in vendor_stats.values())
+                
+                logger.info("\nOverall Totals:")
+                logger.info(f"  • Total unique items: {total_items}")
+                logger.info(f"  • Total variations: {total_variations}")
+                logger.info(f"  • Total unique SKUs: {total_skus}")
+                logger.info("="*50 + "\n")
             
             logger.info(f"\nFound total of {len(items_needing_images)} items needing images")
             return items_needing_images
@@ -226,9 +236,22 @@ if __name__ == "__main__":
     items = catalog.get_items_without_images()
     
     if items:
+        logger.info("\nDetailed Item Breakdown:")
+        # Group by vendor
+        vendor_items = {}
         for item in items:
-            print(f"\nItem: {item['item_data']['name']} (ID: {item['id']})")
-            if item['item_data']['variations']:
-                print("Variations:")
-                for var in item['item_data']['variations']:
-                    print(f"  - SKU {var['sku']}: {var['name']} | {var['vendor_name']}")
+            for var in item['item_data']['variations']:
+                vendor = var['vendor_name']
+                if vendor not in vendor_items:
+                    vendor_items[vendor] = []
+                vendor_items[vendor].append({
+                    'name': item['item_data']['name'],
+                    'sku': var['sku'],
+                    'variation': var['name']
+                })
+        
+        # Print by vendor
+        for vendor, items in sorted(vendor_items.items()):
+            logger.info(f"\n{vendor} Items:")
+            for item in sorted(items, key=lambda x: x['sku']):
+                logger.info(f"  • {item['sku']}: {item['name']}")

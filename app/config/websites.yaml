@@ -2,8 +2,8 @@ websites:
   - name: Winco Fireworks
     url: https://www.wincofireworks.com/fireworks/
     scraper: winco_scraper
-    enabled: false
-    limit: 5
+    enabled: true
+    limit: -1
     note: >
       Uses WordPress/WooCommerce structure with srcset attributes.
       Product Metadata:
@@ -35,8 +35,8 @@ websites:
       - https://www.redrhinofireworks.com/firework-brands/subtle-fireworks/
       - https://www.redrhinofireworks.com/firework-brands/texas-outlaw/
     scraper: redrhino_scraper
-    enabled: false
-    limit: 5
+    enabled: true
+    limit: -1
     note: >
       Uses WordPress/Elementor structure.
       Product Images: Found in multiple locations:
@@ -57,9 +57,9 @@ websites:
 
   - name: World Class Fireworks
     url: https://www.worldclassfireworks.com/fireworks/
-    scraper: worldclass_scraper.py
-    enabled: false
-    limit: 5
+    scraper: worldclass_scraper
+    enabled: true
+    limit: -1
     note: >
       Uses custom Shopify structure.
       Pagination: Uses 'Load More' button with data-url attribute.
@@ -73,7 +73,7 @@ websites:
     url: https://www.pyrobuy.com/products.asp?sid=1&bid=1
     scraper: pyrobuy_scraper
     enabled: true
-    limit: 5
+    limit: -1
     note: >
       Uses classic ASP structure with query parameters.
       Product Links: Found in productdtls.asp URLs.
@@ -98,8 +98,8 @@ websites:
       - https://www.raccoonfireworksusa.com/monkey-mania-1
       - https://www.raccoonfireworksusa.com/raccoon-1-4g-1
     scraper: raccoon_scraper
-    enabled: false
-    limit: 5
+    enabled: true
+    limit: -1
     note: >
       Uses Wix platform with dynamic product pages.
       Product Links: Found in <a> tags with '/product-page/' in href.

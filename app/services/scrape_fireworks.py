@@ -15,9 +15,6 @@ from ratelimit import limits, sleep_and_retry
 from app.utils.paths import paths
 from app.utils.verify_paths import PathVerifier
 from app.utils.logger import setup_logger
-from app.config import websites, vendor_directories
-from app.scrapers import redrhino_scraper, winco_scraper, raccoon_scraper
-from app.scrapers.pyrobuy_scraper import PyrobuyFireworksScraper
 
 logger = setup_logger('scrape_fireworks')
 
@@ -101,18 +98,94 @@ def process_product_batch_db(products, session):
         return False
 
 def run_scrapers():
-    scrapers = {
-        'Pyro Buy Fireworks': PyrobuyFireworksScraper,
-        # ... other scrapers ...
-    }
+    """Run scrapers based on websites.yaml configuration"""
+    all_stats = []
     
-    for site_name, scraper_class in scrapers.items():
-        logger.info(f"\nAttempting to scrape {site_name}...")
+    # Load website configurations
+    with open(paths.WEBSITES_CONFIG, 'r') as f:
+        config = yaml.safe_load(f)
+    
+    # Make sure we have the websites list
+    websites = config.get('websites', [])
+    if not websites:
+        logger.error("No websites found in configuration")
+        return
+        
+    logger.info(f"Found {len(websites)} websites in configuration")
+    logger.info("Website order from config:")
+    for idx, website in enumerate(websites, 1):
+        logger.info(f"{idx}. {website.get('name')} ({website.get('scraper')})")
+    
+    # Process each website in order
+    for website in websites:
+        site_name = website.get('name')
+        scraper_name = website.get('scraper')
+        
+        if not site_name or not scraper_name:
+            logger.error(f"Missing name or scraper in config: {website}")
+            continue
+            
+        if not website.get('enabled', True):  # Default to enabled if not specified
+            logger.info(f"Skipping disabled scraper for {site_name}")
+            continue
+            
         try:
+            # Import the scraper class dynamically
+            module_name = f"app.scrapers.{scraper_name}"
+            
+            # Convert scraper name to class name
+            class_name = ''.join(
+                word.capitalize() 
+                for word in scraper_name.replace('_scraper', '').split('_')
+            ) + 'FireworksScraper'
+            
+            logger.info(f"Scraper name from config: {scraper_name}")
+            logger.info(f"Generated class name: {class_name}")
+            
+            # Import the module first
+            module = importlib.import_module(module_name)
+            
+            # Now we can log module attributes
+            logger.info(f"Available attributes in module: {dir(module)}")
+            logger.info(f"Attempting to load {class_name} from {module_name}")
+            
+            # Get the class
+            scraper_class = getattr(module, class_name)
+            
+            # Initialize and run the scraper
+            logger.info(f"Starting scrape for {site_name}...")
             scraper = scraper_class()
             scraper.run()
+            all_stats.append(scraper.stats)
+            logger.info(f"Completed scrape for {site_name}")
+            
+        except ImportError as e:
+            logger.error(f"Could not import scraper module for {site_name} ({module_name}): {str(e)}")
+        except AttributeError as e:
+            logger.error(f"Could not find scraper class {class_name} for {site_name}: {str(e)}")
         except Exception as e:
             logger.error(f"Error running scraper for {site_name}: {str(e)}")
+            
+    # Print overall summary
+    logger.info("\n" + "="*50)
+    logger.info("OVERALL SCRAPING SUMMARY")
+    logger.info("="*50)
+    
+    total_pages = sum(stat.pages_processed for stat in all_stats)
+    total_products = sum(stat.products_found for stat in all_stats)
+    total_downloads = sum(stat.images_downloaded for stat in all_stats)
+    total_existing = sum(stat.images_existing for stat in all_stats)
+    total_errors = sum(stat.errors for stat in all_stats)
+    
+    logger.info(f"Total Pages Processed: {total_pages}")
+    logger.info(f"Total Products Found: {total_products}")
+    logger.info(f"\nTotal Images:")
+    logger.info(f"  • Downloaded: {total_downloads}")
+    logger.info(f"  • Already Existed: {total_existing}")
+    logger.info(f"  • Total: {total_downloads + total_existing}")
+    if total_errors > 0:
+        logger.info(f"\nTotal Errors: {total_errors}")
+    logger.info("="*50)
 
 @sleep_and_retry
 @limits(calls=30, period=60)  # 30 calls per minute

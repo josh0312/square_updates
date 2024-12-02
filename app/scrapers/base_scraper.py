@@ -8,7 +8,7 @@ from app.utils.request_helpers import get_with_ssl_ignore
 from bs4 import BeautifulSoup
 import time
 from typing import Optional, List, Dict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from PIL import Image
 import io
 
@@ -25,6 +25,37 @@ class ProductData:
     category: Optional[str] = None
     stock_status: Optional[str] = None
 
+@dataclass
+class ScraperStats:
+    vendor_name: str
+    pages_processed: int = 0
+    products_found: int = 0
+    images_downloaded: int = 0
+    images_existing: int = 0
+    db_updates: int = 0
+    db_inserts: int = 0
+    db_unchanged: int = 0
+    errors: int = 0
+    
+    def print_summary(self, logger):
+        logger.info("\n" + "="*50)
+        logger.info(f"Summary for {self.vendor_name}")
+        logger.info("="*50)
+        logger.info(f"Pages Processed: {self.pages_processed}")
+        logger.info(f"Products Found: {self.products_found}")
+        logger.info("\nImage Statistics:")
+        logger.info(f"  • Downloaded: {self.images_downloaded}")
+        logger.info(f"  • Already Existed: {self.images_existing}")
+        logger.info(f"  • Total Images: {self.images_downloaded + self.images_existing}")
+        logger.info("\nDatabase Statistics:")
+        logger.info(f"  • New Records: {self.db_inserts}")
+        logger.info(f"  • Updated Records: {self.db_updates}")
+        logger.info(f"  • Unchanged Records: {self.db_unchanged}")
+        logger.info(f"  • Total Records: {self.db_inserts + self.db_updates + self.db_unchanged}")
+        if self.errors > 0:
+            logger.info(f"\nErrors Encountered: {self.errors}")
+        logger.info("="*50 + "\n")
+
 class BaseScraper:
     def __init__(self, scraper_name):
         self.logger = setup_logger(scraper_name)
@@ -32,6 +63,7 @@ class BaseScraper:
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
+        self.stats = ScraperStats(self.config.get('name', scraper_name))
     
     def _load_config(self, scraper_name):
         """Load scraper configuration from websites.yaml"""

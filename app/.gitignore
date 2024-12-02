@@ -45,3 +45,11 @@ fireworks.db
 matcher_test.log
 winco_test.log
 square_check.log
+
+# Data directory
+data/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3

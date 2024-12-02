@@ -89,21 +89,51 @@ class PyrobuyFireworksScraper(BaseScraper):
                     time.sleep(1)  # Polite delay
                     
                 # PyroBuy-specific next page logic
-                next_link = soup.find('a', href=lambda x: x and 'currentpage=' in x)
-                if next_link:
-                    next_url = urljoin(current_url, next_link['href'])
-                    self.logger.info(f"Moving to next page: {next_url}")
+                next_link = None
+                current_page = 1
+                
+                # First try: Look for currentpage parameter in URL
+                if 'currentpage=' in current_url:
+                    try:
+                        current_page = int(current_url.split('currentpage=')[1].split('&')[0])
+                        next_page = current_page + 1
+                        # Construct next page URL
+                        next_url = current_url.replace(f'currentpage={current_page}', f'currentpage={next_page}')
+                        self.logger.info(f"Found next page URL from parameter: {next_url}")
+                        current_url = next_url
+                        time.sleep(2)
+                    except Exception as e:
+                        self.logger.error(f"Error parsing current page: {str(e)}")
+                        break
+                else:
+                    # First page - add currentpage parameter
+                    separator = '&' if '?' in current_url else '?'
+                    next_url = f"{current_url}{separator}currentpage=2"
+                    self.logger.info(f"Adding pagination to URL: {next_url}")
                     current_url = next_url
                     time.sleep(2)
-                else:
-                    self.logger.info("No more pages found")
+                
+                # Verify next page has products
+                next_response = self.make_request(current_url)
+                if not next_response:
+                    self.logger.info("No valid next page found")
+                    break
+                    
+                next_soup = BeautifulSoup(next_response.text, 'html.parser')
+                next_products = [link['href'] for link in next_soup.find_all('a', href=True) 
+                                if 'productdtls.asp' in link['href']]
+                
+                if not next_products:
+                    self.logger.info("No products found on next page")
                     break
                     
             except Exception as e:
                 self.logger.error(f"Error processing page: {str(e)}")
                 break
                 
-        self.logger.info(f"Completed scrape with {successful_downloads} downloads")
+        # Only print summary after all URLs are processed
+        if url == self.config['urls'][-1]:  # Only on last URL
+            self.stats.print_summary(self.logger)
 
 # Add entry point for direct execution
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ import re
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import os
+from app.scrapers.base_scraper import BaseScraper
 
 # Set up logger
 logger = setup_logger('winco_scraper')
@@ -17,6 +18,20 @@ logger = setup_logger('winco_scraper')
 engine = create_engine(f'sqlite:///{paths.DB_FILE}')
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
+
+class WincoFireworksScraper(BaseScraper):
+    def __init__(self):
+        super().__init__('winco_scraper')
+        
+    def scrape_website(self, url, limit=5, base_dir=None):
+        """Main scraping method"""
+        domain_dir = os.path.join(base_dir, self.get_domain_folder(url)) if base_dir else self.get_domain_folder(url)
+        
+        self.logger.info(f"Starting scrape of {url}")
+        self.logger.info(f"Saving images to {domain_dir}")
+        
+        # Call the existing scrape_website function with our parameters
+        return scrape_website(url, limit=limit, base_dir=base_dir, headers=self.headers)
 
 def scrape_website(url, limit=5, base_dir=None, headers=None):
     """Main scraper function"""
@@ -55,7 +70,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
         for f in existing_files:
             logger.info(f"  - {f} ({os.path.getsize(os.path.join(domain_dir, f))} bytes)")
     
-    while True:  # Changed to while True with explicit breaks
+    while current_url and (limit == -1 or successful_downloads < limit):
         try:
             # Get initial page
             logger.info(f"Making request to: {current_url}")
@@ -149,3 +164,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     logger.info("\nFinal Summary:")
     logger.info(f"Total pages processed: {pages_processed + 1}")
     logger.info(f"Images downloaded: {successful_downloads}") 
+
+if __name__ == "__main__":
+    scraper = WincoFireworksScraper()
+    scraper.run() 
