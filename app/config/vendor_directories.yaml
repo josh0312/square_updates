@@ -1,5 +1,5 @@
-# Base directory for all firework images
-base_directory: "/Users/joshgoble/Downloads/firework_pics"
+# Base directory is now relative to DATA_DIR/images
+base_directory: "data/images"
 
 # Vendor to directory mappings
 vendors:
@@ -7,7 +7,7 @@ vendors:
   "Raccoon": "raccoonfireworksusa.com"
   "Garrets": "garretsfireworks.com"
   "Winco": "wincofireworks.com"
-  "Supreme": "supremefireworks.com"
+  "Supreme": "www.spfireworks.com"
   "NyTex": "nytexfireworks.com"
   "CHW": "chwfireworks.com"
   "AWF": "americanwholesalefireworks.com"

@@ -42,11 +42,12 @@ logger.addHandler(console_handler)
 
 class ImageMatcher:
     def __init__(self):
-        # Load vendor directory mappings from config directory
+        # Load vendor directory mappings from vendor config
         with open(paths.VENDOR_CONFIG, 'r') as f:
             self.config = yaml.safe_load(f)
         
-        self.base_dir = self.config['base_directory']
+        # Base directory is now under DATA_DIR/images
+        self.base_dir = os.path.join(paths.DATA_DIR, 'images')
         self.vendors = self.config['vendors']
         self.aliases = self.config.get('aliases', {})
         
@@ -77,6 +78,7 @@ class ImageMatcher:
     
     def get_image_files(self, vendor_dir):
         """Get list of image files in vendor directory"""
+        # Remove extra 'images' from path since self.base_dir already includes it
         full_path = os.path.join(self.base_dir, vendor_dir)
         if not os.path.exists(full_path):
             logger.warning(f"Directory not found: {full_path}")
