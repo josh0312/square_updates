@@ -1,9 +1,10 @@
 from pydantic_settings import BaseSettings
-from pydantic import BaseModel
-from typing import List
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+# Update the path to look for .env in the app directory
+env_path = Path(__file__).parent.parent / '.env'
+load_dotenv(env_path)
 
 class Settings(BaseSettings):
     # API Settings
@@ -19,32 +20,7 @@ class Settings(BaseSettings):
     
     class Config:
         case_sensitive = True
-        env_file = ".env"
+        env_file = str(env_path)
 
 # Create settings instance
-settings = Settings()
-
-# Image download configs can stay at the bottom
-class ImageDownloadConfig(BaseModel):
-    website: str
-    base_url: str
-    image_selector: str
-    name_attribute: str
-    output_directory: str
-
-image_download_configs = [
-    ImageDownloadConfig(
-        website="Example Website 1",
-        base_url="https://example1.com/",
-        image_selector="img.product-image",
-        name_attribute="data-product-id",
-        output_directory="images/example1",
-    ),
-    ImageDownloadConfig(
-        website="Example Website 2",
-        base_url="https://example2.com/",
-        image_selector="div.item-image > img",
-        name_attribute="alt",
-        output_directory="images/example2",
-    ),
-] 
+settings = Settings() 

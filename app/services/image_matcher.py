@@ -15,6 +15,7 @@ from datetime import datetime
 from app.utils.paths import paths
 from app.utils.verify_paths import PathVerifier
 import sys
+from pprint import pformat
 
 # Use paths instead of local definitions
 file_handler = logging.FileHandler(paths.get_log_file('image_matcher'), mode='w')
@@ -69,20 +70,48 @@ class ImageMatcher:
         # Check aliases first
         vendor_name = self.aliases.get(vendor_name, vendor_name)
         
-        # If the alias gave us a directory directly, use that
-        if vendor_name.endswith('.com'):
-            return vendor_name
+        # Load vendor directory mappings from vendor config
+        with open(paths.VENDOR_CONFIG, 'r') as f:
+            config = yaml.safe_load(f)
+            websites = config.get('websites', [])
+            
+            # Look for matching website configuration
+            for website in websites:
+                if website['name'].lower() == vendor_name.lower():
+                    # For Supreme, use the URL from the website config
+                    if 'url' in website:
+                        domain = website['url'].split('//')[1].split('/')[0]
+                        # Remove www. prefix if present
+                        return domain.replace('www.', '')
+                    elif 'urls' in website:
+                        # If multiple URLs, use the first one
+                        domain = website['urls'][0].split('//')[1].split('/')[0]
+                        # Remove www. prefix if present
+                        return domain.replace('www.', '')
         
-        # Otherwise look up the vendor name in vendors
-        return self.vendors.get(vendor_name)
+        # If no match found in websites.yaml, try the original vendors mapping
+        vendor_dir = self.vendors.get(vendor_name)
+        if vendor_dir:
+            # Remove www. prefix if present
+            return vendor_dir.replace('www.', '')
+        return None
     
     def get_image_files(self, vendor_dir):
         """Get list of image files in vendor directory"""
-        # Remove extra 'images' from path since self.base_dir already includes it
+        if not vendor_dir:
+            logger.warning("No vendor directory specified")
+            return []
+        
+        # Construct path using data/images directory
         full_path = os.path.join(self.base_dir, vendor_dir)
         if not os.path.exists(full_path):
             logger.warning(f"Directory not found: {full_path}")
-            return []
+            # Try alternate path without www prefix
+            alt_path = os.path.join(self.base_dir, vendor_dir.replace('www.', ''))
+            if os.path.exists(alt_path):
+                full_path = alt_path
+            else:
+                return []
         
         return [f for f in os.listdir(full_path) 
                 if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp'))]
@@ -99,7 +128,6 @@ class ImageMatcher:
         
         # For Red Rhino images, remove product code if present
         if is_red_rhino:
-            # Remove product codes
             name = re.sub(r'^[a-z0-9]{3,30}-', '', name, flags=re.IGNORECASE)
             name = re.sub(r'^[a-z0-9]{3,30}\s+', '', name, flags=re.IGNORECASE)
             logger.info(f"After product code removal: '{name}'")
@@ -156,36 +184,48 @@ class ImageMatcher:
         words = name.split()
         logger.debug(f"Split words: {words}")
         
-        # Remove descriptive terms
-        cleaned_words = []
-        i = 0
-        while i < len(words):
-            skip = False
-            current_word = words[i]
-            logger.debug(f"Processing word: '{current_word}'")
-            
-            # Check each descriptive term
-            for term in descriptive_terms:
-                term_words = term.split()
-                if i + len(term_words) <= len(words):
-                    # Check if the next few words match the term
-                    potential_match = ' '.join(words[i:i+len(term_words)]).lower()
-                    logger.debug(f"Checking term '{term}' against '{potential_match}'")
-                    if potential_match == term.lower():
-                        i += len(term_words) - 1
-                        skip = True
-                        logger.debug(f"Removed descriptive term: '{potential_match}'")
-                        break
-            
-            if not skip and words[i] not in stop_words:
-                cleaned_words.append(words[i])
-                logger.debug(f"Kept word: '{words[i]}'")
-            elif words[i] in stop_words:
-                logger.debug(f"Removed stop word: '{words[i]}'")
-            i += 1
+        # Check if name would be too simple after cleaning
+        word_count = len(words)
+        numeric_words = [w for w in words if any(c.isdigit() for c in w)]
         
-        # Remove extra whitespace and join
-        cleaned = ' '.join(cleaned_words).strip()
+        # Don't remove descriptive terms if:
+        # 1. The name has 2 or fewer words
+        # 2. One of the words is a number
+        # 3. Removing the term would leave just a number
+        if word_count <= 2 or numeric_words:
+            logger.info(f"Simple name detected: '{name}' - keeping descriptive terms")
+            cleaned = name
+        else:
+            # Remove descriptive terms only for longer names
+            cleaned_words = []
+            i = 0
+            while i < len(words):
+                skip = False
+                current_word = words[i]
+                logger.debug(f"Processing word: '{current_word}'")
+                
+                # Check each descriptive term
+                for term in descriptive_terms:
+                    term_words = term.split()
+                    if i + len(term_words) <= len(words):
+                        potential_match = ' '.join(words[i:i+len(term_words)]).lower()
+                        logger.debug(f"Checking term '{term}' against '{potential_match}'")
+                        if potential_match == term.lower():
+                            i += len(term_words) - 1
+                            skip = True
+                            logger.debug(f"Removed descriptive term: '{potential_match}'")
+                            break
+                
+                if not skip and words[i] not in stop_words:
+                    cleaned_words.append(words[i])
+                    logger.debug(f"Kept word: '{words[i]}'")
+                elif words[i] in stop_words:
+                    logger.debug(f"Removed stop word: '{words[i]}'")
+                i += 1
+                
+            # Remove extra whitespace and join
+            cleaned = ' '.join(cleaned_words).strip()
+        
         logger.debug(f"Final cleaned result: '{cleaned}'")
         
         if not cleaned:
@@ -195,47 +235,59 @@ class ImageMatcher:
         logger.info(f"Cleaned name: '{name}' -> '{cleaned}'")
         return cleaned
     
-    def find_best_match(self, name_to_match, image_files):
+    def find_best_match(self, name_to_match, image_files, sku=None, vendor_sku=None):
         """Find best matching image file for a given name"""
         if not image_files:
             logger.warning("No valid image names to match against")
             return None, 0
         
-        is_red_rhino = 'redrhinofireworks.com' in str(image_files)
-        
         logger.info(f"\n=== Starting Match Process ===")
         logger.info(f"Looking for match: '{name_to_match}'")
+        logger.info(f"Square SKU: '{sku}'")
+        logger.info(f"Vendor SKU: '{vendor_sku}'")
         logger.info(f"Number of images to check: {len(image_files)}")
         
-        # Clean the name to match (no product code removal needed for Square name)
-        clean_name = self.clean_name(name_to_match, is_red_rhino=False)
+        # First try to match by Square SKU
+        if sku:
+            logger.info(f"\nTrying to match by Square SKU: {sku}")
+            for image_file in image_files:
+                base_name = os.path.splitext(image_file)[0].lower()
+                if sku.lower() in base_name:
+                    logger.info(f"Found Square SKU match: {image_file}")
+                    return image_file, 100
+        
+        # Then try to match by vendor SKU
+        if vendor_sku:
+            logger.info(f"\nTrying to match by Vendor SKU: {vendor_sku}")
+            for image_file in image_files:
+                base_name = os.path.splitext(image_file)[0].lower()
+                if vendor_sku.lower() in base_name:
+                    logger.info(f"Found Vendor SKU match: {image_file}")
+                    return image_file, 100
+        
+        # Finally, fall back to name matching
+        logger.info("\nFalling back to name matching...")
+        clean_name = self.clean_name(name_to_match)
         logger.info(f"Final name to match: '{clean_name}'")
         
-        logger.info("\nChecking each image:")
         best_match = None
         best_ratio = 0
         
         for image_file in image_files:
-            # Get base name without extension
             base_name = os.path.splitext(image_file)[0]
+            clean_image = self.clean_name(base_name)
             
-            clean_image = self.clean_name(base_name, is_red_rhino=True)
-            logger.info(f"Original image filename: '{image_file}' -> {clean_image}")
-            
-            # Calculate match ratio
             ratio = fuzz.ratio(clean_name, clean_image)
             logger.info(f"Comparing:")
             logger.info(f"  Clean name: '{clean_name}'")
             logger.info(f"  Image name: '{clean_image}'")
             logger.info(f"  Match ratio: {ratio}%")
             
-            # Update best match if better ratio found
             if ratio > best_ratio:
                 best_ratio = ratio
                 best_match = image_file
                 logger.info(f"  New best match! Score: {ratio}%")
                 
-                # Early exit if we find a perfect match
                 if ratio == 100:
                     logger.info("Found perfect match - stopping search")
                     break
@@ -250,6 +302,26 @@ class ImageMatcher:
             logger.info(f"\nNo match found meeting minimum score (80%)")
             logger.info(f"Best match was: '{best_match}' with score: {best_ratio}%")
             return None, best_ratio
+    
+    def get_vendor_code(self, vendor_name, variation_name):
+        """Extract vendor code from variation name or vendor name"""
+        # Common vendor codes
+        vendor_codes = {
+            'Supreme': 'SP',
+            'Red Rhino': 'RR',
+            'Winco': 'WC',
+            'Raccoon': 'RC',
+        }
+        
+        # First try to extract from variation name
+        if variation_name:
+            # Look for 2-3 letter code at start of variation name
+            match = re.match(r'^([A-Za-z]{2,3})[0-9-]*', variation_name)
+            if match:
+                return match.group(1).upper()
+        
+        # Fall back to vendor mapping
+        return vendor_codes.get(vendor_name)
     
     def find_matches(self):
         """Find matches for all items without images"""
@@ -272,7 +344,7 @@ class ImageMatcher:
             if 'image_ids' in item['item_data'] and item['item_data']['image_ids']:
                 logger.info("Item already has images - skipping")
                 continue
-                
+            
             # Get all variations that need images
             variations_needing_images = []
             for var in variations:
@@ -280,29 +352,28 @@ class ImageMatcher:
                 vendor_name = var['vendor_name']
                 needs_image = var.get('needs_image', False)
                 
+                # Get SKUs from the correct places
+                square_sku = var.get('item_variation_data', {}).get('sku')  # Get Square SKU
+                vendor_infos = var.get('item_variation_data', {}).get('item_variation_vendor_infos', [])
+                vendor_info = vendor_infos[0].get('item_variation_vendor_info_data', {}) if vendor_infos else {}
+                vendor_sku = vendor_info.get('sku')  # Get vendor SKU
+                
                 logger.info(f"  Variation: '{var_name}'")
                 logger.info(f"  Vendor: {vendor_name}")
+                logger.info(f"  Square SKU: {square_sku}")
+                logger.info(f"  Vendor SKU: {vendor_sku}")
                 logger.info(f"  Needs image: {needs_image}")
                 
-                # Check if variation already has images
-                if 'image_ids' in var and var['image_ids']:
-                    logger.info("  Variation already has images - skipping")
-                    continue
-                    
-                # Skip if neither item nor variation needs an image
-                if not needs_image and not needs_primary:
-                    logger.info("  Skipping - no image needed")
-                    continue
-                    
-                variations_needing_images.append(var)
+                variations_needing_images.append((var, square_sku, vendor_sku))
             
             # If no variations need images, skip this item
             if not variations_needing_images:
                 logger.info("No variations need images - skipping item")
                 continue
-                
+            
             # Use first variation's vendor to find images
-            vendor_name = variations_needing_images[0]['vendor_name']
+            first_var, _, _ = variations_needing_images[0]
+            vendor_name = first_var['vendor_name']
             vendor_dir = self.get_vendor_directory(vendor_name)
             if not vendor_dir:
                 logger.warning(f"No directory mapping found for vendor: {vendor_name}")
@@ -311,15 +382,19 @@ class ImageMatcher:
             logger.info(f"  Looking in directory: {vendor_dir}")
             image_files = self.get_image_files(vendor_dir)
             
-            # Find best match using item name
+            # Find best match using item name and SKU
             name_to_match = item_name
             logger.info(f"  Using name for matching: '{name_to_match}'")
             
-            best_match, match_ratio = self.find_best_match(name_to_match, image_files)
-            
-            if best_match:
-                # Create match data for each variation
-                for var in variations_needing_images:
+            for var, square_sku, vendor_sku in variations_needing_images:
+                best_match, match_ratio = self.find_best_match(
+                    name_to_match, 
+                    image_files, 
+                    sku=square_sku,
+                    vendor_sku=vendor_sku
+                )
+                
+                if best_match:
                     match_data = {
                         'item_name': item_name,
                         'variation_name': var['name'],
@@ -332,9 +407,9 @@ class ImageMatcher:
                         'needs_primary': needs_primary
                     }
                     matches.append(match_data)
-                logger.info(f"  Found match: {best_match} ({match_ratio}%)")
-            else:
-                logger.warning(f"  No match found for: {name_to_match} (Vendor: {vendor_name})")
+                    logger.info(f"  Found match: {best_match} ({match_ratio}%)")
+                else:
+                    logger.warning(f"  No match found for: {name_to_match} (Vendor: {vendor_name})")
         
         return matches
     
