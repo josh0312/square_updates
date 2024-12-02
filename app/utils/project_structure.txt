@@ -1,4 +1,4 @@
-Project Structure - Generated 2024-12-01 16:38:00
+Project Structure - Generated 2024-12-01 18:47:47
 ================================================================================
 
 app/
@@ -14,15 +14,64 @@ app/
 │   └── websites.yaml
 ├── core
 │   └── config.py
+├── data
+│   ├── redrhinofireworks.com
+│   │   ├── 1101117-Raging-Rhino.png
+│   │   ├── 1101211-Texas-Pop-Rockets.png
+│   │   ├── 1101235-Dancing-Butterfly.png
+│   │   ├── 1101306-B-3-Bomber-with-Report.png
+│   │   ├── 1101903-RWB-Bunting.png
+│   │   ├── 1101934-4-Logo-Pennants.png
+│   │   ├── 6301201-Galaxy-Quest.png
+│   │   ├── 6301254-Sorcerers-Stone.png
+│   │   ├── 6301279-Death-By-Stereo.png
+│   │   ├── 6301306-Swordplay.png
+│   │   ├── 6301308-Howling-Duel.png
+│   │   ├── 6301311-Fireworks-Are-Awesome.png
+│   │   ├── 6301338-Red-Rhino-8000-Roll-Crackers.png
+│   │   ├── 6301353-Reggae-Croc.png
+│   │   ├── 6301354-Summer-Bash.png
+│   │   ├── 6301358-Age-Of-Dragons.png
+│   │   ├── 6301365-Agent-Of-Chaos.png
+│   │   ├── 6301367-Wooly-Bully.png
+│   │   ├── 6301369-Rockin-The-Free-World.png
+│   │   ├── 6301372-Future-All-American.png
+│   │   ├── 6301373-Roswell-Reborn.png
+│   │   ├── 6301376-Good-Times.png
+│   │   ├── 6301380-Stone-Breaker.png
+│   │   ├── 6301382-One-Jacked-Quacker.png
+│   │   ├── CD246-Neptune-Missile.png
+│   │   ├── cd124-Giant-Smoke-Balls.png
+│   │   ├── cd130-Staff-of-Ra.png
+│   │   ├── cd331-Hens-Laying-Eggs.png
+│   │   └── cd667-Ravaged.png
+│   └── wincofireworks.com
+│       ├── 10-Ball-Assorted-Roman-Candle.png
+│       ├── 10-Ball-Candle.png
+│       ├── 10-Ball-China-6-pack.png
+│       ├── 10-Ball-Crackling.png
+│       ├── 10-Ball-Mini-Candle.png
+│       ├── 121-Gigawatts.png
+│       ├── 3-Assortment.png
+│       ├── 3-Solar-Wave-Cone.png
+│       ├── 4-Turbo-Flash-Cone.png
+│       └── 8-Pharaohs-Treasure.png
 ├── db
 │   └── session.py
 ├── fireworks.db
 ├── logs
+│   ├── all_scrapers.log
 │   ├── api.endpoints.images.log
 │   ├── app.services.scraper.log
+│   ├── app.services.square_catalog.log
 │   ├── app.services.square_client.log
+│   ├── image_matcher.log
+│   ├── image_matcher_unmatched.log
 │   ├── matcher.log
 │   ├── matcher_test.log
+│   ├── raccoon_scraper.log
+│   ├── redrhino_scraper.log
+│   ├── scrape_fireworks.log
 │   ├── scraper.log
 │   ├── square.log
 │   ├── square_catalog.log
@@ -31,16 +80,18 @@ app/
 │   ├── test_endpoints.log
 │   ├── test_image_matcher.log
 │   ├── test_scraper.log
-│   └── test_square_catalog.log
+│   ├── test_square_catalog.log
+│   ├── verify_paths.log
+│   └── winco_scraper.log
 ├── main.py
 ├── middleware
 │   └── error_handler.py
 ├── models
 │   └── product.py
-├── requirements.txt
 ├── schemas
 │   └── product.py
 ├── scrapers
+│   ├── base_scraper.py
 │   ├── pyrobuy_scraper.py
 │   ├── raccoon_scraper.py
 │   ├── redrhino_scraper.py
@@ -53,7 +104,6 @@ app/
 │   ├── square_catalog.py
 │   ├── square_client.py
 │   └── square_image_uploader.py
-├── setup.py
 ├── tests
 │   ├── conftest.py
 │   ├── fixtures
@@ -67,11 +117,13 @@ app/
 │   ├── test_square_image_uploader.py
 │   ├── test_square_items.py
 │   └── test_winco_scraper.py
-├── unmatched.txt
 └── utils
     ├── logger.py
+    ├── paths.py
     ├── project_structure.txt
-    └── tree_view.py
+    ├── request_helpers.py
+    ├── tree_view.py
+    └── verify_paths.py
 
 File Descriptions
 ================================================================================

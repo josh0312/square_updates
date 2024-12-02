@@ -17,6 +17,7 @@ from app.utils.verify_paths import PathVerifier
 from app.utils.logger import setup_logger
 from app.config import websites, vendor_directories
 from app.scrapers import redrhino_scraper, winco_scraper, raccoon_scraper
+from app.scrapers.pyrobuy_scraper import PyrobuyFireworksScraper
 
 logger = setup_logger('scrape_fireworks')
 
@@ -99,51 +100,19 @@ def process_product_batch_db(products, session):
         logger.error(f"Error processing batch: {str(e)}")
         return False
 
-def scrape_all_websites():
-    websites = load_websites()
+def run_scrapers():
+    scrapers = {
+        'Pyro Buy Fireworks': PyrobuyFireworksScraper,
+        # ... other scrapers ...
+    }
     
-    for website in websites:
-        if not website.get('enabled', True):
-            continue
-            
+    for site_name, scraper_class in scrapers.items():
+        logger.info(f"\nAttempting to scrape {site_name}...")
         try:
-            logger.info(f"\nAttempting to scrape {website['name']}...")
-            
-            # Get appropriate scraper function
-            scraper_func = None
-            if 'Red Rhino' in website['name']:
-                scraper_func = redrhino_scraper.scrape_website
-            elif 'Winco' in website['name']:
-                scraper_func = winco_scraper.scrape_website
-            elif 'Raccoon' in website['name']:
-                scraper_func = raccoon_scraper.scrape_website
-            else:
-                logger.error(f"No scraper found for {website['name']}")
-                continue
-            
-            # Get limit from website config
-            limit = website.get('limit', -1)
-            logger.info(f"Using limit: {limit if limit != -1 else 'unlimited'}")
-            
-            # Get URL - handle both single URL and list of URLs
-            urls = website.get('urls', [website.get('url')] if website.get('url') else [])
-            
-            # Process each URL
-            for url in urls:
-                try:
-                    scraper_func(
-                        url=url,
-                        limit=limit,
-                        base_dir=BASE_DIR,
-                        headers=headers
-                    )
-                except Exception as e:
-                    logger.error(f"Error scraping URL {url}: {str(e)}")
-                    continue
-                    
+            scraper = scraper_class()
+            scraper.run()
         except Exception as e:
-            logger.error(f"Error processing website {website['name']}: {str(e)}")
-            continue
+            logger.error(f"Error running scraper for {site_name}: {str(e)}")
 
 @sleep_and_retry
 @limits(calls=30, period=60)  # 30 calls per minute
@@ -159,6 +128,6 @@ if __name__ == "__main__":
     
     logger.info("Starting scraper...")
     try:
-        scrape_all_websites()
+        run_scrapers()
     except Exception as e:
         logger.error("Fatal error in main execution", exc_info=True)

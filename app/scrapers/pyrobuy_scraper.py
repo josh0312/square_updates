@@ -1,220 +1,111 @@
-import requests
+from app.scrapers.base_scraper import BaseScraper
 from bs4 import BeautifulSoup
 import time
-from urllib.parse import urljoin, urlparse
-import re
-import logging
 import os
-from app.utils.logger import setup_logger
-from app.utils.request_helpers import get_with_ssl_ignore
+from urllib.parse import urljoin
 
-# Initialize logger properly
-logger = setup_logger('pyrobuy_scraper')
+class PyrobuyFireworksScraper(BaseScraper):
+    def __init__(self):
+        super().__init__('pyrobuy_scraper')
 
-def get_domain_folder(url):
-    """Create folder name from domain"""
-    parsed_url = urlparse(url)
-    domain = parsed_url.netloc.replace('www.', '')
-    return domain
-
-def count_existing_images(directory):
-    """Count number of images in directory"""
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-        return 0
-    return len([f for f in os.listdir(directory) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp'))])
-
-def get_next_page_url(soup, base_url, headers=None):
-    """Extract the next page URL if it exists"""
-    logger.info("Looking for next page...")
-    
-    # Try to find the current page number
-    current_page = 1
-    if 'currentpage=' in base_url:
-        try:
-            current_page = int(base_url.split('currentpage=')[1].split('&')[0])
-            logger.info(f"Current page: {current_page}")
-        except:
-            pass
-            
-    # Look for next page link
-    next_link = soup.find('a', href=lambda x: x and f'currentpage={current_page + 1}' in x)
-    if next_link:
-        next_url = next_link['href']
-        if not next_url.startswith('http'):
-            next_url = urljoin(base_url, next_url)
-        return next_url
+    def scrape_website(self, url, limit=5, base_dir=None):
+        """Main scraping method with PyroBuy-specific logic"""
+        domain_dir = os.path.join(base_dir, self.get_domain_folder(url)) if base_dir else self.get_domain_folder(url)
         
-    return None
-
-def get_pyrobuy_product_details(url, headers=None):
-    """Extract product details from a PyroBuy product page"""
-    try:
-        response = get_with_ssl_ignore(url, headers=headers)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
+        self.logger.info(f"Starting scrape of {url}")
+        self.logger.info(f"Saving images to {domain_dir}")
         
-        # Debug the HTML structure
-        logger.debug(f"Product page HTML structure:")
-        logger.debug(soup.prettify()[:1000])
+        successful_downloads = 0
+        current_url = url
         
-        # Find product name from meta og:title
-        name = None
-        title_meta = soup.find('meta', property='og:title')
-        if title_meta:
-            name = title_meta.get('content')
-            
-        # Find product image from meta og:image
-        image_url = None
-        image_meta = soup.find('meta', property='og:image')
-        if image_meta:
-            image_url = image_meta.get('content')
-            if image_url and not image_url.startswith(('http://', 'https://')):
-                image_url = urljoin(url, image_url)
-        
-        if name and image_url:
-            logger.info(f"Found product details - Name: {name}, Image: {image_url}")
-        else:
-            logger.warning(f"Missing details - Name: {name}, Image: {image_url}")
-            
-        return {
-            'name': name,
-            'image_url': image_url
-        }
-        
-    except Exception as e:
-        logger.error(f"Error getting product details: {str(e)}")
-        return {}
-
-def process_pyrobuy_product(name, product_url, image_url, soup, domain_dir, headers):
-    """Process a single PyroBuy product"""
-    try:
-        if not os.path.exists(domain_dir):
-            os.makedirs(domain_dir)
-            
-        # Clean filename
-        safe_name = "".join([c for c in name if c.isalnum() or c in (' ', '-', '_')]).rstrip()
-        image_ext = os.path.splitext(image_url)[1].lower()
-        if not image_ext:
-            image_ext = '.png'  # Default to .png if no extension found
-            
-        filename = f"{safe_name}{image_ext}"
-        filepath = os.path.join(domain_dir, filename)
-        
-        # Download image if it doesn't exist
-        if not os.path.exists(filepath):
-            logger.info(f"Downloading image to: {filepath}")
-            response = get_with_ssl_ignore(image_url, headers=headers)
-            response.raise_for_status()
-            
-            with open(filepath, 'wb') as f:
-                f.write(response.content)
-            return True
-            
-        return False
-        
-    except Exception as e:
-        logger.error(f"Error processing product: {str(e)}")
-        return False
-
-def scrape_website(url, limit=5, base_dir=None, headers=None):
-    """Main scraping function for PyroBuy"""
-    # Create domain directory inside base_dir
-    domain = get_domain_folder(url)
-    domain_dir = os.path.join(base_dir, domain) if base_dir else domain
-    
-    logger.info(f"Fetching content from: {url}")
-    logger.info(f"Saving images to: {domain_dir}")
-    
-    response = get_with_ssl_ignore(url, headers=headers)
-    response.raise_for_status()
-    logger.debug(f"Response content length: {len(response.text)}")
-    logger.debug(f"Response content type: {response.headers.get('content-type')}")
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    existing_count = count_existing_images(domain_dir)
-    logger.info(f"Found {existing_count} existing images in directory")
-    
-    successful_downloads = 0
-    current_url = url
-    page_number = 1
-    
-    while current_url and (limit == -1 or successful_downloads < limit):
-        logger.info(f"\nProcessing page {page_number}...")
-        response = get_with_ssl_ignore(current_url, headers=headers)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Find all product links
-        product_links = []
-        
-        # Look for links to product detail pages
-        all_links = soup.find_all('a')
-        logger.debug(f"Found {len(all_links)} total links")
-        for link in all_links:
-            href = link.get('href')
-            if href:
-                logger.debug(f"Found link: {href}")
-                if 'productdtls.asp' in href:
-                    product_links.append(href)
-                    logger.debug(f"Added product link: {href}")
-
-        unique_product_links = list(set([link for link in product_links if link]))
-        logger.info(f"Found {len(unique_product_links)} unique product links")
-        
-        # Process each product page
-        for product_url in unique_product_links:
-            if limit != -1 and successful_downloads >= limit:
+        while current_url and (limit == -1 or successful_downloads < limit):
+            try:
+                response = self.make_request(current_url)
+                if not response:
+                    break
+                    
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                # PyroBuy-specific product link extraction
+                product_links = []
+                for link in soup.find_all('a', href=True):
+                    href = link['href']
+                    if 'productdtls.asp' in href:
+                        # Convert relative URL to absolute URL
+                        full_url = urljoin(current_url, href)
+                        product_links.append(full_url)
+                
+                self.logger.info(f"Found {len(product_links)} product links")
+                
+                # Process each product with PyroBuy-specific logic
+                for product_url in product_links:
+                    if limit != -1 and successful_downloads >= limit:
+                        break
+                        
+                    self.logger.info(f"Processing product URL: {product_url}")
+                    product_response = self.make_request(product_url)
+                    if not product_response:
+                        continue
+                        
+                    product_soup = BeautifulSoup(product_response.text, 'html.parser')
+                    
+                    # PyroBuy-specific product data extraction
+                    name = None
+                    image_url = None
+                    
+                    title_meta = product_soup.find('meta', property='og:title')
+                    if title_meta:
+                        name = title_meta.get('content')
+                        
+                    image_meta = product_soup.find('meta', property='og:image')
+                    if image_meta:
+                        image_url = image_meta.get('content')
+                        # Make sure image URL is absolute and handle both HTTP/HTTPS
+                        if image_url:
+                            if not image_url.startswith(('http://', 'https://')):
+                                image_url = urljoin(product_url, image_url)
+                            # Try to use domain from base URL for consistency
+                            if 'pyrobuy.com' in current_url and 'pyrobuy.com' not in image_url:
+                                image_url = urljoin(current_url, image_url.split('/')[-1])
+                            self.logger.info(f"Resolved image URL: {image_url}")
+                    
+                    if name and image_url:
+                        self.logger.info(f"Found product: {name}")
+                        self.logger.info(f"Image URL: {image_url}")
+                        
+                        # Use base class utility for downloading
+                        filename = f"{self.clean_filename(name)}.png"
+                        filepath = os.path.join(domain_dir, filename)
+                        
+                        if not os.path.exists(filepath):
+                            if self.download_image(image_url, filepath):
+                                successful_downloads += 1
+                                self.logger.info(f"Downloaded image for {name}")
+                            else:
+                                self.logger.error(f"Failed to download image for {name}")
+                        else:
+                            self.logger.info(f"Image already exists for {name}")
+                                
+                    time.sleep(1)  # Polite delay
+                    
+                # PyroBuy-specific next page logic
+                next_link = soup.find('a', href=lambda x: x and 'currentpage=' in x)
+                if next_link:
+                    next_url = urljoin(current_url, next_link['href'])
+                    self.logger.info(f"Moving to next page: {next_url}")
+                    current_url = next_url
+                    time.sleep(2)
+                else:
+                    self.logger.info("No more pages found")
+                    break
+                    
+            except Exception as e:
+                self.logger.error(f"Error processing page: {str(e)}")
                 break
                 
-            if not product_url.startswith(('http://', 'https://')):
-                product_url = urljoin(current_url, product_url)
-            
-            logger.info(f"Visiting product page: {product_url}")
-            try:
-                product_details = get_pyrobuy_product_details(product_url, headers)
-                
-                if product_details.get('name') and product_details.get('image_url'):
-                    logger.info(f"Found product: {product_details['name']}")
-                    logger.info(f"Found image URL: {product_details['image_url']}")
-                    
-                    # Process the product
-                    was_updated = process_pyrobuy_product(
-                        product_details['name'],
-                        product_url,
-                        product_details['image_url'],
-                        soup,
-                        domain_dir,
-                        headers
-                    )
-                    
-                    if was_updated:
-                        successful_downloads += 1
-                        logger.info(f"Successfully processed product {successful_downloads} of {limit if limit != -1 else 'unlimited'}")
-                    else:
-                        logger.info("Product already exists with no changes")
-                else:
-                    logger.warning("Could not find product name or image URL")
-            
-                time.sleep(2)  # Delay between product pages
-                
-            except Exception as e:
-                logger.error(f"Error processing product page: {str(e)}")
-                continue
+        self.logger.info(f"Completed scrape with {successful_downloads} downloads")
 
-        # Get next page URL
-        next_url = get_next_page_url(soup, current_url, headers)
-        if next_url:
-            logger.info(f"Moving to next page: {next_url}")
-            current_url = next_url
-            page_number += 1
-            time.sleep(2)
-        else:
-            logger.info("No more pages to process")
-            break
-    
-    logger.info(f"\nFinal Summary:")
-    logger.info(f"Pages processed: {page_number}")
-    logger.info(f"Existing images found: {existing_count}")
-    logger.info(f"New images downloaded: {successful_downloads}")
-    logger.info(f"Total images in directory: {count_existing_images(domain_dir)}") 
+# Add entry point for direct execution
+if __name__ == "__main__":
+    scraper = PyrobuyFireworksScraper()
+    scraper.run()

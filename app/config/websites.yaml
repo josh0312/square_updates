@@ -2,7 +2,7 @@ websites:
   - name: Winco Fireworks
     url: https://www.wincofireworks.com/fireworks/
     scraper: winco_scraper
-    enabled: true
+    enabled: false
     limit: 5
     note: >
       Uses WordPress/WooCommerce structure with srcset attributes.
@@ -35,7 +35,7 @@ websites:
       - https://www.redrhinofireworks.com/firework-brands/subtle-fireworks/
       - https://www.redrhinofireworks.com/firework-brands/texas-outlaw/
     scraper: redrhino_scraper
-    enabled: true
+    enabled: false
     limit: 5
     note: >
       Uses WordPress/Elementor structure.
@@ -58,7 +58,7 @@ websites:
   - name: World Class Fireworks
     url: https://www.worldclassfireworks.com/fireworks/
     scraper: worldclass_scraper.py
-    enabled: true
+    enabled: false
     limit: 5
     note: >
       Uses custom Shopify structure.
@@ -98,7 +98,7 @@ websites:
       - https://www.raccoonfireworksusa.com/monkey-mania-1
       - https://www.raccoonfireworksusa.com/raccoon-1-4g-1
     scraper: raccoon_scraper
-    enabled: true
+    enabled: false
     limit: 5
     note: >
       Uses Wix platform with dynamic product pages.
