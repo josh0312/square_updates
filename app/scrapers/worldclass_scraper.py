@@ -4,8 +4,10 @@ import time
 import os
 from urllib.parse import urljoin, urlparse
 import logging
+from app.utils.logger import setup_logger
+from app.utils.request_helpers import get_with_ssl_ignore
 
-logger = logging.getLogger(__name__)
+logger = setup_logger('worldclass_scraper')
 
 def get_domain_folder(url):
     """Create folder name from domain"""
@@ -89,7 +91,7 @@ def get_next_page_url(soup, current_url):
         current_products = set(link['href'] for link in soup.find_all('a', href=True) 
                              if '/fireworks/' in link['href'])
         
-        response = requests.get(next_url, verify=False)
+        response = get_with_ssl_ignore(next_url, headers=headers)
         if response.status_code == 200:
             next_soup = BeautifulSoup(response.text, 'html.parser')
             next_products = set(link['href'] for link in next_soup.find_all('a', href=True) 
@@ -134,7 +136,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
         logger.info(f"\nProcessing page {page_number}...")
         
         try:
-            response = requests.get(current_url, headers=headers, verify=False)
+            response = get_with_ssl_ignore(current_url, headers=headers)
             soup = BeautifulSoup(response.text, 'html.parser')
             
             # Process each product
@@ -159,7 +161,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                 logger.info(f"Fetching product page: {full_url}")
                 
                 try:
-                    product_response = requests.get(full_url, headers=headers, verify=False)
+                    product_response = get_with_ssl_ignore(full_url, headers=headers)
                     product_soup = BeautifulSoup(product_response.text, 'html.parser')
                     
                     # Get product name
@@ -225,7 +227,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                             
                             if not os.path.exists(filepath):
                                 try:
-                                    img_response = requests.get(image_url, headers=headers, verify=False)
+                                    img_response = get_with_ssl_ignore(image_url, headers=headers)
                                     if img_response.status_code == 200:
                                         with open(filepath, 'wb') as f:
                                             f.write(img_response.content)

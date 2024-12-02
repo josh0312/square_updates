@@ -5,10 +5,11 @@ from urllib.parse import urljoin, urlparse
 import re
 import logging
 import os
-from utils.logger import setup_logger
+from app.utils.logger import setup_logger
+from app.utils.request_helpers import get_with_ssl_ignore
 
-# Only initialize logger once
-logger = logging.getLogger(__name__)
+# Initialize logger properly
+logger = setup_logger('pyrobuy_scraper')
 
 def get_domain_folder(url):
     """Create folder name from domain"""
@@ -49,7 +50,7 @@ def get_next_page_url(soup, base_url, headers=None):
 def get_pyrobuy_product_details(url, headers=None):
     """Extract product details from a PyroBuy product page"""
     try:
-        response = requests.get(url, headers=headers, verify=False)
+        response = get_with_ssl_ignore(url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
@@ -103,7 +104,7 @@ def process_pyrobuy_product(name, product_url, image_url, soup, domain_dir, head
         # Download image if it doesn't exist
         if not os.path.exists(filepath):
             logger.info(f"Downloading image to: {filepath}")
-            response = requests.get(image_url, headers=headers, verify=False)
+            response = get_with_ssl_ignore(image_url, headers=headers)
             response.raise_for_status()
             
             with open(filepath, 'wb') as f:
@@ -125,7 +126,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     logger.info(f"Fetching content from: {url}")
     logger.info(f"Saving images to: {domain_dir}")
     
-    response = requests.get(url, headers=headers, verify=False)
+    response = get_with_ssl_ignore(url, headers=headers)
     response.raise_for_status()
     logger.debug(f"Response content length: {len(response.text)}")
     logger.debug(f"Response content type: {response.headers.get('content-type')}")
@@ -140,7 +141,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     
     while current_url and (limit == -1 or successful_downloads < limit):
         logger.info(f"\nProcessing page {page_number}...")
-        response = requests.get(current_url, headers=headers, verify=False)
+        response = get_with_ssl_ignore(current_url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         

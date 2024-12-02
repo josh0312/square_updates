@@ -12,6 +12,8 @@ app/core/__init__.py
 app/core/config.py
 app/db/__init__.py
 app/db/session.py
+app/models/__init__.py
+app/models/product.py
 app/schemas/__init__.py
 app/schemas/product.py
 app/services/__init__.py
@@ -33,7 +35,9 @@ app/tests/test_square_items.py
 app/tests/test_winco_scraper.py
 app/utils/__init__.py
 app/utils/logger.py
+app/utils/paths.py
 app/utils/tree_view.py
+app/utils/verify_paths.py
 nytex_fireworks.egg-info/PKG-INFO
 nytex_fireworks.egg-info/SOURCES.txt
 nytex_fireworks.egg-info/dependency_links.txt

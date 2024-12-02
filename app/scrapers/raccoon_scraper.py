@@ -1,6 +1,7 @@
 from app.models.product import Product, Base
 from app.utils.logger import setup_logger
 from app.utils.paths import paths
+from app.utils.request_helpers import get_with_ssl_ignore
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -32,7 +33,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     logger.info(f"Fetching content from: {url}")
     logger.info(f"Saving images to: {domain_dir}")
     
-    response = requests.get(url, headers=headers, verify=False)
+    response = get_with_ssl_ignore(url, headers=headers)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, 'html.parser')
     
@@ -46,7 +47,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     
     while current_url and (limit == -1 or successful_downloads < limit):
         logger.info(f"\nProcessing page {page_number}...")
-        response = requests.get(current_url, headers=headers, verify=False)
+        response = get_with_ssl_ignore(current_url, headers=headers)
         soup = BeautifulSoup(response.text, 'html.parser')
         
         # Find all product links
@@ -135,7 +136,7 @@ def count_existing_images(directory):
 def get_raccoon_product_details(product_url, headers):
     """Extract product details from a Raccoon product page"""
     try:
-        response = requests.get(product_url, headers=headers, verify=False)
+        response = get_with_ssl_ignore(product_url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
@@ -197,7 +198,7 @@ def process_raccoon_product(product_name, product_url, image_url, soup, domain_d
         # Download image if it doesn't exist
         if not os.path.exists(image_path):
             os.makedirs(os.path.dirname(image_path), exist_ok=True)
-            response = requests.get(image_url, headers=headers, verify=False)
+            response = get_with_ssl_ignore(image_url, headers=headers)
             if response.status_code == 200:
                 with open(image_path, 'wb') as f:
                     f.write(response.content)

@@ -1,7 +1,7 @@
 from app.models.product import Product, Base
 from app.utils.logger import setup_logger
 from app.utils.paths import paths
-import requests
+from app.utils.request_helpers import get_with_ssl_ignore
 from bs4 import BeautifulSoup
 import time
 from urllib.parse import urljoin, urlparse
@@ -33,6 +33,15 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     domain_dir = os.path.join(base_dir, domain) if base_dir else domain
     os.makedirs(domain_dir, exist_ok=True)
     
+    logger.info(f"Base directory: {base_dir}")
+    logger.info(f"Domain: {domain}")
+    logger.info(f"Full domain directory path: {domain_dir}")
+    
+    if os.path.exists(domain_dir):
+        logger.info(f"Directory exists: {domain_dir}")
+    else:
+        logger.error(f"Failed to create directory: {domain_dir}")
+    
     logger.info(f"Fetching content from: {url}")
     logger.info(f"Saving images to: {domain_dir}")
     
@@ -40,11 +49,17 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
     current_url = url
     pages_processed = 0
     
+    if os.path.exists(domain_dir):
+        existing_files = [f for f in os.listdir(domain_dir) if os.path.isfile(os.path.join(domain_dir, f))]
+        logger.info(f"Found {len(existing_files)} existing files in {domain_dir}:")
+        for f in existing_files:
+            logger.info(f"  - {f} ({os.path.getsize(os.path.join(domain_dir, f))} bytes)")
+    
     while True:  # Changed to while True with explicit breaks
         try:
             # Get initial page
             logger.info(f"Making request to: {current_url}")
-            response = requests.get(current_url, headers=headers, verify=False)
+            response = get_with_ssl_ignore(current_url, headers=headers)
             logger.info(f"Response status code: {response.status_code}")
             
             if response.status_code == 200:
@@ -70,7 +85,7 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                             logger.info(f"URL: {product_url}")
                             
                             # Get product page
-                            product_response = requests.get(product_url, headers=headers, verify=False)
+                            product_response = get_with_ssl_ignore(product_url, headers=headers)
                             if product_response.status_code == 200:
                                 product_soup = BeautifulSoup(product_response.text, 'html.parser')
                                 
@@ -87,16 +102,29 @@ def scrape_website(url, limit=5, base_dir=None, headers=None):
                                         
                                         if not os.path.exists(filepath):
                                             try:
-                                                img_response = requests.get(image_url, headers=headers, verify=False)
+                                                img_response = get_with_ssl_ignore(image_url, headers=headers)
                                                 if img_response.status_code == 200:
+                                                    # Log the file size we're about to write
+                                                    content_length = len(img_response.content)
+                                                    logger.info(f"Downloading {content_length} bytes to: {filepath}")
+                                                    
                                                     with open(filepath, 'wb') as f:
                                                         f.write(img_response.content)
-                                                    successful_downloads += 1
-                                                    logger.info(f"Downloaded image: {filename}")
+                                                    
+                                                    # Verify the file was created and has content
+                                                    if os.path.exists(filepath):
+                                                        file_size = os.path.getsize(filepath)
+                                                        if file_size > 0:
+                                                            successful_downloads += 1
+                                                            logger.info(f"Successfully downloaded image: {filename} ({file_size} bytes)")
+                                                        else:
+                                                            logger.error(f"File was created but is empty: {filename}")
+                                                    else:
+                                                        logger.error(f"Failed to create file: {filename}")
                                             except Exception as e:
                                                 logger.error(f"Error downloading image: {str(e)}")
                                         else:
-                                            logger.info(f"Image already exists: {filename}")
+                                            logger.info(f"Image already exists: {filename} ({os.path.getsize(filepath)} bytes)")
                                 
                                 time.sleep(1)  # Polite delay between products
                 
