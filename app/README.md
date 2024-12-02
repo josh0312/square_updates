@@ -78,13 +78,15 @@ Currently supports:
 - World Class Fireworks
 - Pyro Buy Fireworks
 - Raccoon Fireworks
+- Supreme Fireowrks
 
 ## Image Storage
 
 Images are stored in the following structure:
 
-    /Users/joshgoble/Downloads/firework_pics/
-    └── [domain-name]/
+    data
+    └── images
+      └── [domain-name]/
         └── [product-images].jpg
 
 ## Database Schema

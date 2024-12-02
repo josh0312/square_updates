@@ -241,150 +241,163 @@ class SupremeFireworksScraper(BaseScraper):
     def process_category(self, category_url, domain_dir):
         """Process a single category page and its products"""
         current_url = category_url
+        processed_urls = set()  # Keep track of processed URLs to avoid loops
         
-        while current_url and (self.config['limit'] == -1 or self.stats.images_downloaded < self.config['limit']):
+        while current_url and current_url not in processed_urls and (self.config['limit'] == -1 or self.stats.images_downloaded < self.config['limit']):
             try:
+                self.logger.info(f"Processing category URL: {current_url}")
+                processed_urls.add(current_url)
+                
                 response = self.make_request(current_url)
                 if not response:
                     break
                     
                 soup = BeautifulSoup(response.text, 'html.parser')
-                self.stats.pages_processed += 1
                 
-                # Find product links in this category
+                # Get product links from current page
                 product_links = self.get_product_links(soup, current_url)
-                self.logger.info(f"Found {len(product_links)} products in category")
                 
+                # Process each product
+                for product in product_links:
+                    if self.config['limit'] != -1 and self.stats.images_downloaded >= self.config['limit']:
+                        break
+                        
+                    product_url = product['url']
+                    product_response = self.make_request(product_url)
+                    if not product_response:
+                        continue
+                        
+                    product_soup = BeautifulSoup(product_response.text, 'html.parser')
+                    product_data = self.extract_product_data(product_soup, product_url, product.get('code'))
+                    
+                    if product_data and product_data.image_url:
+                        # Save image and update database
+                        self.save_product(product_data, domain_dir)
+                    
+                    # Clear memory
+                    del product_soup
+                    del product_response
+                    
+                # Look for next page link
+                next_page = soup.find('a', string=lambda x: x and ('下一页' in x or 'Next' in x or '>' in x))
+                if next_page and next_page.get('href'):
+                    next_url = urljoin(current_url, next_page['href'])
+                    if next_url != current_url and next_url not in processed_urls:
+                        current_url = next_url
+                    else:
+                        break  # No new pages to process
+                else:
+                    break  # No next page found
+                    
                 # Clear memory
                 del soup
                 del response
                 
-                # Process products
-                for product in product_links:
-                    # Check download limit
-                    if self.config['limit'] != -1 and self.stats.images_downloaded >= self.config['limit']:
-                        self.logger.info(f"Reached download limit of {self.config['limit']} images")
-                        return
-                        
-                    self.logger.info(f"Processing product URL: {product['url']}")
-                    
-                    response = self.make_request(product['url'])
-                    if not response:
-                        continue
-                        
-                    product_soup = BeautifulSoup(response.text, 'html.parser')
-                    product_data = self.extract_product_data(product_soup, product['url'], product['code'])
-                    
-                    # Clear memory
-                    del product_soup
-                    del response
-                    
-                    if product_data.name and product_data.image_url:
-                        self.stats.products_found += 1
-                        
-                        # Create clean filename from product name
-                        clean_name = self.clean_filename(product_data.name.lower())
-                        filename = f"{clean_name}.jpg"
-                        filepath = os.path.join(domain_dir, filename)
-                        
-                        if os.path.exists(filepath):
-                            self.stats.images_existing += 1
-                            self.logger.info(f"Image already exists for {product_data.name}")
-                        else:
-                            # Ensure image URL uses HTTP
-                            image_url = product_data.image_url
-                            if image_url.startswith('https://'):
-                                image_url = image_url.replace('https://', 'http://', 1)
-                            
-                            try:
-                                # Create directory if it doesn't exist
-                                os.makedirs(os.path.dirname(filepath), exist_ok=True)
-                                
-                                # Download image with HTTP
-                                response = self.session.get(image_url, timeout=30, verify=False)
-                                if response.status_code == 200:
-                                    with open(filepath, 'wb') as f:
-                                        f.write(response.content)
-                                    self.stats.images_downloaded += 1
-                                    self.logger.info(f"Successfully downloaded image for {product_data.name}")
-                                else:
-                                    self.stats.errors += 1
-                                    self.logger.error(f"Failed to download image: {response.status_code} for URL: {image_url}")
-                                
-                                # Clear memory
-                                del response
-                                
-                            except Exception as e:
-                                self.stats.errors += 1
-                                self.logger.error(f"Error downloading image for {product_data.name}: {str(e)}")
-                        
-                        # Save to database regardless of whether image was downloaded
-                        try:
-                            from app.models.product import Product
-                            from sqlalchemy.orm import Session
-                            from sqlalchemy import create_engine
-                            
-                            # Use absolute path for database
-                            db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'products.db')
-                            engine = create_engine(f'sqlite:///{db_path}')
-                            session = Session(engine)
-                            
-                            # Create or update product record
-                            product = session.query(Product).filter_by(
-                                site_name='Supreme',
-                                product_name=product_data.name.split(' - ')[0]  # Get just the code part
-                            ).first()
-                            
-                            if not product:
-                                product = Product(
-                                    site_name='Supreme',
-                                    product_name=product_data.name.split(' - ')[0],  # Product code
-                                    sku=product_data.name.split(' - ')[0],  # Use code as SKU
-                                    description=product_data.description,
-                                    image_url=product_data.image_url,
-                                    local_image_path=filepath,
-                                    product_url=product_data.url,
-                                    category=product_data.category if product_data.category else None,
-                                    stock_status=product_data.stock_status if product_data.stock_status else None,
-                                    effects=product_data.effects if product_data.effects else None,
-                                    price=None,  # No price information available
-                                    weight=None,  # No weight information available
-                                    is_active=True
-                                )
-                                session.add(product)
-                                self.logger.info(f"Added new product to database: {product_data.name}")
-                                self.stats.db_inserts += 1
-                            else:
-                                product.image_url = product_data.image_url
-                                product.local_image_path = filepath
-                                product.description = product_data.description
-                                product.updated_at = datetime.utcnow()
-                                self.logger.info(f"Updated existing product in database: {product_data.name}")
-                                self.stats.db_updates += 1
-                            
-                            session.commit()
-                            session.close()
-                            
-                        except Exception as e:
-                            self.logger.error(f"Error saving to database: {str(e)}")
-                            import traceback
-                            self.logger.error(f"Traceback: {traceback.format_exc()}")
-                            self.stats.errors += 1
-                    
-                    # Clear memory
-                    del product_data
-                    time.sleep(2)  # Add delay between product requests
+                self.stats.pages_processed += 1
                 
-                # Get next page in this category
-                current_url = self.get_next_page_url(soup, current_url)
-                if current_url:
-                    time.sleep(2)
-                    
             except Exception as e:
                 self.logger.error(f"Error processing category page: {str(e)}")
                 self.stats.errors += 1
-                break
-
+                break  # Stop on error to avoid potential infinite loops
+    
+    def save_product(self, product_data, domain_dir):
+        """Save product image and update database"""
+        if not product_data.name or not product_data.image_url:
+            return
+            
+        self.stats.products_found += 1
+        
+        # Create clean filename from product name
+        clean_name = self.clean_filename(product_data.name.lower())
+        filename = f"{clean_name}.jpg"
+        filepath = os.path.join(domain_dir, filename)
+        
+        if os.path.exists(filepath):
+            self.stats.images_existing += 1
+            self.logger.info(f"Image already exists for {product_data.name}")
+        else:
+            # Ensure image URL uses HTTP
+            image_url = product_data.image_url
+            if image_url.startswith('https://'):
+                image_url = image_url.replace('https://', 'http://', 1)
+            
+            try:
+                # Create directory if it doesn't exist
+                os.makedirs(os.path.dirname(filepath), exist_ok=True)
+                
+                # Download image with HTTP
+                response = self.session.get(image_url, timeout=30, verify=False)
+                if response.status_code == 200:
+                    with open(filepath, 'wb') as f:
+                        f.write(response.content)
+                    self.stats.images_downloaded += 1
+                    self.logger.info(f"Successfully downloaded image for {product_data.name}")
+                else:
+                    self.stats.errors += 1
+                    self.logger.error(f"Failed to download image: {response.status_code} for URL: {image_url}")
+                
+                # Clear memory
+                del response
+                
+            except Exception as e:
+                self.stats.errors += 1
+                self.logger.error(f"Error downloading image for {product_data.name}: {str(e)}")
+        
+        # Save to database regardless of whether image was downloaded
+        try:
+            from app.models.product import Product
+            from sqlalchemy.orm import Session
+            from sqlalchemy import create_engine
+            
+            # Use absolute path for database
+            engine = create_engine(f'sqlite:///{self.db_path}')
+            session = Session(engine)
+            
+            # Create or update product record
+            product = session.query(Product).filter_by(
+                site_name='Supreme',
+                product_name=product_data.name.split(' - ')[0]  # Get just the code part
+            ).first()
+            
+            if not product:
+                product = Product(
+                    site_name='Supreme',
+                    product_name=product_data.name.split(' - ')[0],  # Product code
+                    sku=product_data.name.split(' - ')[0],  # Use code as SKU
+                    description=product_data.description,
+                    image_url=product_data.image_url,
+                    local_image_path=filepath,
+                    product_url=product_data.url,
+                    category=product_data.category if product_data.category else None,
+                    stock_status=product_data.stock_status if product_data.stock_status else None,
+                    effects=product_data.effects if product_data.effects else None,
+                    price=None,  # No price information available
+                    weight=None,  # No weight information available
+                    is_active=True
+                )
+                session.add(product)
+                self.logger.info(f"Added new product to database: {product_data.name}")
+                self.stats.db_inserts += 1
+            else:
+                product.image_url = product_data.image_url
+                product.local_image_path = filepath
+                product.description = product_data.description
+                product.updated_at = datetime.utcnow()
+                self.logger.info(f"Updated existing product in database: {product_data.name}")
+                self.stats.db_updates += 1
+            
+            session.commit()
+            session.close()
+            
+        except Exception as e:
+            self.logger.error(f"Error saving to database: {str(e)}")
+            import traceback
+            self.logger.error(f"Traceback: {traceback.format_exc()}")
+            self.stats.errors += 1
+            
+        # Add delay between products
+        time.sleep(2)
+    
     def __del__(self):
         """Clean up session on object destruction"""
         if self.session:
