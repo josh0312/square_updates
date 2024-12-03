@@ -556,7 +556,7 @@ class ImageMatcher:
     def _associate_image_with_variation(self, image_id, variation_id):
         """Associate an uploaded image with a catalog item variation."""
         try:
-            # First get the variation to ensure it exists and get its current data
+            # First get the variation to ensure it exists
             variation_result = self.catalog_api.retrieve_catalog_object(
                 object_id=variation_id
             )
@@ -567,24 +567,39 @@ class ImageMatcher:
             
             # Get the current variation data
             current_variation = variation_result.body['object']
-            variation_data = current_variation['item_variation_data']
+            current_data = current_variation.get('item_variation_data', {})
             
-            # Preserve all existing data and just add/update the image_ids
-            variation_data['image_ids'] = [image_id]
+            # Create a copy of the current data and add our image_ids
+            updated_data = current_data.copy()
+            updated_data['image_ids'] = [image_id]
             
-            # Update the variation with the image while preserving all other data
-            update_request = {
+            # Create the batch upsert request
+            batch_request = {
                 "idempotency_key": f"update_{image_id}_{variation_id}_{int(time.time())}",
-                "object": {
-                    "type": "ITEM_VARIATION",
-                    "id": variation_id,
-                    "version": current_variation['version'],
-                    "item_variation_data": variation_data
-                }
+                "batches": [
+                    {
+                        "objects": [
+                            {
+                                "type": "ITEM_VARIATION",
+                                "id": variation_id,
+                                "version": current_variation.get('version'),
+                                "present_at_all_locations": current_variation.get('present_at_all_locations'),
+                                "present_at_location_ids": current_variation.get('present_at_location_ids'),
+                                "item_variation_data": updated_data
+                            }
+                        ]
+                    }
+                ]
             }
             
-            update_result = self.catalog_api.upsert_catalog_object(
-                body=update_request
+            logger.debug("\nCurrent variation data:")
+            logger.debug(pformat(current_variation))
+            logger.debug("\nSending batch upsert request:")
+            logger.debug(pformat(batch_request))
+            
+            # Use BatchUpsertCatalogObjects to associate the image
+            update_result = self.catalog_api.batch_upsert_catalog_objects(
+                body=batch_request
             )
             
             if update_result.is_success():
@@ -631,8 +646,35 @@ class ImageMatcher:
         return successful_uploads, failed_uploads
     
     def write_unmatched(self, unmatched_items):
+        """Write unmatched items to a log file, grouped by vendor."""
         unmatched_log = paths.get_log_file('image_matcher_unmatched')
-        # ... rest of the code ...
+        logger.info(f"\nWriting unmatched items to: {unmatched_log}")
+        
+        # Group items by vendor
+        vendor_groups = {}
+        for item in unmatched_items:
+            vendor = item['vendor']
+            if vendor not in vendor_groups:
+                vendor_groups[vendor] = []
+            vendor_groups[vendor].append(item)
+        
+        with open(unmatched_log, 'w') as f:
+            f.write("Items with no matching images found:\n")
+            f.write(f"Total unmatched items: {len(unmatched_items)}\n\n")
+            
+            # Write items grouped by vendor
+            for vendor, items in sorted(vendor_groups.items()):
+                f.write(f"\n{vendor} ({len(items)} items):\n")
+                f.write("=" * 50 + "\n")
+                
+                # Sort items by name within each vendor group
+                for item in sorted(items, key=lambda x: x['item_name']):
+                    f.write(f"\nItem: {item['item_name']}\n")
+                    f.write(f"Variation: {item['variation_name']}\n")
+                    f.write(f"Vendor SKU: {item['vendor_sku']}\n")
+                    f.write("-" * 30 + "\n")
+                
+                f.write("\n")
     
     def test_square_data(self):
         """Test method to verify Square catalog data"""
@@ -669,52 +711,156 @@ if __name__ == "__main__":
     matcher = ImageMatcher()
     logger.info("\n=== Starting Image Matcher ===")
     
-    # Get all items needing images
-    catalog_items = matcher.square.get_items_without_images()
-    total_items = len(catalog_items)
+    # Get items needing images from Square Catalog
+    catalog = SquareCatalog()
     
-    # Group items by vendor
-    vendor_items = {}
-    for item in catalog_items:
-        item_name = item['name']
+    # Get all items using Square Catalog's improved pagination
+    all_items = []
+    cursor = None
+    batch_size = 100
+    
+    logger.info("Fetching all items from Square...")
+    
+    while True:
+        # Get batch of items
+        body = {
+            "product_types": ["REGULAR"],
+            "state_filters": {"states": ["ACTIVE"]},
+            "limit": batch_size
+        }
         
-        for var in item['variations']:
-            vendor_name = var['vendor_name']
-            if not vendor_name:
-                vendor_name = 'Unknown Vendor'
+        if cursor:
+            body["cursor"] = cursor
+        
+        result = catalog.client.catalog.search_catalog_items(body=body)
+        
+        if not result.is_success():
+            logger.error("Failed to fetch items from Square API")
+            logger.error(pformat(result.errors))
+            break
+        
+        # Process this batch
+        batch_items = catalog.process_catalog_items(result.body)
+        all_items.extend(batch_items)
+        
+        # Get cursor for next batch
+        cursor = result.body.get('cursor')
+        logger.info(f"Fetched batch of {len(batch_items)} items. Total so far: {len(all_items)}")
+        
+        # If no cursor, we've got all items
+        if not cursor:
+            break
+    
+    logger.info(f"\nFetched {len(all_items)} total items")
+    
+    # Find matches for items needing images
+    matches = []
+    unmatched_items = []  # Track unmatched items
+    
+    for item in all_items:
+        item_name = item['name']
+        item_needs_primary = item['needs_primary_image']
+        has_variations = len(item['variations']) > 0
+        
+        logger.info(f"\nProcessing: {item_name}")
+        logger.info(f"Has variations: {has_variations}")
+        logger.info(f"Needs primary image: {item_needs_primary}")
+        
+        if not has_variations:
+            # Single item without variations - just look for a match
+            if item_needs_primary:
+                logger.info("Looking for primary image for single item")
+                # Take first variation's vendor info for matching
+                var = item['variations'][0]
+                vendor_name = var['vendor_name']
+                square_sku = var['square_sku']
+                vendor_sku = var['vendor_sku']
                 
-            if vendor_name not in vendor_items:
-                vendor_items[vendor_name] = set()
-            
-            vendor_items[vendor_name].add(item_name)
+                vendor_dir = matcher.get_vendor_directory(vendor_name)
+                if vendor_dir:
+                    image_files = matcher.get_image_files(vendor_dir)
+                    best_match, match_ratio = matcher.find_best_match(
+                        item_name,
+                        image_files,
+                        sku=square_sku,
+                        vendor_sku=vendor_sku
+                    )
+                    
+                    if best_match:
+                        match_data = {
+                            'item_name': item_name,
+                            'variation_name': var['name'],
+                            'variation_id': var['id'],
+                            'vendor': vendor_name,
+                            'image_file': best_match,
+                            'image_path': os.path.join(matcher.base_dir, vendor_dir, best_match),
+                            'match_ratio': match_ratio,
+                            'needs_primary': True
+                        }
+                        matches.append(match_data)
+                        logger.info(f"Found match for primary image: {best_match} ({match_ratio}%)")
+                    else:
+                        unmatched_items.append({
+                            'item_name': item_name,
+                            'variation_name': var['name'],
+                            'vendor': vendor_name,
+                            'vendor_sku': vendor_sku
+                        })
+        else:
+            # Item with variations - process in order
+            first_variation = True
+            for var in item['variations']:
+                if var['needs_image'] or (first_variation and item_needs_primary):
+                    logger.info(f"\nProcessing variation: {var['name']}")
+                    vendor_name = var['vendor_name']
+                    square_sku = var['square_sku']
+                    vendor_sku = var['vendor_sku']
+                    
+                    vendor_dir = matcher.get_vendor_directory(vendor_name)
+                    if vendor_dir:
+                        image_files = matcher.get_image_files(vendor_dir)
+                        best_match, match_ratio = matcher.find_best_match(
+                            item_name,
+                            image_files,
+                            sku=square_sku,
+                            vendor_sku=vendor_sku
+                        )
+                        
+                        if best_match:
+                            match_data = {
+                                'item_name': item_name,
+                                'variation_name': var['name'],
+                                'variation_id': var['id'],
+                                'vendor': vendor_name,
+                                'image_file': best_match,
+                                'image_path': os.path.join(matcher.base_dir, vendor_dir, best_match),
+                                'match_ratio': match_ratio,
+                                'needs_primary': first_variation and item_needs_primary
+                            }
+                            matches.append(match_data)
+                            logger.info(f"Found match: {best_match} ({match_ratio}%)")
+                            if first_variation and item_needs_primary:
+                                logger.info("This will also be set as the primary image")
+                        else:
+                            unmatched_items.append({
+                                'item_name': item_name,
+                                'variation_name': var['name'],
+                                'vendor': vendor_name,
+                                'vendor_sku': vendor_sku
+                            })
+                first_variation = False
     
-    # Log items grouped by vendor
-    logger.info("\n=== Items Needing Images By Vendor ===")
-    for vendor, vendor_item_names in sorted(vendor_items.items()):
-        logger.info(f"\n{vendor}:")
-        for item_name in sorted(vendor_item_names):
-            logger.info(f"  - {item_name}")
-    
-    logger.info(f"\n=== Processing {total_items} items ===")
-    
-    # Process matches
-    matches = matcher.find_matches()
-    
-    # Process uploads
+    # Process any matches found
     if matches:
         successful_uploads, failed_uploads = matcher.process_matches(matches)
-        
-        # Write unmatched items
-        unmatched_items = [
-            {
-                'item_name': item['name'],
-                'variation_name': var['name'],
-                'vendor': var['vendor_name']
-            }
-            for item in catalog_items
-            for var in item['variations']
-            if not any(m['variation_id'] == var['id'] for m in matches)
-        ]
-        
-        if unmatched_items:
-            matcher.write_unmatched(unmatched_items)
+        logger.info("\n=== Final Summary ===")
+        logger.info(f"Total matches found: {len(matches)}")
+        logger.info(f"Successful uploads: {successful_uploads}")
+        logger.info(f"Failed uploads: {failed_uploads}")
+    else:
+        logger.info("\nNo matches found")
+    
+    # Write unmatched items to log
+    if unmatched_items:
+        matcher.write_unmatched(unmatched_items)
+        logger.info(f"\nWrote {len(unmatched_items)} unmatched items to log")
