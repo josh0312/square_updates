@@ -259,6 +259,18 @@ class SquareCatalog:
                                     continue
                                     
                                 var = variations_lookup.get(var_id, {})
+                                
+                                # If variation not found in lookup, fetch it directly
+                                if not var:
+                                    logger.debug(f"Variation {var_id} not in lookup, fetching directly...")
+                                    var_result = self.client.catalog.retrieve_catalog_object(object_id=var_id)
+                                    if var_result.is_success():
+                                        var = var_result.body.get('object', {})
+                                        logger.debug(f"Retrieved variation directly: {pformat(var)}")
+                                    else:
+                                        logger.error(f"Failed to retrieve variation {var_id}: {var_result.errors}")
+                                        continue
+                                
                                 logger.debug(f"\nProcessing variation:\n{pformat(var)}")
                                 var_data = var.get('item_variation_data', {})
                                 
@@ -273,21 +285,30 @@ class SquareCatalog:
                                 
                                 # Get vendor info from item_variation_vendor_infos array
                                 vendor_infos = var_data.get('item_variation_vendor_infos', [])
+                                logger.debug(f"Found {len(vendor_infos)} vendor infos for variation {var_id}")
+                                
                                 if vendor_infos:
                                     vendor_info = vendor_infos[0]
+                                    logger.debug(f"Processing vendor info: {pformat(vendor_info)}")
                                     if vendor_info:
                                         vendor_info_data = vendor_info.get('item_variation_vendor_info_data', {})
+                                        logger.debug(f"Vendor info data: {pformat(vendor_info_data)}")
                                         if vendor_info_data:
                                             vendor_id = vendor_info_data.get('vendor_id')
                                             vendor_sku = vendor_info_data.get('sku', '')
+                                            logger.debug(f"Extracted vendor_id: {vendor_id}, vendor_sku: {vendor_sku}")
                                             if vendor_id in self.vendor_map:
                                                 vendor_name = self.vendor_map[vendor_id]
+                                                logger.debug(f"Mapped vendor_id {vendor_id} to vendor_name: {vendor_name}")
+                                            else:
+                                                logger.debug(f"Vendor ID {vendor_id} not found in vendor_map")
                                 
                                 # If no variation-level vendor info, use item-level
                                 if vendor_name == 'Unknown' and item_vendor_id:
                                     vendor_id = item_vendor_id
                                     vendor_name = self.vendor_map[item_vendor_id]
                                     vendor_sku = item_vendor_sku
+                                    logger.debug(f"Using item-level vendor info: {vendor_name}")
                                 
                                 # Get all three types of prices
                                 vendor_price = 0.0
@@ -308,6 +329,14 @@ class SquareCatalog:
                                 default_cost_data = var_data.get('default_unit_cost', {})
                                 default_cost_amount = default_cost_data.get('amount', 0)
                                 default_cost = default_cost_amount / 100.0 if default_cost_amount else 0.0
+                                
+                                logger.debug(f"Final extracted data for {item_name}:")
+                                logger.debug(f"  Square SKU: {square_sku}")
+                                logger.debug(f"  Vendor: {vendor_name}")
+                                logger.debug(f"  Vendor SKU: {vendor_sku}")
+                                logger.debug(f"  Vendor Price: ${vendor_price:.2f}")
+                                logger.debug(f"  Retail Price: ${variation_price:.2f}")
+                                logger.debug(f"  Unit Cost: ${default_cost:.2f}")
                                 
                                 variation_name = var_data.get('name', '')
                                 upc = var_data.get('upc', '')
