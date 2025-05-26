@@ -15,6 +15,7 @@ class ProjectPaths:
         self.LOGS_DIR = self.APP_DIR / 'logs'
         self.SERVICES_DIR = self.APP_DIR / 'services'
         self.DATA_DIR = self.APP_DIR / 'data'
+        self.IMAGES_DIR = self.DATA_DIR / 'images'
         
         # Config files
         self.VENDOR_CONFIG = self.CONFIG_DIR / 'vendor_directories.yaml'
@@ -28,7 +29,8 @@ class ProjectPaths:
             'config': self.CONFIG_DIR,
             'logs': self.LOGS_DIR,
             'services': self.SERVICES_DIR,
-            'data': self.DATA_DIR
+            'data': self.DATA_DIR,
+            'images': self.IMAGES_DIR
         }
         
         # Required files
@@ -81,6 +83,7 @@ class ProjectPaths:
             f"  LOGS_DIR: {self.LOGS_DIR}",
             f"  SERVICES_DIR: {self.SERVICES_DIR}",
             f"  DATA_DIR: {self.DATA_DIR}",
+            f"  IMAGES_DIR: {self.IMAGES_DIR}",
             f"  DB_FILE: {self.DB_FILE}",
             "Config Files:",
             f"  VENDOR_CONFIG: {self.VENDOR_CONFIG}",

@@ -8,7 +8,7 @@ import warnings
 from urllib3.exceptions import InsecureRequestWarning
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.models.product import Product, Base
+from app.models.product import BaseProduct, VendorProduct, Base
 from datetime import datetime
 import os
 from app.utils.logger import setup_logger, log_product_found, log_image_download, log_database_update, log_metadata
@@ -40,9 +40,9 @@ class RedrhinoFireworksScraper(BaseScraper):
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
             }
 
-        # Create domain directory for images - remove www. prefix
+        # Use centralized images directory structure
         domain = urlparse(url).netloc.replace('www.', '')
-        domain_dir = os.path.join(base_dir, domain) if base_dir else domain
+        domain_dir = os.path.join(paths.IMAGES_DIR, domain)
         os.makedirs(domain_dir, exist_ok=True)
         
         # Count existing images
@@ -310,7 +310,7 @@ def extract_effects(description):
     return effects if effects else None
 
 def process_redrhino_product(product_name, product_url, image_url, product_soup, domain_dir, headers):
-    """Process a single Red Rhino product"""
+    """Process a single Red Rhino product using new model structure"""
     try:
         session = Session()
         downloaded = False  # Track if we downloaded a new image
@@ -391,48 +391,57 @@ def process_redrhino_product(product_name, product_url, image_url, product_soup,
             else:
                 log_image_download(logger, "exists", new_filename)
         
-        # Store in database
-        product_data = {
-            'site_name': 'Red Rhino Fireworks',
-            'product_name': product_name,
-            'sku': sku,
-            'description': description,
-            'effects': effects,
-            'product_url': product_url,
-            'image_url': image_url,
-            'local_image_path': local_image_path
-        }
+        # Find or create BaseProduct
+        base_product = session.query(BaseProduct).filter_by(name=product_name).first()
+        if not base_product:
+            base_product = BaseProduct(name=product_name)
+            session.add(base_product)
+            session.flush()  # Get the ID
         
-        # Log metadata found
-        log_metadata(logger, product_data)
-        
-        # Check if product exists and update/insert as needed
-        existing_product = session.query(Product).filter_by(
-            site_name='Red Rhino Fireworks',
-            product_name=product_name
+        # Check if vendor product exists
+        existing_vendor_product = session.query(VendorProduct).filter_by(
+            base_product_id=base_product.id,
+            vendor_name='Red Rhino Fireworks'
         ).first()
         
-        if existing_product:
+        if existing_vendor_product:
+            # Update existing vendor product
             changes = {}
-            for key, value in product_data.items():
-                if getattr(existing_product, key) != value:
-                    changes[key] = value
-                    setattr(existing_product, key, value)
+            updates = {
+                'vendor_sku': sku,
+                'vendor_description': description,
+                'vendor_product_url': product_url,
+                'vendor_image_url': image_url,
+                'local_image_path': local_image_path
+            }
+            
+            for field, value in updates.items():
+                if getattr(existing_vendor_product, field) != value:
+                    changes[field] = value
+                    setattr(existing_vendor_product, field, value)
                     
             if changes:
-                existing_product.updated_at = datetime.utcnow()
                 session.commit()
                 log_database_update(logger, "updated", product_name, changes)
-                return True, downloaded  # Return both values
+                return True, downloaded
             else:
                 log_database_update(logger, "unchanged", product_name)
                 return False, downloaded
         else:
-            new_product = Product(**product_data)
-            session.add(new_product)
+            # Create new vendor product
+            new_vendor_product = VendorProduct(
+                base_product_id=base_product.id,
+                vendor_name='Red Rhino Fireworks',
+                vendor_sku=sku,
+                vendor_description=description,
+                vendor_product_url=product_url,
+                vendor_image_url=image_url,
+                local_image_path=local_image_path
+            )
+            session.add(new_vendor_product)
             session.commit()
             log_database_update(logger, "new", product_name)
-            return True, downloaded  # Return both values
+            return True, downloaded
             
     except Exception as e:
         logger.error(f"❌ Error processing Red Rhino product: {str(e)}")

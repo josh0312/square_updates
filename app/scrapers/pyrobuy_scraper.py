@@ -1,8 +1,10 @@
 from app.scrapers.base_scraper import BaseScraper
 from bs4 import BeautifulSoup
 import time
+from urllib.parse import urljoin, urlparse
+import re
 import os
-from urllib.parse import urljoin
+from app.utils.paths import paths
 
 class PyrobuyFireworksScraper(BaseScraper):
     def __init__(self):
@@ -10,7 +12,9 @@ class PyrobuyFireworksScraper(BaseScraper):
 
     def scrape_website(self, url, limit=5, base_dir=None):
         """Main scraping method with PyroBuy-specific logic"""
-        domain_dir = os.path.join(base_dir, self.get_domain_folder(url)) if base_dir else self.get_domain_folder(url)
+        # Use centralized images directory structure
+        domain = self.get_domain_folder(url)
+        domain_dir = os.path.join(paths.IMAGES_DIR, domain)
         
         self.logger.info(f"Starting scrape of {url}")
         self.logger.info(f"Saving images to {domain_dir}")

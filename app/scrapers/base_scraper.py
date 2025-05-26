@@ -92,7 +92,7 @@ class BaseScraper:
             
         for url in self.config['urls']:
             self.logger.info(f"\nProcessing URL: {url}")
-            self.scrape_website(url, limit=self.config['limit'], base_dir=paths.DATA_DIR)
+            self.scrape_website(url, limit=self.config['limit'])
     
     # Utility methods that scrapers can optionally use
     def get_domain_folder(self, url):

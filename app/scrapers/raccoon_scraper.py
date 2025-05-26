@@ -1,4 +1,4 @@
-from app.models.product import Product, Base
+from app.models.product import BaseProduct, VendorProduct, Base
 from app.utils.logger import setup_logger
 from app.utils.paths import paths
 from app.utils.request_helpers import get_with_ssl_ignore
@@ -27,7 +27,9 @@ class RaccoonFireworksScraper(BaseScraper):
         
     def scrape_website(self, url, limit=5, base_dir=None):
         """Main scraping method"""
-        domain_dir = os.path.join(base_dir, self.get_domain_folder(url)) if base_dir else self.get_domain_folder(url)
+        # Use centralized images directory structure
+        domain = self.get_domain_folder(url)
+        domain_dir = os.path.join(paths.IMAGES_DIR, domain)
         
         self.logger.info(f"Fetching content from: {url}")
         self.logger.info(f"Saving images to: {domain_dir}")
@@ -166,7 +168,7 @@ class RaccoonFireworksScraper(BaseScraper):
             return None
 
     def process_raccoon_product(self, product_name, product_url, image_url, product_soup, domain_dir):
-        """Process a single Raccoon product"""
+        """Process a single Raccoon product using new model structure"""
         try:
             session = Session()
             
@@ -174,13 +176,20 @@ class RaccoonFireworksScraper(BaseScraper):
             safe_name = self.clean_filename(product_name)
             image_path = os.path.join(domain_dir, f"{safe_name}.png")
             
-            # Check if product exists in database
-            existing = session.query(Product).filter_by(
-                site_name="Raccoon Fireworks",
-                product_name=product_name
+            # Find or create BaseProduct
+            base_product = session.query(BaseProduct).filter_by(name=product_name).first()
+            if not base_product:
+                base_product = BaseProduct(name=product_name)
+                session.add(base_product)
+                session.flush()  # Get the ID
+            
+            # Check if vendor product exists
+            existing_vendor_product = session.query(VendorProduct).filter_by(
+                base_product_id=base_product.id,
+                vendor_name='Raccoon Fireworks'
             ).first()
             
-            # Check both database and file existence
+            # Check file existence
             file_exists = os.path.exists(image_path)
             if file_exists:
                 self.logger.info(f"Image file exists at: {image_path}")
@@ -188,7 +197,7 @@ class RaccoonFireworksScraper(BaseScraper):
                 self.logger.info(f"Image file does not exist at: {image_path}")
             
             # Only skip if both database record exists and file exists
-            if existing and existing.image_url == image_url and file_exists:
+            if existing_vendor_product and existing_vendor_product.vendor_image_url == image_url and file_exists:
                 self.stats.images_existing += 1
                 self.stats.db_unchanged += 1
                 return False
@@ -203,27 +212,28 @@ class RaccoonFireworksScraper(BaseScraper):
                 else:
                     self.logger.error(f"Failed to download image from: {image_url}")
                     
-            # Create or update product in database only if we have the image
+            # Create or update vendor product in database only if we have the image
             if downloaded or file_exists:
-                product_data = {
-                    'site_name': "Raccoon Fireworks",
-                    'product_name': product_name,
-                    'product_url': product_url,
-                    'image_url': image_url,
-                    'local_image_path': image_path,
-                    'updated_at': datetime.now()
-                }
-                
-                if existing:
-                    for key, value in product_data.items():
-                        setattr(existing, key, value)
+                if existing_vendor_product:
+                    # Update existing vendor product
+                    existing_vendor_product.vendor_product_url = product_url
+                    existing_vendor_product.vendor_image_url = image_url
+                    existing_vendor_product.local_image_path = image_path
+                    session.commit()
                     self.stats.db_updates += 1
                 else:
-                    new_product = Product(**product_data)
-                    session.add(new_product)
+                    # Create new vendor product
+                    new_vendor_product = VendorProduct(
+                        base_product_id=base_product.id,
+                        vendor_name='Raccoon Fireworks',
+                        vendor_product_url=product_url,
+                        vendor_image_url=image_url,
+                        local_image_path=image_path
+                    )
+                    session.add(new_vendor_product)
+                    session.commit()
                     self.stats.db_inserts += 1
                     
-                session.commit()
                 return True
                 
             return False

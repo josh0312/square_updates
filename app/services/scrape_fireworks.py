@@ -2,9 +2,10 @@ import os
 import yaml
 import logging
 import sys
+import time
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.models.product import Base, Product
+from app.models.product import Base, BaseProduct, VendorProduct
 import importlib
 import requests
 import asyncio
@@ -71,29 +72,56 @@ async def process_product_batch(products, session, domain_dir, headers):
                 tasks.append(task)
     return await asyncio.gather(*tasks)
 
-def process_product_batch_db(products, session):
-    """Process multiple products in a single database transaction"""
+def process_product_batch_db(products, db_session):
+    """Process multiple products in a single database transaction using new model structure"""
     try:
-        for product in products:
-            existing = session.query(Product).filter_by(
-                site_name=product['site_name'],
-                product_name=product['name']
+        for product_data in products:
+            # Find or create BaseProduct
+            base_product = db_session.query(BaseProduct).filter_by(
+                name=product_data['name']
             ).first()
             
-            if existing:
-                # Update if needed
-                for key, value in product.items():
-                    if getattr(existing, key) != value:
-                        setattr(existing, key, value)
+            if not base_product:
+                base_product = BaseProduct(name=product_data['name'])
+                db_session.add(base_product)
+                db_session.flush()  # Get the ID
+            
+            # Find or create/update VendorProduct
+            vendor_product = db_session.query(VendorProduct).filter_by(
+                base_product_id=base_product.id,
+                vendor_name=product_data['vendor_name']
+            ).first()
+            
+            if vendor_product:
+                # Update existing vendor product
+                vendor_product.vendor_sku = product_data.get('vendor_sku')
+                vendor_product.vendor_price = product_data.get('vendor_price')
+                vendor_product.vendor_description = product_data.get('description')
+                vendor_product.vendor_category = product_data.get('category')
+                vendor_product.vendor_image_url = product_data.get('image_url')
+                vendor_product.local_image_path = product_data.get('local_image_path')
+                vendor_product.vendor_product_url = product_data.get('product_url')
+                vendor_product.vendor_video_url = product_data.get('video_url')
             else:
-                # Create new
-                new_product = Product(**product)
-                session.add(new_product)
+                # Create new vendor product
+                vendor_product = VendorProduct(
+                    base_product_id=base_product.id,
+                    vendor_name=product_data['vendor_name'],
+                    vendor_sku=product_data.get('vendor_sku'),
+                    vendor_price=product_data.get('vendor_price'),
+                    vendor_description=product_data.get('description'),
+                    vendor_category=product_data.get('category'),
+                    vendor_image_url=product_data.get('image_url'),
+                    local_image_path=product_data.get('local_image_path'),
+                    vendor_product_url=product_data.get('product_url'),
+                    vendor_video_url=product_data.get('video_url')
+                )
+                db_session.add(vendor_product)
         
-        session.commit()
+        db_session.commit()
         return True
     except Exception as e:
-        session.rollback()
+        db_session.rollback()
         logger.error(f"Error processing batch: {str(e)}")
         return False
 

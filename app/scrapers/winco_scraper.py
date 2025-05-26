@@ -1,4 +1,4 @@
-from app.models.product import Product, Base
+from app.models.product import BaseProduct, VendorProduct, Base
 from app.utils.logger import setup_logger
 from app.utils.paths import paths
 from app.utils.request_helpers import get_with_ssl_ignore
@@ -25,13 +25,15 @@ class WincoFireworksScraper(BaseScraper):
         
     def scrape_website(self, url, limit=5, base_dir=None):
         """Main scraping method"""
-        domain_dir = os.path.join(base_dir, self.get_domain_folder(url)) if base_dir else self.get_domain_folder(url)
+        # Use centralized images directory structure
+        domain = self.get_domain_folder(url)
+        domain_dir = os.path.join(paths.IMAGES_DIR, domain)
         
         self.logger.info(f"Starting scrape of {url}")
         self.logger.info(f"Saving images to {domain_dir}")
         
         # Call the existing scrape_website function with our parameters
-        return scrape_website(url, limit=limit, base_dir=base_dir, headers=self.headers)
+        return scrape_website(url, limit=limit, base_dir=str(paths.IMAGES_DIR), headers=self.headers)
 
 def scrape_website(url, limit=5, base_dir=None, headers=None):
     """Main scraper function"""

@@ -35,7 +35,7 @@ websites:
       - https://www.redrhinofireworks.com/firework-brands/subtle-fireworks/
       - https://www.redrhinofireworks.com/firework-brands/texas-outlaw/
     scraper: redrhino_scraper
-    enabled: false
+    enabled: true
     limit: -1
     note: >
       Uses WordPress/Elementor structure.
@@ -135,10 +135,17 @@ websites:
   - name: Supreme Fireworks
     url: http://www.spfireworks.com/html/1/150/index.html
     scraper: supreme_scraper
-    enabled: true
+    enabled: false
     limit: -1
     note: >
   
+  - name: NyTex Fireworks
+    url: https://shop.nytexfireworks.com
+    scraper: nytex_scraper
+    enabled: false
+    limit: -1
+    note: "NyTex Fireworks main shop - scanning for product videos"
+
   # Add more websites as needed:
   # - name: Store Name
   #   url: https://store-url.com

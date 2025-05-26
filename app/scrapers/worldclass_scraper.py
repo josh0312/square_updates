@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import time
 import os
 from urllib.parse import urljoin, urlparse
+import re
+from app.utils.paths import paths
 
 class WorldclassFireworksScraper(BaseScraper):
     def __init__(self):
@@ -82,12 +84,12 @@ class WorldclassFireworksScraper(BaseScraper):
 
     def scrape_website(self, url, limit=5, base_dir=None):
         """Main scraping method"""
-        domain_dir = os.path.join(base_dir, self.get_domain_folder(url)) if base_dir else self.get_domain_folder(url)
-        if not os.path.exists(domain_dir):
-            os.makedirs(domain_dir)
+        # Use centralized images directory structure
+        domain = self.get_domain_folder(url)
+        domain_dir = os.path.join(paths.IMAGES_DIR, domain)
         
-        self.logger.info(f"Fetching content from: {url}")
-        self.logger.info(f"Saving images to: {domain_dir}")
+        self.logger.info(f"Starting scrape of {url}")
+        self.logger.info(f"Saving images to {domain_dir}")
         
         existing_count = self.count_existing_images(domain_dir)
         self.logger.info(f"Found {existing_count} existing images in directory")

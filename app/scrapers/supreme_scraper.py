@@ -4,6 +4,8 @@ import time
 import os
 from urllib.parse import urljoin
 from datetime import datetime
+from app.models.product import BaseProduct, VendorProduct, Base
+from app.utils.paths import paths
 
 class SupremeFireworksScraper(BaseScraper):
     def __init__(self):
@@ -21,7 +23,6 @@ class SupremeFireworksScraper(BaseScraper):
         # Initialize database if it doesn't exist
         if not os.path.exists(self.db_path):
             from sqlalchemy import create_engine
-            from app.models.product import Base
             engine = create_engine(f'sqlite:///{self.db_path}')
             Base.metadata.create_all(engine)
             
@@ -206,10 +207,9 @@ class SupremeFireworksScraper(BaseScraper):
     
     def scrape_website(self, url, limit=5, base_dir=None):
         """Main scraping method with Supreme Fireworks specific logic"""
-        # Use images/<website> directory structure
-        domain_dir = os.path.join('images', self.get_domain_folder(url))
-        if base_dir:
-            domain_dir = os.path.join(base_dir, domain_dir)
+        # Use centralized images directory structure
+        domain = self.get_domain_folder(url)
+        domain_dir = os.path.join(paths.IMAGES_DIR, domain)
         
         self.logger.info(f"Starting scrape of {url}")
         self.logger.info(f"Saving images to {domain_dir}")
@@ -301,7 +301,7 @@ class SupremeFireworksScraper(BaseScraper):
                 break  # Stop on error to avoid potential infinite loops
     
     def save_product(self, product_data, domain_dir):
-        """Save product image and update database"""
+        """Save product image and update database using new model structure"""
         if not product_data.name or not product_data.image_url:
             return
             
@@ -343,9 +343,8 @@ class SupremeFireworksScraper(BaseScraper):
                 self.stats.errors += 1
                 self.logger.error(f"Error downloading image for {product_data.name}: {str(e)}")
         
-        # Save to database regardless of whether image was downloaded
+        # Save to database using new model structure
         try:
-            from app.models.product import Product
             from sqlalchemy.orm import Session
             from sqlalchemy import create_engine
             
@@ -353,40 +352,50 @@ class SupremeFireworksScraper(BaseScraper):
             engine = create_engine(f'sqlite:///{self.db_path}')
             session = Session(engine)
             
-            # Create or update product record
-            product = session.query(Product).filter_by(
-                site_name='Supreme',
-                product_name=product_data.name.split(' - ')[0]  # Get just the code part
+            # Extract product name (remove code part if present)
+            product_name = product_data.name.split(' - ')[0] if ' - ' in product_data.name else product_data.name
+            
+            # Find or create BaseProduct
+            base_product = session.query(BaseProduct).filter_by(name=product_name).first()
+            if not base_product:
+                base_product = BaseProduct(name=product_name)
+                session.add(base_product)
+                session.flush()  # Get the ID
+            
+            # Check if vendor product exists
+            existing_vendor_product = session.query(VendorProduct).filter_by(
+                base_product_id=base_product.id,
+                vendor_name='Supreme Fireworks'
             ).first()
             
-            if not product:
-                product = Product(
-                    site_name='Supreme',
-                    product_name=product_data.name.split(' - ')[0],  # Product code
-                    sku=product_data.name.split(' - ')[0],  # Use code as SKU
-                    description=product_data.description,
-                    image_url=product_data.image_url,
-                    local_image_path=filepath,
-                    product_url=product_data.url,
-                    category=product_data.category if product_data.category else None,
-                    stock_status=product_data.stock_status if product_data.stock_status else None,
-                    effects=product_data.effects if product_data.effects else None,
-                    price=None,  # No price information available
-                    weight=None,  # No weight information available
-                    is_active=True
-                )
-                session.add(product)
-                self.logger.info(f"Added new product to database: {product_data.name}")
-                self.stats.db_inserts += 1
-            else:
-                product.image_url = product_data.image_url
-                product.local_image_path = filepath
-                product.description = product_data.description
-                product.updated_at = datetime.utcnow()
+            if existing_vendor_product:
+                # Update existing vendor product
+                existing_vendor_product.vendor_sku = product_data.name.split(' - ')[0] if ' - ' in product_data.name else None
+                existing_vendor_product.vendor_description = product_data.description
+                existing_vendor_product.vendor_image_url = product_data.image_url
+                existing_vendor_product.local_image_path = filepath
+                existing_vendor_product.vendor_product_url = product_data.url
+                existing_vendor_product.vendor_category = product_data.category if hasattr(product_data, 'category') else None
+                session.commit()
                 self.logger.info(f"Updated existing product in database: {product_data.name}")
                 self.stats.db_updates += 1
+            else:
+                # Create new vendor product
+                new_vendor_product = VendorProduct(
+                    base_product_id=base_product.id,
+                    vendor_name='Supreme Fireworks',
+                    vendor_sku=product_data.name.split(' - ')[0] if ' - ' in product_data.name else None,
+                    vendor_description=product_data.description,
+                    vendor_image_url=product_data.image_url,
+                    local_image_path=filepath,
+                    vendor_product_url=product_data.url,
+                    vendor_category=product_data.category if hasattr(product_data, 'category') else None
+                )
+                session.add(new_vendor_product)
+                session.commit()
+                self.logger.info(f"Added new product to database: {product_data.name}")
+                self.stats.db_inserts += 1
             
-            session.commit()
             session.close()
             
         except Exception as e:
