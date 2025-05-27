@@ -63,6 +63,19 @@ debug_page_*.html
 product_urls.json
 video_scan_results/
 
+# Downloaded videos - too large for git
+pyrobuy_videos/
+
+# Temporary/generated files
+urls_with_*.json
+urls_with_*.txt
+urls_without_*.json
+urls_without_*.txt
+video_scan_summary_*.txt
+pyrobuy_video_download_report_*.txt
+url_catalog_matches_*.xlsx
+~$*.xlsx
+
 # Virtual environment
 venv/
 env/
