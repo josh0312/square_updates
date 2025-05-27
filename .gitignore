@@ -10,6 +10,9 @@ __pycache__/
 .Python
 env/
 venv/
+.venv/
+app/venv/
+app/.venv/
 build/
 develop-eggs/
 dist/
@@ -33,6 +36,7 @@ coverage.xml
 
 # Logs
 *.log
+*.log.*
 logs/*
 !logs/.gitkeep
 
@@ -66,7 +70,7 @@ video_scan_results/
 # Downloaded videos - too large for git
 pyrobuy_videos/
 
-# Temporary/generated files
+# Temporary/generated files (improved patterns)
 urls_with_*.json
 urls_with_*.txt
 urls_without_*.json
@@ -75,6 +79,15 @@ video_scan_summary_*.txt
 pyrobuy_video_download_report_*.txt
 url_catalog_matches_*.xlsx
 ~$*.xlsx
+*_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_*.json
+*_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_*.txt
+*_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_*.xlsx
+
+# Standalone script files (should be in scripts/)
+comprehensive_video_scan.py
+download_pyrobuy_videos.py
+process_urls_catalog_match.py
+run_image_sync.py
 
 # Virtual environment
 venv/
