@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 import sys
 
-from app.models.product import Product, Base  # Update import path
+from app.models.product import Base  # Update import path
 from app.utils.logger import setup_logger  # Add centralized logger
 from app.utils.paths import paths  # Add paths
 from app.config import websites

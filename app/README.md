@@ -130,8 +130,14 @@ Comprehensive logging with:
 
 ### Running the FastAPI Application
 ```bash
-cd app
-python main.py
+# From project root directory
+source venv/bin/activate
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+# Access the application
+# • API Root: http://127.0.0.1:8000/
+# • Interactive Docs: http://127.0.0.1:8000/docs
+# • Catalog API: http://127.0.0.1:8000/api/catalog/items
 ```
 
 ### Web Scraping

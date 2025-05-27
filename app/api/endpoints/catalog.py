@@ -4,13 +4,13 @@ from sqlalchemy.orm import Session
 
 from app.db.session import get_db
 from app.schemas.product import Product, ProductCreate
-from app.services.square_catalog import SquareCatalog
+from app.services.square_client import SquareClient
 from app.utils.logger import setup_logger
 
 logger = setup_logger(__name__)
 
 router = APIRouter()
-square_client = SquareCatalog()
+square_client = SquareClient()
 
 @router.get("/items", response_model=List[Product])
 async def get_catalog_items(

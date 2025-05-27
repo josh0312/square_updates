@@ -16,9 +16,9 @@ pip install -r requirements.txt
 export SQUARE_ACCESS_TOKEN=your_token
 export SQUARE_ENVIRONMENT=sandbox
 
-# Run the application
-cd app
-python main.py
+# Run the FastAPI application
+source venv/bin/activate
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 ## 📁 Project Overview
@@ -74,6 +74,54 @@ square_updates/
 - **[Detailed Documentation](app/README.md)** - Complete setup, usage, and API reference
 - **[Log Cleanup Utility](scripts/cleanup_logs.py)** - Automated log maintenance
 - **[Requirements](requirements.txt)** - Python dependencies
+
+## 🚀 FastAPI Server
+
+### Starting the Server
+```bash
+source venv/bin/activate
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+### API Endpoints
+
+The FastAPI server runs on `http://127.0.0.1:8000` and provides:
+
+#### 📚 Documentation
+- **Interactive API Docs**: `http://127.0.0.1:8000/docs`
+- **OpenAPI Spec**: `http://127.0.0.1:8000/openapi.json`
+
+#### 📊 Catalog Management
+- **GET** `/api/catalog/items` - List all catalog items (100+ fireworks products)
+- **GET** `/api/catalog/items/{item_id}` - Get specific product details
+
+#### 🖼️ Image Management  
+- **POST** `/api/images/match` - Match vendor images to Square catalog
+- **POST** `/api/images/upload` - Upload images to Square
+
+#### 🕷️ Web Scraping
+- **POST** `/api/scraping/start` - Start vendor website scraping
+- **GET** `/api/scraping/status` - Get scraping progress and status
+
+### Example API Usage
+
+```bash
+# Get all products
+curl http://127.0.0.1:8000/api/catalog/items
+
+# Get specific product
+curl http://127.0.0.1:8000/api/catalog/items/DOFEJIYCIO52CU7Y4XRL6JTC
+
+# Start scraping (POST request)
+curl -X POST http://127.0.0.1:8000/api/scraping/start
+```
+
+### Features
+- ✅ **Real-time Square API integration** with 11 vendor mappings
+- ✅ **Live product data** from Square catalog (100+ items)
+- ✅ **Interactive documentation** at `/docs` endpoint
+- ✅ **CORS enabled** for cross-origin requests
+- ✅ **Automatic reload** during development
 
 ## 🛠️ Common Operations
 

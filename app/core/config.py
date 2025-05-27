@@ -18,6 +18,9 @@ class Settings(BaseSettings):
     # Database Settings
     SQLALCHEMY_DATABASE_URL: str = "sqlite:///fireworks.db"
     
+    # CORS Settings
+    ALLOWED_ORIGINS: list = ["http://localhost:3000", "http://localhost:8000", "http://127.0.0.1:8000"]
+    
     class Config:
         case_sensitive = True
         env_file = str(env_path)

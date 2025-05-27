@@ -3,9 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from sqlalchemy.exc import SQLAlchemyError
 
-from api.endpoints import catalog, images, scraping
-from core.config import settings
-from middleware.error_handler import (
+from app.api.endpoints import catalog, images, scraping
+from app.core.config import settings
+from app.middleware.error_handler import (
     error_handler_middleware,
     validation_exception_handler,
     sqlalchemy_exception_handler
