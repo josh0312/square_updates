@@ -9,118 +9,223 @@ This project manages the Square catalog for NyTex Fireworks, including image man
 - 🖼️ High-resolution image downloading with duplicate prevention
 - 📊 SQLite database integration for product data storage
 - 🚦 Rate limiting and polite scraping practices
-- 📝 Comprehensive logging system
+- 📝 **Improved logging system with automatic rotation**
 - ⚙️ YAML-based website configuration
 - 🔍 Support for various website structures (WooCommerce, Shopify, etc.)
+- 🎯 **Square API integration for catalog management**
+- 🔗 **Advanced image matching and upload capabilities**
 
 ## Prerequisites
 
-- Python 3.7+
+- Python 3.11+
 - pip (Python package installer)
+- Square Developer Account (for API access)
 
 ## Installation
 
 1. Clone the repository:
+   ```bash
    git clone [your-repository-url]
-   cd [repository-name]
+   cd square_updates
+   ```
 
-2. Install required dependencies:
+2. Create and activate virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install required dependencies:
+   ```bash
    pip install -r requirements.txt
+   ```
 
-3. Configure your database path in `scrape_fireworks.py`:
-   engine = create_engine('sqlite:///fireworks.db')
-
-## Configuration
-
-The project uses `websites.yaml` for website configurations. Each website entry includes:
-
-    name: Website Name
-    url: https://website-url.com
-    scraper: scraper_file.py
-    enabled: true
-    limit: 5  # Number of images to download (-1 for unlimited)
-    note: "Website-specific notes and structure information"
-
-## Usage
-
-Run the scraper:
-    python scrape_fireworks.py
-
-The scraper will:
-1. Load configurations from `websites.yaml`
-2. Process each enabled website
-3. Download images to site-specific folders
-4. Store product metadata in the database
-5. Generate detailed logs in `scraper.log`
+4. Set up environment variables:
+   ```bash
+   export SQUARE_ACCESS_TOKEN=your_access_token
+   export SQUARE_ENVIRONMENT=sandbox  # or production
+   ```
 
 ## Project Structure
 
-    ├── models/
-    │   └── product.py
-    ├── scrapers/
-    │   ├── __init__.py
-    │   ├── winco_scraper.py
-    │   ├── redrhino_scraper.py
-    │   ├── worldclass_scraper.py
-    │   ├── pyrobuy_scraper.py
-    │   └── raccoon_scraper.py
-    ├── scrape_fireworks.py
-    ├── websites.yaml
-    ├── requirements.txt
-    ├── scraper.log
-    └── README.md
+```
+square_updates/
+├── app/                          # Main application directory
+│   ├── api/                      # API endpoints
+│   ├── config/                   # Configuration files
+│   ├── core/                     # Core application logic
+│   ├── data/                     # Data storage (images, etc.)
+│   │   └── images/              # Downloaded product images
+│   │       ├── pyrobuy.com/
+│   │       ├── raccoonfireworksusa.com/
+│   │       ├── redrhinofireworks.com/
+│   │       ├── spfireworks.com/
+│   │       ├── wincofireworks.com/
+│   │       └── worldclassfireworks.com/
+│   ├── db/                      # Database utilities
+│   ├── logs/                    # **Rotating log files**
+│   ├── models/                  # Data models
+│   ├── schemas/                 # Pydantic schemas
+│   ├── scrapers/                # Website scrapers
+│   ├── scripts/                 # Utility scripts
+│   ├── services/                # Business logic services
+│   ├── utils/                   # Utility functions
+│   ├── main.py                  # FastAPI application entry point
+│   └── fireworks.db            # SQLite database
+├── scripts/                     # Project-level scripts
+│   └── cleanup_logs.py         # **Log maintenance utility**
+├── data/                        # Project data directory
+├── requirements.txt
+└── setup.py
+```
 
 ## Supported Websites
 
 Currently supports:
-- Winco Fireworks Texas
-- Red Rhino Fireworks
-- World Class Fireworks
-- Pyro Buy Fireworks
-- Raccoon Fireworks
-- Supreme Fireowrks
+- **Winco Fireworks Texas** (WooCommerce-based)
+- **Red Rhino Fireworks** (WordPress/Elementor-based)
+- **World Class Fireworks** (Shopify-based)
+- **Pyro Buy Fireworks** (Classic ASP-based)
+- **Raccoon Fireworks**
+- **Supreme Fireworks**
 
-## Image Storage
+## Core Components
 
-Images are stored in the following structure:
+### 1. Web Scraping
+Scrapes product images and metadata from vendor websites with:
+- Rate limiting to respect server resources
+- Automatic file naming and organization
+- Duplicate detection and prevention
+- Error handling and retry logic
+- **Rotating log files with automatic size management**
 
-    data
-    └── images
-      └── [domain-name]/
-        └── [product-images].jpg
+### 2. Image Matching System
+Advanced matching between Square catalog items and vendor images:
+- Intelligent product name cleaning and normalization
+- Fuzzy string matching with configurable thresholds
+- Support for multiple image formats (PNG, JPG, JPEG, GIF, WEBP)
+- Vendor code resolution (WN → Winco, RR → Red Rhino, etc.)
+- **Enhanced logging with detailed match scoring**
+
+### 3. Square Catalog Management
+Full integration with Square API for:
+- Fetching and updating catalog items
+- Managing vendor relationships and mappings
+- Handling product variations and SKUs
+- Image upload and association
+- Active item filtering (excludes archived items)
+
+### 4. **Improved Logging System**
+Comprehensive logging with:
+- **Automatic log rotation** (10MB max file size, 5 backup files)
+- **No more duplicate console messages**
+- Service-specific log files with meaningful names:
+  - `scraper.log`: Main scraping operations
+  - `all_scrapers.log`: Combined scraper output
+  - `[vendor]_scraper.log`: Individual vendor scrapers
+  - `image_matcher_unmatched.log`: Unmatched items tracking
+  - `verify_paths.log`: Path verification operations
+
+## Usage
+
+### Running the FastAPI Application
+```bash
+cd app
+python main.py
+```
+
+### Web Scraping
+```bash
+python scrape_fireworks.py
+```
+
+### Image Matching and Upload
+```bash
+python image_matcher.py
+```
+
+### Log Cleanup
+```bash
+python scripts/cleanup_logs.py --live --keep-days 7
+```
+
+## Configuration
+
+### Website Configuration
+The project uses YAML files for website configurations. Each website entry includes:
+```yaml
+name: Website Name
+url: https://website-url.com
+scraper: scraper_file.py
+enabled: true
+limit: 5  # Number of images to download (-1 for unlimited)
+note: "Website-specific notes and structure information"
+```
+
+### Environment Variables
+Required environment variables:
+- `SQUARE_ACCESS_TOKEN`: Your Square API access token
+- `SQUARE_ENVIRONMENT`: `sandbox` or `production`
 
 ## Database Schema
 
-Products are stored with the following information:
-- Site name
-- Product name
-- SKU
-- Price
-- Description
-- Category
-- Stock status
-- Effects
-- Product URL
-- Image URL
-- Local image path
-- Timestamps
+Products are stored with comprehensive information:
+- Site name and vendor details
+- Product name, SKU, and pricing
+- Detailed descriptions and categories
+- Stock status and effects
+- Product and image URLs
+- Local image paths
+- **Timestamp tracking for all operations**
 
-## Error Handling
+## Recent Improvements (December 2024)
 
-The scraper includes:
-- Comprehensive error logging
-- Network error recovery
-- File system error handling
-- Database transaction management
+### Logging System Overhaul
+- ✅ **Fixed double message problem** - no more duplicate console output
+- ✅ **Implemented automatic log rotation** - prevents huge log files
+- ✅ **Added proper logger deduplication** - prevents handler conflicts
+- ✅ **Enhanced .gitignore patterns** - better temporary file handling
 
-## Adding New Websites
+### Image Matching Enhancements
+- Enhanced product name cleaning and matching algorithms
+- Intelligent removal of product codes and descriptive terms
+- Improved matching accuracy for vendor-specific naming conventions
+- Better handling of variations vs parent items
+- Detailed match scoring and reporting
 
-To add a new website to the scraper:
+### Square Integration Improvements
+- Selective image upload system (only uploads when needed)
+- Better vendor code resolution and mapping
+- Enhanced item status tracking (active vs archived)
+- Improved error handling and logging
 
-1. Create a new scraper file in the `scrapers` directory (e.g., `new_website_scraper.py`).
-2. Implement the website-specific scraping logic in the new scraper file, following the existing scraper structure.
-3. Update the `websites.yaml` file with the new website's configuration, including the scraper file name.
-4. Run the `scrape_fireworks.py` script to start scraping the new website.
+## Testing
+
+### Image Upload Testing
+```bash
+python square_image_uploader_test.py
+```
+
+### Limited Testing Mode
+For development, you can limit operations:
+```bash
+python image_matcher.py  # Processes first 3 successful uploads
+```
+
+## Maintenance
+
+### Log Management
+Automatic log rotation is now enabled, but you can manually clean logs:
+```bash
+# Dry run (shows what would be removed)
+python scripts/cleanup_logs.py
+
+# Remove logs older than 3 days
+python scripts/cleanup_logs.py --live --keep-days 3
+```
+
+### Database Maintenance
+The SQLite database is located at `app/fireworks.db` and includes comprehensive product data with full audit trails.
 
 ## Contributing
 
@@ -130,154 +235,31 @@ To add a new website to the scraper:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+## Error Handling
 
-[Your chosen license]
-
-## Acknowledgments
-
-- Winco Fireworks (WooCommerce-based)
-- Red Rhino Fireworks (WordPress/Elementor-based)
-  - Supports year-based image folders
-  - Handles multiple image locations
-  - Filters out common site images
-- World Class Fireworks (Shopify-based)
-- Pyro Buy Fireworks (Classic ASP-based)
+The system includes comprehensive error handling:
+- **Network error recovery** with exponential backoff
+- **File system error handling** with detailed logging
+- **Database transaction management** with rollback capabilities
+- **API rate limit handling** with automatic retry logic
+- **Detailed error logging** with context information
 
 ## Notes
 
 - Ensure you have proper permissions to scrape target websites
-- Adjust rate limiting as needed to be respectful to servers
-- Monitor scraper.log for detailed operation information
+- Monitor the rotating log files for detailed operation information
+- Use the sandbox environment for testing before production
+- The system respects rate limits and implements polite scraping practices
+- All operations are logged with timestamps and detailed context
 
-### Image Matcher
-- Automatically matches Square catalog items with vendor product images
-- Uses fuzzy string matching to handle naming variations
-- Supports multiple image formats (PNG, JPG, JPEG, GIF, WEBP)
-- Generates detailed logs and reports:
-  - `matcher.log`: Detailed matching process logs
-  - `unmatched.txt`: List of items without image matches
-- Provides match statistics and success rates
-- Handles vendor aliases and directory mappings
+## License
 
-### Square Catalog Management
-- Fetches and updates catalog items
-- Manages vendor relationships
-- Handles product variations and SKUs
-- Supports image assignments
-- Supports both exact and fuzzy matching with configurable thresholds
-- Generates detailed matching statistics and reports
+[Your chosen license]
 
-### Web Scraping
-- Scrapes product images from vendor websites
-- Handles pagination and rate limiting
-- Supports multiple vendor sites
-- Organizes images by vendor
-- Features:
-  - Rate limiting to respect server resources
-  - Automatic file naming and organization
-  - Duplicate detection
-  - Error handling and retry logic
-- Generates scraping logs:
-  - `scraper.log`: Detailed scraping progress
-  - `logs/scraper.log`: Additional debug information
+## Support
 
-
-### Square Catalog Management
-- Fetches and updates catalog items through Square API
-- Manages vendor relationships and mappings
-- Handles product variations and SKUs
-- Supports image assignments
-- Features:
-  - Vendor mapping and ID resolution
-  - Item variation tracking
-  - SKU management
-  - Image status tracking
-  - Bulk operations support
-- Generates detailed logs:
-  - `square_catalog.log`: API interactions and operations
-  - `square.log`: Testing and debugging information
-
-### Square Image Upload
-- Uploads matched images directly to Square catalog
-- Associates images with catalog items and variations
-- Features:
-  - Single image upload testing
-  - Idempotent operations
-  - Error handling and logging
-  - Image-to-item association
-- Generates detailed logs:
-  - `square_image_upload.log`: Image upload operations and results
-
-## Testing Image Upload
-To test image uploads to Square:
-
-1. Set up environment variables:
-   ```
-   SQUARE_ACCESS_TOKEN=your_access_token
-   SQUARE_ENVIRONMENT=sandbox  # or production
-   ```
-
-2. Run the test script:
-   ```
-   python square_image_uploader_test.py
-   ```
-
-3. Check `square_image_upload.log` for results
-
-## Setup
-
-1. Clone the repository
-2. Install dependencies:
-
-## Square Image Management System
-
-## Recent Updates (Nov 25, 2024)
-
-### Image Matching and Upload Improvements
-- Added selective image upload system:
-  - Checks if items/variations already have images before uploading
-  - Only uploads to items/variations that need images
-  - Properly associates images with both parent items and variations
-  - Supports primary image designation for items
-
-### Square Catalog Integration
-- Added active item filtering:
-  - Only processes non-archived items
-  - Checks image status at both item and variation level
-  - Improved vendor code resolution (WN -> Winco, RR -> Red Rhino, etc.)
-  - Better logging of item/variation status
-
-### Testing Features
-- Added test limiting:
-  - Can limit to first 3 successful uploads for testing
-  - Detailed logging of match attempts and results
-  - Shows which items were processed and why
-  - Logs successful uploads with match scores
-
-### Usage
-To test with limited uploads:
-```bash
-python image_matcher.py
-```
-This will:
-1. Process items until 3 successful uploads
-2. Show detailed matching process
-3. Log results to matcher.log
-4. Write unmatched items to unmatched.txt
-
-### Image Matching Improvements (Dec 1, 2024)
-- Enhanced product name cleaning and matching:
-  - Intelligent removal of product codes (e.g., "1101717-", "814327019540-")
-  - Filtering of descriptive terms ("artillery", "shells", "500g", etc.)
-  - Improved matching accuracy for Red Rhino products
-  - Better handling of variations vs parent items
-- Logging improvements:
-  - Detailed match scoring information
-  - Clear indication of why matches succeed or fail
-  - Product code removal tracking
-  - Best match reporting even when below threshold
-- Upload process improvements:
-  - Successful parent item uploads counted even if variation association fails
-  - Better handling of items without variations
-  - More detailed upload status reporting
+For issues or questions:
+1. Check the relevant log files in `app/logs/`
+2. Review the error handling documentation
+3. Use the testing modes for development
+4. Monitor the log rotation system for historical data
